@@ -7,7 +7,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   border: 1px solid #EAEAE8;
-  background-color: #fff;
+  background-color: #F7F6F3;
 }
 
 .variable-sample {
@@ -57,7 +57,7 @@ body {
   justify-content: space-between;
   align-items: stretch;
 
-  background-color: #F7F6F3;
+  background-color: #EAEAE8;
   /*border: 1px solid #E8E7E4; border-radius:4px;*/
   /*border-top: 1px solid #E8E7E4;*/
   border-bottom: 1px solid #EAEAE8;
@@ -86,11 +86,11 @@ body {
     width: 100%;
     -webkit-appearance: none;
     height: 4px;
-    background-color: #E8E7E4;
+    background-color: #CECDCC;
     border-radius: 2px;
   }
   .variable .ctrl input[type=range]::-webkit-slider-thumb {
-    border: 2px solid #F7F6F3;
+    border: 2px solid #EAEAE8;
     height: 16px;
     width: 16px;
     background: #73726E;
