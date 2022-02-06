@@ -2,6 +2,9 @@ body {
   margin: 0;
   background-color: #F7F6F3;
   font-family: 'Min Sans VF', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .variable-sample {
@@ -107,6 +110,7 @@ body {
   .variable .ctrl label.tight {
     flex: 0 1 auto;
     color: #999;
+    width: 100%;
   }
   .variable .ctrl label:last-child {
     margin-right: 0;
@@ -128,7 +132,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100% - 89px);
+  height: calc(100vh - 89px);
 }
 
 .variable-sample {
