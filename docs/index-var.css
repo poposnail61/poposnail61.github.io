@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: #F7F6F3;
+  font-family: 'Min Sans VF', sans-serif;
 }
 
 .variable-sample {
@@ -86,6 +87,7 @@ body {
     width: 16px;
     background: #999;
     border-radius: 50%;
+    box-shadow: none;
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: 0; /*chrome의 경우 margin-top값을 부여해야합니다.*/
