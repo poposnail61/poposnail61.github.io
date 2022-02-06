@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  background-color: #F7F6F3;
   font-family: 'Min Sans VF', sans-serif;
   display: flex;
   flex-direction: column;
   height: 100%;
   font-size: 14px;
   font-weight: 400;
+  border: 1px #EAEAE8;
 }
 
 .variable-sample {
@@ -55,9 +55,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+
+  background-color: #F7F6F3;
   /*border: 1px solid #ddd; border-radius:4px;*/
   /*border-top: 1px solid #ddd;*/
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #EAEAE8;
   color: #333;
   padding: 20px;
   overflow: hidden;
