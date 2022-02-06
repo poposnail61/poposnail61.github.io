@@ -7,6 +7,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   border: 1px #EAEAE8;
+  background-color: #fff;
 }
 
 .variable-sample {
@@ -35,7 +36,7 @@ body {
 
 .variable .unsupported-message {
   opacity: 0.3;
-  border: 2px solid #999;
+  border: 2px solid #73726E;
   border-radius:4px;
   text-align: center;
   padding: 1em 1em;
@@ -57,10 +58,10 @@ body {
   align-items: stretch;
 
   background-color: #F7F6F3;
-  /*border: 1px solid #ddd; border-radius:4px;*/
-  /*border-top: 1px solid #ddd;*/
+  /*border: 1px solid #E8E7E4; border-radius:4px;*/
+  /*border-top: 1px solid #E8E7E4;*/
   border-bottom: 1px solid #EAEAE8;
-  color: #333;
+  color: #37352F;
   padding: 20px;
   overflow: hidden;
 }
@@ -85,14 +86,14 @@ body {
     width: 100%;
     -webkit-appearance: none;
     height: 4px;
-    background-color: #ddd;
+    background-color: #E8E7E4;
     border-radius: 2px;
   }
   .variable .ctrl input[type=range]::-webkit-slider-thumb {
     border: 2px solid #F7F6F3;
     height: 16px;
     width: 16px;
-    background: #999;
+    background: #73726E;
     border-radius: 50%;
     box-shadow: none;
     cursor: pointer;
@@ -113,7 +114,7 @@ body {
   }
   .variable .ctrl label.tight {
     flex: 0 1 auto;
-    color: #999;
+    color: #73726E;
     width: 100%;
   }
   .variable .ctrl label:last-child {
@@ -143,7 +144,7 @@ body {
 }
 
 .variable-sample {
-  color: #333;
+  color: #37352F;
   max-width: 100%;
   padding-bottom: 20px;
   font-size: var(--var-size);
