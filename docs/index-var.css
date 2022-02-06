@@ -5,6 +5,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .variable-sample {
@@ -117,6 +119,7 @@ body {
   }
   .variable .ctrl label .label {
     width: 80px;
+    font-weight: 500;
   }
   .variable .ctrl label .label.var {
     font-weight: 500;
@@ -132,12 +135,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 89px);
+  overflow: hidden;
+  padding: 0 20px;
+  height: calc(100vh - 87px);
 }
 
 .variable-sample {
   color: #333;
   max-width: 100%;
+  padding-bottom: 20px;
   font-size: var(--var-size);
   letter-spacing: var(--var-letterSpacing);
   line-height: var(--var-lineHeight);
