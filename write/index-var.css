@@ -6,6 +6,7 @@ body {
   height: 100%;
   font-size: 14px;
   font-weight: 400;
+  line-height: 18px;
   border: 1px solid #EAEAE8;
   background-color: #F7F6F3;
 }
@@ -140,7 +141,7 @@ body {
   justify-content: center;
   overflow: hidden;
   padding: 0 20px;
-  height: calc(100vh - 89px);
+  height: calc(100vh - 87px);
 }
 
 .variable-sample {
