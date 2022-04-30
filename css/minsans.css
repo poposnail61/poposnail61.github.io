@@ -1,54 +1,49 @@
 
-
-* {
-  box-sizing: border-box;
+@font-face {
+    font-family: 'Min Sans VF';
+    src: url('../fonts/variable/MinSansVF.woff2') format('woff2'),
+    url('../fonts/variable/MinSansVF.ttf') format('truetype');
 }
 
-body {
-  font-family: "Min Sans VF";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 100vh;
-  background-color: #F7F6F3;
-  flex-direction: column;
+
+@font-face {
+    font-family: 'Min Sans';
+    font-weight: 900;
+    src: url('../fonts/static/woff2/MinSans-Black.woff2') format('woff2'),
+    url('../fonts/static/ttf/MinSans-Black.ttf') format('truetype');
 }
 
-h1 {
-  font-weight: 100;
-  font-size: 14vw;
-  line-height: 14vw;
-  font-variation-settings: "wght" 100;
-  margin: 0 0 4vw;
+@font-face {
+    font-family: 'Min Sans';
+    font-weight: 700;
+    src: url('../fonts/static/woff2/MinSans-Bold.woff2') format('woff2'),
+    url('../fonts/static/ttf/MinSans-Bold.ttf') format('truetype');
 }
 
-h5 {
-  font-size: 4vw;
-  opacity: 0.5;
-  font-variation-settings: "wght" 250;
-  letter-spacing: 0.2vw;
-  margin: 0;
+@font-face {
+    font-family: 'Min Sans';
+    font-weight: 550;
+    src: url('../fonts/static/woff2/MinSans-Medium.woff2') format('woff2'),
+    url('../fonts/static/ttf/MinSans-Medium.ttf') format('truetype');
 }
 
-h1 span {
-  --delay: calc((var(--char-index) + 1) * 100ms);
-  animation: breathe 3000ms infinite both;
-  animation-delay: var(--delay);
+@font-face {
+    font-family: 'Min Sans';
+    font-weight: 400;
+    src: url('../fonts/static/woff2/MinSans-Regular.woff2') format('woff2'),
+    url('../fonts/static/ttf/MinSans-Regular.ttf') format('truetype');
 }
 
-h1:hover span {
-  animation-play-state: paused;
+@font-face {
+    font-family: 'Min Sans';
+    font-weight: 250;
+    src: url('../fonts/static/woff2/MinSans-Light.woff2') format('woff2'),
+    url('../fonts/static/ttf/MinSans-Light.ttf') format('truetype');
 }
 
-@keyframes breathe {
-  0% {
-    font-variation-settings: "wght" 100;
-  }
-  50% {
-    font-variation-settings: "wght" 900;\
-  }
-  100% {
-    font-variation-settings: "wght" 100;
-  }
+@font-face {
+    font-family: 'Min Sans';
+    font-weight: 100;
+    src: url('../fonts/static/woff2/MinSans-Thin.woff2') format('woff2'),
+    url('../fonts/static/ttf/MinSans-Thin.ttf') format('truetype');
 }
