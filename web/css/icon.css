@@ -308,7 +308,7 @@ i.iSync::before {
   vertical-align: top;
   content: "\E627";
 }
-i.iDraft::before {
+i.iFile::before {
   vertical-align: top;
   content: "\E66D";
 }
@@ -340,19 +340,19 @@ i.iShare::before {
   vertical-align: top;
   content: "\E80D";
 }
-i.iCheckBox::before {
+i.iCheckSquare::before {
   vertical-align: top;
   content: "\E834";
 }
-i.iCheckBoxBlank::before {
+i.iSquare::before {
   vertical-align: top;
   content: "\E835";
 }
-i.iRadioButtonUnchecked::before {
+i.iCircle::before {
   vertical-align: top;
   content: "\E836";
 }
-i.iRadioButtonChecked::before {
+i.iRecodeCircle::before {
   vertical-align: top;
   content: "\E837";
 }
@@ -468,7 +468,7 @@ i.iZoomOut::before {
   vertical-align: top;
   content: "\E900";
 }
-i.iCheckBoxIndeterminate::before {
+i.iRemoveSquare::before {
   vertical-align: top;
   content: "\E909";
 }
@@ -520,11 +520,11 @@ i.iStopCircle::before {
   vertical-align: top;
   content: "\EF71";
 }
-i.iDownload::before {
+i.iArrowInDown::before {
   vertical-align: top;
   content: "\F090";
 }
-i.iUpload::before {
+i.iArrowOutUp::before {
   vertical-align: top;
   content: "\F09B";
 }
