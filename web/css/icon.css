@@ -344,14 +344,6 @@ i.iCheckSquare::before {
   vertical-align: top;
   content: "\E834";
 }
-i.iSquare::before {
-  vertical-align: top;
-  content: "\E835";
-}
-i.iCircle::before {
-  vertical-align: top;
-  content: "\E836";
-}
 i.iRecodeCircle::before {
   vertical-align: top;
   content: "\E837";
