@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Test1";
+  font-weight: 700;
+  src: url("SpoqaHanSansNeo-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Test2";
+  font-weight: 700;
+  src: url("SpoqaHanSansNeo2-Bold.woff2") format("woff2");
+}
+
+.test1 {
+  padding: 8px;
+  background-color: blue;
+  color: white;
+  display: inline-block;
+  font-family: "Test1";
+}
+
+.test2 {
+  padding: 8px;
+  background-color: blue;
+  color: white;
+  display: inline-block;
+  font-family: "Test2";
+}
