@@ -11,7 +11,7 @@
 }
 
 .test1 {
-  padding: 8px;
+  padding: 2px 8px;
   background-color: blue;
   font-size: 11px;
   line-height: 16px;
@@ -22,7 +22,7 @@
 }
 
 .test2 {
-  padding: 8px;
+  padding: 2px 8px;
   background-color: blue;
   color: white;
   font-size: 11px;
