@@ -13,6 +13,9 @@
 .test1 {
   padding: 8px;
   background-color: blue;
+  font-size: 11px;
+  line-height: 16px;
+  border: 1px solid #ced3d6;
   color: white;
   display: inline-block;
   font-family: "Test1";
@@ -22,6 +25,9 @@
   padding: 8px;
   background-color: blue;
   color: white;
+  font-size: 11px;
+  line-height: 16px;
+  border: 1px solid #ced3d6;
   display: inline-block;
   font-family: "Test2";
 }
