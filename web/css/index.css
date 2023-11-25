@@ -1,0 +1,21 @@
+body {
+  margin: 0px;
+  padding: 20px;
+  font-family: 'Min Sans VF', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #EAEAE8;
+  background-color: #F7F6F3;
+}
+.w900 {
+  font-weight: 900;
+}
+.w700 {
+  font-weight: 700;
+}
+.w500 {
+  font-weight: 500;
+}
