@@ -2,6 +2,7 @@
   font-family: "Min Sans VF";
   src: url("../fonts/variable/MinSansVF.woff2") format("woff2");
   font-weight: 100 900;
+	font-style: normal;
 }
 
 
@@ -9,6 +10,7 @@
   font-family: "pre";
   src: url("../fonts/variable/PretendardVariable.woff2") format("woff2");
   font-display: swap;
+	font-style: normal;
 }
 
 @font-face {
