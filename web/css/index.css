@@ -5,7 +5,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   border: 1px solid #EAEAE8;
   background-color: #F7F6F3;
@@ -13,9 +13,18 @@ body {
 .w900 {
   font-weight: 900;
 }
+.w800 {
+  font-weight: 800;
+}
 .w700 {
   font-weight: 700;
 }
 .w500 {
   font-weight: 500;
+}
+.w300 {
+  font-weight: 300;
+}
+.w200 {
+  font-weight: 200;
 }
