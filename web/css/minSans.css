@@ -3,6 +3,12 @@
   src: url("../fonts/variable/MinSansVF.woff2") format("woff2");
 }
 
+
+@font-face {
+  font-family: "pre";
+  src: url("../fonts/variable/PretendardVariable.woff2") format("woff2");
+}
+
 @font-face {
   font-family: "Min Sans";
   font-weight: 900;

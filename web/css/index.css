@@ -28,3 +28,7 @@ body {
 .w200 {
   font-weight: 200;
 }
+
+.pre {
+  font-family: 'pre';
+}
