@@ -32,3 +32,21 @@ body {
 .pre {
   font-family: 'pre';
 }
+.ss01 {
+  font-feature-settings: 'ss01' on;
+}
+.ss02 {
+  font-feature-settings: 'ss02' on;
+}
+.ss03 {
+  font-feature-settings: 'ss03' on;
+}
+.ss04 {
+  font-feature-settings: 'ss04' on;
+}
+.ss05 {
+  font-feature-settings: 'ss05' on;
+}
+.ss06 {
+  font-feature-settings: 'ss06' on;
+}
