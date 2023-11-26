@@ -1,12 +1,12 @@
 body {
   margin: 0px;
   padding: 20px;
-  font-family: "Min Sans VF", sans-serif;
+  font-family: "Min Sans", sans-serif;
   display: flex;
   flex-direction: column;
   height: 100%;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
   border: 1px solid #EAEAE8;
   background-color: #F7F6F3;
 }
@@ -31,6 +31,9 @@ body {
 
 .pre {
   font-family: 'pre';
+}
+.vf {
+  font-family: 'Min Sans VF';
 }
 .ss01 {
   font-feature-settings: 'ss01' on;
