@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 20px;
-  font-family: "Min Sans", sans-serif;
+  font-family: 'Min Sans VF', sans-serif;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -30,10 +30,10 @@ body {
 }
 
 .pre {
-  font-family: 'pre';
+  font-family: 'Pretendard Variable';
 }
 .vf {
-  font-family: 'Min Sans VF';
+  font-family: 'Min Sans';
 }
 .ss01 {
   font-feature-settings: 'ss01' on;
