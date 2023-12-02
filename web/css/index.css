@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 20px;
-  font-family: 'Gmarket Sans2';
+  font-family: 'Min Sans';
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -29,7 +29,7 @@ body {
   font-weight: 200;
 }
 .vf {
-  font-family: 'minsansvf3';
+  font-family: 'Min Sans VF3';
 }
 .ss01 {
   font-feature-settings: 'ss01' on;
