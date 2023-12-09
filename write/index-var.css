@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Min Sans VF", sans-serif;
+  font-family: "MinSansVF", sans-serif;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -19,7 +19,7 @@ body {
 }
 @supports (font-variation-settings: normal) {
   .variable-sample {
-    font-family: "Min Sans VF";
+    font-family: "MinSansVF";
   }
 }
 .variable-sample:focus {
