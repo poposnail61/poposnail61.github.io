@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    body { display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; margin:0; background:#f0f0f0; font-family:sans-serif; }
+    canvas { background:#deb887; box-shadow:0 0 10px rgba(0,0,0,0.5); }
+    #startMenu { display:flex; flex-direction:column; gap:10px; align-items:center; }
+    #restart { margin-top:10px; }
+  </style>
+  <title>Omok</title>
+</head>
+<body>
+  <div id="startMenu">
+    <h2>난이도 선택</h2>
+    <button onclick="chooseDifficulty('easy')">초급</button>
+    <button onclick="chooseDifficulty('medium')">중급</button>
+    <button onclick="chooseDifficulty('hard')">고급</button>
+  </div>
+  <canvas id="board" style="display:none"></canvas>
+  <button id="restart" style="display:none" onclick="showMenu()">재시작</button>
+<script>
+const boardSize = 15;
+const cellSize = 30;
+const canvas = document.getElementById('board');
+canvas.width = canvas.height = boardSize * cellSize;
+const ctx = canvas.getContext('2d');
+const startMenu = document.getElementById('startMenu');
+const restartBtn = document.getElementById('restart');
+let board = Array.from({length: boardSize}, () => Array(boardSize).fill(0));
+let gameOver = false;
+let aiWeight = 0.8;
+
+function resetGame(){
+  board = Array.from({length: boardSize}, () => Array(boardSize).fill(0));
+  gameOver = false;
+  drawBoard();
+}
+
+function chooseDifficulty(level){
+  if(level==='easy') aiWeight = 0.3;
+  else if(level==='medium') aiWeight = 0.8;
+  else aiWeight = 1.2;
+  startMenu.style.display='none';
+  canvas.style.display='block';
+  restartBtn.style.display='none';
+  resetGame();
+}
+
+function showMenu(){
+  startMenu.style.display='flex';
+  canvas.style.display='none';
+  restartBtn.style.display='none';
+}
+
+function endGame(msg){
+  drawBoard();
+  alert(msg);
+  gameOver=true;
+  restartBtn.style.display='block';
+}
+
+function drawBoard(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.strokeStyle = '#000';
+  for(let i=0;i<boardSize;i++){
+    ctx.beginPath();
+    ctx.moveTo(cellSize/2, cellSize/2 + i*cellSize);
+    ctx.lineTo(canvas.width - cellSize/2, cellSize/2 + i*cellSize);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(cellSize/2 + i*cellSize, cellSize/2);
+    ctx.lineTo(cellSize/2 + i*cellSize, canvas.height - cellSize/2);
+    ctx.stroke();
+  }
+  for(let y=0;y<boardSize;y++){
+    for(let x=0;x<boardSize;x++){
+      if(board[y][x]) drawStone(x,y,board[y][x]);
+    }
+  }
+}
+
+function drawStone(x,y,player){
+  ctx.beginPath();
+  ctx.arc(x*cellSize + cellSize/2, y*cellSize + cellSize/2, cellSize*0.4, 0, Math.PI*2);
+  ctx.fillStyle = player===1 ? '#000' : '#fff';
+  ctx.strokeStyle = '#000';
+  ctx.fill();
+  ctx.stroke();
+}
+
+function checkWin(x,y,player){
+  const dirs=[[1,0],[0,1],[1,1],[1,-1]];
+  for(const [dx,dy] of dirs){
+    let count=1;
+    for(const dir of [1,-1]){
+      let nx=x+dx*dir, ny=y+dy*dir;
+      while(nx>=0 && nx<boardSize && ny>=0 && ny<boardSize && board[ny][nx]==player){
+        count++; nx+=dx*dir; ny+=dy*dir;
+      }
+    }
+    if(count>=5) return true;
+  }
+  return false;
+}
+
+function scorePoint(x,y,player){
+  const dirs=[[1,0],[0,1],[1,1],[1,-1]];
+  let score=0;
+  for(const [dx,dy] of dirs){
+    let count=1;
+    for(const dir of [1,-1]){
+      let nx=x+dx*dir, ny=y+dy*dir;
+      while(nx>=0 && nx<boardSize && ny>=0 && ny<boardSize && board[ny][nx]==player){
+        count++; nx+=dx*dir; ny+=dy*dir;
+      }
+    }
+    score=Math.max(score,count);
+  }
+  return Math.pow(10,score);
+}
+
+function aiMove(){
+  let best=null, bestScore=-1;
+  for(let y=0;y<boardSize;y++){
+    for(let x=0;x<boardSize;x++){
+      if(board[y][x]) continue;
+      let s = scorePoint(x,y,2) + scorePoint(x,y,1)*aiWeight;
+      if(s>bestScore){ bestScore=s; best={x,y}; }
+    }
+  }
+  if(best){
+    board[best.y][best.x]=2;
+    if(checkWin(best.x,best.y,2)){ endGame('AI wins!'); return; }
+  }
+  drawBoard();
+}
+
+canvas.addEventListener('click', e=>{
+  if(gameOver) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = Math.floor((e.clientX-rect.left)/cellSize);
+  const y = Math.floor((e.clientY-rect.top)/cellSize);
+  if(x<0||x>=boardSize||y<0||y>=boardSize||board[y][x]) return;
+  board[y][x]=1;
+  if(checkWin(x,y,1)){ endGame('You win!'); return; }
+  aiMove();
+});
+
+showMenu();
+</script>
+</body>
+</html>
