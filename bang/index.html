@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bang Single Player</title>
+  <style>
+    body{font-family:sans-serif;background:#f0f0f0;margin:0;padding:20px;}
+    #log{white-space:pre-line;background:#fff;padding:10px;height:60vh;overflow-y:auto;border:1px solid #ccc;}
+    #controls{margin-bottom:10px;}
+  </style>
+</head>
+<body>
+  <div id="controls">
+    인원수:
+    <select id="playerCount">
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+    <button id="startBtn">게임 시작</button>
+  </div>
+  <div id="log"></div>
+<script>
+const logEl = document.getElementById('log');
+const startBtn = document.getElementById('startBtn');
+const playerCountSelect = document.getElementById('playerCount');
+let players = [];
+let turnIndex = 0;
+function log(msg){
+  logEl.textContent += msg + '\n';
+  logEl.scrollTop = logEl.scrollHeight;
+}
+function shuffle(arr){
+  for(let i=arr.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]]=[arr[j],arr[i]];
+  }
+}
+function roleSetup(n){
+  const roles=[];
+  if(n===4){roles.push('Sheriff','Outlaw','Outlaw','Renegade');}
+  if(n===5){roles.push('Sheriff','Outlaw','Outlaw','Renegade','Deputy');}
+  if(n===6){roles.push('Sheriff','Outlaw','Outlaw','Outlaw','Renegade','Deputy');}
+  if(n===7){roles.push('Sheriff','Outlaw','Outlaw','Outlaw','Renegade','Deputy','Deputy');}
+  shuffle(roles);
+  return roles;
+}
+function nextAlive(idx){
+  let i=idx;
+  do{ i=(i+1)%players.length; }while(players[i].hp<=0);
+  return i;
+}
+function alivePlayers(){
+  return players.filter(p=>p.hp>0);
+}
+function aiChooseTarget(ai){
+  const alive = alivePlayers().filter(p=>p!==ai);
+  const sheriff = players.find(p=>p.role==='Sheriff');
+  if(ai.role==='Outlaw') return sheriff.hp>0 ? sheriff : alive[0];
+  if(ai.role==='Deputy'){
+    const outlaw = alive.find(p=>p.role==='Outlaw');
+    return outlaw || alive.find(p=>p.role==='Renegade') || sheriff;
+  }
+  if(ai.role==='Renegade'){
+    const others = alive.filter(p=>p!==sheriff);
+    if(others.length>0) return others[Math.floor(Math.random()*others.length)];
+    return sheriff;
+  }
+  return alive[Math.floor(Math.random()*alive.length)];
+}
+function checkWin(){
+  const sheriffAlive = players.find(p=>p.role==='Sheriff' && p.hp>0);
+  const outlawsAlive = players.some(p=>p.role==='Outlaw' && p.hp>0);
+  const renegadeAlive = players.some(p=>p.role==='Renegade' && p.hp>0);
+  const othersAlive = players.filter(p=>p.hp>0);
+  if(!sheriffAlive){
+    log('보안관이 사망했습니다. 무법자 승리!');
+    return true;
+  }
+  if(!outlawsAlive && !renegadeAlive){
+    log('모든 무법자와 배신자가 사망했습니다. 보안관 팀 승리!');
+    return true;
+  }
+  if(!sheriffAlive && othersAlive.length===1 && renegadeAlive){
+    log('배신자가 마지막으로 남았습니다. 배신자 승리!');
+    return true;
+  }
+  return false;
+}
+function attack(attacker,target){
+  if(target.hp<=0) return;
+  log(`${attacker.name}이(가) ${target.name}을(를) 공격합니다.`);
+  target.hp--;
+  if(target.hp<=0){
+    log(`${target.name} 탈락!`);
+  }
+}
+function playerTurn(p){
+  if(p.hp<=0) return false;
+  if(!p.isAI){
+    const alive = alivePlayers().filter(t=>t!==p);
+    let msg='대상을 선택하세요:\n';
+    alive.forEach((t,i)=>{msg+=`${i+1}: ${t.name} (HP:${t.hp})\n`;});
+    let choice=parseInt(prompt(msg),10)-1;
+    if(isNaN(choice)||choice<0||choice>=alive.length) choice=0;
+    attack(p,alive[choice]);
+  }else{
+    const target=aiChooseTarget(p);
+    attack(p,target);
+  }
+  return checkWin();
+}
+function gameLoop(){
+  if(playerTurn(players[turnIndex])) return;
+  turnIndex=nextAlive(turnIndex);
+  setTimeout(gameLoop,500);
+}
+startBtn.onclick=()=>{
+  logEl.textContent='';
+  const n=parseInt(playerCountSelect.value,10);
+  const roles=roleSetup(n);
+  players=[];
+  for(let i=0;i<n;i++){
+    const role=roles[i];
+    const hp=role==='Sheriff'?5:4;
+    players.push({name:`플레이어${i+1}${i===0?'(나)':''}`,role,hp,isAI:i!==0});
+  }
+  const userIndex=players.findIndex(p=>!p.isAI);
+  if(players[userIndex].role!=='Sheriff'){
+    const sheriffIndex=players.findIndex(p=>p.role==='Sheriff');
+    [players[userIndex].role,players[sheriffIndex].role]=[players[sheriffIndex].role,players[userIndex].role];
+  }
+  shuffle(players);
+  turnIndex=players.findIndex(p=>p.role==='Sheriff');
+  log(`게임 시작! 보안관은 ${players[turnIndex].name}`);
+  players.forEach(p=>log(`${p.name}: ${p.role} (HP:${p.hp})`));
+  gameLoop();
+};
+</script>
+</body>
+</html>
