@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rush Hour</title>
+<style>
+  body{display:flex;justify-content:center;align-items:center;height:100vh;margin:0;background:#f0f0f0;font-family:sans-serif;}
+  canvas{background:#fff;box-shadow:0 0 10px rgba(0,0,0,0.5);}
+</style>
+</head>
+<body>
+<canvas id="board"></canvas>
+<script>
+const boardSize=6;
+const cellSize=80;
+const exitGap=cellSize; // extra space for the red car exit
+const canvas=document.getElementById('board');
+canvas.width=boardSize*cellSize+exitGap;
+canvas.height=boardSize*cellSize;
+const ctx=canvas.getContext('2d');
+function randColor(){return 'hsl('+Math.random()*360+',60%,70%)';}
+function generatePuzzle(){
+  const cars=[{x:0,y:2,length:2,dir:'H',color:'red',red:true}];
+  let attempts=0;
+  while(cars.length<8&&attempts<200){
+    attempts++;
+    const dir=Math.random()<0.5?'H':'V';
+    const length=Math.random()<0.7?2:3;
+    const x=Math.floor(Math.random()*(dir==='H'?boardSize-length+1:boardSize));
+    const y=Math.floor(Math.random()*(dir==='V'?boardSize-length+1:boardSize));
+    let overlap=false;
+    for(const c of cars){
+      for(let i=0;i<length;i++){
+        const cx=dir==='H'?x+i:x;
+        const cy=dir==='V'?y+i:y;
+        for(let j=0;j<c.length;j++){
+          const ox=c.dir==='H'?c.x+j:c.x;
+          const oy=c.dir==='V'?c.y+j:c.y;
+          if(cx===ox&&cy===oy){overlap=true;break;}
+        }
+        if(overlap)break;
+      }
+      if(overlap)break;
+    }
+    if(!overlap)cars.push({x,y,length,dir,color:randColor()});
+  }
+  return cars;
+}
+const puzzles=Array.from({length:50},generatePuzzle);
+let cars=JSON.parse(JSON.stringify(puzzles[Math.floor(Math.random()*puzzles.length)]));
+let selected=null;
+function drawArrow(x1,y1,x2,y2){
+  const angle=Math.atan2(y2-y1,x2-x1);
+  const len=10;
+  ctx.beginPath();
+  ctx.moveTo(x1,y1);
+  ctx.lineTo(x2,y2);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(x2,y2);
+  ctx.lineTo(x2-len*Math.cos(angle-Math.PI/6),y2-len*Math.sin(angle-Math.PI/6));
+  ctx.lineTo(x2-len*Math.cos(angle+Math.PI/6),y2-len*Math.sin(angle+Math.PI/6));
+  ctx.closePath();
+  ctx.fill();
+}
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.strokeStyle='#000';
+  // horizontal grid
+  for(let i=0;i<=boardSize;i++){
+    ctx.beginPath();
+    ctx.moveTo(0,i*cellSize);
+    ctx.lineTo(boardSize*cellSize,i*cellSize);
+    ctx.stroke();
+  }
+  // vertical grid with exit gap on row 2
+  for(let i=0;i<=boardSize;i++){
+    ctx.beginPath();
+    if(i===boardSize){
+      ctx.moveTo(i*cellSize,0);
+      ctx.lineTo(i*cellSize,cellSize*2);
+      ctx.moveTo(i*cellSize,cellSize*3);
+      ctx.lineTo(i*cellSize,canvas.height);
+    }else{
+      ctx.moveTo(i*cellSize,0);
+      ctx.lineTo(i*cellSize,canvas.height);
+    }
+    ctx.stroke();
+  }
+  // exit arrow
+  const ex=boardSize*cellSize;
+  const ey=cellSize*2+cellSize/2;
+  ctx.fillStyle='rgba(200,0,0,0.8)';
+  ctx.beginPath();
+  ctx.moveTo(ex+cellSize*0.2,ey);
+  ctx.lineTo(ex+cellSize*0.8,ey-cellSize*0.3);
+  ctx.lineTo(ex+cellSize*0.8,ey+cellSize*0.3);
+  ctx.closePath();
+  ctx.fill();
+  for(const car of cars){
+    ctx.fillStyle=car.color;
+    const x=car.x*cellSize;
+    const y=car.y*cellSize;
+    const w=car.dir==='H'?car.length*cellSize:cellSize;
+    const h=car.dir==='V'?car.length*cellSize:cellSize;
+    ctx.fillRect(x+2,y+2,w-4,h-4);
+    ctx.fillStyle='rgba(255,255,255,0.7)';
+    if(car.dir==='H'){
+      drawArrow(x+8,y+h/2,x+w-8,y+h/2);
+    }else{
+      drawArrow(x+w/2,y+8,x+w/2,y+h-8);
+    }
+  }
+}
+function carAt(x,y){
+  return cars.find(c=>{
+    for(let i=0;i<c.length;i++){
+      const cx=c.dir==='H'?c.x+i:c.x;
+      const cy=c.dir==='V'?c.y+i:c.y;
+      if(cx===x&&cy===y)return true;
+    }
+    return false;
+  });
+}
+function isFree(x,y,ignore){
+  for(const c of cars){
+    if(c===ignore)continue;
+    for(let i=0;i<c.length;i++){
+      const cx=c.dir==='H'?c.x+i:c.x;
+      const cy=c.dir==='V'?c.y+i:c.y;
+      if(cx===x&&cy===y)return false;
+    }
+  }
+  return x>=0&&x<boardSize&&y>=0&&y<boardSize;
+}
+function tryMove(car,newX,newY){
+  if(car.dir==='H'){if(newY!==car.y)return;for(let i=0;i<car.length;i++)if(!isFree(newX+i,newY,car))return;car.x=newX;}
+  else{if(newX!==car.x)return;for(let i=0;i<car.length;i++)if(!isFree(newX,newY+i,car))return;car.y=newY;}
+  if(car.red&&car.x+car.length===boardSize&&car.y===2)setTimeout(()=>alert('성공!'),50);
+}
+canvas.addEventListener('mousedown',e=>{
+  const rect=canvas.getBoundingClientRect();
+  const x=Math.floor((e.clientX-rect.left)/cellSize);
+  const y=Math.floor((e.clientY-rect.top)/cellSize);
+  const car=carAt(x,y);
+  if(car)selected={car,ox:car.x,oy:car.y,sx:e.clientX,sy:e.clientY};
+});
+window.addEventListener('mousemove',e=>{
+  if(!selected)return;
+  const car=selected.car;
+  const dx=Math.round((e.clientX-selected.sx)/cellSize);
+  const dy=Math.round((e.clientY-selected.sy)/cellSize);
+  if(car.dir==='H')tryMove(car,selected.ox+dx,car.y);
+  else tryMove(car,car.x,selected.oy+dy);
+  draw();
+});
+window.addEventListener('mouseup',()=>{selected=null;});
+draw();
+</script>
+</body>
+</html>
