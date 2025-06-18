@@ -19,6 +19,8 @@ canvas.width = canvas.height = boardSize * cellSize;
 const ctx = canvas.getContext('2d');
 let board = Array.from({length: boardSize}, () => Array(boardSize).fill(0));
 let gameOver = false;
+let lastUserMove = null;
+let lastAiMove = null;
 
 function drawBoard(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -43,7 +45,13 @@ function drawBoard(){
 function drawStone(x,y,player){
   ctx.beginPath();
   ctx.arc(x*cellSize + cellSize/2, y*cellSize + cellSize/2, cellSize*0.4, 0, Math.PI*2);
-  ctx.fillStyle = player===1 ? '#000' : '#fff';
+  if(player===1){
+    const isLast = lastUserMove && lastUserMove.x===x && lastUserMove.y===y;
+    ctx.fillStyle = isLast ? '#333' : '#000';
+  }else{
+    const isLast = lastAiMove && lastAiMove.x===x && lastAiMove.y===y;
+    ctx.fillStyle = isLast ? '#eee' : '#fff';
+  }
   ctx.strokeStyle = '#000';
   ctx.fill();
   ctx.stroke();
@@ -91,6 +99,7 @@ function aiMove(){
   }
   if(best){
     board[best.y][best.x]=2;
+    lastAiMove={x:best.x,y:best.y};
     if(checkWin(best.x,best.y,2)){ drawBoard(); alert('AI wins!'); gameOver=true; return; }
   }
   drawBoard();
@@ -103,8 +112,10 @@ canvas.addEventListener('click', e=>{
   const y = Math.floor((e.clientY-rect.top)/cellSize);
   if(x<0||x>=boardSize||y<0||y>=boardSize||board[y][x]) return;
   board[y][x]=1;
-  if(checkWin(x,y,1)){ drawBoard(); alert('You win!'); gameOver=true; return; }
-  aiMove();
+  lastUserMove={x,y};
+  drawBoard();
+  if(checkWin(x,y,1)){ alert('You win!'); gameOver=true; return; }
+  setTimeout(()=>{ if(!gameOver) aiMove(); }, 500);
 });
 
 drawBoard();
