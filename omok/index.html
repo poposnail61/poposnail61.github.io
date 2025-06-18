@@ -19,6 +19,31 @@ canvas.width = canvas.height = boardSize * cellSize;
 const ctx = canvas.getContext('2d');
 let board = Array.from({length: boardSize}, () => Array(boardSize).fill(0));
 let gameOver = false;
+let lastUserMove = null;
+let lastAiMove = null;
+let difficulty = 'medium';
+
+function chooseDifficulty(){
+  const choice = prompt('난이도를 선택하세요 (1: 초급, 2: 중급, 3: 고급)', '2');
+  if(choice === '1') difficulty = 'easy';
+  else if(choice === '3') difficulty = 'hard';
+  else difficulty = 'medium';
+}
+
+function startGame(){
+  chooseDifficulty();
+  board = Array.from({length: boardSize}, () => Array(boardSize).fill(0));
+  gameOver = false;
+  lastUserMove = null;
+  lastAiMove = null;
+  drawBoard();
+}
+
+function endGame(message){
+  alert(message);
+  gameOver = true;
+  if(confirm('다시 시작하시겠습니까?')) startGame();
+}
 
 function drawBoard(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -43,7 +68,13 @@ function drawBoard(){
 function drawStone(x,y,player){
   ctx.beginPath();
   ctx.arc(x*cellSize + cellSize/2, y*cellSize + cellSize/2, cellSize*0.4, 0, Math.PI*2);
-  ctx.fillStyle = player===1 ? '#000' : '#fff';
+  if(player===1){
+    const isLast = lastUserMove && lastUserMove.x===x && lastUserMove.y===y;
+    ctx.fillStyle = isLast ? '#333' : '#000';
+  }else{
+    const isLast = lastAiMove && lastAiMove.x===x && lastAiMove.y===y;
+    ctx.fillStyle = isLast ? '#eee' : '#fff';
+  }
   ctx.strokeStyle = '#000';
   ctx.fill();
   ctx.stroke();
@@ -80,7 +111,52 @@ function scorePoint(x,y,player){
   return Math.pow(10,score);
 }
 
+function findWinningMove(player){
+  for(let y=0;y<boardSize;y++){
+    for(let x=0;x<boardSize;x++){
+      if(board[y][x]) continue;
+      board[y][x]=player;
+      const win = checkWin(x,y,player);
+      board[y][x]=0;
+      if(win) return {x,y};
+    }
+  }
+  return null;
+}
+
 function aiMove(){
+  if(difficulty==='easy'){
+    const empty=[];
+    for(let y=0;y<boardSize;y++){
+      for(let x=0;x<boardSize;x++) if(!board[y][x]) empty.push({x,y});
+    }
+    const best = empty[Math.floor(Math.random()*empty.length)];
+    board[best.y][best.x]=2;
+    lastAiMove=best;
+    if(checkWin(best.x,best.y,2)){ drawBoard(); endGame('AI wins!'); return; }
+    drawBoard();
+    return;
+  }
+
+  if(difficulty==='hard'){
+    let move = findWinningMove(2);
+    if(move){
+      board[move.y][move.x]=2;
+      lastAiMove=move;
+      drawBoard();
+      endGame('AI wins!');
+      return;
+    }
+    move = findWinningMove(1);
+    if(move){
+      board[move.y][move.x]=2;
+      lastAiMove=move;
+      if(checkWin(move.x,move.y,2)){ drawBoard(); endGame('AI wins!'); return; }
+      drawBoard();
+      return;
+    }
+  }
+
   let best=null, bestScore=-1;
   for(let y=0;y<boardSize;y++){
     for(let x=0;x<boardSize;x++){
@@ -91,7 +167,8 @@ function aiMove(){
   }
   if(best){
     board[best.y][best.x]=2;
-    if(checkWin(best.x,best.y,2)){ drawBoard(); alert('AI wins!'); gameOver=true; return; }
+    lastAiMove={x:best.x,y:best.y};
+    if(checkWin(best.x,best.y,2)){ drawBoard(); endGame('AI wins!'); return; }
   }
   drawBoard();
 }
@@ -103,11 +180,13 @@ canvas.addEventListener('click', e=>{
   const y = Math.floor((e.clientY-rect.top)/cellSize);
   if(x<0||x>=boardSize||y<0||y>=boardSize||board[y][x]) return;
   board[y][x]=1;
-  if(checkWin(x,y,1)){ drawBoard(); alert('You win!'); gameOver=true; return; }
-  aiMove();
+  lastUserMove={x,y};
+  drawBoard();
+  if(checkWin(x,y,1)){ endGame('You win!'); return; }
+  setTimeout(()=>{ if(!gameOver) aiMove(); }, 500);
 });
 
-drawBoard();
+startGame();
 </script>
 </body>
 </html>
