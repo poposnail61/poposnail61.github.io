@@ -1,4 +1,4 @@
-import {generateRandomPuzzle, defaultPuzzles} from './puzzles.js';
+import {generatePuzzleByDifficulty, solvePuzzle, classifyDifficulty} from './puzzles.js';
 
 const boardSize=6;
 const cellSize=80;
@@ -9,10 +9,13 @@ const canvas=document.getElementById('board');
 canvas.width=boardPixelSize+exitWidth;
 canvas.height=boardPixelSize;
 const ctx=canvas.getContext('2d');
+const startDiv=document.getElementById('start');
+const dialog=document.getElementById('dialog');
+const restartBtn=document.getElementById('restartBtn');
 
-let puzzles=defaultPuzzles;
-let cars=JSON.parse(JSON.stringify(puzzles[Math.floor(Math.random()*puzzles.length)]));
+let cars=[];
 let selected=null;
+let currentLevel=1;
 
 function draw(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -37,6 +40,9 @@ function draw(){
     const h=car.dir==='V'?car.length*cellSize:cellSize;
     ctx.fillRect(x+2,y+2,w-4,h-4);
   }
+  ctx.fillStyle='#000';
+  ctx.font='16px sans-serif';
+  ctx.fillText('난이도 '+currentLevel,10,20);
 }
 
 function carAt(x,y){
@@ -65,7 +71,7 @@ function isFree(x,y,ignore){
 function tryMove(car,newX,newY){
   if(car.dir==='H'){if(newY!==car.y)return;for(let i=0;i<car.length;i++)if(!isFree(newX+i,newY,car))return;car.x=newX;}
   else{if(newX!==car.x)return;for(let i=0;i<car.length;i++)if(!isFree(newX,newY+i,car))return;car.y=newY;}
-  if(car.red&&car.x+car.length===boardSize&&car.y===exitRow)setTimeout(()=>alert('성공!'),50);
+  if(car.red&&car.x+car.length===boardSize&&car.y===exitRow)setTimeout(()=>{dialog.classList.remove('hidden');},50);
 }
 
 canvas.addEventListener('mousedown',e=>{
@@ -111,4 +117,23 @@ window.addEventListener('touchmove',e=>{
 window.addEventListener('mouseup',()=>{selected=null;});
 window.addEventListener('touchend',()=>{selected=null;},{passive:false});
 
-draw();
+function startGame(level){
+  const puzzle=generatePuzzleByDifficulty(level);
+  if(!puzzle){alert('문제 생성 실패');return;}
+  cars=JSON.parse(JSON.stringify(puzzle));
+  currentLevel=classifyDifficulty(solvePuzzle(cars));
+  startDiv.classList.add('hidden');
+  dialog.classList.add('hidden');
+  canvas.classList.remove('hidden');
+  draw();
+}
+
+startDiv.querySelectorAll('button').forEach(btn=>{
+  btn.addEventListener('click',()=>startGame(parseInt(btn.dataset.level,10)));
+});
+
+restartBtn.onclick=()=>{
+  dialog.classList.add('hidden');
+  canvas.classList.add('hidden');
+  startDiv.classList.remove('hidden');
+};
