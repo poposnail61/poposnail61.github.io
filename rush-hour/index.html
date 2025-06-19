@@ -6,11 +6,28 @@
 <title>Rush Hour</title>
 <style>
   body{display:flex;justify-content:center;align-items:center;height:100vh;margin:0;background:#f0f0f0;font-family:sans-serif;}
+  #start button{margin:0 5px;padding:10px 15px;}
   canvas{background:#fff;box-shadow:0 0 10px rgba(0,0,0,0.5);}
+  #dialog{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;justify-content:center;align-items:center;}
+  #dialogContent{background:#fff;padding:20px;text-align:center;}
+  .hidden{display:none;}
 </style>
 </head>
 <body>
-<canvas id="board"></canvas>
+<div id="start">
+  <button data-level="1">난이도1</button>
+  <button data-level="2">난이도2</button>
+  <button data-level="3">난이도3</button>
+  <button data-level="4">난이도4</button>
+  <button data-level="5">난이도5</button>
+</div>
+<canvas id="board" class="hidden"></canvas>
+<div id="dialog" class="hidden">
+  <div id="dialogContent">
+    <p>성공!</p>
+    <button id="restartBtn">재시작</button>
+  </div>
+</div>
 <script type="module" src="js/game.js"></script>
 </body>
 </html>
