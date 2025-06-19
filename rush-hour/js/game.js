@@ -13,6 +13,11 @@ const startDiv=document.getElementById('start');
 const dialog=document.getElementById('dialog');
 const restartBtn=document.getElementById('restartBtn');
 
+// Ensure start screen is visible and dialog hidden on initial load
+startDiv.classList.remove('hidden');
+dialog.classList.add('hidden');
+canvas.classList.add('hidden');
+
 let cars=[];
 let selected=null;
 let currentLevel=1;
@@ -136,4 +141,6 @@ restartBtn.onclick=()=>{
   dialog.classList.add('hidden');
   canvas.classList.add('hidden');
   startDiv.classList.remove('hidden');
+  cars=[];
+  selected=null;
 };
