@@ -1,0 +1,23 @@
+{
+  "name": "icon-font-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5",
+    "archiver": "^5.3.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.4.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.1",
+    "supertest": "^6.3.3"
+  }
+}

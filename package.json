@@ -1,0 +1,12 @@
+{
+  "name": "icon-font-tool-root",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter icon-font-server dev\" \"pnpm --filter icon-font-client dev\"",
+    "test": "pnpm --recursive test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
