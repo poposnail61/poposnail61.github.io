@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon Font Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+</head>
+<body>
+  <h1>Icon Font Tool</h1>
+  <input id="fileInput" type="file" accept=".svg" multiple>
+  <div id="controls">
+    <label>Stroke Weight <input id="weight" type="range" min="0.2" max="5" step="0.1" value="1"></label>
+    <button id="thinner">Thinner ½</button>
+    <button id="thicker">Thicker ×2</button>
+  </div>
+  <div id="grid"></div>
+  <button id="downloadBtn">Download ZIP</button>
+  <script src="app.js"></script>
+</body>
+</html>
