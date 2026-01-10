@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Splitter - Premium Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Image Splitter</h1>
+            <p>Seamlessly slice your visuals with precision.</p>
+        </header>
+
+        <main>
+            <div class="control-panel">
+                <div class="input-group">
+                    <label for="splitHeight">Split Height (px)</label>
+                    <input type="number" id="splitHeight" value="1000" min="10">
+                </div>
+                <div class="input-group">
+                    <label for="gapHeight">Gap to Ignore (px)</label>
+                    <input type="number" id="gapHeight" value="0" min="0">
+                </div>
+            </div>
+
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-content">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <span>Drag & Drop images here or <strong>Browse</strong></span>
+                    <input type="file" id="fileInput" multiple accept="image/*" hidden>
+                </div>
+            </div>
+
+            <div class="action-bar">
+                <button id="processBtn" class="primary-btn" disabled>
+                    Process Images
+                </button>
+            </div>
+
+            <div id="resultsArea" class="results-area">
+                <!-- Results will be injected here -->
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Poposnail61. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
