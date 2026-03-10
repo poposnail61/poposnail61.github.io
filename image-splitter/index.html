@@ -23,12 +23,27 @@
         <main>
             <div class="control-panel">
                 <div class="input-group">
-                    <label for="splitHeight">Split Height (px)</label>
-                    <input type="number" id="splitHeight" value="1080" min="10">
+                    <label for="cropRatio">자르기 비율</label>
+                    <select id="cropRatio">
+                        <option value="3:4" selected>3:4 (세로, 기본)</option>
+                        <option value="1:1">1:1 (정사각형)</option>
+                        <option value="4:3">4:3 (가로)</option>
+                        <option value="9:16">9:16 (세로 영상)</option>
+                        <option value="16:9">16:9 (가로 영상)</option>
+                        <option value="custom">사용자 지정</option>
+                    </select>
                 </div>
                 <div class="input-group">
-                    <label for="gapHeight">Gap to Ignore (px)</label>
+                    <label for="gapHeight">무시할 간격 (px)</label>
                     <input type="number" id="gapHeight" value="20" min="0">
+                </div>
+                <div class="input-group custom-ratio-group" id="customRatioGroup">
+                    <label>사용자 지정 비율 (가로 : 세로)</label>
+                    <div class="ratio-inputs">
+                        <input type="number" id="customRatioW" value="3" min="1">
+                        <span>:</span>
+                        <input type="number" id="customRatioH" value="4" min="1">
+                    </div>
                 </div>
             </div>
 

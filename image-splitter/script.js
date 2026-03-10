@@ -3,10 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const uploadZone = document.getElementById('uploadZone');
     const processBtn = document.getElementById('processBtn');
     const resultsArea = document.getElementById('resultsArea');
-    const splitHeightInput = document.getElementById('splitHeight');
+    const cropRatioSelect = document.getElementById('cropRatio');
+    const customRatioGroup = document.getElementById('customRatioGroup');
+    const customRatioW = document.getElementById('customRatioW');
+    const customRatioH = document.getElementById('customRatioH');
     const gapHeightInput = document.getElementById('gapHeight');
 
     let selectedFiles = [];
+
+    // Show/hide custom ratio inputs
+    cropRatioSelect.addEventListener('change', () => {
+        customRatioGroup.classList.toggle('visible', cropRatioSelect.value === 'custom');
+    });
 
     // Drag & Drop Handling
     uploadZone.addEventListener('dragover', (e) => {
@@ -38,36 +46,44 @@ document.addEventListener('DOMContentLoaded', () => {
             if (selectedFiles.length > 0) {
                 processBtn.disabled = false;
                 processBtn.textContent = `Process ${selectedFiles.length} Image${selectedFiles.length > 1 ? 's' : ''}`;
-                // Optional: Show preview of selected files names?
             } else {
                 alert('Please select valid image files.');
             }
         }
     }
 
+    function getRatio() {
+        if (cropRatioSelect.value === 'custom') {
+            const w = parseFloat(customRatioW.value) || 3;
+            const h = parseFloat(customRatioH.value) || 4;
+            return { w, h };
+        }
+        const [w, h] = cropRatioSelect.value.split(':').map(Number);
+        return { w, h };
+    }
+
     processBtn.addEventListener('click', async () => {
-        const splitHeight = parseInt(splitHeightInput.value, 10);
+        const { w: ratioW, h: ratioH } = getRatio();
         const gapHeight = parseInt(gapHeightInput.value, 10) || 0;
 
-        if (!splitHeight || splitHeight <= 0) {
-            alert('Please enter a valid split height.');
+        if (!ratioW || !ratioH || ratioW <= 0 || ratioH <= 0) {
+            alert('유효한 비율을 입력해주세요.');
             return;
         }
 
         processBtn.disabled = true;
         processBtn.textContent = 'Processing...';
-        resultsArea.innerHTML = ''; // Clear previous results
+        resultsArea.innerHTML = '';
 
         for (const file of selectedFiles) {
-            await processImage(file, splitHeight, gapHeight);
+            await processImage(file, ratioW, ratioH, gapHeight);
         }
 
         processBtn.disabled = false;
         processBtn.textContent = 'Process Images';
     });
 
-    async function processImage(file, splitHeight, gap) {
-        // Create a result card
+    async function processImage(file, ratioW, ratioH, gap) {
         const card = document.createElement('div');
         card.className = 'result-card';
         card.innerHTML = `
@@ -83,6 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const width = imgBitmap.width;
             const height = imgBitmap.height;
 
+            // Calculate split height from image width and ratio
+            const splitHeight = Math.round(width * (ratioH / ratioW));
+
             const zip = new JSZip();
             const folder = zip.folder(file.name.replace(/\.[^/.]+$/, ""));
 
@@ -95,42 +114,31 @@ document.addEventListener('DOMContentLoaded', () => {
             canvas.width = width;
 
             while (currentY < height) {
-                // Determine height of this chunk
                 let chunkHeight = splitHeight;
 
-                // If this chunk goes beyond image, clip it
                 if (currentY + chunkHeight > height) {
                     chunkHeight = height - currentY;
                 }
 
-                // If chunkHeight is 0 or less (shouldn't happen with logic, but safety), break
                 if (chunkHeight <= 0) break;
 
-                // Resize canvas for this chunk
                 canvas.height = chunkHeight;
-
-                // Draw
                 ctx.drawImage(imgBitmap, 0, currentY, width, chunkHeight, 0, 0, width, chunkHeight);
 
-                // Convert to blob
                 const blob = await new Promise(resolve => canvas.toBlob(resolve, file.type || 'image/png'));
 
-                // Add to zip
                 const ext = file.name.split('.').pop() || 'png';
                 const partName = `${file.name.replace(/\.[^/.]+$/, "")}_${String(partIndex).padStart(2, '0')}.${ext}`;
                 folder.file(partName, blob);
 
                 chunks.push(partName);
 
-                // Move Y
                 currentY += splitHeight + gap;
                 partIndex++;
             }
 
-            // Generate Zip
             const content = await zip.generateAsync({ type: "blob" });
 
-            // Update Card
             card.innerHTML = `
                 <div class="result-header">
                     <h3>${file.name}</h3>
