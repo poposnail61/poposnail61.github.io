@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const customRatioW = document.getElementById('customRatioW');
     const customRatioH = document.getElementById('customRatioH');
     const gapHeightInput = document.getElementById('gapHeight');
+    const sampleBtn = document.getElementById('sampleBtn');
 
     let selectedFiles = [];
 
@@ -61,6 +62,44 @@ document.addEventListener('DOMContentLoaded', () => {
         const [w, h] = cropRatioSelect.value.split(':').map(Number);
         return { w, h };
     }
+
+    sampleBtn.addEventListener('click', () => {
+        const { w: ratioW, h: ratioH } = getRatio();
+        const gap = parseInt(gapHeightInput.value, 10) || 0;
+
+        const sampleWidth = 1080;
+        const sectionHeight = Math.round(sampleWidth * (ratioH / ratioW));
+        const totalHeight = 10 * sectionHeight + 9 * gap;
+
+        const canvas = document.createElement('canvas');
+        canvas.width = sampleWidth;
+        canvas.height = totalHeight;
+        const ctx = canvas.getContext('2d');
+
+        // 밝은 회색 배경 (무시할 간격 영역)
+        ctx.fillStyle = '#d1d5db';
+        ctx.fillRect(0, 0, sampleWidth, totalHeight);
+
+        // 10개 흰색 섹션 (잘려질 영역)
+        const fontSize = Math.min(Math.round(sectionHeight * 0.25), 220);
+        ctx.font = `bold ${fontSize}px Arial`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        for (let i = 0; i < 10; i++) {
+            const y = i * (sectionHeight + gap);
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, y, sampleWidth, sectionHeight);
+
+            // 섹션 번호 (연한 회색 워터마크)
+            ctx.fillStyle = '#e5e7eb';
+            ctx.fillText(String(i + 1).padStart(2, '0'), sampleWidth / 2, y + sectionHeight / 2);
+        }
+
+        canvas.toBlob(blob => {
+            saveAs(blob, 'sample_image.png');
+        }, 'image/png');
+    });
 
     processBtn.addEventListener('click', async () => {
         const { w: ratioW, h: ratioH } = getRatio();
