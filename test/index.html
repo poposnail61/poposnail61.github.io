@@ -1,53 +1,60 @@
 <!DOCTYPE html>
-<html lang="kr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <link rel="stylesheet" href="web/css/nocksans.css">
-    <link rel="stylesheet" href="web/css/index.css">
-    <title></title>
-  </head>
-  <body>
-    <div class="wrap">
-      <div class="box font12">
-        부동산 전문가 12
-      </div>
-      <div class="text-wrap">
-        <div class="text-group">
-          <div class="text1">부동산 정책 전문가</div>
-          <div class="text2">이동현</div>
-        </div>
-        <div class="button font12">구독하기</div>
-      </div>
-    </div>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사파리 열기 테스트</title>
+  <style>
+    body { font-family: sans-serif; padding: 30px; background: #f5f5f5; }
+    .box { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .status { font-size: 18px; font-weight: bold; }
+    .ua { font-size: 11px; color: #888; word-break: break-all; margin-top: 8px; }
+    .banner { background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 12px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="status" id="status">🔍 감지 중...</div>
+    <div class="ua" id="ua"></div>
+  </div>
+  <div id="banner"></div>
+  <div class="box">
+    <p>✅ 이 페이지가 <b>사파리</b>에서 열리면 성공!</p>
+    <p>📌 카카오톡/인스타에서 열면 자동으로 사파리로 이동을 시도합니다.</p>
+  </div>
 
-    <div class="wrap">
-      <div class="box font125">
-        부동산 전문가 12.5
-      </div>
-      <div class="text-wrap">
-        <div class="text-group">
-          <div class="text1">부동산 정책 전문가</div>
-          <div class="text2">이동현</div>
-        </div>
-        <div class="button font125">구독하기</div>
-      </div>
-    </div>
+  <script>
+    var ua = navigator.userAgent || '';
+    document.getElementById('ua').textContent = 'UA: ' + ua;
 
-    <div class="wrap">
-      <div class="box font13">
-        부동산 전문가 13
-      </div>
-      <div class="text-wrap">
-        <div class="text-group">
-          <div class="text1">부동산 정책 전문가</div>
-          <div class="text2">이동현</div>
-        </div>
-        <div class="button font13">구독하기</div>
-      </div>
-    </div>
-    <script id="rendered-js">
-      Splitting();
-    </script>
-  </body>
+    var isKakao    = /KAKAO/i.test(ua);
+    var isInsta    = /Instagram/i.test(ua);
+    var isFacebook = /FBAN|FBAV/i.test(ua);
+    var isIOS      = /iPhone|iPad|iPod/i.test(ua);
+    var isInApp    = isKakao || isInsta || isFacebook;
+
+    if (isInApp) {
+      var appName = isKakao ? '카카오톡' : isInsta ? '인스타그램' : '페이스북';
+      document.getElementById('status').textContent = '⚠️ ' + appName + ' 인앱 브라우저 감지됨';
+
+      document.getElementById('banner').innerHTML =
+        '<div class="banner">🚀 사파리로 이동 시도 중...</div>';
+
+      if (isIOS) {
+        // safari 스킴으로 강제 호출 시도
+        var safariUrl = 'safari-https://' + location.host + location.pathname + location.search + location.hash;
+        setTimeout(function() {
+          location.replace(safariUrl);
+        }, 1000);
+      } else {
+        document.getElementById('banner').innerHTML =
+          '<div class="banner">📌 Android는 우측 상단 메뉴 → <b>다른 브라우저로 열기</b>를 눌러주세요.</div>';
+      }
+    } else {
+      document.getElementById('status').textContent = '✅ 일반 브라우저 (사파리 or 크롬 등)';
+      document.getElementById('banner').innerHTML =
+        '<div class="box" style="background:#d4edda;">🎉 이미 외부 브라우저에서 열려 있습니다!</div>';
+    }
+  </script>
+</body>
 </html>
