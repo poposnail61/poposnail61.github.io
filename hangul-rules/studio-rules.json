@@ -1,0 +1,5036 @@
+{
+ "schema": "hangul-rules/studio-layout/1",
+ "source": "Noto Sans CJK KR Regular (noto-cjk Sans2.004)",
+ "frame": {
+  "unitsPerEm": 1000,
+  "advanceWidth": 1000,
+  "cellEmBox": {
+   "x0": 27,
+   "y0": -107,
+   "x1": 895,
+   "y1": 842
+  },
+  "note": "정규화 (0,0,1,1)이 이 em 박스에 대응한다. 전 음절 잉크 봉투에서 얻었다."
+ },
+ "units": {
+  "padding": "부모 사각형 대비 %",
+  "gap": "노드 inner main 대비 %",
+  "overlap": "노드 inner main 대비 %",
+  "spaceWeight": "형제 합=1로 정규화"
+ },
+ "topologies": {
+  "H-compound": {
+   "example": "곿",
+   "syllables": 159,
+   "nodes": {
+    "Root": {
+     "axis": "Vertical",
+     "gap": 8.372,
+     "overlap": 0.0,
+     "padding": {
+      "top": 3.899,
+      "right": 3.802,
+      "bottom": 3.477,
+      "left": 1.843
+     },
+     "n": 159
+    },
+    "LeadingMedial": {
+     "axis": "Vertical",
+     "spaceWeight": 0.562,
+     "spaceWeightIqr": 0.061,
+     "gap": 10.613,
+     "overlap": 0.0,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 159
+    },
+    "Leading": {
+     "spaceWeight": 0.803,
+     "spaceWeightIqr": 0.259,
+     "padding": {
+      "top": 0.0,
+      "right": 9.425,
+      "bottom": 0.0,
+      "left": 9.169
+     },
+     "n": 159
+    },
+    "Medial": {
+     "spaceWeight": 0.197,
+     "spaceWeightIqr": 0.259,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 159
+    },
+    "Trailing": {
+     "axis": "Horizontal",
+     "spaceWeight": 0.438,
+     "spaceWeightIqr": 0.061,
+     "gap": 3.577,
+     "overlap": 0.0,
+     "padding": {
+      "top": 0.0,
+      "right": 9.158,
+      "bottom": 0.0,
+      "left": 10.037
+     },
+     "n": 159
+    },
+    "TrailingFirst": {
+     "spaceWeight": 0.51,
+     "spaceWeightIqr": 0.054,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 159
+    },
+    "TrailingSecond": {
+     "spaceWeight": 0.49,
+     "spaceWeightIqr": 0.054,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 159
+    }
+   }
+  },
+  "H-none": {
+   "example": "고",
+   "syllables": 67,
+   "nodes": {
+    "LeadingMedial": {
+     "axis": "Vertical",
+     "gap": 11.226,
+     "overlap": 0.0,
+     "padding": {
+      "top": 7.165,
+      "right": 2.995,
+      "bottom": 14.226,
+      "left": 2.65
+     },
+     "n": 67
+    },
+    "Leading": {
+     "spaceWeight": 0.571,
+     "spaceWeightIqr": 0.363,
+     "padding": {
+      "top": 0.0,
+      "right": 8.78,
+      "bottom": 0.0,
+      "left": 8.659
+     },
+     "n": 67
+    },
+    "Medial": {
+     "spaceWeight": 0.429,
+     "spaceWeightIqr": 0.363,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 67
+    }
+   }
+  },
+  "H-simple": {
+   "example": "곡",
+   "syllables": 685,
+   "nodes": {
+    "Root": {
+     "axis": "Vertical",
+     "gap": 7.209,
+     "overlap": 0.0,
+     "padding": {
+      "top": 4.11,
+      "right": 3.226,
+      "bottom": 3.477,
+      "left": 2.65
+     },
+     "n": 685
+    },
+    "LeadingMedial": {
+     "axis": "Vertical",
+     "spaceWeight": 0.622,
+     "spaceWeightIqr": 0.083,
+     "gap": 10.598,
+     "overlap": 0.0,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 685
+    },
+    "Leading": {
+     "spaceWeight": 0.68,
+     "spaceWeightIqr": 0.205,
+     "padding": {
+      "top": 0.0,
+      "right": 9.058,
+      "bottom": 0.0,
+      "left": 8.802
+     },
+     "n": 685
+    },
+    "Medial": {
+     "spaceWeight": 0.32,
+     "spaceWeightIqr": 0.205,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 685
+    },
+    "Trailing": {
+     "spaceWeight": 0.378,
+     "spaceWeightIqr": 0.083,
+     "padding": {
+      "top": 0.0,
+      "right": 10.636,
+      "bottom": 0.0,
+      "left": 11.355
+     },
+     "n": 685
+    }
+   }
+  },
+  "M-compound": {
+   "example": "괆",
+   "syllables": 122,
+   "nodes": {
+    "Root": {
+     "axis": "Vertical",
+     "gap": 5.086,
+     "overlap": 0.0,
+     "padding": {
+      "top": 1.686,
+      "right": 6.336,
+      "bottom": 3.477,
+      "left": 2.535
+     },
+     "n": 122
+    },
+    "LeadingMedial": {
+     "axis": "Horizontal",
+     "spaceWeight": 0.583,
+     "spaceWeightIqr": 0.029,
+     "gap": 6.093,
+     "overlap": 0.0,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 122
+    },
+    "LeadingMedialBase": {
+     "axis": "Vertical",
+     "spaceWeight": 0.73,
+     "spaceWeightIqr": 0.237,
+     "gap": 0.0,
+     "overlap": 10.829,
+     "padding": {
+      "top": 8.081,
+      "right": 0.0,
+      "bottom": 4.217,
+      "left": 0.0
+     },
+     "n": 122
+    },
+    "Leading": {
+     "spaceWeight": 0.624,
+     "spaceWeightIqr": 0.097,
+     "padding": {
+      "top": 0.0,
+      "right": 5.952,
+      "bottom": 0.0,
+      "left": 4.904
+     },
+     "n": 122
+    },
+    "MedialBase": {
+     "spaceWeight": 0.376,
+     "spaceWeightIqr": 0.097,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 122
+    },
+    "MedialExtension": {
+     "spaceWeight": 0.27,
+     "spaceWeightIqr": 0.237,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 122
+    },
+    "Trailing": {
+     "axis": "Horizontal",
+     "spaceWeight": 0.417,
+     "spaceWeightIqr": 0.029,
+     "gap": 3.47,
+     "overlap": 0.0,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 12.419
+     },
+     "n": 122
+    },
+    "TrailingFirst": {
+     "spaceWeight": 0.508,
+     "spaceWeightIqr": 0.04,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.141,
+      "left": 0.0
+     },
+     "n": 122
+    },
+    "TrailingSecond": {
+     "spaceWeight": 0.492,
+     "spaceWeightIqr": 0.04,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 122
+    }
+   }
+  },
+  "M-none": {
+   "example": "과",
+   "syllables": 93,
+   "nodes": {
+    "LeadingMedial": {
+     "axis": "Horizontal",
+     "gap": 5.896,
+     "overlap": 0.0,
+     "padding": {
+      "top": 1.581,
+      "right": 11.636,
+      "bottom": 3.056,
+      "left": 1.959
+     },
+     "n": 93
+    },
+    "LeadingMedialBase": {
+     "axis": "Vertical",
+     "spaceWeight": 0.725,
+     "spaceWeightIqr": 0.222,
+     "gap": 6.851,
+     "overlap": 0.0,
+     "padding": {
+      "top": 7.285,
+      "right": 0.0,
+      "bottom": 8.177,
+      "left": 0.0
+     },
+     "n": 93
+    },
+    "Leading": {
+     "spaceWeight": 0.54,
+     "spaceWeightIqr": 0.17,
+     "padding": {
+      "top": 0.0,
+      "right": 7.475,
+      "bottom": 0.0,
+      "left": 6.224
+     },
+     "n": 93
+    },
+    "MedialBase": {
+     "spaceWeight": 0.46,
+     "spaceWeightIqr": 0.17,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 93
+    },
+    "MedialExtension": {
+     "spaceWeight": 0.275,
+     "spaceWeightIqr": 0.222,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 93
+    }
+   }
+  },
+  "M-simple": {
+   "example": "관",
+   "syllables": 460,
+   "nodes": {
+    "Root": {
+     "axis": "Vertical",
+     "gap": 4.225,
+     "overlap": 0.0,
+     "padding": {
+      "top": 1.686,
+      "right": 6.797,
+      "bottom": 3.583,
+      "left": 2.304
+     },
+     "n": 460
+    },
+    "LeadingMedial": {
+     "axis": "Horizontal",
+     "spaceWeight": 0.644,
+     "spaceWeightIqr": 0.037,
+     "gap": 5.984,
+     "overlap": 0.0,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 460
+    },
+    "LeadingMedialBase": {
+     "axis": "Vertical",
+     "spaceWeight": 0.734,
+     "spaceWeightIqr": 0.218,
+     "gap": 0.0,
+     "overlap": 8.812,
+     "padding": {
+      "top": 7.756,
+      "right": 0.0,
+      "bottom": 5.961,
+      "left": 0.0
+     },
+     "n": 460
+    },
+    "Leading": {
+     "spaceWeight": 0.624,
+     "spaceWeightIqr": 0.099,
+     "padding": {
+      "top": 0.0,
+      "right": 6.791,
+      "bottom": 0.0,
+      "left": 4.569
+     },
+     "n": 460
+    },
+    "MedialBase": {
+     "spaceWeight": 0.376,
+     "spaceWeightIqr": 0.097,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 460
+    },
+    "MedialExtension": {
+     "spaceWeight": 0.266,
+     "spaceWeightIqr": 0.218,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 460
+    },
+    "Trailing": {
+     "spaceWeight": 0.356,
+     "spaceWeightIqr": 0.037,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 14.081
+     },
+     "n": 460
+    }
+   }
+  },
+  "VL-compound": {
+   "example": "걳",
+   "syllables": 219,
+   "nodes": {
+    "Root": {
+     "axis": "Vertical",
+     "gap": 4.134,
+     "overlap": 0.0,
+     "padding": {
+      "top": 1.686,
+      "right": 7.258,
+      "bottom": 3.477,
+      "left": 3.571
+     },
+     "n": 219
+    },
+    "LeadingMedial": {
+     "axis": "Horizontal",
+     "spaceWeight": 0.562,
+     "spaceWeightIqr": 0.027,
+     "gap": 0.0,
+     "overlap": 2.837,
+     "padding": {
+      "top": 0.0,
+      "right": 2.42,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 219
+    },
+    "Leading": {
+     "spaceWeight": 0.619,
+     "spaceWeightIqr": 0.341,
+     "padding": {
+      "top": 7.246,
+      "right": 0.0,
+      "bottom": 1.706,
+      "left": 0.0
+     },
+     "n": 219
+    },
+    "Medial": {
+     "spaceWeight": 0.381,
+     "spaceWeightIqr": 0.341,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 219
+    },
+    "Trailing": {
+     "axis": "Horizontal",
+     "spaceWeight": 0.438,
+     "spaceWeightIqr": 0.027,
+     "gap": 3.397,
+     "overlap": 0.0,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 11.974
+     },
+     "n": 219
+    },
+    "TrailingFirst": {
+     "spaceWeight": 0.508,
+     "spaceWeightIqr": 0.027,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 219
+    },
+    "TrailingSecond": {
+     "spaceWeight": 0.492,
+     "spaceWeightIqr": 0.027,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 219
+    }
+   }
+  },
+  "VL-none": {
+   "example": "거",
+   "syllables": 45,
+   "nodes": {
+    "LeadingMedial": {
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 2.554,
+     "padding": {
+      "top": 1.581,
+      "right": 8.871,
+      "bottom": 3.056,
+      "left": 3.111
+     },
+     "n": 45
+    },
+    "Leading": {
+     "spaceWeight": 0.639,
+     "spaceWeightIqr": 0.325,
+     "padding": {
+      "top": 3.646,
+      "right": 0.0,
+      "bottom": 20.0,
+      "left": 0.0
+     },
+     "n": 45
+    },
+    "Medial": {
+     "spaceWeight": 0.361,
+     "spaceWeightIqr": 0.325,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 45
+    }
+   }
+  },
+  "VL-simple": {
+   "example": "걱",
+   "syllables": 720,
+   "nodes": {
+    "Root": {
+     "axis": "Vertical",
+     "gap": 3.799,
+     "overlap": 0.0,
+     "padding": {
+      "top": 1.686,
+      "right": 7.604,
+      "bottom": 3.477,
+      "left": 3.629
+     },
+     "n": 720
+    },
+    "LeadingMedial": {
+     "axis": "Horizontal",
+     "spaceWeight": 0.618,
+     "spaceWeightIqr": 0.043,
+     "gap": 0.0,
+     "overlap": 3.1,
+     "padding": {
+      "top": 0.0,
+      "right": 2.034,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 720
+    },
+    "Leading": {
+     "spaceWeight": 0.621,
+     "spaceWeightIqr": 0.329,
+     "padding": {
+      "top": 8.776,
+      "right": 0.0,
+      "bottom": 4.88,
+      "left": 0.0
+     },
+     "n": 720
+    },
+    "Medial": {
+     "spaceWeight": 0.379,
+     "spaceWeightIqr": 0.329,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 720
+    },
+    "Trailing": {
+     "spaceWeight": 0.382,
+     "spaceWeightIqr": 0.043,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 16.178
+     },
+     "n": 720
+    }
+   }
+  },
+  "VR-compound": {
+   "example": "갃",
+   "syllables": 499,
+   "nodes": {
+    "Root": {
+     "axis": "Vertical",
+     "gap": 4.778,
+     "overlap": 0.0,
+     "padding": {
+      "top": 1.686,
+      "right": 2.304,
+      "bottom": 3.477,
+      "left": 3.571
+     },
+     "n": 499
+    },
+    "LeadingMedial": {
+     "axis": "Horizontal",
+     "spaceWeight": 0.561,
+     "spaceWeightIqr": 0.019,
+     "gap": 10.063,
+     "overlap": 0.0,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 499
+    },
+    "Leading": {
+     "spaceWeight": 0.688,
+     "spaceWeightIqr": 0.111,
+     "padding": {
+      "top": 9.959,
+      "right": 0.0,
+      "bottom": 6.168,
+      "left": 0.0
+     },
+     "n": 499
+    },
+    "Medial": {
+     "spaceWeight": 0.312,
+     "spaceWeightIqr": 0.111,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 499
+    },
+    "Trailing": {
+     "axis": "Horizontal",
+     "spaceWeight": 0.439,
+     "spaceWeightIqr": 0.019,
+     "gap": 3.343,
+     "overlap": 0.0,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 9.427
+     },
+     "n": 499
+    },
+    "TrailingFirst": {
+     "spaceWeight": 0.509,
+     "spaceWeightIqr": 0.033,
+     "padding": {
+      "top": 0.262,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 499
+    },
+    "TrailingSecond": {
+     "spaceWeight": 0.491,
+     "spaceWeightIqr": 0.033,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 499
+    }
+   }
+  },
+  "VR-none": {
+   "example": "가",
+   "syllables": 95,
+   "nodes": {
+    "LeadingMedial": {
+     "axis": "Horizontal",
+     "gap": 9.356,
+     "overlap": 0.0,
+     "padding": {
+      "top": 1.581,
+      "right": 8.065,
+      "bottom": 3.056,
+      "left": 3.917
+     },
+     "n": 95
+    },
+    "Leading": {
+     "spaceWeight": 0.68,
+     "spaceWeightIqr": 0.107,
+     "padding": {
+      "top": 10.055,
+      "right": 0.0,
+      "bottom": 23.094,
+      "left": 0.0
+     },
+     "n": 95
+    },
+    "Medial": {
+     "spaceWeight": 0.32,
+     "spaceWeightIqr": 0.107,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 95
+    }
+   }
+  },
+  "VR-simple": {
+   "example": "각",
+   "syllables": 1421,
+   "nodes": {
+    "Root": {
+     "axis": "Vertical",
+     "gap": 4.093,
+     "overlap": 0.0,
+     "padding": {
+      "top": 1.686,
+      "right": 4.263,
+      "bottom": 3.477,
+      "left": 3.917
+     },
+     "n": 1421
+    },
+    "LeadingMedial": {
+     "axis": "Horizontal",
+     "spaceWeight": 0.613,
+     "spaceWeightIqr": 0.047,
+     "gap": 9.975,
+     "overlap": 0.0,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 1421
+    },
+    "Leading": {
+     "spaceWeight": 0.686,
+     "spaceWeightIqr": 0.114,
+     "padding": {
+      "top": 10.626,
+      "right": 0.0,
+      "bottom": 8.577,
+      "left": 0.0
+     },
+     "n": 1421
+    },
+    "Medial": {
+     "spaceWeight": 0.314,
+     "spaceWeightIqr": 0.114,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "n": 1421
+    },
+    "Trailing": {
+     "spaceWeight": 0.387,
+     "spaceWeightIqr": 0.047,
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 13.927
+     },
+     "n": 1421
+    }
+   }
+  }
+ },
+ "contextTables": {
+  "Medial.spaceWeight": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㅏ": {
+     "value": 0.295,
+     "n": 406
+    },
+    "VR|ㅐ": {
+     "value": 0.384,
+     "n": 412
+    },
+    "VR|ㅑ": {
+     "value": 0.292,
+     "n": 412
+    },
+    "VR|ㅒ": {
+     "value": 0.386,
+     "n": 394
+    },
+    "VL|ㅓ": {
+     "value": 0.357,
+     "n": 106
+    },
+    "VL|ㅔ": {
+     "value": 0.392,
+     "n": 408
+    },
+    "VL|ㅕ": {
+     "value": 0.326,
+     "n": 64
+    },
+    "VL|ㅖ": {
+     "value": 0.381,
+     "n": 406
+    },
+    "H|ㅗ": {
+     "value": 0.371,
+     "n": 167
+    },
+    "H|ㅛ": {
+     "value": 0.366,
+     "n": 144
+    },
+    "H|ㅜ": {
+     "value": 0.361,
+     "n": 115
+    },
+    "H|ㅠ": {
+     "value": 0.402,
+     "n": 128
+    },
+    "H|ㅡ": {
+     "value": 0.17,
+     "n": 357
+    },
+    "VR|ㅣ": {
+     "value": 0.137,
+     "n": 391
+    }
+   }
+  },
+  "Leading.spaceWeight": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㄱ": {
+     "value": 0.679,
+     "n": 108
+    },
+    "VR|ㄲ": {
+     "value": 0.705,
+     "n": 106
+    },
+    "VR|ㄴ": {
+     "value": 0.694,
+     "n": 104
+    },
+    "VR|ㄷ": {
+     "value": 0.694,
+     "n": 101
+    },
+    "VR|ㄸ": {
+     "value": 0.733,
+     "n": 101
+    },
+    "VR|ㄹ": {
+     "value": 0.698,
+     "n": 107
+    },
+    "VR|ㅁ": {
+     "value": 0.656,
+     "n": 106
+    },
+    "VR|ㅂ": {
+     "value": 0.654,
+     "n": 108
+    },
+    "VR|ㅃ": {
+     "value": 0.724,
+     "n": 108
+    },
+    "VR|ㅅ": {
+     "value": 0.709,
+     "n": 109
+    },
+    "VR|ㅆ": {
+     "value": 0.753,
+     "n": 110
+    },
+    "VR|ㅇ": {
+     "value": 0.678,
+     "n": 104
+    },
+    "VR|ㅈ": {
+     "value": 0.708,
+     "n": 108
+    },
+    "VR|ㅉ": {
+     "value": 0.756,
+     "n": 108
+    },
+    "VR|ㅊ": {
+     "value": 0.71,
+     "n": 108
+    },
+    "VR|ㅋ": {
+     "value": 0.673,
+     "n": 100
+    },
+    "VR|ㅌ": {
+     "value": 0.688,
+     "n": 103
+    },
+    "VR|ㅍ": {
+     "value": 0.717,
+     "n": 108
+    },
+    "VR|ㅎ": {
+     "value": 0.711,
+     "n": 108
+    },
+    "VL|ㄱ": {
+     "value": 0.878,
+     "n": 65
+    },
+    "VL|ㄹ": {
+     "value": 0.521,
+     "n": 79
+    },
+    "VL|ㅋ": {
+     "value": 0.88,
+     "n": 60
+    },
+    "VL|ㅎ": {
+     "value": 0.689,
+     "n": 80
+    },
+    "VL|ㅌ": {
+     "value": 0.512,
+     "n": 76
+    },
+    "VL|ㅈ": {
+     "value": 0.538,
+     "n": 49
+    },
+    "VL|ㄲ": {
+     "value": 0.889,
+     "n": 43
+    },
+    "VL|ㄴ": {
+     "value": 0.872,
+     "n": 42
+    },
+    "VL|ㄷ": {
+     "value": 0.475,
+     "n": 42
+    },
+    "VL|ㅁ": {
+     "value": 0.874,
+     "n": 43
+    },
+    "VL|ㅂ": {
+     "value": 0.873,
+     "n": 43
+    },
+    "VL|ㅃ": {
+     "value": 0.899,
+     "n": 42
+    },
+    "VL|ㅆ": {
+     "value": 0.612,
+     "n": 44
+    },
+    "VL|ㅇ": {
+     "value": 0.881,
+     "n": 42
+    },
+    "VL|ㅉ": {
+     "value": 0.613,
+     "n": 44
+    },
+    "VL|ㅍ": {
+     "value": 0.557,
+     "n": 56
+    },
+    "VL|ㅊ": {
+     "value": 0.543,
+     "n": 48
+    },
+    "VL|ㅅ": {
+     "value": 0.532,
+     "n": 45
+    },
+    "VL|ㄸ": {
+     "value": 0.564,
+     "n": 41
+    },
+    "H|ㄱ": {
+     "value": 0.563,
+     "n": 48
+    },
+    "H|ㄲ": {
+     "value": 0.563,
+     "n": 48
+    },
+    "H|ㅅ": {
+     "value": 0.645,
+     "n": 73
+    },
+    "H|ㅆ": {
+     "value": 0.828,
+     "n": 39
+    },
+    "H|ㅈ": {
+     "value": 0.633,
+     "n": 66
+    },
+    "H|ㅉ": {
+     "value": 0.83,
+     "n": 38
+    },
+    "H|ㅊ": {
+     "value": 0.706,
+     "n": 70
+    },
+    "H|ㅋ": {
+     "value": 0.647,
+     "n": 46
+    },
+    "H|ㄴ": {
+     "value": 0.798,
+     "n": 39
+    },
+    "H|ㄷ": {
+     "value": 0.804,
+     "n": 39
+    },
+    "H|ㄸ": {
+     "value": 0.802,
+     "n": 41
+    },
+    "H|ㄹ": {
+     "value": 0.839,
+     "n": 39
+    },
+    "H|ㅁ": {
+     "value": 0.808,
+     "n": 39
+    },
+    "H|ㅂ": {
+     "value": 0.819,
+     "n": 39
+    },
+    "H|ㅃ": {
+     "value": 0.666,
+     "n": 52
+    },
+    "H|ㅇ": {
+     "value": 0.822,
+     "n": 39
+    },
+    "H|ㅌ": {
+     "value": 0.836,
+     "n": 39
+    },
+    "H|ㅍ": {
+     "value": 0.816,
+     "n": 39
+    },
+    "H|ㅎ": {
+     "value": 0.298,
+     "n": 78
+    },
+    "M|ㄱ": {
+     "value": 0.545,
+     "n": 63
+    },
+    "M|ㄲ": {
+     "value": 0.553,
+     "n": 65
+    },
+    "M|ㄸ": {
+     "value": 0.38,
+     "n": 59
+    },
+    "M|ㅃ": {
+     "value": 0.637,
+     "n": 27
+    },
+    "M|ㅅ": {
+     "value": 0.627,
+     "n": 71
+    },
+    "M|ㅈ": {
+     "value": 0.623,
+     "n": 71
+    },
+    "M|ㅊ": {
+     "value": 0.679,
+     "n": 72
+    },
+    "M|ㅋ": {
+     "value": 0.629,
+     "n": 64
+    },
+    "M|ㅆ": {
+     "value": 0.658,
+     "n": 40
+    },
+    "M|ㅉ": {
+     "value": 0.666,
+     "n": 48
+    },
+    "M|ㄴ": {
+     "value": 0.415,
+     "n": 11
+    },
+    "M|ㄷ": {
+     "value": 0.44,
+     "n": 10
+    },
+    "M|ㄹ": {
+     "value": 0.547,
+     "n": 6
+    },
+    "M|ㅁ": {
+     "value": 0.49,
+     "n": 8
+    },
+    "M|ㅂ": {
+     "value": 0.523,
+     "n": 6
+    },
+    "M|ㅇ": {
+     "value": 0.473,
+     "n": 10
+    },
+    "M|ㅌ": {
+     "value": 0.485,
+     "n": 9
+    },
+    "M|ㅍ": {
+     "value": 0.5,
+     "n": 9
+    },
+    "M|ㅎ": {
+     "value": 0.661,
+     "n": 26
+    }
+   }
+  },
+  "Leading.padding.top": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㄱ": {
+     "value": 11.196,
+     "n": 108
+    },
+    "VR|ㄲ": {
+     "value": 11.31,
+     "n": 106
+    },
+    "VR|ㄴ": {
+     "value": 10.166,
+     "n": 104
+    },
+    "VR|ㄷ": {
+     "value": 12.0,
+     "n": 101
+    },
+    "VR|ㄸ": {
+     "value": 11.698,
+     "n": 101
+    },
+    "VR|ㄹ": {
+     "value": 9.278,
+     "n": 107
+    },
+    "VR|ㅁ": {
+     "value": 11.513,
+     "n": 106
+    },
+    "VR|ㅂ": {
+     "value": 9.595,
+     "n": 108
+    },
+    "VR|ㅃ": {
+     "value": 9.702,
+     "n": 108
+    },
+    "VR|ㅅ": {
+     "value": 8.302,
+     "n": 109
+    },
+    "VR|ㅆ": {
+     "value": 10.189,
+     "n": 110
+    },
+    "VR|ㅇ": {
+     "value": 9.388,
+     "n": 104
+    },
+    "VR|ㅈ": {
+     "value": 11.764,
+     "n": 108
+    },
+    "VR|ㅉ": {
+     "value": 11.754,
+     "n": 108
+    },
+    "VR|ㅊ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅋ": {
+     "value": 8.815,
+     "n": 100
+    },
+    "VR|ㅌ": {
+     "value": 10.37,
+     "n": 103
+    },
+    "VR|ㅍ": {
+     "value": 12.399,
+     "n": 108
+    },
+    "VR|ㅎ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VL|ㄱ": {
+     "value": 3.681,
+     "n": 65
+    },
+    "VL|ㄹ": {
+     "value": 9.41,
+     "n": 79
+    },
+    "VL|ㅋ": {
+     "value": 3.4,
+     "n": 60
+    },
+    "VL|ㅎ": {
+     "value": 0.0,
+     "n": 80
+    },
+    "VL|ㅌ": {
+     "value": 10.889,
+     "n": 76
+    },
+    "VL|ㅈ": {
+     "value": 12.151,
+     "n": 49
+    },
+    "VL|ㄲ": {
+     "value": 3.358,
+     "n": 43
+    },
+    "VL|ㄴ": {
+     "value": 3.678,
+     "n": 42
+    },
+    "VL|ㄷ": {
+     "value": 11.633,
+     "n": 42
+    },
+    "VL|ㅁ": {
+     "value": 3.39,
+     "n": 43
+    },
+    "VL|ㅂ": {
+     "value": 3.313,
+     "n": 43
+    },
+    "VL|ㅃ": {
+     "value": 3.306,
+     "n": 42
+    },
+    "VL|ㅆ": {
+     "value": 11.449,
+     "n": 44
+    },
+    "VL|ㅇ": {
+     "value": 3.268,
+     "n": 42
+    },
+    "VL|ㅉ": {
+     "value": 12.211,
+     "n": 44
+    },
+    "VL|ㅍ": {
+     "value": 12.151,
+     "n": 56
+    },
+    "VL|ㅊ": {
+     "value": 1.447,
+     "n": 48
+    },
+    "VL|ㅅ": {
+     "value": 9.392,
+     "n": 45
+    },
+    "VL|ㄸ": {
+     "value": 11.698,
+     "n": 41
+    },
+    "H|ㄱ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "H|ㄲ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "H|ㅅ": {
+     "value": 0.0,
+     "n": 73
+    },
+    "H|ㅆ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅈ": {
+     "value": 0.0,
+     "n": 66
+    },
+    "H|ㅉ": {
+     "value": 0.0,
+     "n": 38
+    },
+    "H|ㅊ": {
+     "value": 0.0,
+     "n": 70
+    },
+    "H|ㅋ": {
+     "value": 0.0,
+     "n": 46
+    },
+    "H|ㄴ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㄷ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㄸ": {
+     "value": 0.0,
+     "n": 41
+    },
+    "H|ㄹ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅁ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅂ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅃ": {
+     "value": 0.0,
+     "n": 52
+    },
+    "H|ㅇ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅌ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅍ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅎ": {
+     "value": 0.0,
+     "n": 78
+    },
+    "M|ㄱ": {
+     "value": 0.0,
+     "n": 63
+    },
+    "M|ㄲ": {
+     "value": 0.0,
+     "n": 65
+    },
+    "M|ㄸ": {
+     "value": 0.0,
+     "n": 59
+    },
+    "M|ㅃ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㅅ": {
+     "value": 0.0,
+     "n": 71
+    },
+    "M|ㅈ": {
+     "value": 0.0,
+     "n": 71
+    },
+    "M|ㅊ": {
+     "value": 0.0,
+     "n": 72
+    },
+    "M|ㅋ": {
+     "value": 0.0,
+     "n": 64
+    },
+    "M|ㅆ": {
+     "value": 0.0,
+     "n": 40
+    },
+    "M|ㅉ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "M|ㄴ": {
+     "value": 0.0,
+     "n": 11
+    },
+    "M|ㄷ": {
+     "value": 0.0,
+     "n": 10
+    },
+    "M|ㄹ": {
+     "value": 0.0,
+     "n": 6
+    },
+    "M|ㅁ": {
+     "value": 0.0,
+     "n": 8
+    },
+    "M|ㅂ": {
+     "value": 0.0,
+     "n": 6
+    },
+    "M|ㅇ": {
+     "value": 0.0,
+     "n": 10
+    },
+    "M|ㅌ": {
+     "value": 0.0,
+     "n": 9
+    },
+    "M|ㅍ": {
+     "value": 0.0,
+     "n": 9
+    },
+    "M|ㅎ": {
+     "value": 0.0,
+     "n": 26
+    }
+   }
+  },
+  "Medial.padding.top": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㅏ": {
+     "value": 0.0,
+     "n": 406
+    },
+    "VR|ㅐ": {
+     "value": 0.0,
+     "n": 412
+    },
+    "VR|ㅑ": {
+     "value": 0.0,
+     "n": 412
+    },
+    "VR|ㅒ": {
+     "value": 0.0,
+     "n": 394
+    },
+    "VL|ㅓ": {
+     "value": 0.0,
+     "n": 106
+    },
+    "VL|ㅔ": {
+     "value": 0.0,
+     "n": 408
+    },
+    "VL|ㅕ": {
+     "value": 0.0,
+     "n": 64
+    },
+    "VL|ㅖ": {
+     "value": 0.0,
+     "n": 406
+    },
+    "H|ㅗ": {
+     "value": 0.0,
+     "n": 167
+    },
+    "H|ㅛ": {
+     "value": 0.0,
+     "n": 144
+    },
+    "H|ㅜ": {
+     "value": 0.0,
+     "n": 115
+    },
+    "H|ㅠ": {
+     "value": 0.0,
+     "n": 128
+    },
+    "H|ㅡ": {
+     "value": 0.0,
+     "n": 357
+    },
+    "VR|ㅣ": {
+     "value": 0.0,
+     "n": 391
+    }
+   }
+  },
+  "Leading.padding.right": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㄱ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㄲ": {
+     "value": 0.0,
+     "n": 106
+    },
+    "VR|ㄴ": {
+     "value": 0.0,
+     "n": 104
+    },
+    "VR|ㄷ": {
+     "value": 0.0,
+     "n": 101
+    },
+    "VR|ㄸ": {
+     "value": 0.0,
+     "n": 101
+    },
+    "VR|ㄹ": {
+     "value": 0.0,
+     "n": 107
+    },
+    "VR|ㅁ": {
+     "value": 0.0,
+     "n": 106
+    },
+    "VR|ㅂ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅃ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅅ": {
+     "value": 0.0,
+     "n": 109
+    },
+    "VR|ㅆ": {
+     "value": 0.0,
+     "n": 110
+    },
+    "VR|ㅇ": {
+     "value": 0.0,
+     "n": 104
+    },
+    "VR|ㅈ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅉ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅊ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅋ": {
+     "value": 0.0,
+     "n": 100
+    },
+    "VR|ㅌ": {
+     "value": 0.0,
+     "n": 103
+    },
+    "VR|ㅍ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅎ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VL|ㄱ": {
+     "value": 0.0,
+     "n": 65
+    },
+    "VL|ㄹ": {
+     "value": 0.0,
+     "n": 79
+    },
+    "VL|ㅋ": {
+     "value": 0.0,
+     "n": 60
+    },
+    "VL|ㅎ": {
+     "value": 0.0,
+     "n": 80
+    },
+    "VL|ㅌ": {
+     "value": 0.0,
+     "n": 76
+    },
+    "VL|ㅈ": {
+     "value": 0.0,
+     "n": 49
+    },
+    "VL|ㄲ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄴ": {
+     "value": 0.0,
+     "n": 42
+    },
+    "VL|ㄷ": {
+     "value": 0.0,
+     "n": 42
+    },
+    "VL|ㅁ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㅂ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㅃ": {
+     "value": 0.0,
+     "n": 42
+    },
+    "VL|ㅆ": {
+     "value": 0.0,
+     "n": 44
+    },
+    "VL|ㅇ": {
+     "value": 0.0,
+     "n": 42
+    },
+    "VL|ㅉ": {
+     "value": 0.0,
+     "n": 44
+    },
+    "VL|ㅍ": {
+     "value": 0.0,
+     "n": 56
+    },
+    "VL|ㅊ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "VL|ㅅ": {
+     "value": 0.0,
+     "n": 45
+    },
+    "VL|ㄸ": {
+     "value": 0.0,
+     "n": 41
+    },
+    "H|ㄱ": {
+     "value": 12.017,
+     "n": 48
+    },
+    "H|ㄲ": {
+     "value": 10.989,
+     "n": 48
+    },
+    "H|ㅅ": {
+     "value": 5.753,
+     "n": 73
+    },
+    "H|ㅆ": {
+     "value": 3.053,
+     "n": 39
+    },
+    "H|ㅈ": {
+     "value": 5.447,
+     "n": 66
+    },
+    "H|ㅉ": {
+     "value": 3.06,
+     "n": 38
+    },
+    "H|ㅊ": {
+     "value": 5.875,
+     "n": 70
+    },
+    "H|ㅋ": {
+     "value": 11.186,
+     "n": 46
+    },
+    "H|ㄴ": {
+     "value": 11.383,
+     "n": 39
+    },
+    "H|ㄷ": {
+     "value": 11.614,
+     "n": 39
+    },
+    "H|ㄸ": {
+     "value": 8.669,
+     "n": 41
+    },
+    "H|ㄹ": {
+     "value": 10.649,
+     "n": 39
+    },
+    "H|ㅁ": {
+     "value": 12.821,
+     "n": 39
+    },
+    "H|ㅂ": {
+     "value": 13.187,
+     "n": 39
+    },
+    "H|ㅃ": {
+     "value": 9.18,
+     "n": 52
+    },
+    "H|ㅇ": {
+     "value": 11.138,
+     "n": 39
+    },
+    "H|ㅌ": {
+     "value": 12.118,
+     "n": 39
+    },
+    "H|ㅍ": {
+     "value": 9.547,
+     "n": 39
+    },
+    "H|ㅎ": {
+     "value": 5.753,
+     "n": 78
+    },
+    "M|ㄱ": {
+     "value": 12.063,
+     "n": 63
+    },
+    "M|ㄲ": {
+     "value": 8.848,
+     "n": 65
+    },
+    "M|ㄸ": {
+     "value": 50.728,
+     "n": 59
+    },
+    "M|ㅃ": {
+     "value": 7.46,
+     "n": 27
+    },
+    "M|ㅅ": {
+     "value": 5.079,
+     "n": 71
+    },
+    "M|ㅈ": {
+     "value": 4.729,
+     "n": 71
+    },
+    "M|ㅊ": {
+     "value": 5.448,
+     "n": 72
+    },
+    "M|ㅋ": {
+     "value": 12.302,
+     "n": 64
+    },
+    "M|ㅆ": {
+     "value": 1.637,
+     "n": 40
+    },
+    "M|ㅉ": {
+     "value": 0.825,
+     "n": 48
+    },
+    "M|ㄴ": {
+     "value": 13.079,
+     "n": 11
+    },
+    "M|ㄷ": {
+     "value": 35.801,
+     "n": 10
+    },
+    "M|ㄹ": {
+     "value": 11.642,
+     "n": 6
+    },
+    "M|ㅁ": {
+     "value": 25.985,
+     "n": 8
+    },
+    "M|ㅂ": {
+     "value": 14.803,
+     "n": 6
+    },
+    "M|ㅇ": {
+     "value": 35.458,
+     "n": 10
+    },
+    "M|ㅌ": {
+     "value": 35.86,
+     "n": 9
+    },
+    "M|ㅍ": {
+     "value": 31.528,
+     "n": 9
+    },
+    "M|ㅎ": {
+     "value": 4.814,
+     "n": 26
+    }
+   }
+  },
+  "Medial.padding.right": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㅏ": {
+     "value": 0.0,
+     "n": 406
+    },
+    "VR|ㅐ": {
+     "value": 0.0,
+     "n": 412
+    },
+    "VR|ㅑ": {
+     "value": 0.0,
+     "n": 412
+    },
+    "VR|ㅒ": {
+     "value": 0.0,
+     "n": 394
+    },
+    "VL|ㅓ": {
+     "value": 0.0,
+     "n": 106
+    },
+    "VL|ㅔ": {
+     "value": 0.0,
+     "n": 408
+    },
+    "VL|ㅕ": {
+     "value": 0.0,
+     "n": 64
+    },
+    "VL|ㅖ": {
+     "value": 0.0,
+     "n": 406
+    },
+    "H|ㅗ": {
+     "value": 0.0,
+     "n": 167
+    },
+    "H|ㅛ": {
+     "value": 0.0,
+     "n": 144
+    },
+    "H|ㅜ": {
+     "value": 0.0,
+     "n": 115
+    },
+    "H|ㅠ": {
+     "value": 0.0,
+     "n": 128
+    },
+    "H|ㅡ": {
+     "value": 0.0,
+     "n": 357
+    },
+    "VR|ㅣ": {
+     "value": 0.0,
+     "n": 391
+    }
+   }
+  },
+  "Leading.padding.bottom": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㄱ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㄲ": {
+     "value": 1.614,
+     "n": 106
+    },
+    "VR|ㄴ": {
+     "value": 13.093,
+     "n": 104
+    },
+    "VR|ㄷ": {
+     "value": 11.686,
+     "n": 101
+    },
+    "VR|ㄸ": {
+     "value": 11.963,
+     "n": 101
+    },
+    "VR|ㄹ": {
+     "value": 8.284,
+     "n": 107
+    },
+    "VR|ㅁ": {
+     "value": 12.909,
+     "n": 106
+    },
+    "VR|ㅂ": {
+     "value": 11.333,
+     "n": 108
+    },
+    "VR|ㅃ": {
+     "value": 10.755,
+     "n": 108
+    },
+    "VR|ㅅ": {
+     "value": 4.348,
+     "n": 109
+    },
+    "VR|ㅆ": {
+     "value": 6.805,
+     "n": 110
+    },
+    "VR|ㅇ": {
+     "value": 9.489,
+     "n": 104
+    },
+    "VR|ㅈ": {
+     "value": 3.208,
+     "n": 108
+    },
+    "VR|ㅉ": {
+     "value": 4.924,
+     "n": 108
+    },
+    "VR|ㅊ": {
+     "value": 3.676,
+     "n": 108
+    },
+    "VR|ㅋ": {
+     "value": 0.0,
+     "n": 100
+    },
+    "VR|ㅌ": {
+     "value": 8.247,
+     "n": 103
+    },
+    "VR|ㅍ": {
+     "value": 9.542,
+     "n": 108
+    },
+    "VR|ㅎ": {
+     "value": 3.288,
+     "n": 108
+    },
+    "VL|ㄱ": {
+     "value": 0.0,
+     "n": 65
+    },
+    "VL|ㄹ": {
+     "value": 7.635,
+     "n": 79
+    },
+    "VL|ㅋ": {
+     "value": 0.0,
+     "n": 60
+    },
+    "VL|ㅎ": {
+     "value": 2.862,
+     "n": 80
+    },
+    "VL|ㅌ": {
+     "value": 8.022,
+     "n": 76
+    },
+    "VL|ㅈ": {
+     "value": 1.321,
+     "n": 49
+    },
+    "VL|ㄲ": {
+     "value": 0.187,
+     "n": 43
+    },
+    "VL|ㄴ": {
+     "value": 5.674,
+     "n": 42
+    },
+    "VL|ㄷ": {
+     "value": 8.364,
+     "n": 42
+    },
+    "VL|ㅁ": {
+     "value": 1.408,
+     "n": 43
+    },
+    "VL|ㅂ": {
+     "value": 1.524,
+     "n": 43
+    },
+    "VL|ㅃ": {
+     "value": 1.073,
+     "n": 42
+    },
+    "VL|ㅆ": {
+     "value": 5.792,
+     "n": 44
+    },
+    "VL|ㅇ": {
+     "value": 1.706,
+     "n": 42
+    },
+    "VL|ㅉ": {
+     "value": 4.384,
+     "n": 44
+    },
+    "VL|ㅍ": {
+     "value": 8.647,
+     "n": 56
+    },
+    "VL|ㅊ": {
+     "value": 2.864,
+     "n": 48
+    },
+    "VL|ㅅ": {
+     "value": 3.008,
+     "n": 45
+    },
+    "VL|ㄸ": {
+     "value": 10.266,
+     "n": 41
+    },
+    "H|ㄱ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "H|ㄲ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "H|ㅅ": {
+     "value": 0.0,
+     "n": 73
+    },
+    "H|ㅆ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅈ": {
+     "value": 0.0,
+     "n": 66
+    },
+    "H|ㅉ": {
+     "value": 0.0,
+     "n": 38
+    },
+    "H|ㅊ": {
+     "value": 0.0,
+     "n": 70
+    },
+    "H|ㅋ": {
+     "value": 0.0,
+     "n": 46
+    },
+    "H|ㄴ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㄷ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㄸ": {
+     "value": 0.0,
+     "n": 41
+    },
+    "H|ㄹ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅁ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅂ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅃ": {
+     "value": 0.0,
+     "n": 52
+    },
+    "H|ㅇ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅌ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅍ": {
+     "value": 0.0,
+     "n": 39
+    },
+    "H|ㅎ": {
+     "value": 0.0,
+     "n": 78
+    },
+    "M|ㄱ": {
+     "value": 0.0,
+     "n": 63
+    },
+    "M|ㄲ": {
+     "value": 0.0,
+     "n": 65
+    },
+    "M|ㄸ": {
+     "value": 0.0,
+     "n": 59
+    },
+    "M|ㅃ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㅅ": {
+     "value": 0.0,
+     "n": 71
+    },
+    "M|ㅈ": {
+     "value": 0.0,
+     "n": 71
+    },
+    "M|ㅊ": {
+     "value": 0.0,
+     "n": 72
+    },
+    "M|ㅋ": {
+     "value": 0.0,
+     "n": 64
+    },
+    "M|ㅆ": {
+     "value": 0.0,
+     "n": 40
+    },
+    "M|ㅉ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "M|ㄴ": {
+     "value": 0.0,
+     "n": 11
+    },
+    "M|ㄷ": {
+     "value": 0.0,
+     "n": 10
+    },
+    "M|ㄹ": {
+     "value": 0.0,
+     "n": 6
+    },
+    "M|ㅁ": {
+     "value": 0.0,
+     "n": 8
+    },
+    "M|ㅂ": {
+     "value": 0.0,
+     "n": 6
+    },
+    "M|ㅇ": {
+     "value": 0.0,
+     "n": 10
+    },
+    "M|ㅌ": {
+     "value": 0.0,
+     "n": 9
+    },
+    "M|ㅍ": {
+     "value": 0.0,
+     "n": 9
+    },
+    "M|ㅎ": {
+     "value": 0.0,
+     "n": 26
+    }
+   }
+  },
+  "Medial.padding.bottom": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㅏ": {
+     "value": 0.0,
+     "n": 406
+    },
+    "VR|ㅐ": {
+     "value": 0.0,
+     "n": 412
+    },
+    "VR|ㅑ": {
+     "value": 0.0,
+     "n": 412
+    },
+    "VR|ㅒ": {
+     "value": 0.0,
+     "n": 394
+    },
+    "VL|ㅓ": {
+     "value": 0.0,
+     "n": 106
+    },
+    "VL|ㅔ": {
+     "value": 0.0,
+     "n": 408
+    },
+    "VL|ㅕ": {
+     "value": 0.0,
+     "n": 64
+    },
+    "VL|ㅖ": {
+     "value": 0.0,
+     "n": 406
+    },
+    "H|ㅗ": {
+     "value": 0.0,
+     "n": 167
+    },
+    "H|ㅛ": {
+     "value": 0.0,
+     "n": 144
+    },
+    "H|ㅜ": {
+     "value": 0.0,
+     "n": 115
+    },
+    "H|ㅠ": {
+     "value": 0.0,
+     "n": 128
+    },
+    "H|ㅡ": {
+     "value": 0.0,
+     "n": 357
+    },
+    "VR|ㅣ": {
+     "value": 0.0,
+     "n": 391
+    }
+   }
+  },
+  "Leading.padding.left": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㄱ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㄲ": {
+     "value": 0.0,
+     "n": 106
+    },
+    "VR|ㄴ": {
+     "value": 0.0,
+     "n": 104
+    },
+    "VR|ㄷ": {
+     "value": 0.0,
+     "n": 101
+    },
+    "VR|ㄸ": {
+     "value": 0.0,
+     "n": 101
+    },
+    "VR|ㄹ": {
+     "value": 0.0,
+     "n": 107
+    },
+    "VR|ㅁ": {
+     "value": 0.0,
+     "n": 106
+    },
+    "VR|ㅂ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅃ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅅ": {
+     "value": 0.0,
+     "n": 109
+    },
+    "VR|ㅆ": {
+     "value": 0.0,
+     "n": 110
+    },
+    "VR|ㅇ": {
+     "value": 0.0,
+     "n": 104
+    },
+    "VR|ㅈ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅉ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅊ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅋ": {
+     "value": 0.0,
+     "n": 100
+    },
+    "VR|ㅌ": {
+     "value": 0.0,
+     "n": 103
+    },
+    "VR|ㅍ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VR|ㅎ": {
+     "value": 0.0,
+     "n": 108
+    },
+    "VL|ㄱ": {
+     "value": 0.0,
+     "n": 65
+    },
+    "VL|ㄹ": {
+     "value": 0.0,
+     "n": 79
+    },
+    "VL|ㅋ": {
+     "value": 0.0,
+     "n": 60
+    },
+    "VL|ㅎ": {
+     "value": 0.0,
+     "n": 80
+    },
+    "VL|ㅌ": {
+     "value": 0.0,
+     "n": 76
+    },
+    "VL|ㅈ": {
+     "value": 0.0,
+     "n": 49
+    },
+    "VL|ㄲ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄴ": {
+     "value": 0.0,
+     "n": 42
+    },
+    "VL|ㄷ": {
+     "value": 0.0,
+     "n": 42
+    },
+    "VL|ㅁ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㅂ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㅃ": {
+     "value": 0.0,
+     "n": 42
+    },
+    "VL|ㅆ": {
+     "value": 0.0,
+     "n": 44
+    },
+    "VL|ㅇ": {
+     "value": 0.0,
+     "n": 42
+    },
+    "VL|ㅉ": {
+     "value": 0.0,
+     "n": 44
+    },
+    "VL|ㅍ": {
+     "value": 0.0,
+     "n": 56
+    },
+    "VL|ㅊ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "VL|ㅅ": {
+     "value": 0.0,
+     "n": 45
+    },
+    "VL|ㄸ": {
+     "value": 0.0,
+     "n": 41
+    },
+    "H|ㄱ": {
+     "value": 11.411,
+     "n": 48
+    },
+    "H|ㄲ": {
+     "value": 8.181,
+     "n": 48
+    },
+    "H|ㅅ": {
+     "value": 5.63,
+     "n": 73
+    },
+    "H|ㅆ": {
+     "value": 2.683,
+     "n": 39
+    },
+    "H|ㅈ": {
+     "value": 5.508,
+     "n": 66
+    },
+    "H|ㅉ": {
+     "value": 3.541,
+     "n": 38
+    },
+    "H|ㅊ": {
+     "value": 5.753,
+     "n": 70
+    },
+    "H|ㅋ": {
+     "value": 9.08,
+     "n": 46
+    },
+    "H|ㄴ": {
+     "value": 13.537,
+     "n": 39
+    },
+    "H|ㄷ": {
+     "value": 12.592,
+     "n": 39
+    },
+    "H|ㄸ": {
+     "value": 9.28,
+     "n": 41
+    },
+    "H|ㄹ": {
+     "value": 12.485,
+     "n": 39
+    },
+    "H|ㅁ": {
+     "value": 12.821,
+     "n": 39
+    },
+    "H|ㅂ": {
+     "value": 13.065,
+     "n": 39
+    },
+    "H|ㅃ": {
+     "value": 9.425,
+     "n": 52
+    },
+    "H|ㅇ": {
+     "value": 11.016,
+     "n": 39
+    },
+    "H|ㅌ": {
+     "value": 12.729,
+     "n": 39
+    },
+    "H|ㅍ": {
+     "value": 9.302,
+     "n": 39
+    },
+    "H|ㅎ": {
+     "value": 5.263,
+     "n": 78
+    },
+    "M|ㄱ": {
+     "value": 10.47,
+     "n": 63
+    },
+    "M|ㄲ": {
+     "value": 5.254,
+     "n": 65
+    },
+    "M|ㄸ": {
+     "value": 6.518,
+     "n": 59
+    },
+    "M|ㅃ": {
+     "value": 4.305,
+     "n": 27
+    },
+    "M|ㅅ": {
+     "value": 4.904,
+     "n": 71
+    },
+    "M|ㅈ": {
+     "value": 4.028,
+     "n": 71
+    },
+    "M|ㅊ": {
+     "value": 4.569,
+     "n": 72
+    },
+    "M|ㅋ": {
+     "value": 5.4,
+     "n": 64
+    },
+    "M|ㅆ": {
+     "value": 1.839,
+     "n": 40
+    },
+    "M|ㅉ": {
+     "value": 1.923,
+     "n": 48
+    },
+    "M|ㄴ": {
+     "value": 10.947,
+     "n": 11
+    },
+    "M|ㄷ": {
+     "value": 0.0,
+     "n": 10
+    },
+    "M|ㄹ": {
+     "value": 12.05,
+     "n": 6
+    },
+    "M|ㅁ": {
+     "value": 7.877,
+     "n": 8
+    },
+    "M|ㅂ": {
+     "value": 12.422,
+     "n": 6
+    },
+    "M|ㅇ": {
+     "value": 0.0,
+     "n": 10
+    },
+    "M|ㅌ": {
+     "value": 0.0,
+     "n": 9
+    },
+    "M|ㅍ": {
+     "value": 2.059,
+     "n": 9
+    },
+    "M|ㅎ": {
+     "value": 5.155,
+     "n": 26
+    }
+   }
+  },
+  "Medial.padding.left": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㅏ": {
+     "value": 0.0,
+     "n": 406
+    },
+    "VR|ㅐ": {
+     "value": 0.0,
+     "n": 412
+    },
+    "VR|ㅑ": {
+     "value": 0.0,
+     "n": 412
+    },
+    "VR|ㅒ": {
+     "value": 0.0,
+     "n": 394
+    },
+    "VL|ㅓ": {
+     "value": 0.0,
+     "n": 106
+    },
+    "VL|ㅔ": {
+     "value": 0.0,
+     "n": 408
+    },
+    "VL|ㅕ": {
+     "value": 0.0,
+     "n": 64
+    },
+    "VL|ㅖ": {
+     "value": 0.0,
+     "n": 406
+    },
+    "H|ㅗ": {
+     "value": 0.0,
+     "n": 167
+    },
+    "H|ㅛ": {
+     "value": 0.0,
+     "n": 144
+    },
+    "H|ㅜ": {
+     "value": 0.0,
+     "n": 115
+    },
+    "H|ㅠ": {
+     "value": 0.0,
+     "n": 128
+    },
+    "H|ㅡ": {
+     "value": 0.0,
+     "n": 357
+    },
+    "VR|ㅣ": {
+     "value": 0.0,
+     "n": 391
+    }
+   }
+  },
+  "Trailing.spaceWeight": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㄱ": {
+     "value": 0.371,
+     "n": 95
+    },
+    "VR|ㄲ": {
+     "value": 0.391,
+     "n": 95
+    },
+    "VR|ㄳ": {
+     "value": 0.403,
+     "n": 79
+    },
+    "VR|ㄴ": {
+     "value": 0.298,
+     "n": 69
+    },
+    "VR|ㄹ": {
+     "value": 0.445,
+     "n": 95
+    },
+    "VR|ㄻ": {
+     "value": 0.444,
+     "n": 95
+    },
+    "VR|ㄼ": {
+     "value": 0.444,
+     "n": 95
+    },
+    "VR|ㄾ": {
+     "value": 0.444,
+     "n": 95
+    },
+    "VR|ㄿ": {
+     "value": 0.441,
+     "n": 95
+    },
+    "VR|ㅁ": {
+     "value": 0.378,
+     "n": 95
+    },
+    "VR|ㅂ": {
+     "value": 0.416,
+     "n": 95
+    },
+    "VR|ㅄ": {
+     "value": 0.425,
+     "n": 38
+    },
+    "VR|ㅅ": {
+     "value": 0.363,
+     "n": 95
+    },
+    "VR|ㅆ": {
+     "value": 0.399,
+     "n": 95
+    },
+    "VR|ㅇ": {
+     "value": 0.377,
+     "n": 95
+    },
+    "VR|ㅈ": {
+     "value": 0.386,
+     "n": 94
+    },
+    "VR|ㅊ": {
+     "value": 0.438,
+     "n": 94
+    },
+    "VR|ㅋ": {
+     "value": 0.386,
+     "n": 95
+    },
+    "VR|ㅌ": {
+     "value": 0.437,
+     "n": 67
+    },
+    "VR|ㅍ": {
+     "value": 0.385,
+     "n": 95
+    },
+    "VR|ㅎ": {
+     "value": 0.463,
+     "n": 95
+    },
+    "VR|ㄷ": {
+     "value": 0.374,
+     "n": 52
+    },
+    "VL|ㄱ": {
+     "value": 0.37,
+     "n": 47
+    },
+    "VL|ㄲ": {
+     "value": 0.387,
+     "n": 47
+    },
+    "VL|ㄳ": {
+     "value": 0.404,
+     "n": 47
+    },
+    "VL|ㄴ": {
+     "value": 0.292,
+     "n": 41
+    },
+    "VL|ㄷ": {
+     "value": 0.371,
+     "n": 44
+    },
+    "VL|ㄹ": {
+     "value": 0.439,
+     "n": 43
+    },
+    "VL|ㄻ": {
+     "value": 0.443,
+     "n": 43
+    },
+    "VL|ㄼ": {
+     "value": 0.441,
+     "n": 43
+    },
+    "VL|ㄾ": {
+     "value": 0.441,
+     "n": 43
+    },
+    "VL|ㄿ": {
+     "value": 0.439,
+     "n": 43
+    },
+    "VL|ㅁ": {
+     "value": 0.375,
+     "n": 47
+    },
+    "VL|ㅂ": {
+     "value": 0.412,
+     "n": 48
+    },
+    "VL|ㅅ": {
+     "value": 0.354,
+     "n": 49
+    },
+    "VL|ㅆ": {
+     "value": 0.393,
+     "n": 48
+    },
+    "VL|ㅇ": {
+     "value": 0.368,
+     "n": 49
+    },
+    "VL|ㅈ": {
+     "value": 0.376,
+     "n": 48
+    },
+    "VL|ㅊ": {
+     "value": 0.431,
+     "n": 43
+    },
+    "VL|ㅋ": {
+     "value": 0.383,
+     "n": 47
+    },
+    "VL|ㅌ": {
+     "value": 0.436,
+     "n": 28
+    },
+    "VL|ㅍ": {
+     "value": 0.379,
+     "n": 47
+    },
+    "VL|ㅎ": {
+     "value": 0.457,
+     "n": 44
+    },
+    "H|ㄿ": {
+     "value": 0.448,
+     "n": 29
+    },
+    "H|ㅎ": {
+     "value": 0.272,
+     "n": 95
+    },
+    "M|ㄱ": {
+     "value": 0.351,
+     "n": 28
+    },
+    "M|ㄲ": {
+     "value": 0.357,
+     "n": 27
+    },
+    "M|ㄴ": {
+     "value": 0.2,
+     "n": 51
+    },
+    "M|ㄷ": {
+     "value": 0.348,
+     "n": 27
+    },
+    "M|ㄹ": {
+     "value": 0.417,
+     "n": 25
+    },
+    "M|ㄻ": {
+     "value": 0.421,
+     "n": 24
+    },
+    "M|ㄼ": {
+     "value": 0.422,
+     "n": 23
+    },
+    "M|ㄾ": {
+     "value": 0.419,
+     "n": 22
+    },
+    "M|ㄿ": {
+     "value": 0.416,
+     "n": 23
+    },
+    "M|ㅁ": {
+     "value": 0.351,
+     "n": 25
+    },
+    "M|ㅂ": {
+     "value": 0.387,
+     "n": 26
+    },
+    "M|ㅄ": {
+     "value": 0.397,
+     "n": 8
+    },
+    "M|ㅅ": {
+     "value": 0.34,
+     "n": 27
+    },
+    "M|ㅆ": {
+     "value": 0.37,
+     "n": 30
+    },
+    "M|ㅇ": {
+     "value": 0.355,
+     "n": 28
+    },
+    "M|ㅈ": {
+     "value": 0.354,
+     "n": 28
+    },
+    "M|ㅊ": {
+     "value": 0.404,
+     "n": 25
+    },
+    "M|ㅋ": {
+     "value": 0.359,
+     "n": 27
+    },
+    "M|ㅌ": {
+     "value": 0.388,
+     "n": 33
+    },
+    "M|ㅍ": {
+     "value": 0.357,
+     "n": 28
+    },
+    "M|ㅎ": {
+     "value": 0.435,
+     "n": 25
+    },
+    "M|ㄳ": {
+     "value": 0.37,
+     "n": 19
+    },
+    "H|ㄴ": {
+     "value": 0.282,
+     "n": 62
+    },
+    "H|ㅂ": {
+     "value": 0.379,
+     "n": 62
+    },
+    "H|ㅅ": {
+     "value": 0.342,
+     "n": 63
+    },
+    "H|ㅆ": {
+     "value": 0.36,
+     "n": 48
+    },
+    "H|ㅊ": {
+     "value": 0.417,
+     "n": 63
+    },
+    "H|ㄱ": {
+     "value": 0.381,
+     "n": 30
+    },
+    "H|ㄲ": {
+     "value": 0.388,
+     "n": 31
+    },
+    "H|ㄳ": {
+     "value": 0.406,
+     "n": 31
+    },
+    "H|ㄷ": {
+     "value": 0.382,
+     "n": 30
+    },
+    "H|ㄹ": {
+     "value": 0.451,
+     "n": 28
+    },
+    "H|ㄻ": {
+     "value": 0.458,
+     "n": 27
+    },
+    "H|ㄼ": {
+     "value": 0.456,
+     "n": 27
+    },
+    "H|ㄾ": {
+     "value": 0.455,
+     "n": 27
+    },
+    "H|ㅁ": {
+     "value": 0.38,
+     "n": 30
+    },
+    "H|ㅇ": {
+     "value": 0.4,
+     "n": 29
+    },
+    "H|ㅈ": {
+     "value": 0.39,
+     "n": 27
+    },
+    "H|ㅋ": {
+     "value": 0.397,
+     "n": 30
+    },
+    "H|ㅌ": {
+     "value": 0.449,
+     "n": 28
+    },
+    "H|ㅍ": {
+     "value": 0.388,
+     "n": 29
+    },
+    "H|ㄶ": {
+     "value": 0.331,
+     "n": 13
+    }
+   }
+  },
+  "Root.gap": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㄱ": {
+     "value": 5.083,
+     "n": 95
+    },
+    "VR|ㄲ": {
+     "value": 4.276,
+     "n": 95
+    },
+    "VR|ㄳ": {
+     "value": 2.845,
+     "n": 79
+    },
+    "VR|ㄴ": {
+     "value": 0.0,
+     "n": 69
+    },
+    "VR|ㄹ": {
+     "value": 4.586,
+     "n": 95
+    },
+    "VR|ㄻ": {
+     "value": 4.972,
+     "n": 95
+    },
+    "VR|ㄼ": {
+     "value": 4.894,
+     "n": 95
+    },
+    "VR|ㄾ": {
+     "value": 5.0,
+     "n": 95
+    },
+    "VR|ㄿ": {
+     "value": 5.117,
+     "n": 95
+    },
+    "VR|ㅁ": {
+     "value": 4.927,
+     "n": 95
+    },
+    "VR|ㅂ": {
+     "value": 4.602,
+     "n": 95
+    },
+    "VR|ㅄ": {
+     "value": 4.093,
+     "n": 38
+    },
+    "VR|ㅅ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅆ": {
+     "value": 3.445,
+     "n": 95
+    },
+    "VR|ㅇ": {
+     "value": 1.772,
+     "n": 95
+    },
+    "VR|ㅈ": {
+     "value": 5.408,
+     "n": 94
+    },
+    "VR|ㅊ": {
+     "value": 0.0,
+     "n": 94
+    },
+    "VR|ㅋ": {
+     "value": 4.53,
+     "n": 95
+    },
+    "VR|ㅌ": {
+     "value": 5.14,
+     "n": 67
+    },
+    "VR|ㅍ": {
+     "value": 4.134,
+     "n": 95
+    },
+    "VR|ㅎ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄷ": {
+     "value": 4.922,
+     "n": 52
+    },
+    "VL|ㄱ": {
+     "value": 4.846,
+     "n": 47
+    },
+    "VL|ㄲ": {
+     "value": 4.079,
+     "n": 47
+    },
+    "VL|ㄳ": {
+     "value": 2.303,
+     "n": 47
+    },
+    "VL|ㄴ": {
+     "value": 0.0,
+     "n": 41
+    },
+    "VL|ㄷ": {
+     "value": 4.474,
+     "n": 44
+    },
+    "VL|ㄹ": {
+     "value": 4.556,
+     "n": 43
+    },
+    "VL|ㄻ": {
+     "value": 4.525,
+     "n": 43
+    },
+    "VL|ㄼ": {
+     "value": 4.561,
+     "n": 43
+    },
+    "VL|ㄾ": {
+     "value": 4.556,
+     "n": 43
+    },
+    "VL|ㄿ": {
+     "value": 4.672,
+     "n": 43
+    },
+    "VL|ㅁ": {
+     "value": 4.815,
+     "n": 47
+    },
+    "VL|ㅂ": {
+     "value": 4.246,
+     "n": 48
+    },
+    "VL|ㅅ": {
+     "value": 0.0,
+     "n": 49
+    },
+    "VL|ㅆ": {
+     "value": 2.887,
+     "n": 48
+    },
+    "VL|ㅇ": {
+     "value": 1.552,
+     "n": 49
+    },
+    "VL|ㅈ": {
+     "value": 5.667,
+     "n": 48
+    },
+    "VL|ㅊ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㅋ": {
+     "value": 4.171,
+     "n": 47
+    },
+    "VL|ㅌ": {
+     "value": 4.528,
+     "n": 28
+    },
+    "VL|ㅍ": {
+     "value": 4.018,
+     "n": 47
+    },
+    "VL|ㅎ": {
+     "value": 0.0,
+     "n": 44
+    },
+    "H|ㄿ": {
+     "value": 9.05,
+     "n": 29
+    },
+    "H|ㅎ": {
+     "value": 4.596,
+     "n": 95
+    },
+    "M|ㄱ": {
+     "value": 4.992,
+     "n": 28
+    },
+    "M|ㄲ": {
+     "value": 4.757,
+     "n": 27
+    },
+    "M|ㄴ": {
+     "value": 0.0,
+     "n": 51
+    },
+    "M|ㄷ": {
+     "value": 5.145,
+     "n": 27
+    },
+    "M|ㄹ": {
+     "value": 4.469,
+     "n": 25
+    },
+    "M|ㄻ": {
+     "value": 5.147,
+     "n": 24
+    },
+    "M|ㄼ": {
+     "value": 4.956,
+     "n": 23
+    },
+    "M|ㄾ": {
+     "value": 5.275,
+     "n": 22
+    },
+    "M|ㄿ": {
+     "value": 5.451,
+     "n": 23
+    },
+    "M|ㅁ": {
+     "value": 4.709,
+     "n": 25
+    },
+    "M|ㅂ": {
+     "value": 4.372,
+     "n": 26
+    },
+    "M|ㅄ": {
+     "value": 3.98,
+     "n": 8
+    },
+    "M|ㅅ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㅆ": {
+     "value": 3.829,
+     "n": 30
+    },
+    "M|ㅇ": {
+     "value": 1.219,
+     "n": 28
+    },
+    "M|ㅈ": {
+     "value": 5.66,
+     "n": 28
+    },
+    "M|ㅊ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㅋ": {
+     "value": 4.651,
+     "n": 27
+    },
+    "M|ㅌ": {
+     "value": 4.677,
+     "n": 33
+    },
+    "M|ㅍ": {
+     "value": 4.482,
+     "n": 28
+    },
+    "M|ㅎ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㄳ": {
+     "value": 3.399,
+     "n": 19
+    },
+    "H|ㄴ": {
+     "value": 0.0,
+     "n": 62
+    },
+    "H|ㅂ": {
+     "value": 0.0,
+     "n": 62
+    },
+    "H|ㅅ": {
+     "value": 4.735,
+     "n": 63
+    },
+    "H|ㅆ": {
+     "value": 2.946,
+     "n": 48
+    },
+    "H|ㅊ": {
+     "value": 3.034,
+     "n": 63
+    },
+    "H|ㄱ": {
+     "value": 10.635,
+     "n": 30
+    },
+    "H|ㄲ": {
+     "value": 9.989,
+     "n": 31
+    },
+    "H|ㄳ": {
+     "value": 7.744,
+     "n": 31
+    },
+    "H|ㄷ": {
+     "value": 9.879,
+     "n": 30
+    },
+    "H|ㄹ": {
+     "value": 8.778,
+     "n": 28
+    },
+    "H|ㄻ": {
+     "value": 8.705,
+     "n": 27
+    },
+    "H|ㄼ": {
+     "value": 8.484,
+     "n": 27
+    },
+    "H|ㄾ": {
+     "value": 8.744,
+     "n": 27
+    },
+    "H|ㅁ": {
+     "value": 10.366,
+     "n": 30
+    },
+    "H|ㅇ": {
+     "value": 8.398,
+     "n": 29
+    },
+    "H|ㅈ": {
+     "value": 10.056,
+     "n": 27
+    },
+    "H|ㅋ": {
+     "value": 9.322,
+     "n": 30
+    },
+    "H|ㅌ": {
+     "value": 9.055,
+     "n": 28
+    },
+    "H|ㅍ": {
+     "value": 9.759,
+     "n": 29
+    },
+    "H|ㄶ": {
+     "value": 0.0,
+     "n": 13
+    }
+   }
+  },
+  "Trailing.padding.top": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㄱ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄲ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄳ": {
+     "value": 0.0,
+     "n": 79
+    },
+    "VR|ㄴ": {
+     "value": 0.0,
+     "n": 69
+    },
+    "VR|ㄹ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄻ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄼ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄾ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄿ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅁ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅂ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅄ": {
+     "value": 0.0,
+     "n": 38
+    },
+    "VR|ㅅ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅆ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅇ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅈ": {
+     "value": 0.0,
+     "n": 94
+    },
+    "VR|ㅊ": {
+     "value": 0.0,
+     "n": 94
+    },
+    "VR|ㅋ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅌ": {
+     "value": 0.0,
+     "n": 67
+    },
+    "VR|ㅍ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅎ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄷ": {
+     "value": 0.0,
+     "n": 52
+    },
+    "VL|ㄱ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㄲ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㄳ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㄴ": {
+     "value": 0.0,
+     "n": 41
+    },
+    "VL|ㄷ": {
+     "value": 0.0,
+     "n": 44
+    },
+    "VL|ㄹ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄻ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄼ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄾ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄿ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㅁ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㅂ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "VL|ㅅ": {
+     "value": 0.0,
+     "n": 49
+    },
+    "VL|ㅆ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "VL|ㅇ": {
+     "value": 0.0,
+     "n": 49
+    },
+    "VL|ㅈ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "VL|ㅊ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㅋ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㅌ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "VL|ㅍ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㅎ": {
+     "value": 0.0,
+     "n": 44
+    },
+    "H|ㄿ": {
+     "value": 0.0,
+     "n": 29
+    },
+    "H|ㅎ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "M|ㄱ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㄲ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㄴ": {
+     "value": 0.0,
+     "n": 51
+    },
+    "M|ㄷ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㄹ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㄻ": {
+     "value": 0.0,
+     "n": 24
+    },
+    "M|ㄼ": {
+     "value": 0.0,
+     "n": 23
+    },
+    "M|ㄾ": {
+     "value": 0.0,
+     "n": 22
+    },
+    "M|ㄿ": {
+     "value": 0.0,
+     "n": 23
+    },
+    "M|ㅁ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㅂ": {
+     "value": 0.0,
+     "n": 26
+    },
+    "M|ㅄ": {
+     "value": 0.0,
+     "n": 8
+    },
+    "M|ㅅ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㅆ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "M|ㅇ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㅈ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㅊ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㅋ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㅌ": {
+     "value": 0.0,
+     "n": 33
+    },
+    "M|ㅍ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㅎ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㄳ": {
+     "value": 0.0,
+     "n": 19
+    },
+    "H|ㄴ": {
+     "value": 0.0,
+     "n": 62
+    },
+    "H|ㅂ": {
+     "value": 0.0,
+     "n": 62
+    },
+    "H|ㅅ": {
+     "value": 0.0,
+     "n": 63
+    },
+    "H|ㅆ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "H|ㅊ": {
+     "value": 0.0,
+     "n": 63
+    },
+    "H|ㄱ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "H|ㄲ": {
+     "value": 0.0,
+     "n": 31
+    },
+    "H|ㄳ": {
+     "value": 0.0,
+     "n": 31
+    },
+    "H|ㄷ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "H|ㄹ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "H|ㄻ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "H|ㄼ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "H|ㄾ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "H|ㅁ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "H|ㅇ": {
+     "value": 0.0,
+     "n": 29
+    },
+    "H|ㅈ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "H|ㅋ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "H|ㅌ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "H|ㅍ": {
+     "value": 0.0,
+     "n": 29
+    },
+    "H|ㄶ": {
+     "value": 0.0,
+     "n": 13
+    }
+   }
+  },
+  "Trailing.padding.right": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㄱ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄲ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄳ": {
+     "value": 0.0,
+     "n": 79
+    },
+    "VR|ㄴ": {
+     "value": 0.0,
+     "n": 69
+    },
+    "VR|ㄹ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄻ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄼ": {
+     "value": 0.138,
+     "n": 95
+    },
+    "VR|ㄾ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄿ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅁ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅂ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅄ": {
+     "value": 3.911,
+     "n": 38
+    },
+    "VR|ㅅ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅆ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅇ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅈ": {
+     "value": 0.0,
+     "n": 94
+    },
+    "VR|ㅊ": {
+     "value": 0.0,
+     "n": 94
+    },
+    "VR|ㅋ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅌ": {
+     "value": 0.0,
+     "n": 67
+    },
+    "VR|ㅍ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅎ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄷ": {
+     "value": 0.0,
+     "n": 52
+    },
+    "VL|ㄱ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㄲ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㄳ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㄴ": {
+     "value": 0.0,
+     "n": 41
+    },
+    "VL|ㄷ": {
+     "value": 0.0,
+     "n": 44
+    },
+    "VL|ㄹ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄻ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄼ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄾ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄿ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㅁ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㅂ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "VL|ㅅ": {
+     "value": 0.0,
+     "n": 49
+    },
+    "VL|ㅆ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "VL|ㅇ": {
+     "value": 0.0,
+     "n": 49
+    },
+    "VL|ㅈ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "VL|ㅊ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㅋ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㅌ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "VL|ㅍ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㅎ": {
+     "value": 0.0,
+     "n": 44
+    },
+    "H|ㄿ": {
+     "value": 8.201,
+     "n": 29
+    },
+    "H|ㅎ": {
+     "value": 17.073,
+     "n": 95
+    },
+    "M|ㄱ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㄲ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㄴ": {
+     "value": 22.857,
+     "n": 51
+    },
+    "M|ㄷ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㄹ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㄻ": {
+     "value": 0.0,
+     "n": 24
+    },
+    "M|ㄼ": {
+     "value": 0.0,
+     "n": 23
+    },
+    "M|ㄾ": {
+     "value": 0.0,
+     "n": 22
+    },
+    "M|ㄿ": {
+     "value": 0.0,
+     "n": 23
+    },
+    "M|ㅁ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㅂ": {
+     "value": 0.0,
+     "n": 26
+    },
+    "M|ㅄ": {
+     "value": 3.823,
+     "n": 8
+    },
+    "M|ㅅ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㅆ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "M|ㅇ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㅈ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㅊ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㅋ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㅌ": {
+     "value": 13.023,
+     "n": 33
+    },
+    "M|ㅍ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㅎ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㄳ": {
+     "value": 0.0,
+     "n": 19
+    },
+    "H|ㄴ": {
+     "value": 10.867,
+     "n": 62
+    },
+    "H|ㅂ": {
+     "value": 12.805,
+     "n": 62
+    },
+    "H|ㅅ": {
+     "value": 7.711,
+     "n": 63
+    },
+    "H|ㅆ": {
+     "value": 2.686,
+     "n": 48
+    },
+    "H|ㅊ": {
+     "value": 7.834,
+     "n": 63
+    },
+    "H|ㄱ": {
+     "value": 12.454,
+     "n": 30
+    },
+    "H|ㄲ": {
+     "value": 11.966,
+     "n": 31
+    },
+    "H|ㄳ": {
+     "value": 4.162,
+     "n": 31
+    },
+    "H|ㄷ": {
+     "value": 10.526,
+     "n": 30
+    },
+    "H|ㄹ": {
+     "value": 9.547,
+     "n": 28
+    },
+    "H|ㄻ": {
+     "value": 10.184,
+     "n": 27
+    },
+    "H|ㄼ": {
+     "value": 9.89,
+     "n": 27
+    },
+    "H|ㄾ": {
+     "value": 8.425,
+     "n": 27
+    },
+    "H|ㅁ": {
+     "value": 12.24,
+     "n": 30
+    },
+    "H|ㅇ": {
+     "value": 12.24,
+     "n": 29
+    },
+    "H|ㅈ": {
+     "value": 6.732,
+     "n": 27
+    },
+    "H|ㅋ": {
+     "value": 11.844,
+     "n": 30
+    },
+    "H|ㅌ": {
+     "value": 10.459,
+     "n": 28
+    },
+    "H|ㅍ": {
+     "value": 9.524,
+     "n": 29
+    },
+    "H|ㄶ": {
+     "value": 10.159,
+     "n": 13
+    }
+   }
+  },
+  "Trailing.padding.bottom": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㄱ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄲ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄳ": {
+     "value": 0.0,
+     "n": 79
+    },
+    "VR|ㄴ": {
+     "value": 0.0,
+     "n": 69
+    },
+    "VR|ㄹ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄻ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄼ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄾ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄿ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅁ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅂ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅄ": {
+     "value": 0.0,
+     "n": 38
+    },
+    "VR|ㅅ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅆ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅇ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅈ": {
+     "value": 0.0,
+     "n": 94
+    },
+    "VR|ㅊ": {
+     "value": 0.0,
+     "n": 94
+    },
+    "VR|ㅋ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅌ": {
+     "value": 0.0,
+     "n": 67
+    },
+    "VR|ㅍ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㅎ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "VR|ㄷ": {
+     "value": 0.0,
+     "n": 52
+    },
+    "VL|ㄱ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㄲ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㄳ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㄴ": {
+     "value": 0.0,
+     "n": 41
+    },
+    "VL|ㄷ": {
+     "value": 0.0,
+     "n": 44
+    },
+    "VL|ㄹ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄻ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄼ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄾ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㄿ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㅁ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㅂ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "VL|ㅅ": {
+     "value": 0.0,
+     "n": 49
+    },
+    "VL|ㅆ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "VL|ㅇ": {
+     "value": 0.0,
+     "n": 49
+    },
+    "VL|ㅈ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "VL|ㅊ": {
+     "value": 0.0,
+     "n": 43
+    },
+    "VL|ㅋ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㅌ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "VL|ㅍ": {
+     "value": 0.0,
+     "n": 47
+    },
+    "VL|ㅎ": {
+     "value": 0.0,
+     "n": 44
+    },
+    "H|ㄿ": {
+     "value": 0.0,
+     "n": 29
+    },
+    "H|ㅎ": {
+     "value": 0.0,
+     "n": 95
+    },
+    "M|ㄱ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㄲ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㄴ": {
+     "value": 0.0,
+     "n": 51
+    },
+    "M|ㄷ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㄹ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㄻ": {
+     "value": 0.0,
+     "n": 24
+    },
+    "M|ㄼ": {
+     "value": 0.0,
+     "n": 23
+    },
+    "M|ㄾ": {
+     "value": 0.0,
+     "n": 22
+    },
+    "M|ㄿ": {
+     "value": 0.0,
+     "n": 23
+    },
+    "M|ㅁ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㅂ": {
+     "value": 0.0,
+     "n": 26
+    },
+    "M|ㅄ": {
+     "value": 0.0,
+     "n": 8
+    },
+    "M|ㅅ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㅆ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "M|ㅇ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㅈ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㅊ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㅋ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "M|ㅌ": {
+     "value": 0.0,
+     "n": 33
+    },
+    "M|ㅍ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "M|ㅎ": {
+     "value": 0.0,
+     "n": 25
+    },
+    "M|ㄳ": {
+     "value": 0.0,
+     "n": 19
+    },
+    "H|ㄴ": {
+     "value": 0.0,
+     "n": 62
+    },
+    "H|ㅂ": {
+     "value": 0.0,
+     "n": 62
+    },
+    "H|ㅅ": {
+     "value": 0.0,
+     "n": 63
+    },
+    "H|ㅆ": {
+     "value": 0.0,
+     "n": 48
+    },
+    "H|ㅊ": {
+     "value": 0.0,
+     "n": 63
+    },
+    "H|ㄱ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "H|ㄲ": {
+     "value": 0.0,
+     "n": 31
+    },
+    "H|ㄳ": {
+     "value": 0.0,
+     "n": 31
+    },
+    "H|ㄷ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "H|ㄹ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "H|ㄻ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "H|ㄼ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "H|ㄾ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "H|ㅁ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "H|ㅇ": {
+     "value": 0.0,
+     "n": 29
+    },
+    "H|ㅈ": {
+     "value": 0.0,
+     "n": 27
+    },
+    "H|ㅋ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "H|ㅌ": {
+     "value": 0.0,
+     "n": 28
+    },
+    "H|ㅍ": {
+     "value": 0.0,
+     "n": 29
+    },
+    "H|ㄶ": {
+     "value": 0.0,
+     "n": 13
+    }
+   }
+  },
+  "Trailing.padding.left": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "VR|ㄱ": {
+     "value": 14.385,
+     "n": 95
+    },
+    "VR|ㄲ": {
+     "value": 10.788,
+     "n": 95
+    },
+    "VR|ㄳ": {
+     "value": 10.394,
+     "n": 79
+    },
+    "VR|ㄴ": {
+     "value": 17.102,
+     "n": 69
+    },
+    "VR|ㄹ": {
+     "value": 16.069,
+     "n": 95
+    },
+    "VR|ㄻ": {
+     "value": 9.438,
+     "n": 95
+    },
+    "VR|ㄼ": {
+     "value": 8.848,
+     "n": 95
+    },
+    "VR|ㄾ": {
+     "value": 9.113,
+     "n": 95
+    },
+    "VR|ㄿ": {
+     "value": 9.113,
+     "n": 95
+    },
+    "VR|ㅁ": {
+     "value": 16.759,
+     "n": 95
+    },
+    "VR|ㅂ": {
+     "value": 17.082,
+     "n": 95
+    },
+    "VR|ㅄ": {
+     "value": 10.272,
+     "n": 38
+    },
+    "VR|ㅅ": {
+     "value": 10.084,
+     "n": 95
+    },
+    "VR|ㅆ": {
+     "value": 4.348,
+     "n": 95
+    },
+    "VR|ㅇ": {
+     "value": 16.044,
+     "n": 95
+    },
+    "VR|ㅈ": {
+     "value": 11.235,
+     "n": 94
+    },
+    "VR|ㅊ": {
+     "value": 10.981,
+     "n": 94
+    },
+    "VR|ㅋ": {
+     "value": 10.665,
+     "n": 95
+    },
+    "VR|ㅌ": {
+     "value": 16.667,
+     "n": 67
+    },
+    "VR|ㅍ": {
+     "value": 13.491,
+     "n": 95
+    },
+    "VR|ㅎ": {
+     "value": 13.349,
+     "n": 95
+    },
+    "VR|ㄷ": {
+     "value": 16.357,
+     "n": 52
+    },
+    "VL|ㄱ": {
+     "value": 17.942,
+     "n": 47
+    },
+    "VL|ㄲ": {
+     "value": 13.863,
+     "n": 47
+    },
+    "VL|ㄳ": {
+     "value": 11.75,
+     "n": 47
+    },
+    "VL|ㄴ": {
+     "value": 20.897,
+     "n": 41
+    },
+    "VL|ㄷ": {
+     "value": 18.95,
+     "n": 44
+    },
+    "VL|ㄹ": {
+     "value": 19.524,
+     "n": 43
+    },
+    "VL|ㄻ": {
+     "value": 11.921,
+     "n": 43
+    },
+    "VL|ㄼ": {
+     "value": 11.508,
+     "n": 43
+    },
+    "VL|ㄾ": {
+     "value": 12.629,
+     "n": 43
+    },
+    "VL|ㄿ": {
+     "value": 13.043,
+     "n": 43
+    },
+    "VL|ㅁ": {
+     "value": 20.74,
+     "n": 47
+    },
+    "VL|ㅂ": {
+     "value": 21.1,
+     "n": 48
+    },
+    "VL|ㅅ": {
+     "value": 12.531,
+     "n": 49
+    },
+    "VL|ㅆ": {
+     "value": 5.704,
+     "n": 48
+    },
+    "VL|ㅇ": {
+     "value": 17.548,
+     "n": 49
+    },
+    "VL|ㅈ": {
+     "value": 13.625,
+     "n": 48
+    },
+    "VL|ㅊ": {
+     "value": 14.214,
+     "n": 43
+    },
+    "VL|ㅋ": {
+     "value": 14.536,
+     "n": 47
+    },
+    "VL|ㅌ": {
+     "value": 19.211,
+     "n": 28
+    },
+    "VL|ㅍ": {
+     "value": 16.408,
+     "n": 47
+    },
+    "VL|ㅎ": {
+     "value": 16.125,
+     "n": 44
+    },
+    "H|ㄿ": {
+     "value": 10.037,
+     "n": 29
+    },
+    "H|ㅎ": {
+     "value": 16.85,
+     "n": 95
+    },
+    "M|ㄱ": {
+     "value": 16.451,
+     "n": 28
+    },
+    "M|ㄲ": {
+     "value": 14.286,
+     "n": 27
+    },
+    "M|ㄴ": {
+     "value": 0.0,
+     "n": 51
+    },
+    "M|ㄷ": {
+     "value": 18.11,
+     "n": 27
+    },
+    "M|ㄹ": {
+     "value": 17.992,
+     "n": 25
+    },
+    "M|ㄻ": {
+     "value": 12.78,
+     "n": 24
+    },
+    "M|ㄼ": {
+     "value": 11.957,
+     "n": 23
+    },
+    "M|ㄾ": {
+     "value": 11.952,
+     "n": 22
+    },
+    "M|ㄿ": {
+     "value": 12.81,
+     "n": 23
+    },
+    "M|ㅁ": {
+     "value": 19.456,
+     "n": 25
+    },
+    "M|ㅂ": {
+     "value": 18.978,
+     "n": 26
+    },
+    "M|ㅄ": {
+     "value": 11.589,
+     "n": 8
+    },
+    "M|ㅅ": {
+     "value": 11.421,
+     "n": 27
+    },
+    "M|ㅆ": {
+     "value": 5.768,
+     "n": 30
+    },
+    "M|ㅇ": {
+     "value": 18.439,
+     "n": 28
+    },
+    "M|ㅈ": {
+     "value": 11.884,
+     "n": 28
+    },
+    "M|ㅊ": {
+     "value": 11.196,
+     "n": 25
+    },
+    "M|ㅋ": {
+     "value": 13.079,
+     "n": 27
+    },
+    "M|ㅌ": {
+     "value": 14.695,
+     "n": 33
+    },
+    "M|ㅍ": {
+     "value": 15.783,
+     "n": 28
+    },
+    "M|ㅎ": {
+     "value": 15.817,
+     "n": 25
+    },
+    "M|ㄳ": {
+     "value": 12.132,
+     "n": 19
+    },
+    "H|ㄴ": {
+     "value": 12.683,
+     "n": 62
+    },
+    "H|ㅂ": {
+     "value": 12.698,
+     "n": 62
+    },
+    "H|ㅅ": {
+     "value": 7.448,
+     "n": 63
+    },
+    "H|ㅆ": {
+     "value": 3.182,
+     "n": 48
+    },
+    "H|ㅊ": {
+     "value": 7.692,
+     "n": 63
+    },
+    "H|ㄱ": {
+     "value": 10.961,
+     "n": 30
+    },
+    "H|ㄲ": {
+     "value": 9.792,
+     "n": 31
+    },
+    "H|ㄳ": {
+     "value": 9.535,
+     "n": 31
+    },
+    "H|ㄷ": {
+     "value": 12.103,
+     "n": 30
+    },
+    "H|ㄹ": {
+     "value": 12.118,
+     "n": 28
+    },
+    "H|ㄻ": {
+     "value": 10.526,
+     "n": 27
+    },
+    "H|ㄼ": {
+     "value": 10.159,
+     "n": 27
+    },
+    "H|ㄾ": {
+     "value": 9.914,
+     "n": 27
+    },
+    "H|ㅁ": {
+     "value": 12.24,
+     "n": 30
+    },
+    "H|ㅇ": {
+     "value": 11.98,
+     "n": 29
+    },
+    "H|ㅈ": {
+     "value": 7.099,
+     "n": 27
+    },
+    "H|ㅋ": {
+     "value": 9.547,
+     "n": 30
+    },
+    "H|ㅌ": {
+     "value": 12.24,
+     "n": 28
+    },
+    "H|ㅍ": {
+     "value": 10.501,
+     "n": 29
+    },
+    "H|ㄶ": {
+     "value": 9.302,
+     "n": 13
+    }
+   }
+  },
+  "MedialExtension.spaceWeight": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "M|ㅘ": {
+     "value": 0.27,
+     "n": 178
+    },
+    "M|ㅙ": {
+     "value": 0.363,
+     "n": 158
+    },
+    "M|ㅚ": {
+     "value": 0.122,
+     "n": 194
+    },
+    "M|ㅝ": {
+     "value": 0.319,
+     "n": 30
+    },
+    "M|ㅞ": {
+     "value": 0.446,
+     "n": 46
+    },
+    "M|ㅟ": {
+     "value": 0.12,
+     "n": 23
+    },
+    "M|ㅢ": {
+     "value": 0.117,
+     "n": 46
+    }
+   }
+  },
+  "MedialExtension.padding.top": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "M|ㅘ": {
+     "value": 0.0,
+     "n": 178
+    },
+    "M|ㅙ": {
+     "value": 0.0,
+     "n": 158
+    },
+    "M|ㅚ": {
+     "value": 0.0,
+     "n": 194
+    },
+    "M|ㅝ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "M|ㅞ": {
+     "value": 0.0,
+     "n": 46
+    },
+    "M|ㅟ": {
+     "value": 0.0,
+     "n": 23
+    },
+    "M|ㅢ": {
+     "value": 0.0,
+     "n": 46
+    }
+   }
+  },
+  "MedialExtension.padding.right": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "M|ㅘ": {
+     "value": 0.0,
+     "n": 178
+    },
+    "M|ㅙ": {
+     "value": 0.0,
+     "n": 158
+    },
+    "M|ㅚ": {
+     "value": 0.0,
+     "n": 194
+    },
+    "M|ㅝ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "M|ㅞ": {
+     "value": 0.0,
+     "n": 46
+    },
+    "M|ㅟ": {
+     "value": 0.0,
+     "n": 23
+    },
+    "M|ㅢ": {
+     "value": 0.0,
+     "n": 46
+    }
+   }
+  },
+  "MedialExtension.padding.bottom": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "M|ㅘ": {
+     "value": 0.0,
+     "n": 178
+    },
+    "M|ㅙ": {
+     "value": 0.0,
+     "n": 158
+    },
+    "M|ㅚ": {
+     "value": 0.0,
+     "n": 194
+    },
+    "M|ㅝ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "M|ㅞ": {
+     "value": 0.0,
+     "n": 46
+    },
+    "M|ㅟ": {
+     "value": 0.0,
+     "n": 23
+    },
+    "M|ㅢ": {
+     "value": 0.0,
+     "n": 46
+    }
+   }
+  },
+  "MedialExtension.padding.left": {
+   "keyedBy": "family|jamo",
+   "entries": {
+    "M|ㅘ": {
+     "value": 0.0,
+     "n": 178
+    },
+    "M|ㅙ": {
+     "value": 0.0,
+     "n": 158
+    },
+    "M|ㅚ": {
+     "value": 0.0,
+     "n": 194
+    },
+    "M|ㅝ": {
+     "value": 0.0,
+     "n": 30
+    },
+    "M|ㅞ": {
+     "value": 0.0,
+     "n": 46
+    },
+    "M|ㅟ": {
+     "value": 0.0,
+     "n": 23
+    },
+    "M|ㅢ": {
+     "value": 0.0,
+     "n": 46
+    }
+   }
+  }
+ },
+ "fidelity": {
+  "metric": "리프 박스 최대 코너 편차, em 단위 (셀 868×949)",
+  "exact": {
+   "leaves": 15129,
+   "medianEm": 0.0,
+   "p95Em": 0.0,
+   "maxEm": 432.0,
+   "over1EmLeaves": 250
+  },
+  "topologyMedianOnly": {
+   "leaves": 15129,
+   "medianEm": 57.04,
+   "p95Em": 173.83,
+   "maxEm": 435.0
+  },
+  "withContextTables": {
+   "leaves": 15129,
+   "medianEm": 43.43,
+   "p95Em": 124.18,
+   "maxEm": 435.0
+  },
+  "note": "exact는 음절별 역산값을 그대로 되돌린 것으로 알고리즘 재현이 맞는지 확인하는 용도다. 실제 규칙 적용 충실도는 withContextTables 쪽을 봐야 한다. Noto가 11,172자를 개별 최적화한 폰트이므로 완전 일치는 원리적으로 불가능하다."
+ }
+}
