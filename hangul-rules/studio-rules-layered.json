@@ -1,0 +1,10571 @@
+{
+ "schema": "hangul-rules/studio-layered/1",
+ "source": "Noto Sans CJK KR Regular (noto-cjk Sans2.004)",
+ "frame": {
+  "unitsPerEm": 1000,
+  "advanceWidth": 1000,
+  "cellEmBox": {
+   "x0": 27,
+   "y0": -107,
+   "x1": 895,
+   "y1": 842
+  }
+ },
+ "model": {
+  "L1": "CompositionTemplate 12종. split 값과 슬롯.",
+  "L2": "자모 기본 패딩. JamoVariant 단위.",
+  "L3": "(중성,종성) 컬럼 보정. CorrectionRule level=combination, 패딩 가산 delta.",
+  "L4": "음절별 보정. exact glyph rule. 필요할 때만."
+ },
+ "L1_templates": {
+  "H-compound": {
+   "nodes": {
+    "Root": {
+     "padding": {
+      "top": 0.211,
+      "right": 2.995,
+      "bottom": 1.791,
+      "left": 1.843
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 18.28
+    },
+    "LeadingMedial": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 40.883,
+     "spaceWeight": 0.638
+    },
+    "Leading": {
+     "padding": {
+      "top": 0.0,
+      "right": 3.027,
+      "bottom": 0.0,
+      "left": 3.39
+     },
+     "spaceWeight": 0.469
+    },
+    "Medial": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.531
+    },
+    "Trailing": {
+     "padding": {
+      "top": 0.0,
+      "right": 2.785,
+      "bottom": 0.0,
+      "left": 8.475
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 6.685,
+     "spaceWeight": 0.362
+    },
+    "TrailingFirst": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 2.01,
+      "left": 0.0
+     },
+     "spaceWeight": 0.462
+    },
+    "TrailingSecond": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.538
+    }
+   },
+   "syllables": 159
+  },
+  "H-none": {
+   "nodes": {
+    "LeadingMedial": {
+     "padding": {
+      "top": 1.054,
+      "right": 1.498,
+      "bottom": 2.424,
+      "left": 1.843
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 41.921
+    },
+    "Leading": {
+     "padding": {
+      "top": 0.0,
+      "right": 2.622,
+      "bottom": 0.0,
+      "left": 1.669
+     },
+     "spaceWeight": 0.499
+    },
+    "Medial": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.501
+    }
+   },
+   "syllables": 67
+  },
+  "H-simple": {
+   "nodes": {
+    "Root": {
+     "padding": {
+      "top": 0.0,
+      "right": 2.88,
+      "bottom": 0.421,
+      "left": 1.728
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 25.291
+    },
+    "LeadingMedial": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 50.539,
+     "spaceWeight": 0.627
+    },
+    "Leading": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.491
+    },
+    "Medial": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.509
+    },
+    "Trailing": {
+     "padding": {
+      "top": 0.0,
+      "right": 2.295,
+      "bottom": 0.0,
+      "left": 2.657
+     },
+     "spaceWeight": 0.373
+    }
+   },
+   "syllables": 685
+  },
+  "M-compound": {
+   "nodes": {
+    "Root": {
+     "padding": {
+      "top": 1.054,
+      "right": 1.267,
+      "bottom": 1.791,
+      "left": 1.613
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 11.822
+    },
+    "LeadingMedial": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 30.368,
+     "spaceWeight": 0.611
+    },
+    "LeadingMedialBase": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 1.746,
+      "left": 0.0
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 59.451,
+     "spaceWeight": 0.565
+    },
+    "Leading": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 2.093
+     },
+     "spaceWeight": 0.42
+    },
+    "MedialBase": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.161,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.58
+    },
+    "MedialExtension": {
+     "padding": {
+      "top": 0.794,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.435
+    },
+    "Trailing": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.356,
+      "bottom": 0.0,
+      "left": 9.253
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 6.168,
+     "spaceWeight": 0.389
+    },
+    "TrailingFirst": {
+     "padding": {
+      "top": 4.738,
+      "right": 0.0,
+      "bottom": 2.244,
+      "left": 0.0
+     },
+     "spaceWeight": 0.468
+    },
+    "TrailingSecond": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.532
+    }
+   },
+   "syllables": 122
+  },
+  "M-none": {
+   "nodes": {
+    "LeadingMedial": {
+     "padding": {
+      "top": 0.843,
+      "right": 0.806,
+      "bottom": 2.634,
+      "left": 0.115
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 33.14
+    },
+    "LeadingMedialBase": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 2.293,
+      "left": 0.0
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 24.804,
+     "spaceWeight": 0.57
+    },
+    "Leading": {
+     "padding": {
+      "top": 0.0,
+      "right": 2.603,
+      "bottom": 0.0,
+      "left": 0.306
+     },
+     "spaceWeight": 0.525
+    },
+    "MedialBase": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.475
+    },
+    "MedialExtension": {
+     "padding": {
+      "top": 0.764,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.43
+    }
+   },
+   "syllables": 93
+  },
+  "M-simple": {
+   "nodes": {
+    "Root": {
+     "padding": {
+      "top": 0.527,
+      "right": 1.152,
+      "bottom": 0.0,
+      "left": 1.037
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 65.572
+    },
+    "LeadingMedial": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 55.359,
+     "spaceWeight": 0.607
+    },
+    "LeadingMedialBase": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 45.763,
+     "spaceWeight": 0.632
+    },
+    "Leading": {
+     "padding": {
+      "top": 0.0,
+      "right": 24.37,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.352
+    },
+    "MedialBase": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.24
+     },
+     "spaceWeight": 0.648
+    },
+    "MedialExtension": {
+     "padding": {
+      "top": 1.059,
+      "right": 0.0,
+      "bottom": 22.352,
+      "left": 0.0
+     },
+     "spaceWeight": 0.368
+    },
+    "Trailing": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.118,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.393
+    }
+   },
+   "syllables": 460
+  },
+  "VL-compound": {
+   "nodes": {
+    "Root": {
+     "padding": {
+      "top": 0.527,
+      "right": 0.461,
+      "bottom": 2.107,
+      "left": 0.0
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 5.952
+    },
+    "LeadingMedial": {
+     "padding": {
+      "top": 0.0,
+      "right": 6.829,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 36.77,
+     "spaceWeight": 0.586
+    },
+    "Leading": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 1.916,
+      "left": 0.0
+     },
+     "spaceWeight": 0.594
+    },
+    "Medial": {
+     "padding": {
+      "top": 1.568,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.406
+    },
+    "Trailing": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 12.963
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 6.649,
+     "spaceWeight": 0.414
+    },
+    "TrailingFirst": {
+     "padding": {
+      "top": 2.222,
+      "right": 0.0,
+      "bottom": 1.235,
+      "left": 0.0
+     },
+     "spaceWeight": 0.448
+    },
+    "TrailingSecond": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.552
+    }
+   },
+   "syllables": 219
+  },
+  "VL-none": {
+   "nodes": {
+    "LeadingMedial": {
+     "padding": {
+      "top": 1.581,
+      "right": 6.567,
+      "bottom": 2.74,
+      "left": 0.0
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 35.265
+    },
+    "Leading": {
+     "padding": {
+      "top": 1.101,
+      "right": 0.0,
+      "bottom": 5.286,
+      "left": 0.0
+     },
+     "spaceWeight": 0.606
+    },
+    "Medial": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.394
+    }
+   },
+   "syllables": 45
+  },
+  "VL-simple": {
+   "nodes": {
+    "Root": {
+     "padding": {
+      "top": 0.421,
+      "right": 0.23,
+      "bottom": 1.264,
+      "left": 0.0
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 27.653
+    },
+    "LeadingMedial": {
+     "padding": {
+      "top": 0.0,
+      "right": 6.582,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 38.813,
+     "spaceWeight": 0.594
+    },
+    "Leading": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 2.687,
+      "left": 0.0
+     },
+     "spaceWeight": 0.593
+    },
+    "Medial": {
+     "padding": {
+      "top": 1.273,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.407
+    },
+    "Trailing": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 7.968
+     },
+     "spaceWeight": 0.406
+    }
+   },
+   "syllables": 720
+  },
+  "VR-compound": {
+   "nodes": {
+    "Root": {
+     "padding": {
+      "top": 0.421,
+      "right": 0.461,
+      "bottom": 2.107,
+      "left": 0.0
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 7.243
+    },
+    "LeadingMedial": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.463,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 14.186,
+     "spaceWeight": 0.582
+    },
+    "Leading": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 3.293,
+      "left": 0.0
+     },
+     "spaceWeight": 0.642
+    },
+    "Medial": {
+     "padding": {
+      "top": 1.386,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.358
+    },
+    "Trailing": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 9.491
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 8.568,
+     "spaceWeight": 0.418
+    },
+    "TrailingFirst": {
+     "padding": {
+      "top": 2.892,
+      "right": 0.0,
+      "bottom": 1.205,
+      "left": 0.0
+     },
+     "spaceWeight": 0.461
+    },
+    "TrailingSecond": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.539
+    }
+   },
+   "syllables": 499
+  },
+  "VR-none": {
+   "nodes": {
+    "LeadingMedial": {
+     "padding": {
+      "top": 1.475,
+      "right": 0.0,
+      "bottom": 2.74,
+      "left": 0.461
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 16.898
+    },
+    "Leading": {
+     "padding": {
+      "top": 1.1,
+      "right": 0.0,
+      "bottom": 16.172,
+      "left": 0.0
+     },
+     "spaceWeight": 0.64
+    },
+    "Medial": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.36
+    }
+   },
+   "syllables": 95
+  },
+  "VR-simple": {
+   "nodes": {
+    "Root": {
+     "padding": {
+      "top": 0.527,
+      "right": 0.23,
+      "bottom": 0.421,
+      "left": 0.0
+     },
+     "axis": "Vertical",
+     "gap": 0.0,
+     "overlap": 26.809
+    },
+    "LeadingMedial": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.346,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "axis": "Horizontal",
+     "gap": 0.0,
+     "overlap": 16.222,
+     "spaceWeight": 0.584
+    },
+    "Leading": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 15.086,
+      "left": 0.0
+     },
+     "spaceWeight": 0.641
+    },
+    "Medial": {
+     "padding": {
+      "top": 1.006,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 0.0
+     },
+     "spaceWeight": 0.359
+    },
+    "Trailing": {
+     "padding": {
+      "top": 0.0,
+      "right": 0.0,
+      "bottom": 0.0,
+      "left": 6.351
+     },
+     "spaceWeight": 0.416
+    }
+   },
+   "syllables": 1421
+  }
+ },
+ "L2_jamoPadding": {
+  "Leading": {
+   "H": {
+    "ㄱ": {
+     "top": 10.2,
+     "right": 12.198,
+     "bottom": 30.055,
+     "left": 12.319
+    },
+    "ㄲ": {
+     "top": 9.472,
+     "right": 11.473,
+     "bottom": 32.878,
+     "left": 8.213
+    },
+    "ㄴ": {
+     "top": 6.25,
+     "right": 11.473,
+     "bottom": 39.162,
+     "left": 14.251
+    },
+    "ㄷ": {
+     "top": 8.743,
+     "right": 11.594,
+     "bottom": 37.158,
+     "left": 13.406
+    },
+    "ㄸ": {
+     "top": 8.561,
+     "right": 8.937,
+     "bottom": 36.066,
+     "left": 9.3
+    },
+    "ㄹ": {
+     "top": 7.65,
+     "right": 10.507,
+     "bottom": 25.137,
+     "left": 12.44
+    },
+    "ㅁ": {
+     "top": 8.015,
+     "right": 13.164,
+     "bottom": 35.883,
+     "left": 12.802
+    },
+    "ㅂ": {
+     "top": 6.317,
+     "right": 13.285,
+     "bottom": 33.88,
+     "left": 13.043
+    },
+    "ㅃ": {
+     "top": 6.557,
+     "right": 10.145,
+     "bottom": 34.426,
+     "left": 9.42
+    },
+    "ㅅ": {
+     "top": 5.388,
+     "right": 6.28,
+     "bottom": 32.423,
+     "left": 5.797
+    },
+    "ㅆ": {
+     "top": 6.375,
+     "right": 3.14,
+     "bottom": 28.962,
+     "left": 3.502
+    },
+    "ㅇ": {
+     "top": 5.829,
+     "right": 11.353,
+     "bottom": 31.33,
+     "left": 11.594
+    },
+    "ㅈ": {
+     "top": 8.925,
+     "right": 5.797,
+     "bottom": 31.641,
+     "left": 5.495
+    },
+    "ㅉ": {
+     "top": 9.041,
+     "right": 3.261,
+     "bottom": 27.687,
+     "left": 4.106
+    },
+    "ㅊ": {
+     "top": 1.821,
+     "right": 6.159,
+     "bottom": 23.679,
+     "left": 6.643
+    },
+    "ㅋ": {
+     "top": 9.836,
+     "right": 11.836,
+     "bottom": 24.408,
+     "left": 8.816
+    },
+    "ㅌ": {
+     "top": 7.543,
+     "right": 11.957,
+     "bottom": 25.683,
+     "left": 12.681
+    },
+    "ㅍ": {
+     "top": 8.743,
+     "right": 9.783,
+     "bottom": 33.515,
+     "left": 9.42
+    },
+    "ㅎ": {
+     "top": 0.729,
+     "right": 6.039,
+     "bottom": 66.379,
+     "left": 6.159
+    }
+   },
+   "M": {
+    "ㄱ": {
+     "top": 13.735,
+     "right": 18.889,
+     "bottom": 23.583,
+     "left": 10.0
+    },
+    "ㄲ": {
+     "top": 13.976,
+     "right": 17.143,
+     "bottom": 23.583,
+     "left": 6.032
+    },
+    "ㄴ": {
+     "top": 12.531,
+     "right": 17.937,
+     "bottom": 38.579,
+     "left": 14.444
+    },
+    "ㄷ": {
+     "top": 11.914,
+     "right": 16.508,
+     "bottom": 34.385,
+     "left": 14.286
+    },
+    "ㄸ": {
+     "top": 13.352,
+     "right": 52.698,
+     "bottom": 29.951,
+     "left": 7.46
+    },
+    "ㄹ": {
+     "top": 11.401,
+     "right": 15.036,
+     "bottom": 23.855,
+     "left": 13.686
+    },
+    "ㅁ": {
+     "top": 12.56,
+     "right": 17.778,
+     "bottom": 31.081,
+     "left": 14.557
+    },
+    "ㅂ": {
+     "top": 11.742,
+     "right": 17.486,
+     "bottom": 28.913,
+     "left": 14.873
+    },
+    "ㅃ": {
+     "top": 11.093,
+     "right": 9.206,
+     "bottom": 25.637,
+     "left": 6.309
+    },
+    "ㅅ": {
+     "top": 7.806,
+     "right": 12.007,
+     "bottom": 23.583,
+     "left": 5.238
+    },
+    "ㅆ": {
+     "top": 9.449,
+     "right": 3.492,
+     "bottom": 24.918,
+     "left": 3.175
+    },
+    "ㅇ": {
+     "top": 9.264,
+     "right": 16.27,
+     "bottom": 28.044,
+     "left": 12.54
+    },
+    "ㅈ": {
+     "top": 13.352,
+     "right": 11.905,
+     "bottom": 18.653,
+     "left": 4.444
+    },
+    "ㅉ": {
+     "top": 11.914,
+     "right": 1.341,
+     "bottom": 21.837,
+     "left": 3.175
+    },
+    "ㅊ": {
+     "top": 2.054,
+     "right": 12.222,
+     "bottom": 15.572,
+     "left": 6.032
+    },
+    "ㅋ": {
+     "top": 12.736,
+     "right": 19.048,
+     "bottom": 18.448,
+     "left": 5.855
+    },
+    "ㅌ": {
+     "top": 10.751,
+     "right": 16.032,
+     "bottom": 25.427,
+     "left": 14.127
+    },
+    "ㅍ": {
+     "top": 11.945,
+     "right": 12.063,
+     "bottom": 27.692,
+     "left": 9.683
+    },
+    "ㅎ": {
+     "top": 1.233,
+     "right": 9.206,
+     "bottom": 13.329,
+     "left": 6.349
+    }
+   },
+   "VL": {
+    "ㄱ": {
+     "top": 4.506,
+     "right": 9.309,
+     "bottom": 19.767,
+     "left": 5.105
+    },
+    "ㄲ": {
+     "top": 4.36,
+     "right": 5.706,
+     "bottom": 20.494,
+     "left": 3.609
+    },
+    "ㄴ": {
+     "top": 4.506,
+     "right": 8.859,
+     "bottom": 22.02,
+     "left": 10.092
+    },
+    "ㄷ": {
+     "top": 11.047,
+     "right": 31.532,
+     "bottom": 26.599,
+     "left": 9.939
+    },
+    "ㄸ": {
+     "top": 10.756,
+     "right": 23.724,
+     "bottom": 28.488,
+     "left": 6.607
+    },
+    "ㄹ": {
+     "top": 9.448,
+     "right": 30.581,
+     "bottom": 24.855,
+     "left": 9.159
+    },
+    "ㅁ": {
+     "top": 4.36,
+     "right": 7.508,
+     "bottom": 21.366,
+     "left": 9.76
+    },
+    "ㅂ": {
+     "top": 4.36,
+     "right": 7.508,
+     "bottom": 21.076,
+     "left": 9.61
+    },
+    "ㅃ": {
+     "top": 4.288,
+     "right": 1.952,
+     "bottom": 20.858,
+     "left": 5.105
+    },
+    "ㅅ": {
+     "top": 9.012,
+     "right": 29.73,
+     "bottom": 22.674,
+     "left": 3.453
+    },
+    "ㅆ": {
+     "top": 10.756,
+     "right": 20.571,
+     "bottom": 25.654,
+     "left": 0.0
+    },
+    "ㅇ": {
+     "top": 4.36,
+     "right": 7.508,
+     "bottom": 22.093,
+     "left": 4.697
+    },
+    "ㅈ": {
+     "top": 11.368,
+     "right": 30.122,
+     "bottom": 22.238,
+     "left": 3.754
+    },
+    "ㅉ": {
+     "top": 11.192,
+     "right": 19.97,
+     "bottom": 23.692,
+     "left": 0.901
+    },
+    "ㅊ": {
+     "top": 2.762,
+     "right": 29.129,
+     "bottom": 21.512,
+     "left": 4.128
+    },
+    "ㅋ": {
+     "top": 4.506,
+     "right": 8.108,
+     "bottom": 18.314,
+     "left": 4.655
+    },
+    "ㅌ": {
+     "top": 10.465,
+     "right": 31.682,
+     "bottom": 24.855,
+     "left": 9.61
+    },
+    "ㅍ": {
+     "top": 11.337,
+     "right": 28.979,
+     "bottom": 26.962,
+     "left": 2.853
+    },
+    "ㅎ": {
+     "top": 1.599,
+     "right": 17.868,
+     "bottom": 19.186,
+     "left": 2.752
+    }
+   },
+   "VR": {
+    "ㄱ": {
+     "top": 11.675,
+     "right": 25.35,
+     "bottom": 9.645,
+     "left": 4.51
+    },
+    "ㄲ": {
+     "top": 11.844,
+     "right": 15.708,
+     "bottom": 10.706,
+     "left": 4.044
+    },
+    "ㄴ": {
+     "top": 10.649,
+     "right": 13.064,
+     "bottom": 22.222,
+     "left": 10.264
+    },
+    "ㄷ": {
+     "top": 12.521,
+     "right": 14.152,
+     "bottom": 19.966,
+     "left": 10.109
+    },
+    "ㄸ": {
+     "top": 12.352,
+     "right": 5.754,
+     "bottom": 20.135,
+     "left": 6.984
+    },
+    "ㄹ": {
+     "top": 10.491,
+     "right": 13.219,
+     "bottom": 14.552,
+     "left": 9.331
+    },
+    "ㅁ": {
+     "top": 11.929,
+     "right": 26.128,
+     "bottom": 21.658,
+     "left": 9.798
+    },
+    "ㅂ": {
+     "top": 10.321,
+     "right": 26.439,
+     "bottom": 19.289,
+     "left": 9.798
+    },
+    "ㅃ": {
+     "top": 10.406,
+     "right": 10.886,
+     "bottom": 18.443,
+     "left": 5.443
+    },
+    "ㅅ": {
+     "top": 9.306,
+     "right": 15.397,
+     "bottom": 12.724,
+     "left": 3.266
+    },
+    "ㅆ": {
+     "top": 10.867,
+     "right": 4.733,
+     "bottom": 15.736,
+     "left": 0.933
+    },
+    "ㅇ": {
+     "top": 10.152,
+     "right": 21.773,
+     "bottom": 18.274,
+     "left": 6.065
+    },
+    "ㅈ": {
+     "top": 12.186,
+     "right": 15.552,
+     "bottom": 12.944,
+     "left": 3.771
+    },
+    "ㅉ": {
+     "top": 12.521,
+     "right": 2.955,
+     "bottom": 13.452,
+     "left": 2.177
+    },
+    "ㅊ": {
+     "top": 1.434,
+     "right": 14.152,
+     "bottom": 11.675,
+     "left": 4.242
+    },
+    "ㅋ": {
+     "top": 10.152,
+     "right": 25.972,
+     "bottom": 6.351,
+     "left": 4.666
+    },
+    "ㅌ": {
+     "top": 11.337,
+     "right": 15.552,
+     "bottom": 14.552,
+     "left": 9.642
+    },
+    "ㅍ": {
+     "top": 12.86,
+     "right": 11.198,
+     "bottom": 17.936,
+     "left": 3.333
+    },
+    "ㅎ": {
+     "top": 1.015,
+     "right": 13.064,
+     "bottom": 9.319,
+     "left": 3.888
+    }
+   }
+  },
+  "Medial": {
+   "H": {
+    "ㅗ": {
+     "top": 24.472,
+     "right": 0.483,
+     "bottom": 37.852,
+     "left": 0.966
+    },
+    "ㅛ": {
+     "top": 27.465,
+     "right": 0.966,
+     "bottom": 35.915,
+     "left": 0.907
+    },
+    "ㅜ": {
+     "top": 44.894,
+     "right": 0.362,
+     "bottom": 20.423,
+     "left": 0.845
+    },
+    "ㅠ": {
+     "top": 44.894,
+     "right": 0.966,
+     "bottom": 11.18,
+     "left": 0.715
+    },
+    "ㅡ": {
+     "top": 48.768,
+     "right": 0.483,
+     "bottom": 38.908,
+     "left": 0.845
+    }
+   },
+   "VL": {
+    "ㅓ": {
+     "top": 0.354,
+     "right": 9.19,
+     "bottom": 21.633,
+     "left": 33.698
+    },
+    "ㅔ": {
+     "top": 0.43,
+     "right": 4.595,
+     "bottom": 22.206,
+     "left": 23.937
+    },
+    "ㅕ": {
+     "top": 0.287,
+     "right": 9.19,
+     "bottom": 20.63,
+     "left": 34.792
+    },
+    "ㅖ": {
+     "top": 0.43,
+     "right": 4.595,
+     "bottom": 22.493,
+     "left": 27.352
+    }
+   },
+   "VR": {
+    "ㅏ": {
+     "top": 0.435,
+     "right": 1.389,
+     "bottom": 21.335,
+     "left": 38.611
+    },
+    "ㅐ": {
+     "top": 0.581,
+     "right": 21.307,
+     "bottom": 21.335,
+     "left": 2.083
+    },
+    "ㅑ": {
+     "top": 0.581,
+     "right": 1.989,
+     "bottom": 21.626,
+     "left": 38.611
+    },
+    "ㅒ": {
+     "top": 0.581,
+     "right": 21.111,
+     "bottom": 22.206,
+     "left": 1.944
+    },
+    "ㅣ": {
+     "top": 0.581,
+     "right": 27.778,
+     "bottom": 21.335,
+     "left": 49.167
+    }
+   }
+  },
+  "MedialBase": {
+   "M": {
+    "ㅘ": {
+     "top": 31.845,
+     "right": 29.964,
+     "bottom": 46.142,
+     "left": 0.842
+    },
+    "ㅙ": {
+     "top": 31.622,
+     "right": 41.155,
+     "bottom": 46.197,
+     "left": 1.29
+    },
+    "ㅚ": {
+     "top": 31.232,
+     "right": 26.113,
+     "bottom": 46.197,
+     "left": 1.564
+    },
+    "ㅝ": {
+     "top": 28.06,
+     "right": 5.765,
+     "bottom": 2.26,
+     "left": 2.757
+    },
+    "ㅞ": {
+     "top": 58.595,
+     "right": 20.904,
+     "bottom": 6.851,
+     "left": 2.144
+    },
+    "ㅟ": {
+     "top": 23.164,
+     "right": 4.747,
+     "bottom": 2.072,
+     "left": 3.063
+    },
+    "ㅢ": {
+     "top": 55.809,
+     "right": 5.656,
+     "bottom": 15.21,
+     "left": 4.135
+    }
+   }
+  },
+  "MedialExtension": {
+   "M": {
+    "ㅘ": {
+     "top": 0.0,
+     "right": 0.412,
+     "bottom": 22.586,
+     "left": 55.556
+    },
+    "ㅙ": {
+     "top": 0.13,
+     "right": 13.389,
+     "bottom": 23.274,
+     "left": 31.687
+    },
+    "ㅚ": {
+     "top": 0.13,
+     "right": 19.547,
+     "bottom": 23.411,
+     "left": 63.58
+    },
+    "ㅝ": {
+     "top": 0.11,
+     "right": 19.309,
+     "bottom": 0.44,
+     "left": 22.561
+    },
+    "ㅞ": {
+     "top": 0.0,
+     "right": 14.62,
+     "bottom": 4.984,
+     "left": 2.846
+    },
+    "ㅟ": {
+     "top": 0.11,
+     "right": 19.715,
+     "bottom": 0.44,
+     "left": 63.618
+    },
+    "ㅢ": {
+     "top": 0.11,
+     "right": 20.325,
+     "bottom": 6.772,
+     "left": 62.602
+    }
+   }
+  },
+  "Trailing": {
+   "H": {
+    "ㄱ": {
+     "top": 27.715,
+     "right": 10.991,
+     "bottom": 5.656,
+     "left": 9.657
+    },
+    "ㄲ": {
+     "top": 25.339,
+     "right": 11.055,
+     "bottom": 4.525,
+     "left": 7.751
+    },
+    "ㄴ": {
+     "top": 31.674,
+     "right": 9.149,
+     "bottom": 10.181,
+     "left": 11.436
+    },
+    "ㄷ": {
+     "top": 24.321,
+     "right": 9.657,
+     "bottom": 8.145,
+     "left": 10.102
+    },
+    "ㄹ": {
+     "top": 10.747,
+     "right": 7.878,
+     "bottom": 7.919,
+     "left": 10.801
+    },
+    "ㅁ": {
+     "top": 24.661,
+     "right": 10.673,
+     "bottom": 8.371,
+     "left": 10.928
+    },
+    "ㅂ": {
+     "top": 15.271,
+     "right": 11.436,
+     "bottom": 8.371,
+     "left": 11.309
+    },
+    "ㅅ": {
+     "top": 23.303,
+     "right": 5.972,
+     "bottom": 6.561,
+     "left": 5.972
+    },
+    "ㅆ": {
+     "top": 25.113,
+     "right": 1.08,
+     "bottom": 2.941,
+     "left": 1.017
+    },
+    "ㅇ": {
+     "top": 21.493,
+     "right": 10.673,
+     "bottom": 6.109,
+     "left": 10.673
+    },
+    "ㅈ": {
+     "top": 25.339,
+     "right": 5.464,
+     "bottom": 6.787,
+     "left": 5.083
+    },
+    "ㅊ": {
+     "top": 8.145,
+     "right": 6.734,
+     "bottom": 4.525,
+     "left": 5.337
+    },
+    "ㅋ": {
+     "top": 23.077,
+     "right": 10.928,
+     "bottom": 5.204,
+     "left": 7.243
+    },
+    "ㅌ": {
+     "top": 11.878,
+     "right": 9.53,
+     "bottom": 7.692,
+     "left": 10.038
+    },
+    "ㅍ": {
+     "top": 23.077,
+     "right": 8.513,
+     "bottom": 7.692,
+     "left": 8.386
+    },
+    "ㅎ": {
+     "top": 43.213,
+     "right": 16.391,
+     "bottom": 3.846,
+     "left": 15.629
+    }
+   },
+   "M": {
+    "ㄱ": {
+     "top": 46.05,
+     "right": 11.321,
+     "bottom": 4.727,
+     "left": 15.802
+    },
+    "ㄲ": {
+     "top": 45.398,
+     "right": 11.321,
+     "bottom": 4.401,
+     "left": 13.915
+    },
+    "ㄴ": {
+     "top": 21.276,
+     "right": 28.656,
+     "bottom": 53.135,
+     "left": 1.533
+    },
+    "ㄷ": {
+     "top": 45.561,
+     "right": 9.434,
+     "bottom": 6.357,
+     "left": 17.925
+    },
+    "ㄹ": {
+     "top": 35.619,
+     "right": 7.311,
+     "bottom": 6.357,
+     "left": 18.514
+    },
+    "ㅁ": {
+     "top": 44.746,
+     "right": 11.085,
+     "bottom": 6.683,
+     "left": 18.868
+    },
+    "ㅂ": {
+     "top": 39.857,
+     "right": 11.085,
+     "bottom": 6.601,
+     "left": 18.514
+    },
+    "ㅅ": {
+     "top": 42.79,
+     "right": 6.132,
+     "bottom": 5.216,
+     "left": 12.028
+    },
+    "ㅆ": {
+     "top": 43.931,
+     "right": 2.594,
+     "bottom": 2.934,
+     "left": 6.958
+    },
+    "ㅇ": {
+     "top": 43.361,
+     "right": 10.495,
+     "bottom": 5.053,
+     "left": 17.689
+    },
+    "ㅈ": {
+     "top": 45.072,
+     "right": 5.955,
+     "bottom": 5.379,
+     "left": 12.382
+    },
+    "ㅊ": {
+     "top": 34.478,
+     "right": 6.25,
+     "bottom": 5.379,
+     "left": 11.792
+    },
+    "ㅋ": {
+     "top": 44.746,
+     "right": 11.439,
+     "bottom": 4.564,
+     "left": 12.972
+    },
+    "ㅌ": {
+     "top": 35.782,
+     "right": 12.854,
+     "bottom": 6.52,
+     "left": 15.448
+    },
+    "ㅍ": {
+     "top": 44.257,
+     "right": 8.608,
+     "bottom": 6.194,
+     "left": 15.861
+    },
+    "ㅎ": {
+     "top": 29.751,
+     "right": 8.726,
+     "bottom": 5.053,
+     "left": 15.33
+    }
+   },
+   "VL": {
+    "ㄱ": {
+     "top": 30.372,
+     "right": 10.038,
+     "bottom": 3.512,
+     "left": 12.547
+    },
+    "ㄲ": {
+     "top": 27.066,
+     "right": 9.912,
+     "bottom": 3.306,
+     "left": 9.159
+    },
+    "ㄴ": {
+     "top": 34.298,
+     "right": 6.775,
+     "bottom": 7.645,
+     "left": 15.809
+    },
+    "ㄷ": {
+     "top": 28.512,
+     "right": 8.281,
+     "bottom": 5.579,
+     "left": 13.425
+    },
+    "ㄹ": {
+     "top": 16.529,
+     "right": 5.772,
+     "bottom": 5.579,
+     "left": 14.555
+    },
+    "ㅁ": {
+     "top": 27.686,
+     "right": 9.912,
+     "bottom": 5.992,
+     "left": 15.056
+    },
+    "ㅂ": {
+     "top": 21.074,
+     "right": 10.1,
+     "bottom": 5.992,
+     "left": 15.37
+    },
+    "ㅅ": {
+     "top": 26.446,
+     "right": 4.266,
+     "bottom": 4.339,
+     "left": 8.03
+    },
+    "ㅆ": {
+     "top": 25.62,
+     "right": 1.255,
+     "bottom": 2.583,
+     "left": 1.255
+    },
+    "ㅇ": {
+     "top": 28.512,
+     "right": 9.536,
+     "bottom": 3.926,
+     "left": 14.304
+    },
+    "ㅈ": {
+     "top": 29.339,
+     "right": 4.454,
+     "bottom": 4.339,
+     "left": 9.849
+    },
+    "ㅊ": {
+     "top": 14.05,
+     "right": 4.141,
+     "bottom": 4.339,
+     "left": 9.912
+    },
+    "ㅋ": {
+     "top": 27.893,
+     "right": 9.912,
+     "bottom": 3.099,
+     "left": 9.159
+    },
+    "ㅌ": {
+     "top": 17.149,
+     "right": 6.775,
+     "bottom": 5.579,
+     "left": 13.551
+    },
+    "ㅍ": {
+     "top": 26.24,
+     "right": 7.654,
+     "bottom": 5.579,
+     "left": 11.167
+    },
+    "ㅎ": {
+     "top": 9.298,
+     "right": 8.532,
+     "bottom": 3.926,
+     "left": 10.728
+    }
+   },
+   "VR": {
+    "ㄱ": {
+     "top": 30.847,
+     "right": 12.577,
+     "bottom": 5.04,
+     "left": 12.947
+    },
+    "ㄲ": {
+     "top": 26.815,
+     "right": 13.44,
+     "bottom": 4.637,
+     "left": 8.261
+    },
+    "ㄴ": {
+     "top": 33.871,
+     "right": 9.494,
+     "bottom": 9.073,
+     "left": 14.673
+    },
+    "ㄷ": {
+     "top": 28.629,
+     "right": 8.138,
+     "bottom": 7.056,
+     "left": 14.92
+    },
+    "ㄹ": {
+     "top": 16.532,
+     "right": 8.755,
+     "bottom": 7.056,
+     "left": 15.29
+    },
+    "ㅁ": {
+     "top": 27.621,
+     "right": 12.577,
+     "bottom": 7.46,
+     "left": 15.413
+    },
+    "ㅂ": {
+     "top": 21.169,
+     "right": 12.577,
+     "bottom": 7.46,
+     "left": 15.66
+    },
+    "ㅅ": {
+     "top": 25.202,
+     "right": 6.165,
+     "bottom": 5.847,
+     "left": 8.755
+    },
+    "ㅆ": {
+     "top": 25.0,
+     "right": 2.343,
+     "bottom": 4.032,
+     "left": 1.973
+    },
+    "ㅇ": {
+     "top": 27.016,
+     "right": 11.961,
+     "bottom": 5.444,
+     "left": 12.947
+    },
+    "ㅈ": {
+     "top": 27.722,
+     "right": 7.028,
+     "bottom": 5.847,
+     "left": 10.234
+    },
+    "ㅊ": {
+     "top": 13.306,
+     "right": 6.782,
+     "bottom": 5.847,
+     "left": 8.508
+    },
+    "ㅋ": {
+     "top": 28.024,
+     "right": 13.44,
+     "bottom": 4.637,
+     "left": 9.001
+    },
+    "ㅌ": {
+     "top": 17.944,
+     "right": 9.988,
+     "bottom": 7.056,
+     "left": 13.81
+    },
+    "ㅍ": {
+     "top": 26.21,
+     "right": 10.727,
+     "bottom": 6.855,
+     "left": 11.837
+    },
+    "ㅎ": {
+     "top": 8.065,
+     "right": 10.604,
+     "bottom": 5.242,
+     "left": 11.221
+    }
+   }
+  },
+  "TrailingFirst": {
+   "H": {
+    "ㄳ": {
+     "top": 17.692,
+     "right": 13.85,
+     "bottom": 0.513,
+     "left": 2.216
+    },
+    "ㄶ": {
+     "top": 19.744,
+     "right": 18.283,
+     "bottom": 4.872,
+     "left": 1.662
+    },
+    "ㄺ": {
+     "top": 7.949,
+     "right": -0.0,
+     "bottom": 3.846,
+     "left": 8.033
+    },
+    "ㄻ": {
+     "top": 4.359,
+     "right": 5.54,
+     "bottom": 2.564,
+     "left": 5.817
+    },
+    "ㄼ": {
+     "top": 2.821,
+     "right": 6.648,
+     "bottom": 2.308,
+     "left": 3.601
+    },
+    "ㄾ": {
+     "top": 2.308,
+     "right": 5.54,
+     "bottom": 2.051,
+     "left": 3.047
+    },
+    "ㄿ": {
+     "top": 5.641,
+     "right": 8.864,
+     "bottom": 2.308,
+     "left": 3.324
+    },
+    "ㅄ": {
+     "top": 4.744,
+     "right": 9.418,
+     "bottom": 4.103,
+     "left": 5.263
+    }
+   },
+   "M": {
+    "ㄳ": {
+     "top": 15.818,
+     "right": 12.137,
+     "bottom": 0.536,
+     "left": 8.179
+    },
+    "ㄻ": {
+     "top": 2.145,
+     "right": 6.992,
+     "bottom": 1.877,
+     "left": 7.256
+    },
+    "ㄼ": {
+     "top": 2.145,
+     "right": 8.179,
+     "bottom": 2.145,
+     "left": 6.069
+    },
+    "ㄾ": {
+     "top": 2.681,
+     "right": 8.707,
+     "bottom": 1.877,
+     "left": 5.805
+    },
+    "ㄿ": {
+     "top": 3.217,
+     "right": 8.707,
+     "bottom": 2.145,
+     "left": 7.916
+    },
+    "ㅀ": {
+     "top": 3.753,
+     "right": 7.916,
+     "bottom": 2.145,
+     "left": 8.443
+    },
+    "ㅄ": {
+     "top": 8.043,
+     "right": 10.818,
+     "bottom": 2.681,
+     "left": 6.596
+    }
+   },
+   "VL": {
+    "ㄳ": {
+     "top": 11.253,
+     "right": 10.306,
+     "bottom": 0.512,
+     "left": 5.571
+    },
+    "ㄻ": {
+     "top": 0.767,
+     "right": 5.571,
+     "bottom": 2.046,
+     "left": 2.507
+    },
+    "ㄼ": {
+     "top": 0.767,
+     "right": 5.85,
+     "bottom": 2.302,
+     "left": 1.393
+    },
+    "ㄾ": {
+     "top": 1.023,
+     "right": 2.507,
+     "bottom": 2.046,
+     "left": 5.014
+    },
+    "ㄿ": {
+     "top": 1.279,
+     "right": 4.178,
+     "bottom": 2.302,
+     "left": 5.014
+    }
+   },
+   "VR": {
+    "ㄳ": {
+     "top": 12.814,
+     "right": 11.765,
+     "bottom": 0.503,
+     "left": 10.997
+    },
+    "ㄻ": {
+     "top": 2.513,
+     "right": 7.673,
+     "bottom": 2.01,
+     "left": 8.951
+    },
+    "ㄼ": {
+     "top": 2.513,
+     "right": 8.951,
+     "bottom": 2.261,
+     "left": 7.928
+    },
+    "ㄾ": {
+     "top": 2.764,
+     "right": 7.928,
+     "bottom": 2.01,
+     "left": 9.719
+    },
+    "ㄿ": {
+     "top": 3.015,
+     "right": 8.951,
+     "bottom": 2.261,
+     "left": 9.719
+    },
+    "ㅀ": {
+     "top": 4.271,
+     "right": 6.138,
+     "bottom": 3.518,
+     "left": 12.788
+    },
+    "ㅄ": {
+     "top": 7.538,
+     "right": 12.532,
+     "bottom": 3.266,
+     "left": 7.673
+    }
+   }
+  },
+  "TrailingSecond": {
+   "H": {
+    "ㄳ": {
+     "top": 14.824,
+     "right": 3.8,
+     "bottom": 0.251,
+     "left": 0.475
+    },
+    "ㄶ": {
+     "top": 46.985,
+     "right": 16.39,
+     "bottom": 0.503,
+     "left": 4.038
+    },
+    "ㄺ": {
+     "top": 7.789,
+     "right": 15.914,
+     "bottom": 6.03,
+     "left": 14.727
+    },
+    "ㄻ": {
+     "top": 4.271,
+     "right": 15.439,
+     "bottom": 5.276,
+     "left": 14.014
+    },
+    "ㄼ": {
+     "top": 1.508,
+     "right": 15.439,
+     "bottom": 4.774,
+     "left": 11.876
+    },
+    "ㄾ": {
+     "top": 2.01,
+     "right": 12.589,
+     "bottom": 4.774,
+     "left": 12.589
+    },
+    "ㄿ": {
+     "top": 5.528,
+     "right": 12.114,
+     "bottom": 4.523,
+     "left": 8.076
+    },
+    "ㅄ": {
+     "top": 2.638,
+     "right": 1.188,
+     "bottom": 3.769,
+     "left": 4.869
+    }
+   },
+   "M": {
+    "ㄳ": {
+     "top": 17.706,
+     "right": 2.093,
+     "bottom": 1.247,
+     "left": 3.256
+    },
+    "ㄻ": {
+     "top": 6.733,
+     "right": 21.047,
+     "bottom": 3.242,
+     "left": 11.395
+    },
+    "ㄼ": {
+     "top": 6.733,
+     "right": 21.163,
+     "bottom": 3.491,
+     "left": 9.535
+    },
+    "ㄾ": {
+     "top": 6.858,
+     "right": 17.907,
+     "bottom": 4.738,
+     "left": 10.93
+    },
+    "ㄿ": {
+     "top": 7.731,
+     "right": 15.116,
+     "bottom": 4.239,
+     "left": 8.372
+    },
+    "ㅀ": {
+     "top": -0.0,
+     "right": 9.07,
+     "bottom": 1.247,
+     "left": 4.186
+    },
+    "ㅄ": {
+     "top": 11.222,
+     "right": 6.977,
+     "bottom": 2.868,
+     "left": 1.86
+    }
+   },
+   "VL": {
+    "ㄳ": {
+     "top": 10.37,
+     "right": 2.257,
+     "bottom": 0.494,
+     "left": 4.289
+    },
+    "ㄻ": {
+     "top": 2.963,
+     "right": 17.381,
+     "bottom": 1.975,
+     "left": 13.77
+    },
+    "ㄼ": {
+     "top": 2.716,
+     "right": 17.607,
+     "bottom": 3.704,
+     "left": 11.964
+    },
+    "ㄾ": {
+     "top": 2.963,
+     "right": 12.867,
+     "bottom": 3.951,
+     "left": 14.447
+    },
+    "ㄿ": {
+     "top": 3.457,
+     "right": 11.512,
+     "bottom": 3.457,
+     "left": 12.641
+    }
+   },
+   "VR": {
+    "ㄳ": {
+     "top": 12.771,
+     "right": 3.93,
+     "bottom": 0.482,
+     "left": 5.677
+    },
+    "ㄻ": {
+     "top": 5.301,
+     "right": 22.052,
+     "bottom": 2.169,
+     "left": 13.974
+    },
+    "ㄼ": {
+     "top": 5.06,
+     "right": 23.362,
+     "bottom": 3.373,
+     "left": 12.664
+    },
+    "ㄾ": {
+     "top": 5.301,
+     "right": 19.432,
+     "bottom": 3.855,
+     "left": 14.192
+    },
+    "ㄿ": {
+     "top": 5.783,
+     "right": 16.157,
+     "bottom": 3.373,
+     "left": 11.354
+    },
+    "ㅀ": {
+     "top": -0.0,
+     "right": 7.86,
+     "bottom": 2.651,
+     "left": 9.607
+    },
+    "ㅄ": {
+     "top": 9.157,
+     "right": 9.061,
+     "bottom": 1.928,
+     "left": 4.148
+    }
+   }
+  }
+ },
+ "L3_columnDelta": {
+  "ㅏ|-": {
+   "Leading": {
+    "top": -0.916,
+    "right": -0.061,
+    "bottom": -8.399,
+    "left": -1.249
+   },
+   "Medial": {
+    "top": -0.325,
+    "right": -0.839,
+    "bottom": -21.005,
+    "left": -2.622
+   }
+  },
+  "ㅏ|ㄱ": {
+   "Leading": {
+    "top": 0.592,
+    "right": -0.622,
+    "bottom": -1.523,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -0.435,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.403,
+    "right": 4.809,
+    "bottom": 0.0,
+    "left": -2.836
+   }
+  },
+  "ㅏ|ㄲ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.141
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.278,
+    "bottom": 1.161,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.202,
+    "right": 3.946,
+    "bottom": 0.0,
+    "left": -2.343
+   }
+  },
+  "ㅏ|ㄳ": {
+   "Leading": {
+    "top": 0.85,
+    "right": -1.901,
+    "bottom": -5.376,
+    "left": -0.274
+   },
+   "Medial": {
+    "top": 0.092,
+    "right": -0.537,
+    "bottom": -15.184,
+    "left": -0.543
+   },
+   "TrailingFirst": {
+    "top": 1.759,
+    "right": 5.627,
+    "bottom": 0.0,
+    "left": -5.371
+   },
+   "TrailingSecond": {
+    "top": 1.928,
+    "right": 5.24,
+    "bottom": 0.0,
+    "left": -5.459
+   }
+  },
+  "ㅏ|ㄴ": {
+   "Leading": {
+    "top": 2.453,
+    "right": -0.778,
+    "bottom": -7.022,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -18.142,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.202,
+    "right": 2.959,
+    "bottom": 0.0,
+    "left": -1.48
+   }
+  },
+  "ㅏ|ㄹ": {
+   "Leading": {
+    "top": -1.865,
+    "right": -0.622,
+    "bottom": 7.022,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 10.16,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -1.21,
+    "right": 4.686,
+    "bottom": 0.0,
+    "left": -3.453
+   }
+  },
+  "ㅏ|ㄻ": {
+   "Leading": {
+    "top": -0.823,
+    "right": -2.003,
+    "bottom": 0.603,
+    "left": -0.109
+   },
+   "Medial": {
+    "top": 0.092,
+    "right": -0.821,
+    "bottom": -6.045,
+    "left": -0.543
+   },
+   "TrailingFirst": {
+    "top": 1.508,
+    "right": 7.673,
+    "bottom": 1.508,
+    "left": -4.348
+   },
+   "TrailingSecond": {
+    "top": 1.446,
+    "right": 8.297,
+    "bottom": 2.169,
+    "left": -6.332
+   }
+  },
+  "ㅏ|ㄼ": {
+   "Leading": {
+    "top": -1.012,
+    "right": -1.845,
+    "bottom": 1.32,
+    "left": -0.38
+   },
+   "Medial": {
+    "top": 0.268,
+    "right": 0.032,
+    "bottom": -5.87,
+    "left": -0.543
+   },
+   "TrailingFirst": {
+    "top": 1.256,
+    "right": 7.928,
+    "bottom": 0.0,
+    "left": -6.394
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 6.987,
+    "bottom": 0.0,
+    "left": -7.642
+   }
+  },
+  "ㅏ|ㄾ": {
+   "Leading": {
+    "top": -1.122,
+    "right": -1.791,
+    "bottom": 2.077,
+    "left": -0.436
+   },
+   "Medial": {
+    "top": 0.268,
+    "right": 0.032,
+    "bottom": -5.87,
+    "left": -1.963
+   },
+   "TrailingFirst": {
+    "top": -0.251,
+    "right": 9.463,
+    "bottom": 0.0,
+    "left": -9.207
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 8.952,
+    "bottom": 0.0,
+    "left": -8.952
+   }
+  },
+  "ㅏ|ㄿ": {
+   "Leading": {
+    "top": -1.122,
+    "right": -1.791,
+    "bottom": 2.077,
+    "left": -0.436
+   },
+   "Medial": {
+    "top": 0.268,
+    "right": 0.032,
+    "bottom": -5.87,
+    "left": -1.963
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 6.394,
+    "bottom": 0.0,
+    "left": -6.138
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 5.677,
+    "bottom": 0.0,
+    "left": -5.022
+   }
+  },
+  "ㅏ|ㅁ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -0.622,
+    "bottom": -0.085,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 2.032,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 4.809,
+    "bottom": 0.0,
+    "left": -2.836
+   }
+  },
+  "ㅏ|ㅂ": {
+   "Leading": {
+    "top": -0.677,
+    "right": -0.778,
+    "bottom": 1.861,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 6.241,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 4.809,
+    "bottom": 0.0,
+    "left": -3.329
+   }
+  },
+  "ㅏ|ㅄ": {
+   "Leading": {
+    "top": -0.196,
+    "right": -1.746,
+    "bottom": -1.075,
+    "left": -0.542
+   },
+   "Medial": {
+    "top": 0.268,
+    "right": 0.032,
+    "bottom": -10.087,
+    "left": -2.247
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -0.109,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅏ|ㅅ": {
+   "Leading": {
+    "top": 1.519,
+    "right": -0.622,
+    "bottom": -3.046,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -10.015,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.806,
+    "right": 2.713,
+    "bottom": 0.0,
+    "left": -2.096
+   }
+  },
+  "ㅏ|ㅆ": {
+   "Leading": {
+    "top": 0.166,
+    "right": -0.311,
+    "bottom": -0.046,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 2.903,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.202,
+    "right": 1.48,
+    "bottom": 1.613,
+    "left": -1.356
+   }
+  },
+  "ㅏ|ㅇ": {
+   "Leading": {
+    "top": 0.846,
+    "right": -0.622,
+    "bottom": -1.197,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -1.016,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 4.439,
+    "bottom": 0.0,
+    "left": -2.589
+   }
+  },
+  "ㅏ|ㅈ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.169,
+    "left": -0.156
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 2.612,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.101,
+    "right": 4.192,
+    "bottom": -0.202,
+    "left": -3.083
+   }
+  },
+  "ㅏ|ㅊ": {
+   "Leading": {
+    "top": -1.56,
+    "right": 0.0,
+    "bottom": 6.091,
+    "left": -0.311
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.833,
+    "bottom": 3.338,
+    "left": -0.556
+   },
+   "Trailing": {
+    "top": -1.411,
+    "right": 3.699,
+    "bottom": -0.403,
+    "left": -1.356
+   }
+  },
+  "ㅏ|ㅋ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.622
+   },
+   "Medial": {
+    "top": 0.145,
+    "right": 0.833,
+    "bottom": 1.161,
+    "left": -1.389
+   },
+   "Trailing": {
+    "top": -0.202,
+    "right": 4.562,
+    "bottom": 0.0,
+    "left": -3.576
+   }
+  },
+  "ㅏ|ㅌ": {
+   "Leading": {
+    "top": -0.931,
+    "right": -0.156,
+    "bottom": 5.233,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 8.128,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 1.21,
+    "right": 4.316,
+    "bottom": 0.403,
+    "left": -1.48
+   }
+  },
+  "ㅏ|ㅍ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.467
+   },
+   "Medial": {
+    "top": 0.145,
+    "right": 0.833,
+    "bottom": 1.597,
+    "left": -0.278
+   },
+   "Trailing": {
+    "top": -0.202,
+    "right": 3.576,
+    "bottom": 0.0,
+    "left": -3.329
+   }
+  },
+  "ㅏ|ㅎ": {
+   "Leading": {
+    "top": -1.861,
+    "right": -0.156,
+    "bottom": 8.629,
+    "left": -0.223
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": -0.278,
+    "bottom": 7.837,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -2.621,
+    "right": 2.096,
+    "bottom": 0.0,
+    "left": -1.726
+   }
+  },
+  "ㅐ|-": {
+   "Leading": {
+    "top": 1.296,
+    "right": 13.831,
+    "bottom": -7.14,
+    "left": -1.569
+   },
+   "Medial": {
+    "top": -0.471,
+    "right": -0.428,
+    "bottom": -21.005,
+    "left": 0.389
+   }
+  },
+  "ㅐ|ㄱ": {
+   "Leading": {
+    "top": 1.692,
+    "right": 12.442,
+    "bottom": -2.707,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.36,
+    "bottom": -0.726,
+    "left": 0.694
+   },
+   "Trailing": {
+    "top": 1.21,
+    "right": -2.589,
+    "bottom": 0.0,
+    "left": 2.343
+   }
+  },
+  "ㅐ|ㄲ": {
+   "Leading": {
+    "top": 1.354,
+    "right": 12.442,
+    "bottom": -1.523,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": -0.196,
+    "bottom": 1.016,
+    "left": -0.139
+   },
+   "Trailing": {
+    "top": -0.202,
+    "right": -3.699,
+    "bottom": 0.0,
+    "left": 2.466
+   }
+  },
+  "ㅐ|ㄳ": {
+   "Leading": {
+    "top": 2.283,
+    "right": 10.8,
+    "bottom": -6.308,
+    "left": 0.193
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.568,
+    "bottom": -16.063,
+    "left": -1.515
+   },
+   "TrailingFirst": {
+    "top": -0.251,
+    "right": -1.79,
+    "bottom": 0.0,
+    "left": 1.023
+   },
+   "TrailingSecond": {
+    "top": -0.723,
+    "right": -1.747,
+    "bottom": 0.0,
+    "left": 1.528
+   }
+  },
+  "ㅐ|ㄴ": {
+   "Leading": {
+    "top": 4.061,
+    "right": 12.597,
+    "bottom": -7.107,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.36,
+    "bottom": -19.884,
+    "left": 0.694
+   },
+   "Trailing": {
+    "top": -0.806,
+    "right": -2.836,
+    "bottom": 0.0,
+    "left": 2.589
+   }
+  },
+  "ㅐ|ㄷ": {
+   "Leading": {
+    "top": 1.607,
+    "right": 12.442,
+    "bottom": -1.015,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": -0.196,
+    "bottom": 0.0,
+    "left": -0.139
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅐ|ㄹ": {
+   "Leading": {
+    "top": -0.677,
+    "right": 12.442,
+    "bottom": 6.091,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.36,
+    "bottom": 8.853,
+    "left": 0.417
+   },
+   "Trailing": {
+    "top": 0.202,
+    "right": -3.083,
+    "bottom": 0.403,
+    "left": 1.11
+   }
+  },
+  "ㅐ|ㄻ": {
+   "Leading": {
+    "top": -0.106,
+    "right": 10.823,
+    "bottom": 0.931,
+    "left": 0.067
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.568,
+    "bottom": -5.87,
+    "left": -1.515
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -2.046,
+    "bottom": 0.0,
+    "left": 1.023
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -5.24,
+    "bottom": -0.241,
+    "left": 2.62
+   }
+  },
+  "ㅐ|ㄼ": {
+   "Leading": {
+    "top": -0.106,
+    "right": 10.823,
+    "bottom": 0.931,
+    "left": 0.067
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.568,
+    "bottom": -5.87,
+    "left": -1.515
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -3.069,
+    "bottom": 0.0,
+    "left": 1.023
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -6.332,
+    "bottom": 0.241,
+    "left": 2.183
+   }
+  },
+  "ㅐ|ㄾ": {
+   "Leading": {
+    "top": -0.106,
+    "right": 10.823,
+    "bottom": 0.931,
+    "left": 0.067
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.568,
+    "bottom": -5.518,
+    "left": -1.515
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -5.371,
+    "bottom": 0.0,
+    "left": 2.558
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -6.987,
+    "bottom": 0.0,
+    "left": 3.057
+   }
+  },
+  "ㅐ|ㄿ": {
+   "Leading": {
+    "top": -0.106,
+    "right": 10.823,
+    "bottom": 0.902,
+    "left": 0.067
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.284,
+    "bottom": -5.87,
+    "left": -1.515
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -4.604,
+    "bottom": 0.0,
+    "left": 3.325
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -4.803,
+    "bottom": 0.0,
+    "left": 3.93
+   }
+  },
+  "ㅐ|ㅀ": {
+   "Leading": {
+    "top": 0.961,
+    "right": 10.823,
+    "bottom": 0.931,
+    "left": -0.933
+   },
+   "Medial": {
+    "top": -0.053,
+    "right": -4.83,
+    "bottom": -4.991,
+    "left": 8.428
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅐ|ㅁ": {
+   "Leading": {
+    "top": 1.012,
+    "right": 12.442,
+    "bottom": -0.677,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.36,
+    "bottom": 1.451,
+    "left": 0.417
+   },
+   "Trailing": {
+    "top": 0.403,
+    "right": -2.589,
+    "bottom": 0.0,
+    "left": 1.356
+   }
+  },
+  "ㅐ|ㅂ": {
+   "Leading": {
+    "top": 0.169,
+    "right": 12.442,
+    "bottom": 2.03,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.36,
+    "bottom": 5.951,
+    "left": 0.417
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -2.589,
+    "bottom": 0.0,
+    "left": 1.233
+   }
+  },
+  "ㅐ|ㅅ": {
+   "Leading": {
+    "top": 2.538,
+    "right": 12.442,
+    "bottom": -3.553,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.36,
+    "bottom": -10.595,
+    "left": 0.417
+   },
+   "Trailing": {
+    "top": 1.815,
+    "right": -2.343,
+    "bottom": 0.0,
+    "left": 1.48
+   }
+  },
+  "ㅐ|ㅆ": {
+   "Leading": {
+    "top": 1.354,
+    "right": 12.442,
+    "bottom": -1.438,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.36,
+    "bottom": 1.306,
+    "left": 0.694
+   },
+   "Trailing": {
+    "top": 1.411,
+    "right": -1.11,
+    "bottom": 1.613,
+    "left": 0.986
+   }
+  },
+  "ㅐ|ㅇ": {
+   "Leading": {
+    "top": 2.284,
+    "right": 12.442,
+    "bottom": -2.707,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.36,
+    "bottom": -2.322,
+    "left": 0.417
+   },
+   "Trailing": {
+    "top": 1.613,
+    "right": -2.589,
+    "bottom": 0.0,
+    "left": 3.206
+   }
+  },
+  "ㅐ|ㅈ": {
+   "Leading": {
+    "top": 1.438,
+    "right": 12.442,
+    "bottom": -0.338,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.082,
+    "bottom": 1.887,
+    "left": 0.417
+   },
+   "Trailing": {
+    "top": 0.101,
+    "right": -2.713,
+    "bottom": 0.0,
+    "left": 1.356
+   }
+  },
+  "ㅐ|ㅊ": {
+   "Leading": {
+    "top": -0.85,
+    "right": 12.442,
+    "bottom": 5.584,
+    "left": -0.043
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.36,
+    "bottom": 2.612,
+    "left": -0.417
+   },
+   "Trailing": {
+    "top": 2.218,
+    "right": -2.713,
+    "bottom": 0.0,
+    "left": 2.589
+   }
+  },
+  "ㅐ|ㅋ": {
+   "Leading": {
+    "top": 1.607,
+    "right": 12.686,
+    "bottom": -1.015,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": -0.196,
+    "bottom": 0.0,
+    "left": -0.139
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -3.699,
+    "bottom": 0.0,
+    "left": 1.726
+   }
+  },
+  "ㅐ|ㅌ": {
+   "Leading": {
+    "top": -0.381,
+    "right": 12.208,
+    "bottom": 5.668,
+    "left": -0.022
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.082,
+    "bottom": 8.418,
+    "left": 0.417
+   },
+   "Trailing": {
+    "top": -0.403,
+    "right": -3.329,
+    "bottom": 0.0,
+    "left": 1.233
+   }
+  },
+  "ㅐ|ㅍ": {
+   "Leading": {
+    "top": 1.607,
+    "right": 12.686,
+    "bottom": -1.015,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": -0.196,
+    "bottom": 0.435,
+    "left": 0.139
+   },
+   "Trailing": {
+    "top": 0.806,
+    "right": -3.206,
+    "bottom": 0.202,
+    "left": 0.863
+   }
+  },
+  "ㅐ|ㅎ": {
+   "Leading": {
+    "top": -1.015,
+    "right": 12.442,
+    "bottom": 6.007,
+    "left": -0.067
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.36,
+    "bottom": 6.241,
+    "left": -0.417
+   },
+   "Trailing": {
+    "top": 1.815,
+    "right": -2.219,
+    "bottom": 0.202,
+    "left": 0.986
+   }
+  },
+  "ㅑ|-": {
+   "Leading": {
+    "top": -0.783,
+    "right": -0.061,
+    "bottom": -8.399,
+    "left": -1.249
+   },
+   "Medial": {
+    "top": -0.471,
+    "right": -0.34,
+    "bottom": -21.296,
+    "left": -2.622
+   }
+  },
+  "ㅑ|ㄱ": {
+   "Leading": {
+    "top": 0.338,
+    "right": -0.156,
+    "bottom": -1.062,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": -0.044,
+    "bottom": -0.29,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.403,
+    "right": 4.809,
+    "bottom": 0.0,
+    "left": -2.836
+   }
+  },
+  "ㅑ|ㄲ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.622
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.511,
+    "bottom": 0.871,
+    "left": -1.667
+   },
+   "Trailing": {
+    "top": -0.806,
+    "right": 4.562,
+    "bottom": 0.0,
+    "left": -2.959
+   }
+  },
+  "ㅑ|ㄳ": {
+   "Leading": {
+    "top": 0.581,
+    "right": -1.771,
+    "bottom": -5.032,
+    "left": -0.436
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.284,
+    "bottom": -15.474,
+    "left": -0.827
+   },
+   "TrailingFirst": {
+    "top": 1.508,
+    "right": 5.627,
+    "bottom": 0.0,
+    "left": -5.627
+   },
+   "TrailingSecond": {
+    "top": 1.928,
+    "right": 5.022,
+    "bottom": -0.241,
+    "left": -5.459
+   }
+  },
+  "ㅑ|ㄴ": {
+   "Leading": {
+    "top": 2.036,
+    "right": -0.544,
+    "bottom": -6.881,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": -0.322,
+    "bottom": -18.65,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 2.959,
+    "bottom": 0.0,
+    "left": -1.48
+   }
+  },
+  "ㅑ|ㄷ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -0.085,
+    "left": -0.622
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.511,
+    "bottom": 0.871,
+    "left": -1.806
+   },
+   "Trailing": {
+    "top": -0.101,
+    "right": 7.83,
+    "bottom": 0.0,
+    "left": -3.946
+   }
+  },
+  "ㅑ|ㄹ": {
+   "Leading": {
+    "top": -1.861,
+    "right": 0.0,
+    "bottom": 6.768,
+    "left": -0.467
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": 0.234,
+    "bottom": 9.869,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.403,
+    "right": 4.686,
+    "bottom": -0.202,
+    "left": -4.069
+   }
+  },
+  "ㅑ|ㄻ": {
+   "Leading": {
+    "top": -1.032,
+    "right": -1.791,
+    "bottom": 1.647,
+    "left": -0.457
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.284,
+    "bottom": -4.754,
+    "left": -2.247
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 8.951,
+    "bottom": 0.0,
+    "left": -6.394
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 9.607,
+    "bottom": -0.241,
+    "left": -7.424
+   }
+  },
+  "ㅑ|ㄼ": {
+   "Leading": {
+    "top": -0.912,
+    "right": -1.794,
+    "bottom": 1.647,
+    "left": -0.457
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.284,
+    "bottom": -4.754,
+    "left": -2.247
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 8.951,
+    "bottom": 0.0,
+    "left": -6.394
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 8.079,
+    "bottom": -0.241,
+    "left": -8.952
+   }
+  },
+  "ㅑ|ㄾ": {
+   "Leading": {
+    "top": -1.032,
+    "right": -1.771,
+    "bottom": 1.766,
+    "left": -0.457
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.284,
+    "bottom": -4.754,
+    "left": -2.247
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 9.463,
+    "bottom": 0.0,
+    "left": -9.207
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 8.952,
+    "bottom": 0.0,
+    "left": -8.952
+   }
+  },
+  "ㅑ|ㄿ": {
+   "Leading": {
+    "top": -1.032,
+    "right": -1.791,
+    "bottom": 1.766,
+    "left": -0.457
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.284,
+    "bottom": -4.754,
+    "left": -2.247
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 6.394,
+    "bottom": -0.251,
+    "left": -6.138
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 5.677,
+    "bottom": 0.0,
+    "left": -5.022
+   }
+  },
+  "ㅑ|ㅁ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -0.169,
+    "left": -0.467
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.511,
+    "bottom": 0.871,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -1.613,
+    "right": 4.809,
+    "bottom": 0.0,
+    "left": -4.562
+   }
+  },
+  "ㅑ|ㅂ": {
+   "Leading": {
+    "top": -1.015,
+    "right": 0.0,
+    "bottom": 3.723,
+    "left": -0.467
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.511,
+    "bottom": 6.241,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.202,
+    "right": 4.809,
+    "bottom": -0.605,
+    "left": -4.562
+   }
+  },
+  "ㅑ|ㅄ": {
+   "Leading": {
+    "top": -0.179,
+    "right": -1.771,
+    "bottom": -1.075,
+    "left": -0.542
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.284,
+    "bottom": -8.972,
+    "left": -2.247
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.109,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅑ|ㅅ": {
+   "Leading": {
+    "top": 1.015,
+    "right": 0.0,
+    "bottom": -2.754,
+    "left": -0.156
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": 0.234,
+    "bottom": -9.289,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -1.815,
+    "right": 2.836,
+    "bottom": -0.202,
+    "left": -2.713
+   }
+  },
+  "ㅑ|ㅆ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.467
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.511,
+    "bottom": 0.871,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.403,
+    "right": 2.096,
+    "bottom": -0.605,
+    "left": -1.356
+   }
+  },
+  "ㅑ|ㅇ": {
+   "Leading": {
+    "top": 0.518,
+    "right": -0.156,
+    "bottom": -0.761,
+    "left": -0.141
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": -0.044,
+    "bottom": -1.161,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.806,
+    "right": 4.439,
+    "bottom": 0.0,
+    "left": -2.589
+   }
+  },
+  "ㅑ|ㅈ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.169,
+    "left": -0.156
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": -0.044,
+    "bottom": 2.322,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.101,
+    "right": 4.192,
+    "bottom": -0.202,
+    "left": -3.083
+   }
+  },
+  "ㅑ|ㅊ": {
+   "Leading": {
+    "top": -1.56,
+    "right": 0.0,
+    "bottom": 6.261,
+    "left": -0.311
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": 0.511,
+    "bottom": 3.048,
+    "left": -0.556
+   },
+   "Trailing": {
+    "top": -1.411,
+    "right": 3.699,
+    "bottom": -0.403,
+    "left": -1.356
+   }
+  },
+  "ㅑ|ㅋ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.622
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.511,
+    "bottom": 0.871,
+    "left": -1.667
+   },
+   "Trailing": {
+    "top": -0.202,
+    "right": 4.562,
+    "bottom": 0.202,
+    "left": -3.576
+   }
+  },
+  "ㅑ|ㅌ": {
+   "Leading": {
+    "top": -1.396,
+    "right": 0.0,
+    "bottom": 6.176,
+    "left": -0.467
+   },
+   "Medial": {
+    "top": -0.073,
+    "right": 0.511,
+    "bottom": 9.216,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.101,
+    "right": 4.316,
+    "bottom": 0.0,
+    "left": -2.466
+   }
+  },
+  "ㅑ|ㅍ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.622
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.511,
+    "bottom": 0.871,
+    "left": -1.389
+   },
+   "Trailing": {
+    "top": -0.202,
+    "right": 3.576,
+    "bottom": 0.0,
+    "left": -3.329
+   }
+  },
+  "ㅑ|ㅎ": {
+   "Leading": {
+    "top": -1.861,
+    "right": 0.0,
+    "bottom": 8.539,
+    "left": -0.141
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": -0.322,
+    "bottom": 7.692,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -2.016,
+    "right": 2.096,
+    "bottom": 0.0,
+    "left": -1.726
+   }
+  },
+  "ㅒ|-": {
+   "Leading": {
+    "top": 1.296,
+    "right": 13.831,
+    "bottom": -7.359,
+    "left": -1.746
+   },
+   "Medial": {
+    "top": -0.361,
+    "right": 0.043,
+    "bottom": -22.206,
+    "left": -0.021
+   }
+  },
+  "ㅒ|ㄱ": {
+   "Leading": {
+    "top": 1.354,
+    "right": 12.908,
+    "bottom": -1.579,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -1.008,
+    "right": -2.836,
+    "bottom": -0.202,
+    "left": 0.863
+   }
+  },
+  "ㅒ|ㄲ": {
+   "Leading": {
+    "top": 1.607,
+    "right": 12.686,
+    "bottom": -1.557,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.726,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.202,
+    "right": -3.699,
+    "bottom": 0.202,
+    "left": 2.466
+   }
+  },
+  "ㅒ|ㄳ": {
+   "Leading": {
+    "top": 2.303,
+    "right": 10.982,
+    "bottom": -6.452,
+    "left": 0.193
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.372,
+    "bottom": -15.703,
+    "left": -1.376
+   },
+   "TrailingFirst": {
+    "top": -0.251,
+    "right": -1.79,
+    "bottom": 0.0,
+    "left": 1.023
+   },
+   "TrailingSecond": {
+    "top": -0.723,
+    "right": -1.747,
+    "bottom": -0.241,
+    "left": 1.528
+   }
+  },
+  "ㅒ|ㄷ": {
+   "Leading": {
+    "top": 1.607,
+    "right": 12.686,
+    "bottom": -1.557,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.29,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅒ|ㄹ": {
+   "Leading": {
+    "top": -1.015,
+    "right": 12.131,
+    "bottom": 5.493,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 8.273,
+    "left": 0.556
+   },
+   "Trailing": {
+    "top": 0.403,
+    "right": -2.836,
+    "bottom": -1.21,
+    "left": 0.493
+   }
+  },
+  "ㅒ|ㄻ": {
+   "Leading": {
+    "top": -0.106,
+    "right": 10.823,
+    "bottom": 0.902,
+    "left": 0.067
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.372,
+    "bottom": -6.389,
+    "left": -1.376
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -2.046,
+    "bottom": 0.0,
+    "left": 1.023
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -5.022,
+    "bottom": 0.0,
+    "left": 2.62
+   }
+  },
+  "ㅒ|ㄼ": {
+   "Leading": {
+    "top": -0.106,
+    "right": 10.823,
+    "bottom": 0.902,
+    "left": 0.067
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.372,
+    "bottom": -6.389,
+    "left": -1.376
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -3.069,
+    "bottom": 0.0,
+    "left": 1.023
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -6.332,
+    "bottom": 0.241,
+    "left": 2.183
+   }
+  },
+  "ㅒ|ㄾ": {
+   "Leading": {
+    "top": -0.106,
+    "right": 10.823,
+    "bottom": 0.902,
+    "left": 0.067
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.372,
+    "bottom": -6.389,
+    "left": -1.376
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -5.371,
+    "bottom": 0.0,
+    "left": 2.558
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -6.987,
+    "bottom": 0.0,
+    "left": 3.057
+   }
+  },
+  "ㅒ|ㄿ": {
+   "Leading": {
+    "top": -0.106,
+    "right": 10.823,
+    "bottom": 0.931,
+    "left": 0.067
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": -0.372,
+    "bottom": -6.74,
+    "left": -1.376
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -4.604,
+    "bottom": 0.0,
+    "left": 3.325
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -5.022,
+    "bottom": 0.0,
+    "left": 4.148
+   }
+  },
+  "ㅒ|ㅀ": {
+   "Leading": {
+    "top": 0.961,
+    "right": 10.823,
+    "bottom": 0.931,
+    "left": -0.933
+   },
+   "Medial": {
+    "top": -0.053,
+    "right": -4.634,
+    "bottom": -5.862,
+    "left": 8.567
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅒ|ㅁ": {
+   "Leading": {
+    "top": 1.354,
+    "right": 12.908,
+    "bottom": -1.536,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.435,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.403,
+    "right": -2.836,
+    "bottom": 0.0,
+    "left": 0.617
+   }
+  },
+  "ㅒ|ㅂ": {
+   "Leading": {
+    "top": 0.169,
+    "right": 12.442,
+    "bottom": 2.623,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 5.08,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -2.836,
+    "bottom": -0.605,
+    "left": 0.986
+   }
+  },
+  "ㅒ|ㅅ": {
+   "Leading": {
+    "top": 2.115,
+    "right": 12.442,
+    "bottom": -2.707,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -8.418,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.605,
+    "right": -2.589,
+    "bottom": -2.419,
+    "left": 0.37
+   }
+  },
+  "ㅒ|ㅆ": {
+   "Leading": {
+    "top": 1.607,
+    "right": 12.908,
+    "bottom": -1.015,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.435,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.202,
+    "right": -1.11,
+    "bottom": -0.403,
+    "left": 1.11
+   }
+  },
+  "ㅒ|ㅇ": {
+   "Leading": {
+    "top": 2.196,
+    "right": 12.442,
+    "bottom": -1.908,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.556,
+    "bottom": -3.193,
+    "left": 0.556
+   },
+   "Trailing": {
+    "top": 1.008,
+    "right": -3.083,
+    "bottom": 0.0,
+    "left": 2.713
+   }
+  },
+  "ㅒ|ㅈ": {
+   "Leading": {
+    "top": 1.607,
+    "right": 12.442,
+    "bottom": -0.508,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.278,
+    "bottom": 1.016,
+    "left": 0.556
+   },
+   "Trailing": {
+    "top": 0.101,
+    "right": -2.713,
+    "bottom": 0.0,
+    "left": 1.356
+   }
+  },
+  "ㅒ|ㅊ": {
+   "Leading": {
+    "top": -0.85,
+    "right": 12.442,
+    "bottom": 5.584,
+    "left": -0.043
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.556,
+    "bottom": 1.742,
+    "left": -0.278
+   },
+   "Trailing": {
+    "top": 2.218,
+    "right": -2.713,
+    "bottom": 0.0,
+    "left": 2.589
+   }
+  },
+  "ㅒ|ㅋ": {
+   "Leading": {
+    "top": 1.612,
+    "right": 12.686,
+    "bottom": -1.015,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.29,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -3.699,
+    "bottom": 0.0,
+    "left": 1.726
+   }
+  },
+  "ㅒ|ㅌ": {
+   "Leading": {
+    "top": -0.677,
+    "right": 12.131,
+    "bottom": 5.753,
+    "left": -0.043
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 7.983,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.403,
+    "right": -3.329,
+    "bottom": 0.0,
+    "left": 1.233
+   }
+  },
+  "ㅒ|ㅍ": {
+   "Leading": {
+    "top": 1.607,
+    "right": 12.686,
+    "bottom": -0.846,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.726,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.202,
+    "right": -3.206,
+    "bottom": 0.202,
+    "left": 0.863
+   }
+  },
+  "ㅒ|ㅎ": {
+   "Leading": {
+    "top": -1.015,
+    "right": 12.442,
+    "bottom": 6.007,
+    "left": -0.067
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.556,
+    "bottom": 5.37,
+    "left": -0.278
+   },
+   "Trailing": {
+    "top": 1.815,
+    "right": -2.219,
+    "bottom": 0.202,
+    "left": 0.986
+   }
+  },
+  "ㅓ|-": {
+   "Leading": {
+    "top": 2.317,
+    "right": 8.893,
+    "bottom": -4.782,
+    "left": -1.042
+   },
+   "Medial": {
+    "top": -0.354,
+    "right": 1.226,
+    "bottom": -21.303,
+    "left": -7.078
+   }
+  },
+  "ㅓ|ㄱ": {
+   "Leading": {
+    "top": 0.145,
+    "right": 0.0,
+    "bottom": 0.436,
+    "left": 0.751
+   },
+   "Medial": {
+    "top": 0.076,
+    "right": 0.0,
+    "bottom": -1.289,
+    "left": 0.875
+   },
+   "Trailing": {
+    "top": 4.132,
+    "right": 2.384,
+    "bottom": 0.0,
+    "left": -0.753
+   }
+  },
+  "ㅓ|ㄲ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.872,
+    "left": -0.601
+   },
+   "Medial": {
+    "top": 0.076,
+    "right": 1.313,
+    "bottom": 1.003,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 2.479,
+    "right": 3.262,
+    "bottom": 0.0,
+    "left": -2.509
+   }
+  },
+  "ㅓ|ㄳ": {
+   "Leading": {
+    "top": 2.146,
+    "right": -1.507,
+    "bottom": -15.827,
+    "left": -0.518
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.653,
+    "bottom": -17.031,
+    "left": -0.588
+   },
+   "TrailingFirst": {
+    "top": 2.558,
+    "right": 5.014,
+    "bottom": -0.256,
+    "left": -5.292
+   },
+   "TrailingSecond": {
+    "top": 2.222,
+    "right": 4.063,
+    "bottom": 0.0,
+    "left": -4.063
+   }
+  },
+  "ㅓ|ㄴ": {
+   "Leading": {
+    "top": 1.453,
+    "right": 0.0,
+    "bottom": -3.488,
+    "left": 0.751
+   },
+   "Medial": {
+    "top": 0.076,
+    "right": 0.0,
+    "bottom": -18.195,
+    "left": 0.875
+   },
+   "Trailing": {
+    "top": 2.273,
+    "right": 2.635,
+    "bottom": 0.0,
+    "left": -0.878
+   }
+  },
+  "ㅓ|ㄷ": {
+   "Leading": {
+    "top": -0.291,
+    "right": -9.459,
+    "bottom": 0.0,
+    "left": -1.201
+   },
+   "Medial": {
+    "top": 0.076,
+    "right": 1.532,
+    "bottom": 1.003,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 2.066,
+    "right": 2.635,
+    "bottom": -0.207,
+    "left": -1.255
+   }
+  },
+  "ㅓ|ㄹ": {
+   "Leading": {
+    "top": -0.727,
+    "right": 0.0,
+    "bottom": 8.43,
+    "left": 0.751
+   },
+   "Medial": {
+    "top": -0.067,
+    "right": 0.0,
+    "bottom": 10.029,
+    "left": 1.751
+   },
+   "Trailing": {
+    "top": 0.413,
+    "right": 2.886,
+    "bottom": 0.0,
+    "left": -0.125
+   }
+  },
+  "ㅓ|ㄻ": {
+   "Leading": {
+    "top": 1.968,
+    "right": -1.507,
+    "bottom": -7.803,
+    "left": 0.399
+   },
+   "Medial": {
+    "top": -0.177,
+    "right": -0.466,
+    "bottom": -6.412,
+    "left": -1.036
+   },
+   "TrailingFirst": {
+    "top": 1.535,
+    "right": 0.279,
+    "bottom": 1.535,
+    "left": 2.786
+   },
+   "TrailingSecond": {
+    "top": 1.481,
+    "right": 4.74,
+    "bottom": 2.716,
+    "left": -0.903
+   }
+  },
+  "ㅓ|ㄼ": {
+   "Leading": {
+    "top": -0.567,
+    "right": -1.507,
+    "bottom": -7.689,
+    "left": -0.373
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.429,
+    "bottom": -6.058,
+    "left": -1.036
+   },
+   "TrailingFirst": {
+    "top": 2.046,
+    "right": 3.621,
+    "bottom": 0.0,
+    "left": -0.557
+   },
+   "TrailingSecond": {
+    "top": 1.975,
+    "right": 5.643,
+    "bottom": -0.494,
+    "left": -2.483
+   }
+  },
+  "ㅓ|ㄾ": {
+   "Leading": {
+    "top": -0.567,
+    "right": -1.507,
+    "bottom": -7.689,
+    "left": -0.373
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.653,
+    "bottom": -6.058,
+    "left": -1.036
+   },
+   "TrailingFirst": {
+    "top": 1.79,
+    "right": 5.571,
+    "bottom": 0.256,
+    "left": -3.9
+   },
+   "TrailingSecond": {
+    "top": 1.481,
+    "right": 6.546,
+    "bottom": 0.0,
+    "left": -3.16
+   }
+  },
+  "ㅓ|ㄿ": {
+   "Leading": {
+    "top": -0.567,
+    "right": -1.507,
+    "bottom": -7.689,
+    "left": -0.373
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.653,
+    "bottom": -6.235,
+    "left": -1.036
+   },
+   "TrailingFirst": {
+    "top": 1.279,
+    "right": 5.014,
+    "bottom": 0.0,
+    "left": -3.343
+   },
+   "TrailingSecond": {
+    "top": 1.235,
+    "right": 4.515,
+    "bottom": 0.0,
+    "left": -3.612
+   }
+  },
+  "ㅓ|ㅁ": {
+   "Leading": {
+    "top": -1.017,
+    "right": 0.0,
+    "bottom": 2.18,
+    "left": 0.751
+   },
+   "Medial": {
+    "top": 0.076,
+    "right": 0.0,
+    "bottom": 1.862,
+    "left": 0.875
+   },
+   "Trailing": {
+    "top": 2.066,
+    "right": 2.509,
+    "bottom": 0.0,
+    "left": -1.129
+   }
+  },
+  "ㅓ|ㅂ": {
+   "Leading": {
+    "top": -1.163,
+    "right": 0.0,
+    "bottom": 4.07,
+    "left": 0.751
+   },
+   "Medial": {
+    "top": -0.067,
+    "right": 0.0,
+    "bottom": 6.734,
+    "left": 0.875
+   },
+   "Trailing": {
+    "top": 0.413,
+    "right": 2.321,
+    "bottom": 0.0,
+    "left": -1.192
+   }
+  },
+  "ㅓ|ㅅ": {
+   "Leading": {
+    "top": 0.291,
+    "right": 0.0,
+    "bottom": -1.453,
+    "left": 0.751
+   },
+   "Medial": {
+    "top": 0.076,
+    "right": 0.0,
+    "bottom": -11.175,
+    "left": 0.875
+   },
+   "Trailing": {
+    "top": -0.207,
+    "right": 1.255,
+    "bottom": 0.0,
+    "left": -0.251
+   }
+  },
+  "ㅓ|ㅆ": {
+   "Leading": {
+    "top": -0.727,
+    "right": 0.0,
+    "bottom": 2.18,
+    "left": 0.751
+   },
+   "Medial": {
+    "top": -0.067,
+    "right": 0.0,
+    "bottom": 0.43,
+    "left": 0.875
+   },
+   "Trailing": {
+    "top": 1.86,
+    "right": 0.753,
+    "bottom": 1.343,
+    "left": -0.878
+   }
+  },
+  "ㅓ|ㅇ": {
+   "Leading": {
+    "top": 0.291,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.751
+   },
+   "Medial": {
+    "top": 0.076,
+    "right": 0.0,
+    "bottom": -1.433,
+    "left": 0.875
+   },
+   "Trailing": {
+    "top": -1.24,
+    "right": 2.258,
+    "bottom": 0.0,
+    "left": -1.757
+   }
+  },
+  "ㅓ|ㅈ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 2.035,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.076,
+    "right": 1.751,
+    "bottom": 2.006,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.62,
+    "right": 3.45,
+    "bottom": 0.0,
+    "left": -0.941
+   }
+  },
+  "ㅓ|ㅊ": {
+   "Leading": {
+    "top": -2.035,
+    "right": -9.11,
+    "bottom": 7.122,
+    "left": -1.051
+   },
+   "Medial": {
+    "top": 0.076,
+    "right": 1.751,
+    "bottom": 0.716,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 1.446,
+    "right": 3.011,
+    "bottom": -0.207,
+    "left": -3.262
+   }
+  },
+  "ㅓ|ㅋ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.872,
+    "left": -0.15
+   },
+   "Medial": {
+    "top": 0.076,
+    "right": 1.532,
+    "bottom": 1.003,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 2.273,
+    "right": 3.388,
+    "bottom": 0.207,
+    "left": -2.133
+   }
+  },
+  "ㅓ|ㅌ": {
+   "Leading": {
+    "top": -1.017,
+    "right": 0.0,
+    "bottom": 6.831,
+    "left": 0.15
+   },
+   "Medial": {
+    "top": -0.067,
+    "right": 0.0,
+    "bottom": 8.166,
+    "left": -0.438
+   },
+   "Trailing": {
+    "top": 1.653,
+    "right": 3.137,
+    "bottom": 0.0,
+    "left": -0.753
+   }
+  },
+  "ㅓ|ㅍ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 1.744,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.076,
+    "right": 1.532,
+    "bottom": 1.146,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 2.066,
+    "right": 2.76,
+    "bottom": 0.0,
+    "left": -1.129
+   }
+  },
+  "ㅓ|ㅎ": {
+   "Leading": {
+    "top": -1.381,
+    "right": -5.105,
+    "bottom": 9.012,
+    "left": -0.45
+   },
+   "Medial": {
+    "top": -0.067,
+    "right": 0.0,
+    "bottom": 6.877,
+    "left": -0.109
+   },
+   "Trailing": {
+    "top": -4.132,
+    "right": 1.506,
+    "bottom": 0.0,
+    "left": 0.188
+   }
+  },
+  "ㅔ|-": {
+   "Leading": {
+    "top": -1.226,
+    "right": 0.164,
+    "bottom": -6.238,
+    "left": -0.898
+   },
+   "Medial": {
+    "top": -0.43,
+    "right": -0.197,
+    "bottom": -21.876,
+    "left": -4.261
+   }
+  },
+  "ㅔ|ㄱ": {
+   "Leading": {
+    "top": 0.145,
+    "right": 0.0,
+    "bottom": -0.291,
+    "left": 0.107
+   },
+   "Medial": {
+    "top": -0.143,
+    "right": 0.656,
+    "bottom": -0.86,
+    "left": 0.789
+   },
+   "Trailing": {
+    "top": 1.446,
+    "right": 0.125,
+    "bottom": 0.0,
+    "left": 1.255
+   }
+  },
+  "ㅔ|ㄲ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.291,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 1.289,
+    "left": 0.133
+   },
+   "Trailing": {
+    "top": -0.62,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㄳ": {
+   "Leading": {
+    "top": 1.5,
+    "right": -1.4,
+    "bottom": -16.28,
+    "left": 0.061
+   },
+   "Medial": {
+    "top": -0.076,
+    "right": -0.568,
+    "bottom": -16.543,
+    "left": -0.447
+   },
+   "TrailingFirst": {
+    "top": -0.256,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": -0.494,
+    "right": 0.0,
+    "bottom": -0.247,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㄴ": {
+   "Leading": {
+    "top": 1.235,
+    "right": 0.075,
+    "bottom": -5.233,
+    "left": 0.114
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.656,
+    "bottom": -19.628,
+    "left": -1.946
+   },
+   "Trailing": {
+    "top": -1.136,
+    "right": -0.125,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㄷ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 0.573,
+    "left": -2.384
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㄹ": {
+   "Leading": {
+    "top": -0.581,
+    "right": 0.0,
+    "bottom": 7.849,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.656,
+    "bottom": 8.883,
+    "left": 0.351
+   },
+   "Trailing": {
+    "top": 0.413,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.376
+   }
+  },
+  "ㅔ|ㄻ": {
+   "Leading": {
+    "top": 0.613,
+    "right": -1.493,
+    "bottom": -7.884,
+    "left": 0.043
+   },
+   "Medial": {
+    "top": -0.076,
+    "right": -0.568,
+    "bottom": -6.631,
+    "left": -0.224
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㄼ": {
+   "Leading": {
+    "top": 0.613,
+    "right": -1.493,
+    "bottom": -7.884,
+    "left": 0.043
+   },
+   "Medial": {
+    "top": -0.076,
+    "right": -0.568,
+    "bottom": -6.631,
+    "left": 0.0
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㄾ": {
+   "Leading": {
+    "top": 0.613,
+    "right": -1.493,
+    "bottom": -7.884,
+    "left": 0.043
+   },
+   "Medial": {
+    "top": -0.076,
+    "right": -0.568,
+    "bottom": -6.985,
+    "left": 0.224
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.226
+   }
+  },
+  "ㅔ|ㄿ": {
+   "Leading": {
+    "top": 0.645,
+    "right": -1.664,
+    "bottom": -7.884,
+    "left": 0.043
+   },
+   "Medial": {
+    "top": -0.076,
+    "right": -0.568,
+    "bottom": -6.631,
+    "left": 0.0
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㅁ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 1.308,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.438,
+    "bottom": 2.149,
+    "left": 0.57
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.125,
+    "bottom": 0.0,
+    "left": 0.251
+   }
+  },
+  "ㅔ|ㅂ": {
+   "Leading": {
+    "top": -0.218,
+    "right": 0.0,
+    "bottom": 4.651,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.656,
+    "bottom": 5.874,
+    "left": -0.961
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.063,
+    "bottom": 0.0,
+    "left": 0.063
+   }
+  },
+  "ㅔ|ㅅ": {
+   "Leading": {
+    "top": 0.581,
+    "right": 0.0,
+    "bottom": -0.945,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.438,
+    "bottom": -10.315,
+    "left": -0.305
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -0.376,
+    "bottom": 0.0,
+    "left": 0.627
+   }
+  },
+  "ㅔ|ㅆ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.218,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.328,
+    "bottom": 1.433,
+    "left": 0.461
+   },
+   "Trailing": {
+    "top": -0.103,
+    "right": 0.0,
+    "bottom": 0.62,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㅇ": {
+   "Leading": {
+    "top": 0.145,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.107
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.438,
+    "bottom": -2.865,
+    "left": -0.305
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -0.251,
+    "bottom": 0.0,
+    "left": 0.376
+   }
+  },
+  "ㅔ|ㅈ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.872,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 1.862,
+    "left": -0.086
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -0.063,
+    "bottom": 0.0,
+    "left": 0.063
+   }
+  },
+  "ㅔ|ㅊ": {
+   "Leading": {
+    "top": -0.436,
+    "right": 0.0,
+    "bottom": 6.759,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 3.438,
+    "left": 0.789
+   },
+   "Trailing": {
+    "top": -0.413,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㅋ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 0.716,
+    "left": -0.086
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㅌ": {
+   "Leading": {
+    "top": -0.327,
+    "right": 0.0,
+    "bottom": 7.267,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 8.668,
+    "left": 1.008
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㅍ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 1.289,
+    "left": -0.086
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅔ|ㅎ": {
+   "Leading": {
+    "top": -0.436,
+    "right": 0.0,
+    "bottom": 7.558,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.656,
+    "bottom": 6.447,
+    "left": 0.789
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.063
+   }
+  },
+  "ㅕ|-": {
+   "Leading": {
+    "top": -1.599,
+    "right": -9.378,
+    "bottom": -4.737,
+    "left": 0.165
+   },
+   "Medial": {
+    "top": -0.287,
+    "right": 0.995,
+    "bottom": -20.41,
+    "left": -6.32
+   }
+  },
+  "ㅕ|ㄱ": {
+   "Leading": {
+    "top": -0.363,
+    "right": -7.032,
+    "bottom": -0.799,
+    "left": -0.3
+   },
+   "Medial": {
+    "top": 0.072,
+    "right": 0.656,
+    "bottom": -0.358,
+    "left": 0.219
+   },
+   "Trailing": {
+    "top": 3.616,
+    "right": 2.76,
+    "bottom": -0.413,
+    "left": -1.819
+   }
+  },
+  "ㅕ|ㄲ": {
+   "Leading": {
+    "top": -0.436,
+    "right": -7.483,
+    "bottom": -0.327,
+    "left": -0.751
+   },
+   "Medial": {
+    "top": 0.072,
+    "right": 1.313,
+    "bottom": 0.0,
+    "left": -1.751
+   },
+   "Trailing": {
+    "top": 3.616,
+    "right": 3.262,
+    "bottom": -0.103,
+    "left": -2.823
+   }
+  },
+  "ㅕ|ㄳ": {
+   "Leading": {
+    "top": 1.508,
+    "right": -8.884,
+    "bottom": -17.128,
+    "left": -0.65
+   },
+   "Medial": {
+    "top": -0.021,
+    "right": 0.653,
+    "bottom": -18.506,
+    "left": -2.354
+   },
+   "TrailingFirst": {
+    "top": 3.964,
+    "right": 5.014,
+    "bottom": -0.128,
+    "left": -5.292
+   },
+   "TrailingSecond": {
+    "top": 4.321,
+    "right": 4.176,
+    "bottom": -0.247,
+    "left": -4.176
+   }
+  },
+  "ㅕ|ㄴ": {
+   "Leading": {
+    "top": 0.872,
+    "right": -7.958,
+    "bottom": -5.959,
+    "left": 0.751
+   },
+   "Medial": {
+    "top": 0.143,
+    "right": 0.0,
+    "bottom": -17.479,
+    "left": 2.626
+   },
+   "Trailing": {
+    "top": 2.893,
+    "right": 2.635,
+    "bottom": 0.0,
+    "left": -0.878
+   }
+  },
+  "ㅕ|ㄷ": {
+   "Leading": {
+    "top": -0.436,
+    "right": -7.483,
+    "bottom": -0.036,
+    "left": -0.751
+   },
+   "Medial": {
+    "top": 0.072,
+    "right": 1.313,
+    "bottom": 0.0,
+    "left": -1.751
+   },
+   "Trailing": {
+    "top": 2.066,
+    "right": 2.635,
+    "bottom": 0.0,
+    "left": -1.255
+   }
+  },
+  "ㅕ|ㅁ": {
+   "Leading": {
+    "top": -1.017,
+    "right": -7.032,
+    "bottom": -0.218,
+    "left": 0.276
+   },
+   "Medial": {
+    "top": 0.072,
+    "right": 0.0,
+    "bottom": 0.788,
+    "left": 1.751
+   },
+   "Trailing": {
+    "top": 2.893,
+    "right": 2.509,
+    "bottom": 0.0,
+    "left": -1.38
+   }
+  },
+  "ㅕ|ㅂ": {
+   "Leading": {
+    "top": -1.89,
+    "right": -8.108,
+    "bottom": 2.616,
+    "left": 0.15
+   },
+   "Medial": {
+    "top": 0.143,
+    "right": 0.0,
+    "bottom": 6.447,
+    "left": 1.094
+   },
+   "Trailing": {
+    "top": 1.24,
+    "right": 2.321,
+    "bottom": 0.0,
+    "left": -1.192
+   }
+  },
+  "ㅕ|ㅅ": {
+   "Leading": {
+    "top": -0.451,
+    "right": -9.084,
+    "bottom": -1.599,
+    "left": -0.187
+   },
+   "Medial": {
+    "top": 0.072,
+    "right": 0.0,
+    "bottom": -8.238,
+    "left": -0.328
+   },
+   "Trailing": {
+    "top": 0.93,
+    "right": 1.631,
+    "bottom": -0.62,
+    "left": -1.192
+   }
+  },
+  "ㅕ|ㅆ": {
+   "Leading": {
+    "top": -1.163,
+    "right": -11.111,
+    "bottom": 0.145,
+    "left": 0.526
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 1.146,
+    "left": 2.188
+   },
+   "Trailing": {
+    "top": 1.86,
+    "right": 0.627,
+    "bottom": 1.55,
+    "left": -0.627
+   }
+  },
+  "ㅕ|ㅇ": {
+   "Leading": {
+    "top": -0.218,
+    "right": -9.459,
+    "bottom": -1.526,
+    "left": 0.113
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -0.931,
+    "left": 1.313
+   },
+   "Trailing": {
+    "top": 0.103,
+    "right": 2.447,
+    "bottom": -0.103,
+    "left": -1.882
+   }
+  },
+  "ㅕ|ㅈ": {
+   "Leading": {
+    "top": -0.727,
+    "right": -7.357,
+    "bottom": 1.744,
+    "left": -1.201
+   },
+   "Medial": {
+    "top": 0.143,
+    "right": 1.532,
+    "bottom": 3.009,
+    "left": -2.407
+   },
+   "Trailing": {
+    "top": 0.62,
+    "right": 3.45,
+    "bottom": 0.0,
+    "left": -0.941
+   }
+  },
+  "ㅕ|ㅋ": {
+   "Leading": {
+    "top": -0.509,
+    "right": -7.483,
+    "bottom": 0.254,
+    "left": -1.051
+   },
+   "Medial": {
+    "top": 0.072,
+    "right": 1.313,
+    "bottom": 0.0,
+    "left": -2.298
+   },
+   "Trailing": {
+    "top": 2.169,
+    "right": 3.262,
+    "bottom": 0.207,
+    "left": -2.196
+   }
+  },
+  "ㅕ|ㅍ": {
+   "Leading": {
+    "top": -0.509,
+    "right": -7.483,
+    "bottom": 0.509,
+    "left": -0.751
+   },
+   "Medial": {
+    "top": 0.072,
+    "right": 1.422,
+    "bottom": 1.719,
+    "left": -1.751
+   },
+   "Trailing": {
+    "top": 3.099,
+    "right": 2.76,
+    "bottom": -0.207,
+    "left": -1.192
+   }
+  },
+  "ㅖ|-": {
+   "Leading": {
+    "top": -0.544,
+    "right": 0.312,
+    "bottom": -18.196,
+    "left": -0.898
+   },
+   "Medial": {
+    "top": -0.43,
+    "right": -0.197,
+    "bottom": -22.162,
+    "left": 49.5
+   }
+  },
+  "ㅖ|ㄱ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 0.287,
+    "left": -1.532
+   },
+   "Trailing": {
+    "top": -0.62,
+    "right": -0.125,
+    "bottom": 0.0,
+    "left": -0.125
+   }
+  },
+  "ㅖ|ㄲ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.145,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 1.003,
+    "left": -1.532
+   },
+   "Trailing": {
+    "top": 0.207,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㄳ": {
+   "Leading": {
+    "top": 2.21,
+    "right": -1.289,
+    "bottom": -16.199,
+    "left": 0.061
+   },
+   "Medial": {
+    "top": -0.076,
+    "right": -0.568,
+    "bottom": -15.59,
+    "left": -2.296
+   },
+   "TrailingFirst": {
+    "top": -0.256,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": -0.494,
+    "right": -0.226,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㄴ": {
+   "Leading": {
+    "top": 1.163,
+    "right": 0.3,
+    "bottom": -6.323,
+    "left": 0.107
+   },
+   "Medial": {
+    "top": -0.143,
+    "right": 0.656,
+    "bottom": -19.914,
+    "left": -2.845
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㄷ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 0.43,
+    "left": -1.532
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㄹ": {
+   "Leading": {
+    "top": -0.581,
+    "right": 0.601,
+    "bottom": 6.831,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 8.309,
+    "left": 1.094
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -1.24,
+    "left": -0.251
+   }
+  },
+  "ㅖ|ㄻ": {
+   "Leading": {
+    "top": 0.321,
+    "right": -0.831,
+    "bottom": -8.417,
+    "left": 0.085
+   },
+   "Medial": {
+    "top": -0.076,
+    "right": -0.568,
+    "bottom": -7.272,
+    "left": -0.73
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㄼ": {
+   "Leading": {
+    "top": 0.321,
+    "right": -0.831,
+    "bottom": -8.417,
+    "left": 0.085
+   },
+   "Medial": {
+    "top": -0.076,
+    "right": -0.568,
+    "bottom": -7.272,
+    "left": -0.73
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㄾ": {
+   "Leading": {
+    "top": 0.321,
+    "right": -0.831,
+    "bottom": -8.417,
+    "left": 0.085
+   },
+   "Medial": {
+    "top": -0.076,
+    "right": -0.568,
+    "bottom": -7.272,
+    "left": -0.73
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.226
+   }
+  },
+  "ㅖ|ㄿ": {
+   "Leading": {
+    "top": 0.321,
+    "right": -0.846,
+    "bottom": -8.417,
+    "left": 0.061
+   },
+   "Medial": {
+    "top": -0.076,
+    "right": -0.568,
+    "bottom": -7.272,
+    "left": -0.73
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㅁ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.15,
+    "bottom": 0.145,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 0.43,
+    "left": -1.532
+   },
+   "Trailing": {
+    "top": -0.826,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.251
+   }
+  },
+  "ㅖ|ㅂ": {
+   "Leading": {
+    "top": -0.145,
+    "right": 0.601,
+    "bottom": 3.488,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 5.444,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -0.188,
+    "bottom": -0.62,
+    "left": -0.188
+   }
+  },
+  "ㅖ|ㅅ": {
+   "Leading": {
+    "top": 0.145,
+    "right": 0.3,
+    "bottom": -0.727,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -10.315,
+    "left": 1.094
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -0.376,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㅆ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.15,
+    "bottom": 0.581,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 0.43,
+    "left": -1.532
+   },
+   "Trailing": {
+    "top": -0.826,
+    "right": 0.0,
+    "bottom": -0.517,
+    "left": 0.125
+   }
+  },
+  "ㅖ|ㅇ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.45,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": -3.152,
+    "left": 1.094
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -0.376,
+    "bottom": 0.0,
+    "left": 0.251
+   }
+  },
+  "ㅖ|ㅈ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.727,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 0.86,
+    "left": 1.094
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -0.063,
+    "bottom": 0.0,
+    "left": 0.063
+   }
+  },
+  "ㅖ|ㅊ": {
+   "Leading": {
+    "top": -0.218,
+    "right": 0.3,
+    "bottom": 5.669,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 2.579,
+    "left": 1.094
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㅋ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 0.43,
+    "left": -1.532
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㅌ": {
+   "Leading": {
+    "top": -0.581,
+    "right": 0.601,
+    "bottom": 6.686,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 8.309,
+    "left": 1.094
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㅍ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.145,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.219,
+    "bottom": 0.573,
+    "left": -1.532
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅖ|ㅎ": {
+   "Leading": {
+    "top": -0.581,
+    "right": 0.3,
+    "bottom": 6.613,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.656,
+    "bottom": 5.014,
+    "left": 1.094
+   },
+   "Trailing": {
+    "top": 1.24,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.314
+   }
+  },
+  "ㅗ|-": {
+   "Leading": {
+    "top": 4.592,
+    "right": -1.68,
+    "bottom": -14.537,
+    "left": -1.91
+   },
+   "Medial": {
+    "top": 12.241,
+    "right": 0.947,
+    "bottom": -19.112,
+    "left": -0.132
+   }
+  },
+  "ㅗ|ㄱ": {
+   "Leading": {
+    "top": 0.182,
+    "right": 0.121,
+    "bottom": -0.273,
+    "left": 1.027
+   },
+   "Medial": {
+    "top": 3.169,
+    "right": -0.121,
+    "bottom": -1.761,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.113,
+    "right": -0.191,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅗ|ㄲ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.121,
+    "bottom": 0.053,
+    "left": 0.362
+   },
+   "Medial": {
+    "top": 2.465,
+    "right": 0.0,
+    "bottom": -0.352,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -0.889,
+    "bottom": 0.452,
+    "left": 0.381
+   }
+  },
+  "ㅗ|ㄳ": {
+   "Leading": {
+    "top": 1.204,
+    "right": -2.434,
+    "bottom": -11.948,
+    "left": -3.15
+   },
+   "Medial": {
+    "top": 3.719,
+    "right": -0.12,
+    "bottom": -4.709,
+    "left": -0.119
+   },
+   "TrailingFirst": {
+    "top": -1.026,
+    "right": 0.0,
+    "bottom": 0.256,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.713
+   }
+  },
+  "ㅗ|ㄴ": {
+   "Leading": {
+    "top": 1.716,
+    "right": 0.483,
+    "bottom": -3.825,
+    "left": 1.208
+   },
+   "Medial": {
+    "top": 6.162,
+    "right": -0.121,
+    "bottom": -7.218,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.452,
+    "right": 0.381,
+    "bottom": 0.0,
+    "left": 0.127
+   }
+  },
+  "ㅗ|ㄷ": {
+   "Leading": {
+    "top": 0.077,
+    "right": 0.483,
+    "bottom": 0.546,
+    "left": 0.121
+   },
+   "Medial": {
+    "top": 2.465,
+    "right": 0.0,
+    "bottom": -0.352,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.566,
+    "right": 0.127,
+    "bottom": 0.226,
+    "left": 0.953
+   }
+  },
+  "ㅗ|ㄹ": {
+   "Leading": {
+    "top": -0.911,
+    "right": 0.0,
+    "bottom": 7.377,
+    "left": 0.604
+   },
+   "Medial": {
+    "top": -3.697,
+    "right": 0.0,
+    "bottom": 8.979,
+    "left": 0.121
+   },
+   "Trailing": {
+    "top": -0.113,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅗ|ㄻ": {
+   "Leading": {
+    "top": -0.298,
+    "right": -2.925,
+    "bottom": -4.624,
+    "left": -2.649
+   },
+   "Medial": {
+    "top": -1.996,
+    "right": -0.12,
+    "bottom": 4.815,
+    "left": -0.119
+   },
+   "TrailingFirst": {
+    "top": 0.256,
+    "right": -0.554,
+    "bottom": 1.026,
+    "left": 0.554
+   },
+   "TrailingSecond": {
+    "top": 0.251,
+    "right": 1.425,
+    "bottom": 0.251,
+    "left": 0.0
+   }
+  },
+  "ㅗ|ㄼ": {
+   "Leading": {
+    "top": -0.298,
+    "right": -2.27,
+    "bottom": -4.408,
+    "left": -3.167
+   },
+   "Medial": {
+    "top": -1.996,
+    "right": -0.12,
+    "bottom": 5.576,
+    "left": -0.119
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -0.831,
+    "bottom": 1.026,
+    "left": 1.385
+   },
+   "TrailingSecond": {
+    "top": -0.251,
+    "right": 0.95,
+    "bottom": 0.251,
+    "left": 1.188
+   }
+  },
+  "ㅗ|ㄾ": {
+   "Leading": {
+    "top": -0.42,
+    "right": -2.27,
+    "bottom": -3.568,
+    "left": -3.279
+   },
+   "Medial": {
+    "top": -2.948,
+    "right": -0.12,
+    "bottom": 5.576,
+    "left": -0.119
+   },
+   "TrailingFirst": {
+    "top": -0.256,
+    "right": 0.0,
+    "bottom": 1.538,
+    "left": 2.77
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.713,
+    "bottom": 0.754,
+    "left": 1.188
+   }
+  },
+  "ㅗ|ㄿ": {
+   "Leading": {
+    "top": -0.298,
+    "right": -2.547,
+    "bottom": -3.568,
+    "left": -3.167
+   },
+   "Medial": {
+    "top": -1.996,
+    "right": -0.12,
+    "bottom": 5.005,
+    "left": -0.119
+   },
+   "TrailingFirst": {
+    "top": 2.308,
+    "right": 0.277,
+    "bottom": 1.282,
+    "left": 0.277
+   },
+   "TrailingSecond": {
+    "top": 2.01,
+    "right": -0.238,
+    "bottom": 0.754,
+    "left": 0.0
+   }
+  },
+  "ㅗ|ㅁ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.121,
+    "bottom": 1.821,
+    "left": 0.906
+   },
+   "Medial": {
+    "top": 2.289,
+    "right": -0.121,
+    "bottom": 1.056,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.452,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅗ|ㅂ": {
+   "Leading": {
+    "top": -0.546,
+    "right": 0.0,
+    "bottom": 4.189,
+    "left": 0.785
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": -0.121,
+    "bottom": 2.641,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.792,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅗ|ㅄ": {
+   "Leading": {
+    "top": 0.94,
+    "right": -2.069,
+    "bottom": -7.867,
+    "left": -2.116
+   },
+   "Medial": {
+    "top": -11.138,
+    "right": -0.18,
+    "bottom": 5.291,
+    "left": 0.002
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅗ|ㅅ": {
+   "Leading": {
+    "top": 0.182,
+    "right": 0.121,
+    "bottom": 0.0,
+    "left": 0.906
+   },
+   "Medial": {
+    "top": 2.289,
+    "right": -0.121,
+    "bottom": -0.528,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -2.941,
+    "right": 0.127,
+    "bottom": 0.0,
+    "left": 0.127
+   }
+  },
+  "ㅗ|ㅇ": {
+   "Leading": {
+    "top": 0.546,
+    "right": 0.121,
+    "bottom": 0.546,
+    "left": 0.906
+   },
+   "Medial": {
+    "top": 3.345,
+    "right": -0.121,
+    "bottom": -0.704,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 1.584,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅗ|ㅈ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.121,
+    "bottom": 1.184,
+    "left": 0.362
+   },
+   "Medial": {
+    "top": 1.056,
+    "right": 0.0,
+    "bottom": 0.352,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -1.357,
+    "right": 0.0,
+    "bottom": -0.226,
+    "left": 0.0
+   }
+  },
+  "ㅗ|ㅊ": {
+   "Leading": {
+    "top": -0.182,
+    "right": 0.06,
+    "bottom": 5.829,
+    "left": 0.181
+   },
+   "Medial": {
+    "top": -2.201,
+    "right": 0.0,
+    "bottom": 7.57,
+    "left": 0.06
+   },
+   "Trailing": {
+    "top": -2.036,
+    "right": 0.191,
+    "bottom": 0.679,
+    "left": 1.08
+   }
+  },
+  "ㅗ|ㅋ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.483,
+    "bottom": 0.053,
+    "left": 0.121
+   },
+   "Medial": {
+    "top": 2.465,
+    "right": 0.0,
+    "bottom": -0.528,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.226,
+    "left": 0.381
+   }
+  },
+  "ㅗ|ㅌ": {
+   "Leading": {
+    "top": -0.69,
+    "right": 0.06,
+    "bottom": 6.648,
+    "left": 0.211
+   },
+   "Medial": {
+    "top": -2.289,
+    "right": 0.0,
+    "bottom": 7.923,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.113,
+    "right": -0.318,
+    "bottom": 0.113,
+    "left": 1.017
+   }
+  },
+  "ㅗ|ㅍ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.483,
+    "bottom": 0.053,
+    "left": 0.121
+   },
+   "Medial": {
+    "top": 2.465,
+    "right": 0.0,
+    "bottom": -0.528,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.905,
+    "right": 0.127,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅗ|ㅎ": {
+   "Leading": {
+    "top": -1.093,
+    "right": -9.3,
+    "bottom": -18.579,
+    "left": -9.3
+   },
+   "Medial": {
+    "top": 34.683,
+    "right": 9.662,
+    "bottom": -21.479,
+    "left": 8.937
+   },
+   "Trailing": {
+    "top": -1.131,
+    "right": -0.254,
+    "bottom": 0.679,
+    "left": -0.635
+   }
+  },
+  "ㅘ|-": {
+   "Leading": {
+    "top": 3.585,
+    "right": -0.701,
+    "bottom": -6.122,
+    "left": -0.519
+   },
+   "MedialBase": {
+    "top": -13.483,
+    "right": -19.321,
+    "bottom": -13.373,
+    "left": 1.072
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.208,
+    "bottom": -22.146,
+    "left": -1.491
+   }
+  },
+  "ㅘ|ㄱ": {
+   "Leading": {
+    "top": 0.205,
+    "right": 0.317,
+    "bottom": -0.514,
+    "left": 0.159
+   },
+   "MedialBase": {
+    "top": 0.78,
+    "right": 0.602,
+    "bottom": -0.056,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": -0.008,
+    "right": 0.0,
+    "bottom": -0.688,
+    "left": 0.206
+   },
+   "Trailing": {
+    "top": 1.956,
+    "right": 4.009,
+    "bottom": 0.0,
+    "left": -2.005
+   }
+  },
+  "ㅘ|ㄲ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.159
+   },
+   "MedialBase": {
+    "top": 0.0,
+    "right": 0.241,
+    "bottom": -0.167,
+    "left": 0.241
+   },
+   "MedialExtension": {
+    "top": 0.13,
+    "right": -0.206,
+    "bottom": 1.238,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.652,
+    "right": 4.127,
+    "bottom": 0.163,
+    "left": -2.594
+   }
+  },
+  "ㅘ|ㄴ": {
+   "Leading": {
+    "top": 1.849,
+    "right": 0.0,
+    "bottom": -5.752,
+    "left": 0.317
+   },
+   "MedialBase": {
+    "top": 2.787,
+    "right": 0.602,
+    "bottom": -3.4,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": -0.008,
+    "right": 0.0,
+    "bottom": -17.052,
+    "left": 0.206
+   },
+   "Trailing": {
+    "top": 29.175,
+    "right": -16.745,
+    "bottom": -45.148,
+    "left": 15.33
+   }
+  },
+  "ㅘ|ㄷ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.159
+   },
+   "MedialBase": {
+    "top": 0.0,
+    "right": 0.241,
+    "bottom": 0.056,
+    "left": 0.241
+   },
+   "MedialExtension": {
+    "top": 0.13,
+    "right": -0.206,
+    "bottom": 1.238,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 3.774,
+    "bottom": 0.163,
+    "left": -2.476
+   }
+  },
+  "ㅘ|ㄹ": {
+   "Leading": {
+    "top": -1.438,
+    "right": 0.692,
+    "bottom": 7.292,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": -3.344,
+    "right": 0.241,
+    "bottom": 6.075,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": -0.008,
+    "right": 0.0,
+    "bottom": 8.664,
+    "left": 0.206
+   },
+   "Trailing": {
+    "top": 0.163,
+    "right": 4.127,
+    "bottom": 0.0,
+    "left": -3.42
+   }
+  },
+  "ㅘ|ㄻ": {
+   "Leading": {
+    "top": -1.3,
+    "right": 0.0,
+    "bottom": -4.547,
+    "left": -2.599
+   },
+   "MedialBase": {
+    "top": 11.862,
+    "right": -23.028,
+    "bottom": -21.666,
+    "left": -0.036
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.202,
+    "bottom": -1.946,
+    "left": -0.535
+   },
+   "TrailingFirst": {
+    "top": -0.268,
+    "right": 8.839,
+    "bottom": 0.0,
+    "left": -5.937
+   },
+   "TrailingSecond": {
+    "top": -0.249,
+    "right": 8.721,
+    "bottom": 0.0,
+    "left": -6.977
+   }
+  },
+  "ㅘ|ㄼ": {
+   "Leading": {
+    "top": -1.3,
+    "right": 0.0,
+    "bottom": -4.547,
+    "left": -2.599
+   },
+   "MedialBase": {
+    "top": 11.862,
+    "right": -23.028,
+    "bottom": -21.666,
+    "left": -0.036
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.202,
+    "bottom": -1.946,
+    "left": -0.535
+   },
+   "TrailingFirst": {
+    "top": -0.268,
+    "right": 8.443,
+    "bottom": 0.0,
+    "left": -6.069
+   },
+   "TrailingSecond": {
+    "top": -0.748,
+    "right": 8.605,
+    "bottom": -0.249,
+    "left": -8.14
+   }
+  },
+  "ㅘ|ㄾ": {
+   "Leading": {
+    "top": -1.3,
+    "right": 0.0,
+    "bottom": -4.547,
+    "left": -2.599
+   },
+   "MedialBase": {
+    "top": 11.862,
+    "right": -23.028,
+    "bottom": -21.666,
+    "left": -0.036
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.202,
+    "bottom": -1.946,
+    "left": -0.535
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 7.388,
+    "bottom": 0.0,
+    "left": -5.013
+   },
+   "TrailingSecond": {
+    "top": -0.374,
+    "right": 8.14,
+    "bottom": -0.249,
+    "left": -8.372
+   }
+  },
+  "ㅘ|ㄿ": {
+   "Leading": {
+    "top": -1.3,
+    "right": 0.0,
+    "bottom": -4.547,
+    "left": -2.599
+   },
+   "MedialBase": {
+    "top": 11.862,
+    "right": -23.028,
+    "bottom": -21.841,
+    "left": -0.036
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.202,
+    "bottom": -2.426,
+    "left": -0.535
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 5.013,
+    "bottom": 0.0,
+    "left": -5.013
+   },
+   "TrailingSecond": {
+    "top": -0.249,
+    "right": 4.651,
+    "bottom": -0.249,
+    "left": -4.651
+   }
+  },
+  "ㅘ|ㅁ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -0.103,
+    "left": 0.159
+   },
+   "MedialBase": {
+    "top": 0.0,
+    "right": 0.241,
+    "bottom": 0.947,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": -0.008,
+    "right": 0.0,
+    "bottom": 1.238,
+    "left": 0.206
+   },
+   "Trailing": {
+    "top": 0.163,
+    "right": 4.245,
+    "bottom": -0.326,
+    "left": -4.363
+   }
+  },
+  "ㅘ|ㅂ": {
+   "Leading": {
+    "top": -1.017,
+    "right": 0.028,
+    "bottom": 4.108,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": -2.118,
+    "right": 0.241,
+    "bottom": 2.564,
+    "left": 0.241
+   },
+   "MedialExtension": {
+    "top": 0.061,
+    "right": 0.0,
+    "bottom": 5.157,
+    "left": 0.103
+   },
+   "Trailing": {
+    "top": 0.163,
+    "right": 4.304,
+    "bottom": 0.0,
+    "left": -3.007
+   }
+  },
+  "ㅘ|ㅄ": {
+   "Leading": {
+    "top": -0.063,
+    "right": 0.013,
+    "bottom": -7.168,
+    "left": -2.67
+   },
+   "MedialBase": {
+    "top": 14.659,
+    "right": -23.028,
+    "bottom": -26.212,
+    "left": 0.125
+   },
+   "MedialExtension": {
+    "top": 0.08,
+    "right": -0.307,
+    "bottom": -6.586,
+    "left": -0.43
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅘ|ㅅ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": 0.892,
+    "right": 0.241,
+    "bottom": -0.502,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": 0.13,
+    "right": 0.0,
+    "bottom": -7.701,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.815,
+    "right": 1.533,
+    "bottom": 0.0,
+    "left": -0.943
+   }
+  },
+  "ㅘ|ㅆ": {
+   "Leading": {
+    "top": -0.177,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.159
+   },
+   "MedialBase": {
+    "top": 0.0,
+    "right": 0.241,
+    "bottom": -0.167,
+    "left": 0.241
+   },
+   "MedialExtension": {
+    "top": 0.13,
+    "right": -0.206,
+    "bottom": 1.375,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.163,
+    "right": 0.943,
+    "bottom": 0.0,
+    "left": -1.887
+   }
+  },
+  "ㅘ|ㅇ": {
+   "Leading": {
+    "top": 0.028,
+    "right": 0.0,
+    "bottom": -0.308,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": 0.78,
+    "right": 0.361,
+    "bottom": 0.056,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": -0.008,
+    "right": 0.0,
+    "bottom": -1.65,
+    "left": 0.206
+   },
+   "Trailing": {
+    "top": 0.081,
+    "right": 3.892,
+    "bottom": 0.163,
+    "left": -3.066
+   }
+  },
+  "ㅘ|ㅈ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 1.059,
+    "left": -0.241
+   },
+   "MedialExtension": {
+    "top": 0.13,
+    "right": 0.0,
+    "bottom": 1.65,
+    "left": 0.206
+   },
+   "Trailing": {
+    "top": 0.978,
+    "right": 2.182,
+    "bottom": 0.0,
+    "left": -0.943
+   }
+  },
+  "ㅘ|ㅊ": {
+   "Leading": {
+    "top": -1.233,
+    "right": 0.0,
+    "bottom": 6.368,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": -2.229,
+    "right": 0.0,
+    "bottom": 4.068,
+    "left": -0.241
+   },
+   "MedialExtension": {
+    "top": 0.13,
+    "right": 0.0,
+    "bottom": 1.925,
+    "left": 0.206
+   },
+   "Trailing": {
+    "top": 0.163,
+    "right": 1.887,
+    "bottom": 0.0,
+    "left": -0.59
+   }
+  },
+  "ㅘ|ㅋ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.159
+   },
+   "MedialBase": {
+    "top": 0.0,
+    "right": 0.241,
+    "bottom": 0.39,
+    "left": 0.241
+   },
+   "MedialExtension": {
+    "top": 0.13,
+    "right": -0.206,
+    "bottom": 1.238,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.815,
+    "right": 4.009,
+    "bottom": -0.163,
+    "left": -2.712
+   }
+  },
+  "ㅘ|ㅌ": {
+   "Leading": {
+    "top": -1.445,
+    "right": 0.0,
+    "bottom": 6.368,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": -4.013,
+    "right": 0.241,
+    "bottom": 4.849,
+    "left": 0.12
+   },
+   "MedialExtension": {
+    "top": -0.008,
+    "right": 0.0,
+    "bottom": 9.214,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.489,
+    "right": -0.354,
+    "bottom": -0.489,
+    "left": 0.354
+   }
+  },
+  "ㅘ|ㅍ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.159
+   },
+   "MedialBase": {
+    "top": 0.0,
+    "right": 0.241,
+    "bottom": 0.39,
+    "left": 0.241
+   },
+   "MedialExtension": {
+    "top": 0.13,
+    "right": -0.206,
+    "bottom": 1.375,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.326,
+    "right": 3.066,
+    "bottom": 0.0,
+    "left": -2.771
+   }
+  },
+  "ㅘ|ㅎ": {
+   "Leading": {
+    "top": -1.527,
+    "right": 0.0,
+    "bottom": 6.984,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": -3.567,
+    "right": 0.0,
+    "bottom": 6.019,
+    "left": -0.241
+   },
+   "MedialExtension": {
+    "top": 0.13,
+    "right": 0.0,
+    "bottom": 6.051,
+    "left": 0.206
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 2.241,
+    "bottom": 0.0,
+    "left": -2.358
+   }
+  },
+  "ㅙ|-": {
+   "Leading": {
+    "top": 4.67,
+    "right": 12.978,
+    "bottom": -5.501,
+    "left": -1.3
+   },
+   "MedialBase": {
+    "top": -13.354,
+    "right": -15.734,
+    "bottom": -11.357,
+    "left": 0.547
+   },
+   "MedialExtension": {
+    "top": -0.13,
+    "right": 0.839,
+    "bottom": -22.834,
+    "left": 0.223
+   }
+  },
+  "ㅙ|ㄱ": {
+   "Leading": {
+    "top": 1.027,
+    "right": 12.778,
+    "bottom": 0.0,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": 0.725,
+    "right": 1.083,
+    "bottom": 0.056,
+    "left": 0.033
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.015,
+    "bottom": 0.069,
+    "left": 0.103
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -3.774,
+    "bottom": -0.163,
+    "left": 2.83
+   }
+  },
+  "ㅙ|ㄲ": {
+   "Leading": {
+    "top": 1.027,
+    "right": 12.778,
+    "bottom": 0.0,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": 0.613,
+    "right": 1.083,
+    "bottom": 0.0,
+    "left": 0.033
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.015,
+    "bottom": 0.206,
+    "left": 0.103
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -3.774,
+    "bottom": 0.0,
+    "left": 1.887
+   }
+  },
+  "ㅙ|ㄳ": {
+   "Leading": {
+    "top": 2.257,
+    "right": 13.145,
+    "bottom": -11.839,
+    "left": -4.151
+   },
+   "MedialBase": {
+    "top": 18.99,
+    "right": -18.091,
+    "bottom": -30.638,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": 0.03,
+    "right": 0.0,
+    "bottom": -12.314,
+    "left": -0.83
+   },
+   "TrailingFirst": {
+    "top": -0.268,
+    "right": -3.43,
+    "bottom": 0.0,
+    "left": 3.298
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -1.628,
+    "bottom": 0.249,
+    "left": 0.93
+   }
+  },
+  "ㅙ|ㄷ": {
+   "Leading": {
+    "top": 1.027,
+    "right": 12.778,
+    "bottom": 0.0,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": 0.502,
+    "right": 1.083,
+    "bottom": 0.0,
+    "left": 0.033
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.015,
+    "bottom": 0.275,
+    "left": 0.103
+   },
+   "Trailing": {
+    "top": -0.652,
+    "right": -3.656,
+    "bottom": 0.0,
+    "left": 1.179
+   }
+  },
+  "ㅙ|ㄹ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 12.857,
+    "bottom": 6.368,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": -3.121,
+    "right": 1.444,
+    "bottom": 4.904,
+    "left": -0.207
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.015,
+    "bottom": 8.251,
+    "left": 0.206
+   },
+   "Trailing": {
+    "top": -0.489,
+    "right": -3.066,
+    "bottom": -0.489,
+    "left": 1.415
+   }
+  },
+  "ㅙ|ㄻ": {
+   "Leading": {
+    "top": 0.837,
+    "right": 13.271,
+    "bottom": -5.435,
+    "left": -4.058
+   },
+   "MedialBase": {
+    "top": 13.658,
+    "right": -18.091,
+    "bottom": -23.295,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": 0.03,
+    "right": 0.0,
+    "bottom": -2.634,
+    "left": -0.725
+   },
+   "TrailingFirst": {
+    "top": 0.268,
+    "right": -3.298,
+    "bottom": 0.0,
+    "left": 0.923
+   },
+   "TrailingSecond": {
+    "top": 0.249,
+    "right": -6.86,
+    "bottom": -0.499,
+    "left": 3.488
+   }
+  },
+  "ㅙ|ㄼ": {
+   "Leading": {
+    "top": 0.369,
+    "right": 13.31,
+    "bottom": -4.574,
+    "left": -3.99
+   },
+   "MedialBase": {
+    "top": 13.745,
+    "right": -17.849,
+    "bottom": -23.12,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": 0.03,
+    "right": 0.0,
+    "bottom": -2.794,
+    "left": -0.725
+   },
+   "TrailingFirst": {
+    "top": 0.134,
+    "right": -3.694,
+    "bottom": 0.0,
+    "left": 1.055
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -6.86,
+    "bottom": 1.122,
+    "left": 3.953
+   }
+  },
+  "ㅙ|ㄾ": {
+   "Leading": {
+    "top": 0.837,
+    "right": 13.271,
+    "bottom": -5.435,
+    "left": -4.058
+   },
+   "MedialBase": {
+    "top": 13.658,
+    "right": -18.091,
+    "bottom": -23.295,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": 0.03,
+    "right": 0.0,
+    "bottom": -2.634,
+    "left": -0.725
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -6.332,
+    "bottom": 0.0,
+    "left": 4.749
+   },
+   "TrailingSecond": {
+    "top": 0.125,
+    "right": -8.372,
+    "bottom": 0.0,
+    "left": 4.884
+   }
+  },
+  "ㅙ|ㄿ": {
+   "Leading": {
+    "top": 0.837,
+    "right": 13.271,
+    "bottom": -5.435,
+    "left": -4.058
+   },
+   "MedialBase": {
+    "top": 13.658,
+    "right": -18.091,
+    "bottom": -23.295,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": 0.03,
+    "right": 0.0,
+    "bottom": -2.634,
+    "left": -0.725
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -4.222,
+    "bottom": 0.0,
+    "left": 2.639
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -4.651,
+    "bottom": 0.0,
+    "left": 3.488
+   }
+  },
+  "ㅙ|ㅀ": {
+   "Leading": {
+    "top": 0.837,
+    "right": 13.271,
+    "bottom": -3.713,
+    "left": -3.293
+   },
+   "MedialBase": {
+    "top": 14.357,
+    "right": -17.607,
+    "bottom": -23.295,
+    "left": 0.323
+   },
+   "MedialExtension": {
+    "top": 0.03,
+    "right": 0.0,
+    "bottom": -2.954,
+    "left": -0.725
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅙ|ㅁ": {
+   "Leading": {
+    "top": 1.13,
+    "right": 12.778,
+    "bottom": 0.0,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": -0.056,
+    "right": 1.083,
+    "bottom": 0.223,
+    "left": -0.087
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.088,
+    "bottom": 0.275,
+    "left": 0.103
+   },
+   "Trailing": {
+    "top": -0.326,
+    "right": -3.538,
+    "bottom": -0.163,
+    "left": 0.59
+   }
+  },
+  "ㅙ|ㅂ": {
+   "Leading": {
+    "top": 0.616,
+    "right": 12.778,
+    "bottom": 3.389,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": -0.725,
+    "right": 1.083,
+    "bottom": 2.341,
+    "left": 0.033
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.015,
+    "bottom": 4.813,
+    "left": 0.206
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -3.538,
+    "bottom": -0.407,
+    "left": 0.472
+   }
+  },
+  "ㅙ|ㅅ": {
+   "Leading": {
+    "top": 2.047,
+    "right": 12.698,
+    "bottom": -1.643,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": -0.78,
+    "right": 1.083,
+    "bottom": 0.111,
+    "left": -0.087
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.191,
+    "bottom": -8.388,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.163,
+    "right": -2.712,
+    "bottom": 0.163,
+    "left": 1.651
+   }
+  },
+  "ㅙ|ㅆ": {
+   "Leading": {
+    "top": 1.233,
+    "right": 12.698,
+    "bottom": 0.0,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": 0.111,
+    "right": 1.685,
+    "bottom": 0.223,
+    "left": -0.448
+   },
+   "MedialExtension": {
+    "top": -0.138,
+    "right": 0.603,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -2.241,
+    "bottom": 1.467,
+    "left": 1.061
+   }
+  },
+  "ㅙ|ㅇ": {
+   "Leading": {
+    "top": 2.288,
+    "right": 12.857,
+    "bottom": -1.027,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": 1.003,
+    "right": 2.166,
+    "bottom": -0.223,
+    "left": -0.448
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 1.631,
+    "bottom": -3.3,
+    "left": -1.029
+   },
+   "Trailing": {
+    "top": 0.733,
+    "right": -2.83,
+    "bottom": 0.0,
+    "left": 1.179
+   }
+  },
+  "ㅙ|ㅈ": {
+   "Leading": {
+    "top": 1.643,
+    "right": 12.698,
+    "bottom": 0.205,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": 0.0,
+    "right": 1.685,
+    "bottom": 1.003,
+    "left": -0.448
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.603,
+    "bottom": 0.825,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -3.361,
+    "bottom": 0.0,
+    "left": 2.594
+   }
+  },
+  "ㅙ|ㅊ": {
+   "Leading": {
+    "top": 0.404,
+    "right": 12.698,
+    "bottom": 3.492,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": -2.341,
+    "right": 2.166,
+    "bottom": 3.455,
+    "left": -0.448
+   },
+   "MedialExtension": {
+    "top": -0.138,
+    "right": 1.631,
+    "bottom": 0.413,
+    "left": -1.029
+   },
+   "Trailing": {
+    "top": 2.119,
+    "right": -2.594,
+    "bottom": 0.0,
+    "left": 2.948
+   }
+  },
+  "ㅙ|ㅋ": {
+   "Leading": {
+    "top": 1.027,
+    "right": 12.778,
+    "bottom": 0.719,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": 0.502,
+    "right": 1.083,
+    "bottom": 0.0,
+    "left": 0.033
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.015,
+    "bottom": 0.413,
+    "left": 0.103
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -3.892,
+    "bottom": 0.081,
+    "left": 2.123
+   }
+  },
+  "ㅙ|ㅌ": {
+   "Leading": {
+    "top": -0.103,
+    "right": 12.619,
+    "bottom": 5.238,
+    "left": -1.19
+   },
+   "MedialBase": {
+    "top": -2.731,
+    "right": 1.083,
+    "bottom": 4.681,
+    "left": 0.274
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.015,
+    "bottom": 8.182,
+    "left": 0.206
+   },
+   "Trailing": {
+    "top": 0.489,
+    "right": -8.373,
+    "bottom": -0.489,
+    "left": 3.892
+   }
+  },
+  "ㅙ|ㅍ": {
+   "Leading": {
+    "top": 1.027,
+    "right": 12.778,
+    "bottom": 0.0,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": 0.502,
+    "right": 1.083,
+    "bottom": 0.111,
+    "left": 0.033
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.015,
+    "bottom": 0.275,
+    "left": 0.103
+   },
+   "Trailing": {
+    "top": 0.326,
+    "right": -3.184,
+    "bottom": 0.081,
+    "left": 0.884
+   }
+  },
+  "ㅙ|ㅎ": {
+   "Leading": {
+    "top": -0.616,
+    "right": 12.698,
+    "bottom": 5.546,
+    "left": -1.429
+   },
+   "MedialBase": {
+    "top": -2.675,
+    "right": 2.166,
+    "bottom": 5.462,
+    "left": -0.448
+   },
+   "MedialExtension": {
+    "top": -0.138,
+    "right": 1.631,
+    "bottom": 3.575,
+    "left": -1.029
+   },
+   "Trailing": {
+    "top": 3.097,
+    "right": -2.712,
+    "bottom": 0.163,
+    "left": 2.594
+   }
+  },
+  "ㅚ|-": {
+   "Leading": {
+    "top": 3.817,
+    "right": -4.807,
+    "bottom": -7.03,
+    "left": 2.17
+   },
+   "MedialBase": {
+    "top": -12.023,
+    "right": -22.438,
+    "bottom": -13.429,
+    "left": 2.264
+   },
+   "MedialExtension": {
+    "top": -0.13,
+    "right": -0.035,
+    "bottom": -23.081,
+    "left": 0.038
+   }
+  },
+  "ㅚ|ㄱ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -1.825,
+    "bottom": 0.0,
+    "left": 2.063
+   },
+   "MedialBase": {
+    "top": -0.334,
+    "right": 0.963,
+    "bottom": 0.613,
+    "left": -0.181
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.412,
+    "bottom": 0.206,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.652,
+    "right": 0.0,
+    "bottom": -0.652,
+    "left": 0.0
+   }
+  },
+  "ㅚ|ㄲ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -1.825,
+    "bottom": 0.051,
+    "left": 2.063
+   },
+   "MedialBase": {
+    "top": -0.334,
+    "right": 0.963,
+    "bottom": 0.279,
+    "left": -0.181
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.412,
+    "bottom": 0.413,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.177
+   }
+  },
+  "ㅚ|ㄳ": {
+   "Leading": {
+    "top": 0.643,
+    "right": -1.992,
+    "bottom": -11.776,
+    "left": -0.67
+   },
+   "MedialBase": {
+    "top": 17.282,
+    "right": -23.371,
+    "bottom": -29.851,
+    "left": -0.193
+   },
+   "MedialExtension": {
+    "top": 0.03,
+    "right": 0.432,
+    "bottom": -11.651,
+    "left": -0.4
+   },
+   "TrailingFirst": {
+    "top": 0.268,
+    "right": 0.396,
+    "bottom": -0.134,
+    "left": -1.055
+   },
+   "TrailingSecond": {
+    "top": -0.499,
+    "right": 1.86,
+    "bottom": 0.0,
+    "left": -2.093
+   }
+  },
+  "ㅚ|ㄴ": {
+   "Leading": {
+    "top": 2.054,
+    "right": -2.035,
+    "bottom": -5.649,
+    "left": 2.381
+   },
+   "MedialBase": {
+    "top": 3.232,
+    "right": 0.602,
+    "bottom": -3.734,
+    "left": 0.12
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.309,
+    "bottom": -16.846,
+    "left": 0.103
+   },
+   "Trailing": {
+    "top": 29.501,
+    "right": -20.873,
+    "bottom": -45.148,
+    "left": 17.807
+   }
+  },
+  "ㅚ|ㄷ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -1.825,
+    "bottom": 0.051,
+    "left": 2.063
+   },
+   "MedialBase": {
+    "top": -0.334,
+    "right": 0.963,
+    "bottom": 0.613,
+    "left": -0.181
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.412,
+    "bottom": 0.55,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.081,
+    "right": -0.118,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅚ|ㄹ": {
+   "Leading": {
+    "top": -1.75,
+    "right": -2.273,
+    "bottom": 8.166,
+    "left": 2.619
+   },
+   "MedialBase": {
+    "top": -3.567,
+    "right": 1.083,
+    "bottom": 6.353,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.309,
+    "bottom": 8.32,
+    "left": 0.103
+   },
+   "Trailing": {
+    "top": -0.244,
+    "right": -0.118,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅚ|ㄻ": {
+   "Leading": {
+    "top": -1.316,
+    "right": -2.04,
+    "bottom": -4.517,
+    "left": -0.598
+   },
+   "MedialBase": {
+    "top": 12.999,
+    "right": -23.21,
+    "bottom": -22.596,
+    "left": 0.049
+   },
+   "MedialExtension": {
+    "top": 0.03,
+    "right": 0.013,
+    "bottom": -2.851,
+    "left": -0.505
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.396,
+    "bottom": 0.0,
+    "left": -0.132
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -0.249,
+    "left": -0.233
+   }
+  },
+  "ㅚ|ㄼ": {
+   "Leading": {
+    "top": -1.316,
+    "right": -2.04,
+    "bottom": -4.517,
+    "left": -0.598
+   },
+   "MedialBase": {
+    "top": 12.999,
+    "right": -23.21,
+    "bottom": -22.334,
+    "left": 0.049
+   },
+   "MedialExtension": {
+    "top": 0.03,
+    "right": 0.013,
+    "bottom": -2.691,
+    "left": -0.505
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -0.264,
+    "bottom": 0.0,
+    "left": 0.264
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": -0.116,
+    "bottom": -0.249,
+    "left": 0.698
+   }
+  },
+  "ㅚ|ㄾ": {
+   "Leading": {
+    "top": -1.316,
+    "right": -2.04,
+    "bottom": -4.517,
+    "left": -0.598
+   },
+   "MedialBase": {
+    "top": 12.999,
+    "right": -23.21,
+    "bottom": -22.596,
+    "left": 0.049
+   },
+   "MedialExtension": {
+    "top": 0.03,
+    "right": 0.013,
+    "bottom": -2.851,
+    "left": -0.505
+   },
+   "TrailingFirst": {
+    "top": -0.536,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": -0.125,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅚ|ㄿ": {
+   "Leading": {
+    "top": -1.316,
+    "right": -2.04,
+    "bottom": -4.517,
+    "left": -0.598
+   },
+   "MedialBase": {
+    "top": 12.999,
+    "right": -23.21,
+    "bottom": -22.683,
+    "left": 0.049
+   },
+   "MedialExtension": {
+    "top": 0.03,
+    "right": 0.013,
+    "bottom": -2.851,
+    "left": -0.505
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅚ|ㅁ": {
+   "Leading": {
+    "top": 0.014,
+    "right": -2.143,
+    "bottom": 0.103,
+    "left": 2.302
+   },
+   "MedialBase": {
+    "top": 0.334,
+    "right": 1.203,
+    "bottom": 0.557,
+    "left": 0.181
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.103,
+    "bottom": -0.069,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.733,
+    "right": -0.059,
+    "bottom": 0.0,
+    "left": 0.177
+   }
+  },
+  "ㅚ|ㅂ": {
+   "Leading": {
+    "top": -0.822,
+    "right": -2.063,
+    "bottom": 3.698,
+    "left": 2.222
+   },
+   "MedialBase": {
+    "top": -1.282,
+    "right": 1.083,
+    "bottom": 2.564,
+    "left": 0.12
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 4.676,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.326,
+    "right": 0.0,
+    "bottom": 0.081,
+    "left": 0.118
+   }
+  },
+  "ㅚ|ㅅ": {
+   "Leading": {
+    "top": 0.439,
+    "right": -2.063,
+    "bottom": 0.0,
+    "left": 2.222
+   },
+   "MedialBase": {
+    "top": 0.056,
+    "right": 1.083,
+    "bottom": -0.446,
+    "left": 0.12
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -9.351,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.326,
+    "right": 0.0,
+    "bottom": 0.163,
+    "left": 0.943
+   }
+  },
+  "ㅚ|ㅆ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -1.825,
+    "bottom": 0.0,
+    "left": 2.063
+   },
+   "MedialBase": {
+    "top": -0.334,
+    "right": 0.963,
+    "bottom": 0.0,
+    "left": -0.181
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.412,
+    "bottom": 0.413,
+    "left": -0.309
+   },
+   "Trailing": {
+    "top": 0.244,
+    "right": -0.236,
+    "bottom": -0.733,
+    "left": 0.295
+   }
+  },
+  "ㅚ|ㅇ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -1.825,
+    "bottom": 0.0,
+    "left": 2.063
+   },
+   "MedialBase": {
+    "top": 1.282,
+    "right": 0.963,
+    "bottom": 0.446,
+    "left": -0.181
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -1.925,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.733,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅚ|ㅈ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -1.905,
+    "bottom": 0.0,
+    "left": 2.222
+   },
+   "MedialBase": {
+    "top": -0.613,
+    "right": 0.602,
+    "bottom": 1.338,
+    "left": -0.241
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.412,
+    "bottom": 1.65,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.326,
+    "right": -0.295,
+    "bottom": 0.0,
+    "left": 0.236
+   }
+  },
+  "ㅚ|ㅊ": {
+   "Leading": {
+    "top": -1.133,
+    "right": -1.905,
+    "bottom": 6.265,
+    "left": 2.152
+   },
+   "MedialBase": {
+    "top": -2.954,
+    "right": 0.722,
+    "bottom": 4.57,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.103,
+    "bottom": 1.856,
+    "left": -0.103
+   },
+   "Trailing": {
+    "top": -2.445,
+    "right": 0.0,
+    "bottom": -0.163,
+    "left": -0.354
+   }
+  },
+  "ㅚ|ㅋ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -1.825,
+    "bottom": 0.0,
+    "left": 2.063
+   },
+   "MedialBase": {
+    "top": -0.334,
+    "right": 0.963,
+    "bottom": 0.279,
+    "left": -0.181
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.412,
+    "bottom": 0.619,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -0.059,
+    "bottom": 0.0,
+    "left": 0.177
+   }
+  },
+  "ㅚ|ㅌ": {
+   "Leading": {
+    "top": -1.643,
+    "right": -2.035,
+    "bottom": 6.06,
+    "left": 2.063
+   },
+   "MedialBase": {
+    "top": -1.783,
+    "right": 0.602,
+    "bottom": 5.127,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.103,
+    "bottom": 8.388,
+    "left": -0.103
+   },
+   "Trailing": {
+    "top": 0.489,
+    "right": -4.54,
+    "bottom": -0.489,
+    "left": 2.358
+   }
+  },
+  "ㅚ|ㅍ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -1.825,
+    "bottom": 0.0,
+    "left": 2.063
+   },
+   "MedialBase": {
+    "top": -0.334,
+    "right": 0.963,
+    "bottom": 0.725,
+    "left": -0.181
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.309,
+    "bottom": 1.238,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.489,
+    "right": -0.177,
+    "bottom": 0.0,
+    "left": 0.177
+   }
+  },
+  "ㅚ|ㅎ": {
+   "Leading": {
+    "top": -1.643,
+    "right": -1.905,
+    "bottom": 7.395,
+    "left": 2.152
+   },
+   "MedialBase": {
+    "top": -2.954,
+    "right": 0.722,
+    "bottom": 5.629,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.103,
+    "bottom": 4.951,
+    "left": -0.103
+   },
+   "Trailing": {
+    "top": -0.407,
+    "right": 0.0,
+    "bottom": -0.326,
+    "left": 0.0
+   }
+  },
+  "ㅛ|-": {
+   "Leading": {
+    "top": 4.494,
+    "right": -1.465,
+    "bottom": -13.305,
+    "left": -2.05
+   },
+   "Medial": {
+    "top": 6.637,
+    "right": 0.822,
+    "bottom": -17.636,
+    "left": -0.072
+   }
+  },
+  "ㅛ|ㄱ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.273,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.528,
+    "right": -0.483,
+    "bottom": 0.0,
+    "left": 0.059
+   },
+   "Trailing": {
+    "top": -1.244,
+    "right": 0.064,
+    "bottom": 0.0,
+    "left": -0.254
+   }
+  },
+  "ㅛ|ㄲ": {
+   "Leading": {
+    "top": 0.038,
+    "right": 0.121,
+    "bottom": 0.027,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.968,
+    "right": 0.06,
+    "bottom": 0.616,
+    "left": -0.786
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -0.381,
+    "bottom": 0.226,
+    "left": 0.0
+   }
+  },
+  "ㅛ|ㄳ": {
+   "Leading": {
+    "top": 1.095,
+    "right": -2.504,
+    "bottom": -11.95,
+    "left": -3.158
+   },
+   "Medial": {
+    "top": 2.345,
+    "right": -0.058,
+    "bottom": -3.63,
+    "left": -0.907
+   },
+   "TrailingFirst": {
+    "top": 0.256,
+    "right": 0.0,
+    "bottom": 0.128,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.754,
+    "right": -0.119,
+    "bottom": 0.377,
+    "left": 0.475
+   }
+  },
+  "ㅛ|ㄴ": {
+   "Leading": {
+    "top": 1.457,
+    "right": 0.242,
+    "bottom": -4.007,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 7.042,
+    "right": -0.604,
+    "bottom": -6.162,
+    "left": 0.059
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.127
+   }
+  },
+  "ㅛ|ㄷ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.121,
+    "bottom": 0.273,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.528,
+    "right": 0.0,
+    "bottom": 1.232,
+    "left": -0.786
+   },
+   "Trailing": {
+    "top": 0.339,
+    "right": 0.127,
+    "bottom": -0.226,
+    "left": 0.953
+   }
+  },
+  "ㅛ|ㄹ": {
+   "Leading": {
+    "top": -1.381,
+    "right": 0.0,
+    "bottom": 8.302,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -14.613,
+    "right": -0.483,
+    "bottom": 11.972,
+    "left": 0.059
+   },
+   "Trailing": {
+    "top": -0.566,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅛ|ㄻ": {
+   "Leading": {
+    "top": -0.292,
+    "right": -2.573,
+    "bottom": -0.83,
+    "left": -3.021
+   },
+   "Medial": {
+    "top": -16.417,
+    "right": -0.361,
+    "bottom": 9.227,
+    "left": -0.483
+   },
+   "TrailingFirst": {
+    "top": -1.538,
+    "right": 0.0,
+    "bottom": 0.128,
+    "left": 0.277
+   },
+   "TrailingSecond": {
+    "top": -1.508,
+    "right": 0.713,
+    "bottom": -0.754,
+    "left": 0.0
+   }
+  },
+  "ㅛ|ㄼ": {
+   "Leading": {
+    "top": -0.292,
+    "right": -2.573,
+    "bottom": -0.83,
+    "left": -3.021
+   },
+   "Medial": {
+    "top": -16.417,
+    "right": -0.361,
+    "bottom": 9.227,
+    "left": -0.483
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": -1.108,
+    "bottom": 0.513,
+    "left": 2.77
+   },
+   "TrailingSecond": {
+    "top": -0.126,
+    "right": 0.594,
+    "bottom": 0.377,
+    "left": 1.9
+   }
+  },
+  "ㅛ|ㄾ": {
+   "Leading": {
+    "top": -0.292,
+    "right": -2.508,
+    "bottom": -0.723,
+    "left": -3.021
+   },
+   "Medial": {
+    "top": -16.417,
+    "right": -0.361,
+    "bottom": 9.227,
+    "left": -0.483
+   },
+   "TrailingFirst": {
+    "top": -1.026,
+    "right": 0.0,
+    "bottom": 1.41,
+    "left": 3.324
+   },
+   "TrailingSecond": {
+    "top": -0.754,
+    "right": 1.188,
+    "bottom": 0.628,
+    "left": 1.306
+   }
+  },
+  "ㅛ|ㄿ": {
+   "Leading": {
+    "top": -0.292,
+    "right": -2.573,
+    "bottom": -0.83,
+    "left": -3.021
+   },
+   "Medial": {
+    "top": -16.417,
+    "right": -0.361,
+    "bottom": 9.227,
+    "left": -0.483
+   },
+   "TrailingFirst": {
+    "top": -2.949,
+    "right": 0.693,
+    "bottom": 0.513,
+    "left": 2.77
+   },
+   "TrailingSecond": {
+    "top": -2.764,
+    "right": -0.119,
+    "bottom": 0.251,
+    "left": -0.356
+   }
+  },
+  "ㅛ|ㅁ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 1.275,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.528,
+    "right": -0.483,
+    "bottom": 1.761,
+    "left": 0.059
+   },
+   "Trailing": {
+    "top": 1.131,
+    "right": 0.254,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅛ|ㅂ": {
+   "Leading": {
+    "top": -0.729,
+    "right": 0.121,
+    "bottom": 3.825,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -0.528,
+    "right": -0.604,
+    "bottom": 3.169,
+    "left": 0.059
+   },
+   "Trailing": {
+    "top": -0.566,
+    "right": 0.127,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅛ|ㅄ": {
+   "Leading": {
+    "top": 0.617,
+    "right": -2.263,
+    "bottom": -7.113,
+    "left": -3.151
+   },
+   "Medial": {
+    "top": -13.846,
+    "right": -0.421,
+    "bottom": 5.513,
+    "left": -0.423
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅛ|ㅅ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.06,
+    "bottom": 0.501,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 1.32,
+    "right": -0.302,
+    "bottom": 0.616,
+    "left": -0.363
+   },
+   "Trailing": {
+    "top": -3.507,
+    "right": 0.191,
+    "bottom": 0.0,
+    "left": -0.191
+   }
+  },
+  "ㅛ|ㅇ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.592,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -5.458,
+    "right": -0.543,
+    "bottom": 1.056,
+    "left": 0.059
+   },
+   "Trailing": {
+    "top": 0.339,
+    "right": -0.191,
+    "bottom": 0.0,
+    "left": -0.254
+   }
+  },
+  "ㅛ|ㅈ": {
+   "Leading": {
+    "top": 0.038,
+    "right": 0.181,
+    "bottom": 1.594,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -6.074,
+    "right": -0.242,
+    "bottom": 1.585,
+    "left": -0.363
+   },
+   "Trailing": {
+    "top": -0.226,
+    "right": 0.064,
+    "bottom": -0.226,
+    "left": 0.191
+   }
+  },
+  "ㅛ|ㅊ": {
+   "Leading": {
+    "top": -0.729,
+    "right": 0.121,
+    "bottom": 6.922,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -4.754,
+    "right": 0.0,
+    "bottom": 8.451,
+    "left": -0.786
+   },
+   "Trailing": {
+    "top": -3.167,
+    "right": 0.127,
+    "bottom": 0.679,
+    "left": 0.0
+   }
+  },
+  "ㅛ|ㅋ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.121,
+    "bottom": 0.364,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.528,
+    "right": 0.0,
+    "bottom": 1.232,
+    "left": -0.786
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.226,
+    "left": 0.381
+   }
+  },
+  "ㅛ|ㅌ": {
+   "Leading": {
+    "top": -1.184,
+    "right": 0.0,
+    "bottom": 8.34,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -16.021,
+    "right": -0.242,
+    "bottom": 12.5,
+    "left": -0.363
+   },
+   "Trailing": {
+    "top": -0.792,
+    "right": -0.064,
+    "bottom": 0.226,
+    "left": 1.144
+   }
+  },
+  "ㅛ|ㅍ": {
+   "Leading": {
+    "top": 0.038,
+    "right": 0.06,
+    "bottom": 0.501,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -5.458,
+    "right": 0.06,
+    "bottom": 0.968,
+    "left": -0.786
+   },
+   "Trailing": {
+    "top": 0.113,
+    "right": 0.064,
+    "bottom": 0.339,
+    "left": 0.0
+   }
+  },
+  "ㅛ|ㅎ": {
+   "Leading": {
+    "top": -1.275,
+    "right": -9.3,
+    "bottom": -18.944,
+    "left": -9.179
+   },
+   "Medial": {
+    "top": 31.866,
+    "right": 9.179,
+    "bottom": -21.303,
+    "left": 8.151
+   },
+   "Trailing": {
+    "top": 3.167,
+    "right": 1.017,
+    "bottom": -1.584,
+    "left": 0.0
+   }
+  },
+  "ㅜ|-": {
+   "Leading": {
+    "top": 0.199,
+    "right": -1.199,
+    "bottom": 1.216,
+    "left": -1.148
+   },
+   "Medial": {
+    "top": -4.418,
+    "right": 1.187,
+    "bottom": -19.501,
+    "left": -0.13
+   }
+  },
+  "ㅜ|ㄴ": {
+   "Leading": {
+    "top": 1.587,
+    "right": 0.0,
+    "bottom": -4.736,
+    "left": 0.664
+   },
+   "Medial": {
+    "top": 9.155,
+    "right": -0.242,
+    "bottom": -18.222,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.566,
+    "right": 0.127,
+    "bottom": 0.0,
+    "left": -0.127
+   }
+  },
+  "ㅜ|ㅂ": {
+   "Leading": {
+    "top": -0.633,
+    "right": 0.0,
+    "bottom": 2.368,
+    "left": 0.181
+   },
+   "Medial": {
+    "top": -0.264,
+    "right": 0.0,
+    "bottom": 1.408,
+    "left": 0.121
+   },
+   "Trailing": {
+    "top": -0.452,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅜ|ㅅ": {
+   "Leading": {
+    "top": -0.12,
+    "right": 0.0,
+    "bottom": 0.82,
+    "left": 0.664
+   },
+   "Medial": {
+    "top": 1.496,
+    "right": -0.242,
+    "bottom": 3.345,
+    "left": 0.121
+   },
+   "Trailing": {
+    "top": 8.032,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.254
+   }
+  },
+  "ㅜ|ㅆ": {
+   "Leading": {
+    "top": 0.129,
+    "right": 0.725,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 1.937,
+    "right": 0.604,
+    "bottom": -3.345,
+    "left": -0.725
+   },
+   "Trailing": {
+    "top": -6.109,
+    "right": -0.381,
+    "bottom": -0.226,
+    "left": 0.127
+   }
+  },
+  "ㅜ|ㅊ": {
+   "Leading": {
+    "top": -1.03,
+    "right": 0.423,
+    "bottom": 6.375,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -4.842,
+    "right": 0.362,
+    "bottom": 12.412,
+    "left": -0.242
+   },
+   "Trailing": {
+    "top": 8.145,
+    "right": -0.572,
+    "bottom": 0.452,
+    "left": 0.0
+   }
+  },
+  "ㅜ|ㅎ": {
+   "Leading": {
+    "top": -1.093,
+    "right": 0.242,
+    "bottom": 6.375,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -5.106,
+    "right": 0.604,
+    "bottom": 14.085,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -29.186,
+    "right": -7.751,
+    "bottom": 0.226,
+    "left": -7.878
+   }
+  },
+  "ㅝ|-": {
+   "Leading": {
+    "top": -1.064,
+    "right": -2.219,
+    "bottom": 3.464,
+    "left": 0.749
+   },
+   "MedialBase": {
+    "top": -8.663,
+    "right": -0.405,
+    "bottom": -0.188,
+    "left": 0.0
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": -0.102,
+    "bottom": 0.0,
+    "left": -0.407
+   }
+  },
+  "ㅝ|ㄴ": {
+   "Leading": {
+    "top": 0.391,
+    "right": 0.317,
+    "bottom": -3.698,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": 36.443,
+    "right": 1.094,
+    "bottom": 3.588,
+    "left": 13.489
+   },
+   "MedialExtension": {
+    "top": 0.02,
+    "right": 0.238,
+    "bottom": 4.957,
+    "left": 2.953
+   },
+   "Trailing": {
+    "top": -8.638,
+    "right": 0.825,
+    "bottom": -7.987,
+    "left": -0.472
+   }
+  },
+  "ㅝ|ㅅ": {
+   "Leading": {
+    "top": -0.205,
+    "right": 0.0,
+    "bottom": 3.065,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": 14.373,
+    "right": 22.033,
+    "bottom": 27.887,
+    "left": -1.914
+   },
+   "MedialExtension": {
+    "top": 0.02,
+    "right": 0.856,
+    "bottom": 7.432,
+    "left": 2.13
+   },
+   "Trailing": {
+    "top": 5.542,
+    "right": -0.825,
+    "bottom": -0.489,
+    "left": -0.118
+   }
+  },
+  "ㅝ|ㅆ": {
+   "Leading": {
+    "top": -0.205,
+    "right": 0.0,
+    "bottom": 3.065,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": 13.482,
+    "right": 22.033,
+    "bottom": 33.572,
+    "left": -1.914
+   },
+   "MedialExtension": {
+    "top": 0.02,
+    "right": 0.856,
+    "bottom": 12.795,
+    "left": 2.13
+   },
+   "Trailing": {
+    "top": 6.846,
+    "right": -1.061,
+    "bottom": -0.652,
+    "left": -0.354
+   }
+  },
+  "ㅝ|ㅇ": {
+   "Leading": {
+    "top": -0.822,
+    "right": 0.0,
+    "bottom": 3.681,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": 13.036,
+    "right": 22.033,
+    "bottom": 33.237,
+    "left": -1.914
+   },
+   "MedialExtension": {
+    "top": 0.02,
+    "right": 0.238,
+    "bottom": 12.108,
+    "left": 2.336
+   },
+   "Trailing": {
+    "top": 8.72,
+    "right": -0.236,
+    "bottom": -0.163,
+    "left": 0.354
+   }
+  },
+  "ㅝ|ㅈ": {
+   "Leading": {
+    "top": -0.205,
+    "right": 0.0,
+    "bottom": 4.913,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": 12.478,
+    "right": 22.033,
+    "bottom": 34.352,
+    "left": -1.914
+   },
+   "MedialExtension": {
+    "top": 0.02,
+    "right": 0.856,
+    "bottom": 16.233,
+    "left": 2.13
+   },
+   "Trailing": {
+    "top": 8.638,
+    "right": -0.531,
+    "bottom": -0.815,
+    "left": -0.236
+   }
+  },
+  "ㅝ|ㅌ": {
+   "Leading": {
+    "top": -2.465,
+    "right": 0.873,
+    "bottom": 5.346,
+    "left": 0.159
+   },
+   "MedialBase": {
+    "top": 30.535,
+    "right": 0.733,
+    "bottom": 2.474,
+    "left": 14.572
+   },
+   "MedialExtension": {
+    "top": 0.02,
+    "right": 0.65,
+    "bottom": 26.134,
+    "left": 1.513
+   },
+   "Trailing": {
+    "top": -34.717,
+    "right": 16.981,
+    "bottom": 58.84,
+    "left": -14.741
+   }
+  },
+  "ㅞ|-": {
+   "Leading": {
+    "top": 0.951,
+    "right": 14.327,
+    "bottom": 3.981,
+    "left": -3.073
+   },
+   "MedialBase": {
+    "top": -41.741,
+    "right": 4.211,
+    "bottom": 3.507,
+    "left": -0.613
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.217,
+    "bottom": -4.544,
+    "left": -2.033
+   }
+  },
+  "ㅞ|ㄱ": {
+   "Leading": {
+    "top": 1.027,
+    "right": 15.714,
+    "bottom": 2.654,
+    "left": -1.905
+   },
+   "MedialBase": {
+    "top": -16.496,
+    "right": 20.613,
+    "bottom": 27.531,
+    "left": -2.144
+   },
+   "MedialExtension": {
+    "top": -0.008,
+    "right": 0.606,
+    "bottom": 7.426,
+    "left": -0.171
+   },
+   "Trailing": {
+    "top": 11.735,
+    "right": -2.712,
+    "bottom": 0.0,
+    "left": 1.061
+   }
+  },
+  "ㅞ|ㄳ": {
+   "Leading": {
+    "top": 1.418,
+    "right": 15.958,
+    "bottom": -11.883,
+    "left": -4.704
+   },
+   "MedialBase": {
+    "top": 7.488,
+    "right": 0.709,
+    "bottom": -6.851,
+    "left": -2.144
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.861,
+    "bottom": -4.984,
+    "left": -1.381
+   },
+   "TrailingFirst": {
+    "top": 11.528,
+    "right": -1.583,
+    "bottom": -0.536,
+    "left": 1.583
+   },
+   "TrailingSecond": {
+    "top": 9.726,
+    "right": -1.395,
+    "bottom": -1.247,
+    "left": 0.698
+   }
+  },
+  "ㅞ|ㄴ": {
+   "Leading": {
+    "top": 1.643,
+    "right": 13.333,
+    "bottom": -0.77,
+    "left": -2.143
+   },
+   "MedialBase": {
+    "top": 10.032,
+    "right": -18.256,
+    "bottom": 0.0,
+    "left": 17.651
+   },
+   "MedialExtension": {
+    "top": 0.13,
+    "right": -1.452,
+    "bottom": 0.206,
+    "left": 1.784
+   },
+   "Trailing": {
+    "top": -9.942,
+    "right": 12.323,
+    "bottom": 0.0,
+    "left": -0.59
+   }
+  },
+  "ㅞ|ㄻ": {
+   "Leading": {
+    "top": 0.213,
+    "right": 15.465,
+    "bottom": -2.967,
+    "left": -4.376
+   },
+   "MedialBase": {
+    "top": 0.845,
+    "right": 0.871,
+    "bottom": -0.033,
+    "left": -2.144
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.652,
+    "bottom": 2.536,
+    "left": -2.846
+   },
+   "TrailingFirst": {
+    "top": 13.941,
+    "right": -6.464,
+    "bottom": -0.268,
+    "left": 5.673
+   },
+   "TrailingSecond": {
+    "top": 12.968,
+    "right": -4.767,
+    "bottom": 0.0,
+    "left": 4.186
+   }
+  },
+  "ㅞ|ㄼ": {
+   "Leading": {
+    "top": 0.213,
+    "right": 15.465,
+    "bottom": -2.967,
+    "left": -4.376
+   },
+   "MedialBase": {
+    "top": 0.845,
+    "right": 0.871,
+    "bottom": -0.033,
+    "left": -2.144
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.652,
+    "bottom": 2.536,
+    "left": -2.846
+   },
+   "TrailingFirst": {
+    "top": 12.869,
+    "right": -5.541,
+    "bottom": -0.268,
+    "left": 4.749
+   },
+   "TrailingSecond": {
+    "top": 11.721,
+    "right": -4.419,
+    "bottom": -0.499,
+    "left": 3.721
+   }
+  },
+  "ㅞ|ㅇ": {
+   "Leading": {
+    "top": 0.616,
+    "right": 15.714,
+    "bottom": 5.324,
+    "left": -1.905
+   },
+   "MedialBase": {
+    "top": -17.945,
+    "right": 20.613,
+    "bottom": 28.423,
+    "left": -2.144
+   },
+   "MedialExtension": {
+    "top": -0.008,
+    "right": 0.606,
+    "bottom": 6.601,
+    "left": -0.582
+   },
+   "Trailing": {
+    "top": 9.698,
+    "right": -2.948,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅞ|ㅈ": {
+   "Leading": {
+    "top": -1.967,
+    "right": 15.079,
+    "bottom": 8.422,
+    "left": -2.698
+   },
+   "MedialBase": {
+    "top": -15.605,
+    "right": 0.637,
+    "bottom": 16.664,
+    "left": 5.317
+   },
+   "MedialExtension": {
+    "top": 0.061,
+    "right": -0.423,
+    "bottom": 17.258,
+    "left": -1.097
+   },
+   "Trailing": {
+    "top": -21.189,
+    "right": 16.392,
+    "bottom": 28.034,
+    "left": -4.245
+   }
+  },
+  "ㅞ|ㅊ": {
+   "Leading": {
+    "top": 1.027,
+    "right": 15.238,
+    "bottom": 9.638,
+    "left": -1.587
+   },
+   "MedialBase": {
+    "top": -21.066,
+    "right": 20.372,
+    "bottom": 31.878,
+    "left": -1.783
+   },
+   "MedialExtension": {
+    "top": -0.008,
+    "right": 0.606,
+    "bottom": 11.964,
+    "left": -1.405
+   },
+   "Trailing": {
+    "top": 7.498,
+    "right": -3.184,
+    "bottom": -0.326,
+    "left": 2.005
+   }
+  },
+  "ㅞ|ㅌ": {
+   "Leading": {
+    "top": -1.643,
+    "right": 11.587,
+    "bottom": 7.659,
+    "left": -3.016
+   },
+   "MedialBase": {
+    "top": 0.0,
+    "right": -18.376,
+    "bottom": -2.118,
+    "left": 16.869
+   },
+   "MedialExtension": {
+    "top": 0.13,
+    "right": -1.452,
+    "bottom": 21.04,
+    "left": 0.652
+   },
+   "Trailing": {
+    "top": -36.347,
+    "right": 28.892,
+    "bottom": 59.003,
+    "left": -13.443
+   }
+  },
+  "ㅞ|ㅎ": {
+   "Leading": {
+    "top": 0.616,
+    "right": 15.238,
+    "bottom": 11.076,
+    "left": -1.587
+   },
+   "MedialBase": {
+    "top": -21.735,
+    "right": 20.372,
+    "bottom": 33.773,
+    "left": -1.783
+   },
+   "MedialExtension": {
+    "top": -0.008,
+    "right": 0.606,
+    "bottom": 14.439,
+    "left": -1.405
+   },
+   "Trailing": {
+    "top": 11.409,
+    "right": -2.358,
+    "bottom": -0.163,
+    "left": 0.472
+   }
+  },
+  "ㅟ|-": {
+   "Leading": {
+    "top": -0.744,
+    "right": -2.509,
+    "bottom": 1.673,
+    "left": 1.157
+   },
+   "MedialBase": {
+    "top": -1.224,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.153
+   },
+   "MedialExtension": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅟ|ㄴ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.952,
+    "bottom": -4.93,
+    "left": 0.04
+   },
+   "MedialBase": {
+    "top": 42.677,
+    "right": 2.834,
+    "bottom": 5.114,
+    "left": 13.664
+   },
+   "MedialExtension": {
+    "top": 0.02,
+    "right": 0.038,
+    "bottom": 5.644,
+    "left": -0.449
+   },
+   "Trailing": {
+    "top": -3.26,
+    "right": -1.297,
+    "bottom": -9.127,
+    "left": -0.354
+   }
+  },
+  "ㅟ|ㅂ": {
+   "Leading": {
+    "top": -1.233,
+    "right": -0.635,
+    "bottom": 0.189,
+    "left": 1.111
+   },
+   "MedialBase": {
+    "top": 20.384,
+    "right": 21.606,
+    "bottom": 33.537,
+    "left": -2.1
+   },
+   "MedialExtension": {
+    "top": -0.118,
+    "right": 0.655,
+    "bottom": 22.146,
+    "left": -1.066
+   },
+   "Trailing": {
+    "top": 5.868,
+    "right": 0.472,
+    "bottom": 0.081,
+    "left": -0.118
+   }
+  },
+  "ㅟ|ㅅ": {
+   "Leading": {
+    "top": -1.027,
+    "right": -0.635,
+    "bottom": -4.331,
+    "left": 1.111
+   },
+   "MedialBase": {
+    "top": 22.836,
+    "right": 21.606,
+    "bottom": 27.852,
+    "left": -2.1
+   },
+   "MedialExtension": {
+    "top": -0.118,
+    "right": 0.655,
+    "bottom": 6.194,
+    "left": -1.066
+   },
+   "Trailing": {
+    "top": 6.683,
+    "right": -2.241,
+    "bottom": 0.0,
+    "left": 3.656
+   }
+  },
+  "ㅟ|ㅆ": {
+   "Leading": {
+    "top": -1.468,
+    "right": -1.746,
+    "bottom": 0.924,
+    "left": 1.111
+   },
+   "MedialBase": {
+    "top": 39.444,
+    "right": -4.747,
+    "bottom": -0.682,
+    "left": 3.435
+   },
+   "MedialExtension": {
+    "top": 0.02,
+    "right": 0.655,
+    "bottom": 21.596,
+    "left": -1.272
+   },
+   "Trailing": {
+    "top": -34.88,
+    "right": 25.354,
+    "bottom": 54.765,
+    "left": -5.425
+   }
+  },
+  "ㅟ|ㅎ": {
+   "Leading": {
+    "top": 1.643,
+    "right": 0.0,
+    "bottom": 5.941,
+    "left": 0.0
+   },
+   "MedialBase": {
+    "top": 17.04,
+    "right": 23.051,
+    "bottom": 39.556,
+    "left": -2.22
+   },
+   "MedialExtension": {
+    "top": -0.118,
+    "right": 1.272,
+    "bottom": 22.559,
+    "left": -1.889
+   },
+   "Trailing": {
+    "top": 4.564,
+    "right": -0.118,
+    "bottom": -2.608,
+    "left": 0.118
+   }
+  },
+  "ㅠ|-": {
+   "Leading": {
+    "top": -0.1,
+    "right": -1.199,
+    "bottom": 1.524,
+    "left": -1.148
+   },
+   "Medial": {
+    "top": -4.802,
+    "right": 0.583,
+    "bottom": -10.258,
+    "left": 0.0
+   }
+  },
+  "ㅠ|ㄴ": {
+   "Leading": {
+    "top": 1.875,
+    "right": 0.0,
+    "bottom": -5.191,
+    "left": 0.302
+   },
+   "Medial": {
+    "top": 9.243,
+    "right": -0.725,
+    "bottom": -7.835,
+    "left": 0.251
+   },
+   "Trailing": {
+    "top": 0.679,
+    "right": -0.381,
+    "bottom": 0.0,
+    "left": -0.635
+   }
+  },
+  "ㅠ|ㄶ": {
+   "Leading": {
+    "top": -0.01,
+    "right": -1.787,
+    "bottom": -8.111,
+    "left": -3.037
+   },
+   "Medial": {
+    "top": 0.058,
+    "right": 0.123,
+    "bottom": -7.37,
+    "left": -0.715
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅠ|ㅂ": {
+   "Leading": {
+    "top": -0.546,
+    "right": 0.06,
+    "bottom": 2.732,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -1.496,
+    "right": -0.242,
+    "bottom": 11.268,
+    "left": -0.232
+   },
+   "Trailing": {
+    "top": 1.697,
+    "right": 0.127,
+    "bottom": -0.905,
+    "left": -0.445
+   }
+  },
+  "ㅠ|ㅅ": {
+   "Leading": {
+    "top": 0.211,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.302
+   },
+   "Medial": {
+    "top": 2.553,
+    "right": -0.604,
+    "bottom": 0.44,
+    "left": 0.251
+   },
+   "Trailing": {
+    "top": 0.566,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅠ|ㅆ": {
+   "Leading": {
+    "top": 0.038,
+    "right": 0.664,
+    "bottom": 0.182,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.528,
+    "right": 0.0,
+    "bottom": 10.651,
+    "left": -0.594
+   },
+   "Trailing": {
+    "top": 6.9,
+    "right": 0.826,
+    "bottom": 0.566,
+    "left": -0.381
+   }
+  },
+  "ㅠ|ㅊ": {
+   "Leading": {
+    "top": -1.055,
+    "right": 0.302,
+    "bottom": 5.556,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -5.722,
+    "right": 0.0,
+    "bottom": 18.046,
+    "left": -0.534
+   },
+   "Trailing": {
+    "top": 1.131,
+    "right": 0.064,
+    "bottom": -0.905,
+    "left": -0.064
+   }
+  },
+  "ㅠ|ㅎ": {
+   "Leading": {
+    "top": -1.15,
+    "right": 0.242,
+    "bottom": 5.829,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -5.81,
+    "right": 0.121,
+    "bottom": -0.616,
+    "left": -0.474
+   },
+   "Trailing": {
+    "top": 6.561,
+    "right": 0.635,
+    "bottom": -0.226,
+    "left": 0.254
+   }
+  },
+  "ㅡ|-": {
+   "Leading": {
+    "top": 5.11,
+    "right": -1.68,
+    "bottom": -15.418,
+    "left": -1.718
+   },
+   "Medial": {
+    "top": 21.278,
+    "right": 0.947,
+    "bottom": -19.554,
+    "left": -0.011
+   }
+  },
+  "ㅡ|ㄱ": {
+   "Leading": {
+    "top": 0.283,
+    "right": 0.0,
+    "bottom": -1.002,
+    "left": 0.181
+   },
+   "Medial": {
+    "top": 1.496,
+    "right": -0.121,
+    "bottom": -0.968,
+    "left": 0.121
+   },
+   "Trailing": {
+    "top": 0.113,
+    "right": -0.064,
+    "bottom": 0.0,
+    "left": 0.064
+   }
+  },
+  "ㅡ|ㄲ": {
+   "Leading": {
+    "top": 0.038,
+    "right": 0.664,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 1.056,
+    "right": 0.483,
+    "bottom": -0.616,
+    "left": -0.725
+   },
+   "Trailing": {
+    "top": 0.452,
+    "right": 0.254,
+    "bottom": 0.0,
+    "left": -0.127
+   }
+  },
+  "ㅡ|ㄳ": {
+   "Leading": {
+    "top": 1.087,
+    "right": -1.995,
+    "bottom": -12.204,
+    "left": -3.086
+   },
+   "Medial": {
+    "top": 4.185,
+    "right": 0.364,
+    "bottom": -4.718,
+    "left": -0.845
+   },
+   "TrailingFirst": {
+    "top": 1.538,
+    "right": 0.0,
+    "bottom": -0.256,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 2.513,
+    "right": 0.713,
+    "bottom": 0.0,
+    "left": -0.238
+   }
+  },
+  "ㅡ|ㄴ": {
+   "Leading": {
+    "top": 2.219,
+    "right": 0.0,
+    "bottom": -5.373,
+    "left": 0.664
+   },
+   "Medial": {
+    "top": 7.306,
+    "right": -0.181,
+    "bottom": -6.778,
+    "left": 0.121
+   },
+   "Trailing": {
+    "top": -0.792,
+    "right": 0.254,
+    "bottom": 0.0,
+    "left": 0.127
+   }
+  },
+  "ㅡ|ㄷ": {
+   "Leading": {
+    "top": 0.038,
+    "right": 0.362,
+    "bottom": -0.091,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.528,
+    "right": 0.483,
+    "bottom": -0.088,
+    "left": -0.664
+   },
+   "Trailing": {
+    "top": -0.339,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.191
+   }
+  },
+  "ㅡ|ㄹ": {
+   "Leading": {
+    "top": -0.584,
+    "right": 0.0,
+    "bottom": 5.829,
+    "left": 0.725
+   },
+   "Medial": {
+    "top": -8.011,
+    "right": -0.121,
+    "bottom": 8.627,
+    "left": 0.121
+   },
+   "Trailing": {
+    "top": 0.452,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅡ|ㄺ": {
+   "Leading": {
+    "top": 1.383,
+    "right": -2.881,
+    "bottom": -6.763,
+    "left": -3.114
+   },
+   "Medial": {
+    "top": -3.625,
+    "right": -0.241,
+    "bottom": 3.377,
+    "left": 0.002
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅡ|ㄻ": {
+   "Leading": {
+    "top": -0.425,
+    "right": -2.352,
+    "bottom": -5.608,
+    "left": -3.081
+   },
+   "Medial": {
+    "top": -5.434,
+    "right": 0.364,
+    "bottom": 4.901,
+    "left": -0.785
+   },
+   "TrailingFirst": {
+    "top": 0.256,
+    "right": 0.554,
+    "bottom": -0.513,
+    "left": -0.97
+   },
+   "TrailingSecond": {
+    "top": 0.251,
+    "right": -0.119,
+    "bottom": -2.01,
+    "left": -0.238
+   }
+  },
+  "ㅡ|ㄼ": {
+   "Leading": {
+    "top": -0.31,
+    "right": -2.06,
+    "bottom": -5.519,
+    "left": -3.102
+   },
+   "Medial": {
+    "top": -5.244,
+    "right": 0.364,
+    "bottom": 4.711,
+    "left": -0.845
+   },
+   "TrailingFirst": {
+    "top": 2.051,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 2.764,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅡ|ㄾ": {
+   "Leading": {
+    "top": -0.31,
+    "right": -2.06,
+    "bottom": -5.519,
+    "left": -3.102
+   },
+   "Medial": {
+    "top": -5.244,
+    "right": 0.364,
+    "bottom": 4.711,
+    "left": -0.845
+   },
+   "TrailingFirst": {
+    "top": 2.564,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 2.764,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅡ|ㄿ": {
+   "Leading": {
+    "top": -0.197,
+    "right": -2.193,
+    "bottom": -5.519,
+    "left": -3.086
+   },
+   "Medial": {
+    "top": -4.863,
+    "right": 0.364,
+    "bottom": 4.425,
+    "left": -0.845
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -0.251,
+    "left": 0.713
+   }
+  },
+  "ㅡ|ㅁ": {
+   "Leading": {
+    "top": -0.149,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.664
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": -0.121,
+    "bottom": 0.352,
+    "left": 0.121
+   },
+   "Trailing": {
+    "top": -0.452,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅡ|ㅂ": {
+   "Leading": {
+    "top": -0.402,
+    "right": 0.0,
+    "bottom": 2.095,
+    "left": 0.543
+   },
+   "Medial": {
+    "top": -2.289,
+    "right": -0.121,
+    "bottom": 2.729,
+    "left": 0.121
+   },
+   "Trailing": {
+    "top": -1.131,
+    "right": -0.254,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅡ|ㅅ": {
+   "Leading": {
+    "top": 0.691,
+    "right": 0.0,
+    "bottom": -1.548,
+    "left": 0.483
+   },
+   "Medial": {
+    "top": 0.792,
+    "right": -0.121,
+    "bottom": -0.528,
+    "left": 0.121
+   },
+   "Trailing": {
+    "top": -3.394,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.254
+   }
+  },
+  "ㅡ|ㅆ": {
+   "Leading": {
+    "top": 0.129,
+    "right": 0.543,
+    "bottom": -0.091,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 1.056,
+    "right": 0.483,
+    "bottom": -0.528,
+    "left": -0.725
+   },
+   "Trailing": {
+    "top": -6.674,
+    "right": -0.445,
+    "bottom": 0.0,
+    "left": 0.445
+   }
+  },
+  "ㅡ|ㅇ": {
+   "Leading": {
+    "top": 0.211,
+    "right": 0.06,
+    "bottom": -0.182,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.704,
+    "right": -0.121,
+    "bottom": -0.352,
+    "left": 0.121
+   },
+   "Trailing": {
+    "top": -0.792,
+    "right": -0.064,
+    "bottom": -0.339,
+    "left": -0.191
+   }
+  },
+  "ㅡ|ㅈ": {
+   "Leading": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.182,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": -0.121,
+    "bottom": 0.44,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.191
+   }
+  },
+  "ㅡ|ㅊ": {
+   "Leading": {
+    "top": -0.766,
+    "right": 0.362,
+    "bottom": 4.918,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -6.778,
+    "right": 0.483,
+    "bottom": 7.218,
+    "left": -0.664
+   },
+   "Trailing": {
+    "top": -3.507,
+    "right": 0.127,
+    "bottom": 0.226,
+    "left": 0.0
+   }
+  },
+  "ㅡ|ㅋ": {
+   "Leading": {
+    "top": 0.158,
+    "right": 0.543,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": 0.264,
+    "right": 0.483,
+    "bottom": -0.088,
+    "left": -0.725
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅡ|ㅌ": {
+   "Leading": {
+    "top": -0.766,
+    "right": 0.423,
+    "bottom": 5.009,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -7.306,
+    "right": 0.483,
+    "bottom": 7.835,
+    "left": -0.725
+   },
+   "Trailing": {
+    "top": 0.452,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅡ|ㅍ": {
+   "Leading": {
+    "top": 0.038,
+    "right": 0.362,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -0.264,
+    "right": 0.483,
+    "bottom": 0.528,
+    "left": -0.664
+   },
+   "Trailing": {
+    "top": 0.226,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": -0.127
+   }
+  },
+  "ㅡ|ㅎ": {
+   "Leading": {
+    "top": -0.729,
+    "right": 0.242,
+    "bottom": 4.918,
+    "left": 0.0
+   },
+   "Medial": {
+    "top": -7.042,
+    "right": 0.483,
+    "bottom": -22.711,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 1.584,
+    "right": 0.381,
+    "bottom": 0.679,
+    "left": 0.127
+   }
+  },
+  "ㅢ|-": {
+   "Leading": {
+    "top": 3.787,
+    "right": -3.416,
+    "bottom": -9.915,
+    "left": 0.542
+   },
+   "MedialBase": {
+    "top": -8.916,
+    "right": -1.521,
+    "bottom": 18.877,
+    "left": -0.459
+   },
+   "MedialExtension": {
+    "top": -0.11,
+    "right": 0.203,
+    "bottom": -6.332,
+    "left": 0.0
+   }
+  },
+  "ㅢ|ㄴ": {
+   "Leading": {
+    "top": 1.618,
+    "right": -0.675,
+    "bottom": -10.305,
+    "left": 1.111
+   },
+   "MedialBase": {
+    "top": 9.53,
+    "right": 0.842,
+    "bottom": -9.139,
+    "left": 14.578
+   },
+   "MedialExtension": {
+    "top": 0.02,
+    "right": -0.778,
+    "bottom": 0.069,
+    "left": 0.773
+   },
+   "Trailing": {
+    "top": 1.63,
+    "right": -0.472,
+    "bottom": 7.824,
+    "left": 0.354
+   }
+  },
+  "ㅢ|ㄹ": {
+   "Leading": {
+    "top": -0.616,
+    "right": -0.794,
+    "bottom": 1.421,
+    "left": 1.27
+   },
+   "MedialBase": {
+    "top": -12.372,
+    "right": 21.781,
+    "bottom": 31.656,
+    "left": -2.209
+   },
+   "MedialExtension": {
+    "top": -0.118,
+    "right": -0.366,
+    "bottom": 18.84,
+    "left": 0.361
+   },
+   "Trailing": {
+    "top": 6.357,
+    "right": 0.708,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅢ|ㄻ": {
+   "Leading": {
+    "top": -1.233,
+    "right": -1.147,
+    "bottom": -13.329,
+    "left": -1.415
+   },
+   "MedialBase": {
+    "top": 13.771,
+    "right": -2.43,
+    "bottom": 0.0,
+    "left": -2.038
+   },
+   "MedialExtension": {
+    "top": -0.11,
+    "right": -0.242,
+    "bottom": 7.788,
+    "left": -0.049
+   },
+   "TrailingFirst": {
+    "top": 10.188,
+    "right": -1.187,
+    "bottom": -1.609,
+    "left": 0.66
+   },
+   "TrailingSecond": {
+    "top": 9.476,
+    "right": 0.581,
+    "bottom": -0.748,
+    "left": 0.0
+   }
+  },
+  "ㅢ|ㄼ": {
+   "Leading": {
+    "top": -1.233,
+    "right": -1.147,
+    "bottom": -13.329,
+    "left": -1.415
+   },
+   "MedialBase": {
+    "top": 13.771,
+    "right": -2.43,
+    "bottom": 0.0,
+    "left": -2.038
+   },
+   "MedialExtension": {
+    "top": -0.11,
+    "right": -0.242,
+    "bottom": 7.788,
+    "left": -0.049
+   },
+   "TrailingFirst": {
+    "top": 10.188,
+    "right": 0.264,
+    "bottom": -0.268,
+    "left": -0.264
+   },
+   "TrailingSecond": {
+    "top": 8.978,
+    "right": 0.465,
+    "bottom": 0.0,
+    "left": -1.163
+   }
+  },
+  "ㅢ|ㄿ": {
+   "Leading": {
+    "top": -1.233,
+    "right": -1.147,
+    "bottom": -13.329,
+    "left": -1.415
+   },
+   "MedialBase": {
+    "top": 13.771,
+    "right": -2.43,
+    "bottom": 0.0,
+    "left": -2.038
+   },
+   "MedialExtension": {
+    "top": -0.11,
+    "right": -0.242,
+    "bottom": 7.788,
+    "left": -0.049
+   },
+   "TrailingFirst": {
+    "top": 8.847,
+    "right": -1.847,
+    "bottom": 0.0,
+    "left": 1.583
+   },
+   "TrailingSecond": {
+    "top": 8.229,
+    "right": -1.395,
+    "bottom": 0.0,
+    "left": 1.395
+   }
+  },
+  "ㅢ|ㅌ": {
+   "Leading": {
+    "top": -1.438,
+    "right": -0.079,
+    "bottom": 0.043,
+    "left": 0.635
+   },
+   "MedialBase": {
+    "top": 0.0,
+    "right": 1.324,
+    "bottom": -10.476,
+    "left": 13.555
+   },
+   "MedialExtension": {
+    "top": 0.02,
+    "right": 0.457,
+    "bottom": 25.028,
+    "left": -0.462
+   },
+   "Trailing": {
+    "top": -26.241,
+    "right": 16.274,
+    "bottom": 68.375,
+    "left": -13.856
+   }
+  },
+  "ㅢ|ㅍ": {
+   "Leading": {
+    "top": 0.205,
+    "right": -0.794,
+    "bottom": -5.563,
+    "left": 1.27
+   },
+   "MedialBase": {
+    "top": -7.802,
+    "right": 21.781,
+    "bottom": 26.529,
+    "left": -2.209
+   },
+   "MedialExtension": {
+    "top": -0.118,
+    "right": -0.572,
+    "bottom": 12.514,
+    "left": 0.567
+   },
+   "Trailing": {
+    "top": 4.401,
+    "right": 0.354,
+    "bottom": -0.163,
+    "left": -0.295
+   }
+  },
+  "ㅣ|-": {
+   "Leading": {
+    "top": -1.016,
+    "right": -4.54,
+    "bottom": -8.337,
+    "left": 1.062
+   },
+   "Medial": {
+    "top": -0.471,
+    "right": 0.794,
+    "bottom": -21.005,
+    "left": -0.54
+   }
+  },
+  "ㅣ|ㄱ": {
+   "Leading": {
+    "top": 0.338,
+    "right": -3.733,
+    "bottom": -1.523,
+    "left": 1.555
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": -0.278,
+    "bottom": -0.29,
+    "left": 0.278
+   },
+   "Trailing": {
+    "top": 0.202,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㄲ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -1.711,
+    "bottom": 0.0,
+    "left": 0.311
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 1.667,
+    "bottom": 2.467,
+    "left": -2.222
+   },
+   "Trailing": {
+    "top": 0.806,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㄳ": {
+   "Leading": {
+    "top": 0.73,
+    "right": -3.423,
+    "bottom": -5.002,
+    "left": 0.529
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": 1.484,
+    "bottom": -13.427,
+    "left": -2.576
+   },
+   "TrailingFirst": {
+    "top": -0.251,
+    "right": 2.558,
+    "bottom": -0.251,
+    "left": -2.558
+   },
+   "TrailingSecond": {
+    "top": -0.723,
+    "right": 3.275,
+    "bottom": 0.0,
+    "left": -2.183
+   }
+  },
+  "ㅣ|ㄴ": {
+   "Leading": {
+    "top": 2.284,
+    "right": -3.733,
+    "bottom": -7.107,
+    "left": 1.711
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": -0.278,
+    "bottom": -17.997,
+    "left": 0.278
+   },
+   "Trailing": {
+    "top": 0.403,
+    "right": -0.37,
+    "bottom": 0.0,
+    "left": 0.493
+   }
+  },
+  "ㅣ|ㄹ": {
+   "Leading": {
+    "top": -1.777,
+    "right": -3.888,
+    "bottom": 7.191,
+    "left": 1.672
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": -0.278,
+    "bottom": 10.16,
+    "left": 0.278
+   },
+   "Trailing": {
+    "top": -0.605,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㄻ": {
+   "Leading": {
+    "top": -0.883,
+    "right": -3.737,
+    "bottom": 1.598,
+    "left": 1.036
+   },
+   "Medial": {
+    "top": -0.053,
+    "right": -0.221,
+    "bottom": -4.815,
+    "left": -0.019
+   },
+   "TrailingFirst": {
+    "top": -0.251,
+    "right": 0.0,
+    "bottom": 1.256,
+    "left": 0.767
+   },
+   "TrailingSecond": {
+    "top": -0.241,
+    "right": 0.0,
+    "bottom": 1.928,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㄼ": {
+   "Leading": {
+    "top": -1.032,
+    "right": -3.27,
+    "bottom": 1.781,
+    "left": 0.678
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": 1.484,
+    "bottom": -3.936,
+    "left": -2.576
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 1.279
+   },
+   "TrailingSecond": {
+    "top": 0.241,
+    "right": 0.0,
+    "bottom": -0.241,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㄾ": {
+   "Leading": {
+    "top": -1.032,
+    "right": -3.27,
+    "bottom": 1.781,
+    "left": 0.678
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": 1.484,
+    "bottom": -3.936,
+    "left": -2.576
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㄿ": {
+   "Leading": {
+    "top": -1.032,
+    "right": -3.27,
+    "bottom": 1.598,
+    "left": 0.678
+   },
+   "Medial": {
+    "top": 0.122,
+    "right": 1.484,
+    "bottom": -3.936,
+    "left": -2.008
+   },
+   "TrailingFirst": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   },
+   "TrailingSecond": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㅁ": {
+   "Leading": {
+    "top": -0.085,
+    "right": -3.888,
+    "bottom": 0.508,
+    "left": 1.672
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": -0.278,
+    "bottom": 2.032,
+    "left": 0.278
+   },
+   "Trailing": {
+    "top": 0.403,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㅂ": {
+   "Leading": {
+    "top": -1.015,
+    "right": -4.044,
+    "bottom": 2.538,
+    "left": 1.555
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": -0.278,
+    "bottom": 6.531,
+    "left": 0.278
+   },
+   "Trailing": {
+    "top": -0.806,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㅅ": {
+   "Leading": {
+    "top": 1.269,
+    "right": -3.888,
+    "bottom": -3.046,
+    "left": 1.711
+   },
+   "Medial": {
+    "top": -0.145,
+    "right": -0.278,
+    "bottom": -10.595,
+    "left": 0.278
+   },
+   "Trailing": {
+    "top": 0.202,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㅆ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -1.866,
+    "bottom": 0.0,
+    "left": 0.622
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.833,
+    "bottom": 2.612,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -0.605,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㅇ": {
+   "Leading": {
+    "top": 1.195,
+    "right": -3.888,
+    "bottom": -1.354,
+    "left": 1.711
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": -0.278,
+    "bottom": -1.306,
+    "left": 0.278
+   },
+   "Trailing": {
+    "top": -1.008,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.123
+   }
+  },
+  "ㅣ|ㅈ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -2.133,
+    "bottom": 0.141,
+    "left": 0.94
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 2.104,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.0,
+    "right": 0.0,
+    "bottom": 0.0,
+    "left": 0.432
+   }
+  },
+  "ㅣ|ㅊ": {
+   "Leading": {
+    "top": -1.607,
+    "right": -2.255,
+    "bottom": 6.007,
+    "left": 0.899
+   },
+   "Medial": {
+    "top": -0.073,
+    "right": 0.0,
+    "bottom": 2.612,
+    "left": 0.278
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": -0.202,
+    "left": -0.493
+   }
+  },
+  "ㅣ|ㅋ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -1.866,
+    "bottom": 0.0,
+    "left": 0.311
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 1.667,
+    "bottom": 2.612,
+    "left": -2.222
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 0.202,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㅌ": {
+   "Leading": {
+    "top": -1.523,
+    "right": -2.333,
+    "bottom": 6.684,
+    "left": 0.933
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.0,
+    "bottom": 9.144,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": 0.0,
+    "right": -0.123,
+    "bottom": 0.0,
+    "left": 0.123
+   }
+  },
+  "ㅣ|ㅍ": {
+   "Leading": {
+    "top": 0.0,
+    "right": -2.022,
+    "bottom": 0.0,
+    "left": 0.778
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.833,
+    "bottom": 2.612,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.202,
+    "right": 0.0,
+    "bottom": 0.202,
+    "left": 0.0
+   }
+  },
+  "ㅣ|ㅎ": {
+   "Leading": {
+    "top": -1.861,
+    "right": -2.022,
+    "bottom": 7.276,
+    "left": 0.778
+   },
+   "Medial": {
+    "top": 0.0,
+    "right": 0.556,
+    "bottom": 5.951,
+    "left": 0.0
+   },
+   "Trailing": {
+    "top": -0.806,
+    "right": 0.493,
+    "bottom": 0.202,
+    "left": 0.0
+   }
+  }
+ },
+ "coverage": {
+  "measuredSyllables": 4585,
+  "totalSyllables": 11172,
+  "columnsCovered": 371,
+  "columnsTotal": 588,
+  "note": "리프 단위 분해가 된 음절만. 겹중성/겹종성을 쪼개야 하므로 전체보다 적다."
+ },
+ "fidelity": {
+  "metric": "리프 박스 최대 코너 편차 em (셀 868x949)",
+  "layers": {
+   "L1": {
+    "params": 678,
+    "medianEm": 55.0,
+    "p95Em": 197.3,
+    "relPct": 5.8
+   },
+   "L2": {
+    "params": 1482,
+    "medianEm": 26.0,
+    "p95Em": 166.0,
+    "relPct": 2.74
+   },
+   "L3": {
+    "params": 6586,
+    "medianEm": 9.0,
+    "p95Em": 73.0,
+    "relPct": 0.95
+   },
+   "L4": {
+    "params": 61110,
+    "medianEm": 0.0,
+    "p95Em": 0.0,
+    "relPct": 0.0
+   }
+  }
+ }
+}
