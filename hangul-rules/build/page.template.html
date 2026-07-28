@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>한글 조합 규칙 — Noto Sans KR 전수 실측</title>
+<meta name="description" content="Noto Sans CJK KR 11,172자를 전수 실측해 역산한 한글 음절 조합 규칙 명세.">
+<style>
+/* ── 서브셋 인라인 폰트 ───────────────────────────────── */
+@font-face{font-family:"NSKR";src:url(__FONT_REGULAR__) format("woff2");font-weight:400;font-display:block}
+@font-face{font-family:"NSKR";src:url(__FONT_BOLD__) format("woff2");font-weight:700;font-display:block}
+
+/* ── 토큰 ─────────────────────────────────────────────── */
+:root{
+  --bg:#F5F4F1; --panel:#FFFDFA; --sunk:#EDEBE5;
+  --fg:#17161B; --fg2:#4A4753; --fg3:#7C7885;
+  --line:#D8D4CC; --line2:#C3BEB3;
+  --cho:#B4352A; --jung:#186B78; --jong:#6B4E9E;
+  --measure:#9A9790;
+  --f-display:"NSKR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-body:"NSKR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --measure-w:68ch;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#131217; --panel:#1B1A21; --sunk:#100F14;
+    --fg:#EAE8E3; --fg2:#A9A5B0; --fg3:#7B7784;
+    --line:#2F2D36; --line2:#403D49;
+    --cho:#E8695A; --jung:#54B6C2; --jong:#AC90E2;
+    --measure:#6B6774;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#131217; --panel:#1B1A21; --sunk:#100F14;
+  --fg:#EAE8E3; --fg2:#A9A5B0; --fg3:#7B7784;
+  --line:#2F2D36; --line2:#403D49;
+  --cho:#E8695A; --jung:#54B6C2; --jong:#AC90E2;
+  --measure:#6B6774;
+}
+:root[data-theme="light"]{
+  --bg:#F5F4F1; --panel:#FFFDFA; --sunk:#EDEBE5;
+  --fg:#17161B; --fg2:#4A4753; --fg3:#7C7885;
+  --line:#D8D4CC; --line2:#C3BEB3;
+  --cho:#B4352A; --jung:#186B78; --jong:#6B4E9E;
+  --measure:#9A9790;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:var(--f-body);font-size:16px;line-height:1.72;
+  font-feature-settings:"tnum" 0;
+  -webkit-font-smoothing:antialiased;
+}
+:focus-visible{outline:2px solid var(--cho);outline-offset:3px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ── 레이아웃 ─────────────────────────────────────────── */
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.col{max-width:var(--measure-w)}
+main>section{padding:56px 0;border-top:1px solid var(--line)}
+main>section:first-child{border-top:0}
+
+/* ── 마스트헤드 ───────────────────────────────────────── */
+.masthead{padding:76px 0 52px}
+.eyebrow{
+  font-family:var(--f-mono);font-size:11.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--cho);margin:0 0 20px;font-weight:500;
+}
+h1{
+  font-family:var(--f-display);font-weight:700;
+  font-size:clamp(2.3rem,6.2vw,4.1rem);line-height:1.06;
+  letter-spacing:-.03em;margin:0 0 22px;text-wrap:balance;max-width:22ch;
+}
+.deck{font-size:1.14rem;line-height:1.68;color:var(--fg2);margin:0;max-width:60ch}
+.deck b{color:var(--fg);font-weight:700}
+.provenance{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));
+  gap:1px;margin:44px 0 0;padding:0;background:var(--line);
+  border:1px solid var(--line);
+}
+.provenance>div{background:var(--bg);padding:14px 16px}
+.provenance dt{
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--fg3);margin:0 0 5px;
+}
+.provenance dd{margin:0;font-family:var(--f-mono);font-size:15px;
+  font-variant-numeric:tabular-nums;color:var(--fg)}
+.provenance dd small{font-family:var(--f-body);font-size:12px;color:var(--fg3);
+  display:block;letter-spacing:0}
+
+/* ── 섹션 헤더 ────────────────────────────────────────── */
+.rulehead{display:flex;gap:18px;align-items:baseline;margin:0 0 8px}
+.rid{
+  font-family:var(--f-mono);font-size:13px;font-weight:500;color:var(--cho);
+  letter-spacing:.06em;flex:none;padding-top:.32em;
+}
+h2{
+  font-family:var(--f-display);font-weight:700;font-size:clamp(1.5rem,3.1vw,2rem);
+  line-height:1.2;letter-spacing:-.021em;margin:0;text-wrap:balance;
+}
+.lede{color:var(--fg2);margin:14px 0 0;font-size:1.02rem}
+.lede+.lede{margin-top:.7em}
+section>.wrap>.col>p{margin:1em 0 0}
+.note{
+  font-size:.9rem;color:var(--fg3);border-left:2px solid var(--line2);
+  padding:2px 0 2px 15px;margin:26px 0 0;
+}
+.note b{color:var(--fg2)}
+
+/* ── 글리프 플레이트 ──────────────────────────────────── */
+.plates{
+  display:grid;gap:14px;margin:34px 0 0;
+  grid-template-columns:repeat(auto-fill,minmax(148px,1fr));
+}
+.plates.wide{grid-template-columns:repeat(4,1fr)}
+@media (max-width:760px){.plates.wide{grid-template-columns:repeat(2,1fr)}}
+.strip{
+  display:flex;gap:12px;overflow-x:auto;margin:34px 0 0;
+  padding-bottom:12px;scrollbar-width:thin;
+}
+.strip>.plate{flex:0 0 138px}
+.plate{
+  margin:0;background:var(--panel);border:1px solid var(--line);
+  display:flex;flex-direction:column;
+}
+.plate svg{display:block;width:100%;height:auto}
+.plate figcaption{
+  border-top:1px solid var(--line);padding:7px 10px 8px;
+  display:flex;justify-content:space-between;align-items:baseline;gap:8px;
+}
+.pl-ch{font-family:var(--f-display);font-size:15px;font-weight:700;letter-spacing:.02em}
+.pl-meta{font-family:var(--f-mono);font-size:10.5px;color:var(--fg3);
+  font-variant-numeric:tabular-nums;text-align:right;line-height:1.5}
+.plate.flag{border-color:var(--cho)}
+.plate.flag .pl-meta{color:var(--cho)}
+
+/* svg 내부 */
+.emsq{fill:none;stroke:var(--line2);stroke-width:2}
+.base{stroke:var(--measure);stroke-width:2;stroke-dasharray:8 7}
+.gly{fill:var(--fg)}
+.zone{stroke-width:4;fill-opacity:.11;stroke-dasharray:none}
+.z-cho{stroke:var(--cho);fill:var(--cho)}
+.z-jung{stroke:var(--jung);fill:var(--jung)}
+.z-jong{stroke:var(--jong);fill:var(--jong)}
+.dim{stroke:var(--measure);stroke-width:2}
+.dimtxt{fill:var(--measure);font-family:var(--f-mono);font-size:56px;
+  font-variant-numeric:tabular-nums}
+body.hide-zones .zone{display:none}
+
+/* ── 범례 / 컨트롤 ────────────────────────────────────── */
+.controls{
+  display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;
+  margin:30px 0 0;padding:12px 0;border-block:1px solid var(--line);
+}
+.legend{display:flex;gap:16px;flex-wrap:wrap}
+.key{display:inline-flex;gap:7px;align-items:center;
+  font-family:var(--f-mono);font-size:11.5px;letter-spacing:.05em;color:var(--fg2)}
+.swatch{width:11px;height:11px;flex:none;border:2px solid}
+.sw-cho{border-color:var(--cho);background:color-mix(in srgb,var(--cho) 14%,transparent)}
+.sw-jung{border-color:var(--jung);background:color-mix(in srgb,var(--jung) 14%,transparent)}
+.sw-jong{border-color:var(--jong);background:color-mix(in srgb,var(--jong) 14%,transparent)}
+button.tgl{
+  font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;
+  background:var(--panel);color:var(--fg2);border:1px solid var(--line2);
+  padding:6px 13px;cursor:pointer;margin-left:auto;
+}
+button.tgl:hover{color:var(--fg);border-color:var(--fg3)}
+
+/* ── 표 ───────────────────────────────────────────────── */
+.tblwrap{overflow-x:auto;margin:32px 0 0;border:1px solid var(--line);background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-family:var(--f-mono);font-size:12.5px;
+  font-variant-numeric:tabular-nums}
+caption{
+  text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--fg3);
+}
+th,td{padding:7px 13px;text-align:right;white-space:nowrap;border-top:1px solid var(--line)}
+thead th{
+  border-top:0;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--fg3);font-weight:400;background:var(--sunk);
+}
+tbody th{text-align:left;font-weight:400;color:var(--fg)}
+tbody th .ko{font-family:var(--f-display);font-size:14px;font-weight:700;
+  letter-spacing:.04em;margin-right:.45em}
+td.mut{color:var(--fg3)}
+.c-cho{color:var(--cho)}.c-jung{color:var(--jung)}.c-jong{color:var(--jong)}
+tbody tr:hover td,tbody tr:hover th{background:var(--sunk)}
+tr.rowmark th,tr.rowmark td{background:color-mix(in srgb,var(--cho) 7%,transparent)}
+
+/* ── 막대 차트 ────────────────────────────────────────── */
+.bars{margin:32px 0 0;display:grid;gap:3px}
+.bar{display:grid;grid-template-columns:2.5em 1fr 4.2em;gap:12px;align-items:center}
+.bar-l{font-family:var(--f-display);font-size:15px;font-weight:700;text-align:right}
+.bar-t{
+  height:19px;background:var(--sunk);position:relative;
+  border-left:1px solid var(--line2);
+}
+.bar-f{position:absolute;inset:0 auto 0 0;background:var(--jong);opacity:.78}
+.bar-f.cho{background:var(--cho)}
+.bar-v{font-family:var(--f-mono);font-size:11.5px;color:var(--fg2);
+  font-variant-numeric:tabular-nums}
+.bar.hl .bar-v{color:var(--fg);font-weight:700}
+.bar.hl .bar-f{opacity:1}
+.dual{display:grid;grid-template-columns:2.5em 1fr 1fr 4.6em;gap:12px;align-items:center}
+.dual .bar-t.rev .bar-f{inset:0 0 0 auto;background:var(--cho)}
+.bar-t.cen::before{
+  content:"";position:absolute;left:50%;top:-3px;bottom:-3px;
+  width:1px;background:var(--line2);
+}
+.bar-f.free{inset:0 auto 0 auto}
+.scalenote{
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:.07em;
+  color:var(--fg3);text-transform:uppercase;margin:10px 0 0;
+}
+
+/* ── 대비 카드 (낣 vs 랇) ─────────────────────────────── */
+.ab{
+  display:grid;gap:1px;margin:34px 0 0;background:var(--line);
+  border:1px solid var(--line);
+  grid-template-columns:repeat(auto-fit,minmax(232px,1fr));
+}
+.ab>figure{margin:0;background:var(--panel);padding:18px}
+.ab svg{display:block;width:100%;height:auto;max-width:260px;margin:0 auto}
+.ab figcaption{margin:14px 0 0;font-family:var(--f-mono);font-size:11.5px;
+  color:var(--fg2);font-variant-numeric:tabular-nums;line-height:1.75}
+.ab figcaption .big{
+  font-family:var(--f-display);font-size:26px;font-weight:700;color:var(--fg);
+  display:block;margin-bottom:8px;letter-spacing:.03em;
+}
+.ab figcaption em{font-style:normal;color:var(--cho);font-weight:700}
+.delta{
+  background:var(--sunk)!important;display:flex;flex-direction:column;
+  justify-content:center;gap:9px;
+}
+.delta dl{margin:0;display:grid;grid-template-columns:auto auto;gap:5px 14px;
+  font-family:var(--f-mono);font-size:12px;font-variant-numeric:tabular-nums}
+.delta dt{color:var(--fg3)}
+.delta dd{margin:0;text-align:right;font-weight:700}
+.delta dd.up{color:var(--cho)}
+.delta dd.dn{color:var(--jong)}
+
+/* ── 합획 매트릭스 ────────────────────────────────────── */
+.mx{overflow-x:auto;margin:32px 0 0}
+.mx table{font-size:12px;background:var(--panel);border:1px solid var(--line)}
+.mx td{text-align:center;padding:6px 9px;color:var(--fg3)}
+.mx td.on{background:color-mix(in srgb,var(--cho) 22%,transparent);color:var(--cho);font-weight:700}
+.mx thead th{text-align:center}
+
+/* ── 적용 순서 ────────────────────────────────────────── */
+ol.steps{margin:32px 0 0;padding:0;list-style:none;counter-reset:s}
+ol.steps>li{
+  counter-increment:s;position:relative;padding:0 0 0 46px;margin:0 0 22px;
+}
+ol.steps>li::before{
+  content:"R" counter(s);position:absolute;left:0;top:.14em;
+  font-family:var(--f-mono);font-size:12px;color:var(--cho);letter-spacing:.04em;
+}
+ol.steps h3{
+  font-family:var(--f-body);font-size:1rem;font-weight:700;margin:0 0 4px;
+}
+ol.steps p{margin:0;color:var(--fg2);font-size:.96rem}
+ol.steps code{
+  font-family:var(--f-mono);font-size:.87em;background:var(--sunk);
+  padding:1px 5px;border:1px solid var(--line);
+}
+
+footer{
+  border-top:1px solid var(--line);padding:34px 0 60px;
+  font-family:var(--f-mono);font-size:11.5px;color:var(--fg3);line-height:1.9;
+}
+footer a{color:var(--cho)}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">한글 조합 규칙 · 시각적 정규화</p>
+    <h1>낣과 랇은 왜 다른가</h1>
+    <p class="deck">
+      Noto Sans CJK KR은 <b>완성형 11,172자를 개별 최적화</b>한 폰트다. 그래서 같은 종성
+      <b>ㄼ</b>이라도 초성이 <b>ㄴ</b>일 때와 <b>ㄹ</b>일 때 크기가 다르다. 이 문서는
+      11,172자의 글리프 아웃라인을 전부 실측해, 그 안에 숨어 있는 조합 규칙을 역산한
+      결과다. 모든 수치는 em 1000 단위이며 R1→R7 순서로 적용한다.
+    </p>
+    <dl class="provenance" id="prov"></dl>
+  </div>
+</header>
+
+<main>
+
+<!-- R1 ─────────────────────────────────────────────── -->
+<section id="r1">
+  <div class="wrap">
+    <div class="col">
+      <div class="rulehead"><span class="rid">R1</span>
+        <h2>골격은 4계열 × 받침 유무 = 8종</h2></div>
+      <p class="lede">
+        전통 벌식 분류는 중성의 방향으로 3계열(세로·가로·섞임)을 나눈다. 그러나 실측 결과
+        <b>세로모임은 다시 둘로 갈라진다</b>. 가로획이 오른쪽을 향하는 ㅏㅐㅑㅒㅣ는 초성과
+        완전히 분리되지만, 왼쪽을 향하는 ㅓㅔㅕㅖ는 가로획이 초성 쪽으로 파고들어
+        <b>초성과 한 덩어리로 맞물린다</b>. 이 둘은 배분 규칙이 달라 반드시 분리해야 한다.
+      </p>
+    </div>
+    <div class="controls">
+      <div class="legend">
+        <span class="key"><span class="swatch sw-cho"></span>초성</span>
+        <span class="key"><span class="swatch sw-jung"></span>중성</span>
+        <span class="key"><span class="swatch sw-jong"></span>종성</span>
+      </div>
+      <button class="tgl" id="zbtn" aria-pressed="true">존 오버레이 끄기</button>
+    </div>
+    <div class="plates wide" id="p-classes"></div>
+    <div class="col">
+      <p class="note">
+        <b>VR</b> 세로·우향 (ㅏㅐㅑㅒㅣ) · <b>VL</b> 세로·좌향 (ㅓㅔㅕㅖ) ·
+        <b>H</b> 가로 (ㅗㅛㅜㅠㅡ) · <b>M</b> 섞임 (ㅘㅙㅚㅝㅞㅟㅢ).
+        VL과 M의 첫 칸은 초성 단독이 아니라 <b>초성 + 중성 가로부가 결합된 블록</b>이다
+        — 실측에서 이 둘은 서로 크기가 연동돼 독립 측정이 불가능했다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- R2 ─────────────────────────────────────────────── -->
+<section id="r2">
+  <div class="wrap">
+    <div class="col">
+      <div class="rulehead"><span class="rid">R2</span>
+        <h2>기준 존 그리드</h2></div>
+      <p class="lede">
+        계열별 슬롯 사각형의 중앙값. 이것이 조합의 출발점이고, R3~R6은 모두 이 값을
+        문맥에 따라 밀고 당기는 보정이다. 세로 기준선은 <b>베이스라인 y=0</b>,
+        종성 하단은 거의 예외 없이 <b>y=−76</b>에 고정된다.
+      </p>
+    </div>
+    <div class="tblwrap"><table id="t-zones"><caption>계열별 슬롯 사각형 · em 1000 · 중앙값</caption></table></div>
+    <div class="col">
+      <p class="note">
+        받침이 붙으면 초·중성은 위로 밀린다. VR 초성 높이는 <b>605 → 420</b>(−31%),
+        H 초성 높이는 <b>418 → 326</b>(−22%)로 줄어든다. 가로모임이 세로 압축을 덜 받는
+        대신 애초에 초성이 훨씬 납작하다(폭 672 : 높이 326).
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- R3 ─────────────────────────────────────────────── -->
+<section id="r3">
+  <div class="wrap">
+    <div class="col">
+      <div class="rulehead"><span class="rid">R3</span>
+        <h2>종성 27자는 고유 높이 사다리를 갖는다</h2></div>
+      <p class="lede">
+        종성은 같은 칸에 균일하게 들어가지 않는다. 획수와 구조에 따라 <b>ㄴ 266</b>부터
+        <b>ㅎ 420</b>까지 1.58배의 고유 높이 차이가 있고, 하단이 y=−76에 고정된 채
+        <b>위쪽으로만 자란다</b>. 그만큼 초·중성이 위로 밀려 올라간다. 조합 엔진을 짤 때
+        가장 먼저 테이블로 박아 넣어야 하는 값이다.
+      </p>
+    </div>
+    <div class="bars" id="b-jong"></div>
+    <div class="strip" id="p-jong"></div>
+    <div class="col">
+      <p class="note">
+        ㄹ 계열 겹받침(ㄺㄻㄼㄾㄿ)은 모두 <b>376~381</b>로 단독 ㄹ(379)과 사실상 같다.
+        가로로 둘을 나눠 담을 뿐 높이는 유지한다. 반면 ㅀ(411)·ㄶ(385)은
+        ㅎ의 고유 높이에 끌려 올라간다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- R4 ─────────────────────────────────────────────── -->
+<section id="r4">
+  <div class="wrap">
+    <div class="col">
+      <div class="rulehead"><span class="rid">R4</span>
+        <h2>중성 세로획이 둘이면 초성 폭을 깎는다</h2></div>
+      <p class="lede">
+        중성이 세로획 하나(ㅏㅑ)일 때 초성 폭은 <b>516</b>이지만, 둘(ㅐㅒ)이 되면
+        <b>438</b>로 −78 줄어든다. 섞임모임도 같다: ㅘ 571 → ㅙ 467. 중성이 가져가는
+        폭이 늘어난 만큼 초성이 정확히 양보하는 <b>제로섬 배분</b>이다.
+      </p>
+    </div>
+    <div class="tblwrap"><table id="t-width"><caption>중성별 가로 배분 · 받침 있는 글자 · em 1000</caption></table></div>
+    <div class="col">
+      <p class="note">
+        <b>귀속 = 불확정</b>인 행(VL·M 계열)은 중성 가로부가 초성 쪽으로 넘어간 글자가
+        섞여 있어 폭 수치를 그대로 믿을 수 없다. 계열 안에서의 상대 비교
+        (ㅘ 571 → ㅙ 467, ㅝ 522 → ㅞ 442)는 유효하지만, VR·H 행과 직접 비교하면 안 된다.
+      </p>
+    </div>
+    <div class="strip" id="p-jung"></div>
+  </div>
+</section>
+
+<!-- R5 ─────────────────────────────────────────────── -->
+<section id="r5">
+  <div class="wrap">
+    <div class="col">
+      <div class="rulehead"><span class="rid">R5</span>
+        <h2>좌향 중성의 가로획은 초성 폭에 종속된다</h2></div>
+      <p class="lede">
+        중성의 왼쪽 끝이 초성의 오른쪽 끝을 어떻게 따라가는지 회귀하면 두 계열이
+        정반대로 갈린다.
+      </p>
+    </div>
+    <div class="tblwrap"><table id="t-left"><caption>중성 좌단 x = a + 기울기 × 초성 우단 x</caption></table></div>
+    <div class="col">
+      <p class="lede">
+        ㅏ·ㅑ·ㅣ는 기울기 <b>0.10~0.12</b>로 사실상 고정 위치이며 초성과 평균 <b>97~117</b>의
+        틈을 유지한다. 532자 중 <b>접촉 0회</b>. 반면 ㅓ·ㅕ는 기울기 <b>0.69~0.74</b>
+        (r = 0.90~0.94)로 초성 폭을 거의 그대로 따라가고, 평균 틈은 <b>음수</b>다 —
+        즉 가로획이 초성의 오른쪽 경계를 넘어 들어가 맞물린다. 그 결과 1,064자 중
+        <b>240자에서 초성과 획이 아예 붙어버린다</b>.
+      </p>
+    </div>
+    <div class="strip" id="p-left"></div>
+    <div class="col">
+      <p class="note">
+        실무 규칙: <b>ㅏ계열은 중성 위치를 상수로 두고 초성을 그 안에 맞춘다.
+        ㅓ계열은 초성 폭을 먼저 확정하고 중성 가로획 길이를 역산한다.</b>
+        두 계열의 조판 로직이 뒤바뀌면 ㅓ계열에서 가로획이 초성을 뚫거나 허공에 뜬다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- R6 ─────────────────────────────────────────────── -->
+<section id="r6">
+  <div class="wrap">
+    <div class="col">
+      <div class="rulehead"><span class="rid">R6</span>
+        <h2>초성이 세로로 클수록 종성을 눌러 압축한다</h2></div>
+      <p class="lede">
+        여기서 <b>낣</b>과 <b>랇</b>의 차이가 나온다. 중성·종성이 완전히 같아도 초성이
+        세로로 더 많은 공간을 요구하면 그만큼 종성이 위에서 깎인다. 6,807자에 대해
+        상관계수 <b>r = −0.656</b>, 회귀계수 <b>−0.254</b> — 초성 높이가 100 늘면
+        종성 높이가 25 줄어든다.
+      </p>
+    </div>
+    <div class="ab" id="ab-demo"></div>
+    <div class="col">
+      <p class="lede">
+        초성 19자를 세로 점유량으로 줄 세우면 순위가 (중성·종성이 무엇이든) 거의 고정이다.
+        <b>ㅎ이 가장 크고 ㄴ·ㅁ이 가장 작다</b>. 이 등급표가 곧 종성 압축량의 예측자다.
+      </p>
+    </div>
+    <div class="bars" id="b-grade"></div>
+    <p class="scalenote" id="grade-scale"></p>
+    <div class="col">
+      <p class="lede" style="margin-top:2em">
+        중성 ㅏ + 종성 ㄼ 한 줄을 초성만 바꿔가며 실측한 결과. 왼쪽 막대는 초성 높이,
+        오른쪽은 종성 높이 — 시소처럼 맞물린다.
+      </p>
+    </div>
+    <div class="bars" id="b-seesaw"></div>
+    <p class="scalenote" id="seesaw-scale"></p>
+    <div class="strip" id="p-cho"></div>
+    <div class="col">
+      <p class="note">
+        보정량은 <b>±10 단위</b> 안팎으로, R3(최대 154)이나 R4(−78)보다 한 자릿수 작다.
+        규칙 우선순위에서 마지막에 적용하는 미세 보정으로 다루면 된다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- R7 ─────────────────────────────────────────────── -->
+<section id="r7">
+  <div class="wrap">
+    <div class="col">
+      <div class="rulehead"><span class="rid">R7</span>
+        <h2>합획 — 붙는 조합은 두 갈래다</h2></div>
+      <p class="lede">
+        가로모임에서는 획이 <b>물리적으로 닿아 하나의 윤곽선이 된다</b>. 한 윤곽선이 두
+        슬롯 영역을 관통하는지로 직접 검출하면, 서로 무관한 <b>두 개의 메커니즘</b>이
+        드러난다. 아래 두 표는 28자(또는 받침 27자) 중 접촉한 자수다.
+      </p>
+    </div>
+    <div class="mx" id="mx-cho"></div>
+    <div class="col">
+      <p class="lede">
+        <b>①은 중성 기둥과 초성의 충돌이다.</b> 기둥이 위로 향하는 ㅗ·ㅛ는 밑변이 평평하고
+        넓은 초성 <b>ㄴㄷㄹㅁㅂㅇㅌㅍ·ㄸ</b>와 거의 언제나(27~28자) 붙는다. 밑이 뾰족하거나
+        열린 <b>ㄱㄲㅅㅆㅉㅎ</b>는 닿지 않는다(0~1자). ㅃ·ㅅ·ㅈ·ㅊ·ㅋ은 ㅗ/ㅛ와 종성 높이에
+        따라 갈리는 중간값이다. 반대로 ㅜ·ㅠ·ㅡ에서는 오른쪽 다리를 아래로 내려 긋는
+        <b>ㄱ·ㄲ·ㅋ만 28자 전부</b> 중성 가로획에 닿는다 — 기둥 방향과 무관한, 초성 자체의
+        형태 문제다.
+      </p>
+    </div>
+    <div class="mx" id="mx-jong"></div>
+    <div class="col">
+      <p class="lede">
+        <b>②는 중성 기둥과 종성의 충돌이다.</b> 아래로 뻗는 기둥을 가진 <b>ㅜ·ㅠ에서만</b>
+        발생하며, <b>초성이 무엇인지와 거의 무관하게</b> 받침글자 27자 중 19~20자에서 붙는다
+        (초성 ㄱ 13·ㅎ 16만 예외).
+        ㅗ·ㅛ·ㅡ는 0자다. ①과 ②는 원인이 다르므로 규칙도 따로 짜야 한다.
+      </p>
+    </div>
+    <div class="strip" id="p-contact"></div>
+    <div class="col">
+      <p class="note">
+        합획 글자는 초성·중성·종성을 따로 그려 합칠 수 없다. 조합형으로 구현하려면
+        해당 조합을 <b>합자 글리프로 별도 제작</b>하거나, 접촉이 생기지 않도록
+        <b>기둥 길이를 줄이는 예외 규칙</b>을 두어야 한다. Noto는 전자를 택했다 —
+        그래서 11,172자를 개별 최적화할 수밖에 없었다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 적용 ───────────────────────────────────────────── -->
+<section id="impl">
+  <div class="wrap">
+    <div class="col">
+      <div class="rulehead"><span class="rid">↓</span><h2>적용 순서</h2></div>
+      <ol class="steps">
+        <li><h3>골격 판정</h3><p>중성으로 계열(VR / VL / H / M)과 받침 유무를 결정해 8종 중 하나를 고른다.</p></li>
+        <li><h3>기준 존 배치</h3><p>계열별 슬롯 사각형을 놓는다. <code>종성.y0 = −76</code>은 상수로 고정.</p></li>
+        <li><h3>종성 높이 대입</h3><p>종성 고유 높이 테이블(27종)로 <code>종성.y1</code>을 확정하고, 그 위로 초·중성 하단을 밀어 올린다. 영향 최대 <code>154</code>.</p></li>
+        <li><h3>중성 폭 정산</h3><p>중성 세로획이 2개면 초성 폭에서 <code>−78</code>. 남는 폭을 중성에 넘긴다.</p></li>
+        <li><h3>좌향 중성 역산</h3><p>VL·M 계열은 초성 폭을 먼저 확정한 뒤 중성 가로획 길이를 <code>0.69~0.74 × 초성 우단</code>으로 역산.</p></li>
+        <li><h3>초성 등급 미세 보정</h3><p>초성 세로 점유 등급 z를 종성 높이에 <code>−0.254</code> 계수로 반영. <code>±10</code> 수준.</p></li>
+        <li><h3>합획 예외 처리</h3><p>가로모임이면 두 접촉 조건을 검사한다. ①&nbsp;<code>중성 ∈ ㅗㅛ</code>이고 초성 밑변이 평평하거나, <code>중성 ∈ ㅜㅠㅡ</code>이고 <code>초성 ∈ ㄱㄲㅋ</code>. ②&nbsp;<code>중성 ∈ ㅜㅠ</code>이고 받침이 있다. 해당하면 합자 글리프로 대체하거나 기둥을 줄인다.</p></li>
+      </ol>
+    </div>
+    <div class="col">
+      <h3 style="font-family:var(--f-body);font-size:1rem;margin:44px 0 0">측정의 한계</h3>
+      <p class="note" style="margin-top:12px" id="cov-note"></p>
+      <p class="note" style="margin-top:12px">
+        초성 아웃라인에는 점 개수가 1개 다른 <b>미세 이본이 2종</b> 존재한다. KS X 1001
+        2350자 여부와 일치하는지 검증했으나 <b>54개 컬럼 중 27개만 일치(50%)</b>,
+        두 계열이 아웃라인 33종을 공유해 <b>규칙으로 성립하지 않았다</b>. 개별 수작업
+        최적화의 흔적으로 보이며, 규칙화 대상에서 제외했다.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    측정 대상 · Noto Sans CJK KR Regular (noto-cjk Sans2.004) · unitsPerEm 1000<br>
+    방법 · 전 음절 CFF 아웃라인 추출 → 윤곽선을 카운터 병합으로 도형화 →
+    초성축 근사 불변량으로 슬롯 귀속 → 계열별 중앙값 집계<br>
+    본문은 측정 대상 폰트를 서브셋해 표시하고 있다.
+  </div>
+</footer>
+
+<script id="RULES" type="application/json">__RULES_JSON__</script>
+<script id="GLYPHS" type="application/json">__GLYPHS_JSON__</script>
+<script>
+(function(){
+"use strict";
+var R=JSON.parse(document.getElementById("RULES").textContent);
+var G=JSON.parse(document.getElementById("GLYPHS").textContent);
+var GL=G.glyphs, SETS=G.sets;
+
+/* ── 플레이트 렌더 ────────────────────────────────── */
+function rect(b,cls){
+  if(!b) return "";
+  return '<rect class="zone '+cls+'" x="'+b[0]+'" y="'+b[1]+'" width="'+(b[2]-b[0])+
+         '" height="'+(b[3]-b[1])+'"/>';
+}
+function plate(ch,opts){
+  opts=opts||{};
+  var g=GL[ch]; if(!g) return "";
+  var merged=!g.cho;
+  var s='<svg viewBox="-60 0 1120 1180" role="img" aria-label="'+ch+' 글리프와 슬롯 구획">';
+  s+='<g transform="translate(0,960) scale(1,-1)">';
+  s+='<rect class="emsq" x="0" y="-120" width="1000" height="960"/>';
+  s+='<line class="base" x1="-40" y1="0" x2="1040" y2="0"/>';
+  if(!merged){
+    s+=rect(g.cho,"z-cho")+rect(g.jung,"z-jung")+rect(g.jong,"z-jong");
+  }
+  s+='<path class="gly" d="'+g.p+'"/>';
+  s+='</g></svg>';
+  var meta=opts.meta!==undefined?opts.meta:
+    (merged?"합획":(g.jong?"종성 h"+(g.jong[3]-g.jong[1]):"민글자"));
+  return '<figure class="plate'+(opts.flag?" flag":"")+
+    (merged&&opts.meta===undefined?" flag":"")+'">'+s+
+    '<figcaption><span class="pl-ch">'+ch+'</span>'+
+    '<span class="pl-meta">'+meta+'</span></figcaption></figure>';
+}
+function fill(id,list,fn){
+  var el=document.getElementById(id); if(!el) return;
+  el.innerHTML=list.map(fn).join("");
+}
+
+/* R1 골격 */
+var FAMOF={"가":"VR 민글자","각":"VR 받침","거":"VL 민글자","걱":"VL 받침",
+           "고":"H 민글자","곡":"H 받침","과":"M 민글자","관":"M 받침"};
+fill("p-classes",SETS.classes,function(c){return plate(c,{meta:FAMOF[c]||""})});
+
+/* 프로비넌스 */
+var PCT=(100*R.decomposed/R.total).toFixed(1);
+document.getElementById("prov").innerHTML=[
+  ["측정 폰트","Noto Sans KR","Regular · Sans2.004"],
+  ["전수 음절",R.total.toLocaleString(),"완성형 전체"],
+  ["슬롯 완전분해",R.decomposed.toLocaleString(),PCT+"%"],
+  ["좌표 단위","em "+R.unitsPerEm,"베이스라인 y=0"]
+].map(function(r){
+  return "<div><dt>"+r[0]+"</dt><dd>"+r[1]+"<small>"+r[2]+"</small></dd></div>";
+}).join("");
+
+/* R2 존 표 */
+(function(){
+  var LB={VR:"VR 세로·우향",VL:"VL 세로·좌향",H:"H 가로",M:"M 섞임"};
+  var rows='<thead><tr><th style="text-align:left">계열</th><th>받침</th>'+
+    '<th>슬롯</th><th>x0</th><th>x1</th><th>폭</th><th>y0</th><th>y1</th><th>높이</th>'+
+    '<th>표본</th></tr></thead><tbody>';
+  ["VR","VL","H","M"].forEach(function(f){
+    [0,1].forEach(function(b){
+      var z=R.zones[f+b]; if(!z) return;
+      var slots=["a","b","c"].filter(function(k){return z[k]});
+      slots.forEach(function(k,i){
+        var v=z[k], nm=z.labels[["a","b","c"].indexOf(k)];
+        var cc=nm.indexOf("초")===0||nm.indexOf("좌상")===0?"c-cho":
+               (nm.indexOf("중성")===0?"c-jung":"c-jong");
+        rows+='<tr'+(f==="VR"&&b===1?' class="rowmark"':'')+'>';
+        rows+= i===0?'<th rowspan="'+slots.length+'">'+LB[f]+'</th>'+
+                     '<td rowspan="'+slots.length+'" class="mut">'+(b?"있음":"없음")+'</td>':'';
+        rows+='<td class="'+cc+'" style="text-align:left">'+nm+'</td>'+
+          '<td>'+v.x0+'</td><td>'+v.x1+'</td><td><b>'+v.w+'</b></td>'+
+          '<td>'+v.y0+'</td><td>'+v.y1+'</td><td><b>'+v.h+'</b></td>';
+        rows+= i===0?'<td rowspan="'+slots.length+'" class="mut">'+z.n+'</td>':'';
+        rows+='</tr>';
+      });
+    });
+  });
+  document.getElementById("t-zones").innerHTML=rows+"</tbody>";
+})();
+
+/* R3 종성 사다리 */
+(function(){
+  var L=R.jongLadder, ks=Object.keys(L);
+  var mx=Math.max.apply(null,ks.map(function(k){return L[k].h}));
+  document.getElementById("b-jong").innerHTML=ks.map(function(k){
+    var h=L[k].h, hl=(k==="ㄴ"||k==="ㅎ"||k==="ㄼ");
+    return '<div class="bar'+(hl?" hl":"")+'"><span class="bar-l">'+k+'</span>'+
+      '<span class="bar-t"><span class="bar-f" style="width:'+(h/mx*100).toFixed(1)+'%"></span></span>'+
+      '<span class="bar-v">'+h+'</span></div>';
+  }).join("");
+  var pick=["란","락","람","랍","랄","랗"];
+  fill("p-jong",pick,function(c){return plate(c)});
+})();
+
+/* R4 중성 폭 */
+(function(){
+  var W=R.jungWidth;
+  var rows='<thead><tr><th style="text-align:left">중성</th><th>계열</th>'+
+    '<th class="c-cho">초성 폭</th><th class="c-cho">초성 우단</th>'+
+    '<th class="c-jung">중성 좌단</th><th class="c-jung">중성 폭</th><th>표본</th>'+
+    '<th>귀속</th></tr></thead><tbody>';
+  Object.keys(W).forEach(function(k){
+    if(k.slice(-1)!=="1") return;
+    var v=W[k], mark=(k[0]==="ㅏ"||k[0]==="ㅐ");
+    rows+='<tr'+(mark?' class="rowmark"':'')+'><th><span class="ko">'+k[0]+'</span></th>'+
+      '<td class="mut">'+v.fam+'</td><td><b>'+v.choW+'</b></td><td>'+v.choX1+'</td>'+
+      '<td>'+v.jungX0+'</td><td><b>'+v.jungW+'</b></td><td class="mut">'+v.n+'</td>'+
+      '<td class="'+(v.firm?"mut":"c-cho")+'">'+(v.firm?"확정":"불확정")+'</td></tr>';
+  });
+  document.getElementById("t-width").innerHTML=rows+"</tbody>";
+  fill("p-jung",["락","랙","략","럭","렉","릭"],function(c){
+    return plate(c,{meta:"중성 "+GL[c].j[1]});
+  });
+})();
+
+/* R5 좌향 중성 */
+(function(){
+  var D=R.leftDep;
+  var rows='<thead><tr><th style="text-align:left">중성</th><th>기울기</th><th>r</th>'+
+    '<th>평균 틈</th><th>표본</th><th>초성과 접촉</th></tr></thead><tbody>';
+  ["ㅏ","ㅑ","ㅣ","ㅓ","ㅕ"].forEach(function(v){
+    var o=D[v]; if(!o) return;
+    var left=(v==="ㅓ"||v==="ㅕ");
+    rows+='<tr'+(left?' class="rowmark"':'')+'><th><span class="ko">'+v+'</span></th>'+
+      '<td><b>'+(o.slope>0?"+":"")+o.slope.toFixed(3)+'</b></td>'+
+      '<td>'+o.r.toFixed(3)+'</td>'+
+      '<td class="'+(o.gap<0?"c-cho":"")+'">'+(o.gap>0?"+":"")+o.gap.toFixed(0)+'</td>'+
+      '<td class="mut">'+o.n+'</td>'+
+      '<td class="'+(o.merged?"c-cho":"mut")+'">'+o.merged+' / '+o.tot+'</td></tr>';
+  });
+  document.getElementById("t-left").innerHTML=rows+"</tbody>";
+  fill("p-left",["나","너","라","러","사","서"],function(c){
+    return plate(c,{meta:"중성 "+GL[c].j[1]+(GL[c].cho?"":" · 합획"),flag:!GL[c].cho});
+  });
+})();
+
+/* R6 낣 vs 랇 */
+(function(){
+  var a=GL["낣"], b=GL["랇"];
+  function card(ch,g,other){
+    var ch_=g.cho, ju=g.jung, jo=g.jong;
+    var s='<svg viewBox="-60 0 1120 1180" role="img" aria-label="'+ch+'">'+
+      '<g transform="translate(0,960) scale(1,-1)">'+
+      '<rect class="emsq" x="0" y="-120" width="1000" height="960"/>'+
+      '<line class="base" x1="-40" y1="0" x2="1040" y2="0"/>'+
+      rect(ch_,"z-cho")+rect(ju,"z-jung")+rect(jo,"z-jong")+
+      '<path class="gly" d="'+g.p+'"/></g></svg>';
+    var choH=ch_[3]-ch_[1], joH=jo[3]-jo[1];
+    return '<figure>'+s+'<figcaption><span class="big">'+ch+'</span>'+
+      '초성 '+g.j[0]+' 높이 <em>'+choH+'</em><br>'+
+      '종성 '+g.j[2]+' 높이 <em>'+joH+'</em><br>'+
+      '종성 상단 y '+jo[3]+' · 하단 y '+jo[1]+'<br>'+
+      '종성 폭 '+(jo[2]-jo[0])+' (동일)</figcaption></figure>';
+  }
+  var dh=(b.cho[3]-b.cho[1])-(a.cho[3]-a.cho[1]);
+  var dj=(b.jong[3]-b.jong[1])-(a.jong[3]-a.jong[1]);
+  var delta='<figure class="delta"><figcaption style="margin:0">'+
+    '<dl><dt>초성 높이 차</dt><dd class="up">'+(dh>0?"+":"")+dh+'</dd>'+
+    '<dt>종성 높이 차</dt><dd class="dn">'+dj+'</dd>'+
+    '<dt>종성 상단 차</dt><dd class="dn">'+(b.jong[3]-a.jong[3])+'</dd>'+
+    '<dt>종성 하단 차</dt><dd>'+(b.jong[1]-a.jong[1])+'</dd>'+
+    '<dt>종성 폭 차</dt><dd>0</dd></dl>'+
+    '<p style="margin:4px 0 0;font-family:var(--f-body);font-size:12.5px;line-height:1.65;color:var(--fg2)">'+
+    '초성 ㄹ이 ㄴ보다 '+dh+' 더 높다. 종성 하단은 y=−73에 고정된 채 '+
+    '상단만 '+Math.abs(b.jong[3]-a.jong[3])+' 내려앉아 종성 ㄼ이 '+Math.abs(dj)+' 압축된다.</p>'+
+    '</figcaption></figure>';
+  document.getElementById("ab-demo").innerHTML=card("낣",a)+card("랇",b)+delta;
+})();
+
+/* R6 초성 등급 — 0을 중심으로 하는 발산 막대 */
+(function(){
+  var Gd=R.choGrade, ks=Object.keys(Gd);
+  var lim=Math.max.apply(null,ks.map(function(k){return Math.abs(Gd[k].z)}));
+  document.getElementById("b-grade").innerHTML=ks.map(function(k){
+    var z=Gd[k].z, half=Math.abs(z)/lim*50, left=z>=0?50:50-half;
+    var hl=(k==="ㄴ"||k==="ㄹ");
+    return '<div class="bar'+(hl?" hl":"")+'"><span class="bar-l">'+k+'</span>'+
+      '<span class="bar-t cen"><span class="bar-f cho free" style="left:'+left.toFixed(2)+
+      '%;width:'+Math.max(half,.35).toFixed(2)+'%"></span></span>'+
+      '<span class="bar-v">'+(z>0?"+":"")+z.toFixed(2)+'</span></div>';
+  }).join("");
+  document.getElementById("grade-scale").textContent=
+    "z = 표준화 잔차 · 0 = 해당 (중성,종성) 조합의 평균 초성 높이 · 범위 ±"+lim.toFixed(2);
+})();
+
+/* R6 시소 */
+(function(){
+  var list=SETS.choSeries.filter(function(c){return GL[c]&&GL[c].cho});
+  var d=list.map(function(c){var g=GL[c];
+    return {c:c,l:g.j[0],ch:g.cho[3]-g.cho[1],jo:g.jong[3]-g.jong[1]};});
+  d.sort(function(a,b){return b.ch-a.ch});
+  var mc=Math.max.apply(null,d.map(function(x){return x.ch}));
+  var mj=Math.max.apply(null,d.map(function(x){return x.jo}));
+  var mnj=Math.min.apply(null,d.map(function(x){return x.jo}));
+  document.getElementById("b-seesaw").innerHTML=
+    '<div class="dual" style="color:var(--fg3);font-family:var(--f-mono);font-size:10.5px;'+
+    'letter-spacing:.08em;text-transform:uppercase"><span></span>'+
+    '<span style="text-align:right">초성 높이 ←</span><span>→ 종성 높이</span><span></span></div>'+
+    d.map(function(x){
+      var hl=(x.l==="ㄴ"||x.l==="ㄹ");
+      var jw=(x.jo-mnj+8)/(mj-mnj+8)*100;
+      return '<div class="dual bar'+(hl?" hl":"")+'"><span class="bar-l">'+x.l+'</span>'+
+        '<span class="bar-t rev"><span class="bar-f" style="width:'+(x.ch/mc*100).toFixed(1)+'%"></span></span>'+
+        '<span class="bar-t"><span class="bar-f" style="width:'+jw.toFixed(1)+'%"></span></span>'+
+        '<span class="bar-v">'+x.ch+' / '+x.jo+'</span></div>';
+    }).join("");
+  document.getElementById("seesaw-scale").textContent=
+    "종성 막대는 차이를 읽을 수 있도록 "+mnj+"~"+mj+" 구간을 확대한 스케일 · 초성 막대는 0 기준";
+  fill("p-cho",["핣","찳","갋","랇","맓","낣"],function(c){
+    return plate(c,{meta:"초성 "+GL[c].j[0]+" · 종성 h"+(GL[c].jong[3]-GL[c].jong[1]),
+                    flag:(c==="랇"||c==="낣")});
+  });
+})();
+
+/* R7 접촉 매트릭스 ×2 */
+(function(){
+  var CHO="ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ".split("");
+  var JU=["ㅗ","ㅛ","ㅜ","ㅠ","ㅡ"];
+  function matrix(el,data,denom,cap){
+    var t='<table><caption>'+cap+'</caption><thead><tr><th></th>'+
+      CHO.map(function(c){return '<th>'+c+'</th>'}).join("")+'</tr></thead><tbody>';
+    JU.forEach(function(v){
+      t+='<tr><th>'+v+'</th>'+CHO.map(function(c){
+        var n=data[c+v]||0, f=n/denom;
+        var st=n?' style="background:color-mix(in srgb,var(--cho) '+
+          (8+f*34).toFixed(0)+'%,transparent)"':'';
+        return '<td class="'+(f>=.6?"on":"")+'"'+st+'>'+(n||"·")+'</td>';
+      }).join("")+'</tr>';
+    });
+    document.getElementById(el).innerHTML=t+'</tbody></table>';
+  }
+  matrix("mx-cho",R.contactCho,28,"① 초성 ↔ 중성 접촉 · 28자 중 접촉 자수");
+  matrix("mx-jong",R.contactJong,27,"② 중성 ↔ 종성 접촉 · 받침글자 27자 중 접촉 자수");
+  fill("p-contact",["노","오","모","고","구","그"],function(c){
+    return plate(c,{meta:GL[c].cho?"분리 가능":"합획"});
+  });
+})();
+
+/* 한계 — 계열별 분해율 */
+(function(){
+  var C=R.coverage, NM={VR:"세로·우향",VL:"세로·좌향",H:"가로",M:"섞임"};
+  var parts=["VR","VL","H","M"].map(function(f){
+    return NM[f]+" "+Math.round(100*C[f].ok/C[f].total)+"%";
+  });
+  var worst=["VR","VL","H","M"].reduce(function(a,b){
+    return C[a].ok/C[a].total < C[b].ok/C[b].total ? a : b; });
+  document.getElementById("cov-note").innerHTML=
+    R.total.toLocaleString()+"자 중 <b>"+R.decomposed.toLocaleString()+"자("+
+    (100*R.decomposed/R.total).toFixed(1)+"%)</b>만 슬롯 단위로 완전 분해됐다. 나머지는 획이 "+
+    "붙어 있어(합획) 윤곽선만으로는 분리가 불가능한 글자다 — 계열별로 "+parts.join(" · ")+
+    ". 분해율이 가장 낮은 <b>"+NM[worst]+"("+
+    Math.round(100*C[worst].ok/C[worst].total)+"%)</b> 수치는 표본 편향 가능성이 있다"+
+    "(접촉하지 않는 조합에 치우침).";
+})();
+
+/* 존 토글 */
+var btn=document.getElementById("zbtn");
+btn.addEventListener("click",function(){
+  var off=document.body.classList.toggle("hide-zones");
+  btn.setAttribute("aria-pressed",String(!off));
+  btn.textContent=off?"존 오버레이 켜기":"존 오버레이 끄기";
+});
+})();
+</script>
+</body>
+</html>
