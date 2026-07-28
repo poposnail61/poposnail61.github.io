@@ -186,7 +186,78 @@ Root의 V split에서 `Trailing`이 가져가는 비율이다. ㄴ 0.298 → ㅎ
 5. 가로모임 접촉은 `rules.json`의 `contactCho`/`contactJong`를 보고 조합별로 판단한다
 6. 남는 편차는 `CorrectionRule`의 `NodeDelta`(x/y)와 `SlotRectDelta`로 잡는다
 
-## 8. 한계
+## 8. 제품 명세(Notion)와의 접점
+
+제품 명세 「한글 폰트 제작 프로그램」(기준일 2026-07-16)을 기준으로 확인한 것.
+
+### 두 개의 진입점이 있다
+
+명세 §8.2의 `Slot { rect: MasterVariable<NormalizedRect>, ... }`은 초·중·종성
+**3슬롯 평면 모델**이고, `v2.rs`의 `LayoutNode` 그래프는 **재귀 이진 트리 모델**이다.
+둘 다 쓸 수 있게 산출물을 나눠 두었다.
+
+| 넣을 곳 | 쓸 파일 |
+|---|---|
+| §8.2 `Slot.rect` (평면 3슬롯) | [`rules.json`](./rules.json)의 `zones` — [SPEC.md §2](./SPEC.md) |
+| `LayoutNodeValue` (이진 트리) | [`studio-rules.json`](./studio-rules.json) — 이 문서 |
+
+`Slot.rect`도 0–1 정규화 좌표라 §1의 `cellEmBox`만 맞추면 바로 들어간다.
+
+### §8.1 "여섯 유형"은 여덟이어야 한다
+
+> 세로 중성, 가로 중성, 복합 중성, 종성 유무의 여섯 유형은 starter preset이다.
+> 여섯 유형을 코드에 고정하지 않는다.
+
+실측 결과 **세로 중성이 둘로 갈라진다**(SPEC.md R1). ㅏ계열은 갭, ㅓ계열은 오버랩으로
+값이 정반대라(§4) 한 group으로 묶으면 ㅓ계열에서 가로획이 허공에 뜨거나 초성을 뚫는다.
+starter preset을 **여덟 유형**으로 두는 것을 권한다:
+
+```
+VR-무받침  VR-받침   (ㅏㅐㅑㅒㅣ)
+VL-무받침  VL-받침   (ㅓㅔㅕㅖ)
+H-무받침   H-받침    (ㅗㅛㅜㅠㅡ)
+M-무받침   M-받침    (ㅘㅙㅚㅝㅞㅟㅢ)
+```
+
+중성 21자를 남김 없이 4계열로 나누므로 §8.1의 "11,172자 전체에 정확히 하나의 group이
+매칭" 조건을 만족한다. predicate가 선언적이라 코드 변경 없이 들어간다.
+
+### §7.1 variant 태그에 대응
+
+명세의 `ㄱ.initial.before-horizontal` 같은 문맥 variant 구분에 그대로 쓸 수 있는 근거가
+`rules.json`에 있다.
+
+- `contactCho` — 초성이 중성 기둥과 닿는 조합. ㅗ·ㅛ 앞에서 ㄴㄷㄹㅁㅂㅇㅌㅍ는 28자 중
+  27~28자가 닿고 ㄱㄲㅅㅆㅉㅎ는 0~1자다. **`before-horizontal` variant가 실제로 필요한
+  초성이 어느 것인지 이 표로 정해진다**
+- `choGrade` — 초성 19자의 세로 점유 등급. variant를 몇 벌 둘지 판단할 때 쓸 수 있다
+
+### §9.1 규칙 계층 배치 제안
+
+명세의 적용 순서 `Template → Jamo → Jamo Correction → Combination Correction →
+Exact Glyph → Direct Override`에 §5 보정표를 넣을 위치:
+
+| 보정표 | 계층 | 근거 |
+|---|---|---|
+| `Trailing.spaceWeight` (종성별) | `combination` | 종성 정체성이 조건이다 |
+| `Medial.spaceWeight` (중성별) | `combination` | |
+| `Leading.spaceWeight` (초성별) | `combination` | |
+| `*.padding.*` | `combination` | |
+
+§16.1이 **같은 priority에서 같은 property를 건드리면 Error**로 막으므로, 위 넷은
+서로 다른 property를 건드리게 두거나 priority를 달리 줘야 한다. 종성·중성·초성 표가
+같은 split의 형제 가중치를 동시에 바꾸려 하면 충돌한다 — §7의 3번처럼
+**`spaceWeight`를 비우고 컴포넌트 `LayoutDemand`로 옮기면 이 충돌이 원천적으로 없다.**
+
+### 참고: 명세 §15.1과 이 작업의 성격
+
+> 사용자가 디자인을 수정한 뒤 Noto 원본과 IoU가 낮아지는 것은 오류가 아니다.
+
+이 규칙표도 같은 성격이다. **Noto를 닮게 만드는 목표값이 아니라 조합 규칙의 초기값**이다.
+§6의 충실도 43 em은 "Noto 재현 실패"가 아니라 "규칙 하나로 환원되지 않는 폰트를
+규칙으로 근사한 거리"로 읽어야 한다.
+
+## 9. 한계
 
 - **`VL`·`M`의 초성/중성 경계는 실측이 아니라 재구성이다.** Noto에서 이 둘은 크기가
   서로 연동돼 아웃라인만으로 분리되지 않는다. ㅔ·ㅖ는 'ㅓ 가로획+기둥'과 'ㅣ'가 별개
