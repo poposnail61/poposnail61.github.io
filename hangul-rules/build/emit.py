@@ -2,8 +2,9 @@ import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 """토폴로지 기본값 + 컨텍스트 보정표를 studio-rules.json으로 낸다."""
 import json, os, pickle, statistics as st, sys
+import master as MA
 from collections import defaultdict
-STUDIO_JSON=os.path.join(os.path.dirname(os.path.abspath(__file__)),os.pardir,'studio-rules.json')
+STUDIO_JSON=os.path.join(os.path.dirname(os.path.abspath(__file__)),os.pardir,MA.out('studio-rules.json'))
 from tree import tree, CHO, JUNG, JONG, COMPOUND_MEDIALS, COMPOUND_TRAILINGS
 from derive import derive, node_boxes, fam, tkind, CELL, leaves
 
@@ -58,7 +59,7 @@ for (top,path),e in per.items():
     counts[top]=max(counts[top],node['n'])
 out={
  'schema':'hangul-rules/studio-layout/1',
- 'source':'Noto Sans CJK KR Regular (noto-cjk Sans2.004)',
+ 'source':MA.SOURCE,
  'frame':{'unitsPerEm':1000,'advanceWidth':1000,
           'cellEmBox':{'x0':CELL[0],'y0':CELL[1],'x1':CELL[2],'y1':CELL[3]},
           'note':'정규화 (0,0,1,1)이 이 em 박스에 대응한다. 전 음절 잉크 봉투에서 얻었다.'},
@@ -78,7 +79,7 @@ for name,tbl in ctx.items():
         'entries':{k:{'value':q(v),'n':len(v)} for k,v in tbl.items() if len(v)>=6}}
 json.dump(out,open(STUDIO_JSON,'w'),
           ensure_ascii=False,indent=1)
-print('studio-rules.json 생성. 토폴로지 %d종'%len(out['topologies']))
+print('%s 생성. 토폴로지 %d종'%(MA.out('studio-rules.json'),len(out['topologies'])))
 print()
 for name in out['contextTables']:
     e=out['contextTables'][name]['entries']

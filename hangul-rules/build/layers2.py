@@ -6,13 +6,14 @@ partial.pkl 은 음절마다 '측정 가능한 가장 깊은 노드'의 상자�
 자리는 그룹 노드가 terminal 로 들어온다. 관측된 path 만 가지고 적합·평가한다.
 """
 import contextlib, io as _io, json, os, pickle, statistics as st
+import master as MA
 from collections import defaultdict, Counter
 from tree import tree, CHO, JUNG, JONG, COMPOUND_MEDIALS, COMPOUND_TRAILINGS
 RIGHT,LEFT,HORZ,MIX='ㅏㅐㅑㅒㅣ','ㅓㅔㅕㅖ','ㅗㅛㅜㅠㅡ','ㅘㅙㅚㅝㅞㅟㅢ'
 def fam(v): return 'VR' if v in RIGHT else 'VL' if v in LEFT else 'H' if v in HORZ else 'M'
 def tkind(ti): return 'none' if ti==0 else ('compound' if ti in COMPOUND_TRAILINGS else 'simple')
 HERE=_os.path.dirname(_os.path.abspath(__file__))
-part=pickle.load(open(_os.path.join(HERE,'partial.pkl'),'rb'))
+part=pickle.load(open(_os.path.join(HERE,MA.tmp('partial.pkl')),'rb'))
 def union(a,b): return (min(a[0],b[0]),min(a[1],b[1]),max(a[2],b[2]),max(a[3],b[3]))
 SIDES=('top','right','bottom','left')
 ORDER=['Root','LeadingMedial','LeadingMedialBase','Leading','Medial','MedialBase',
@@ -22,7 +23,7 @@ ORDER=['Root','LeadingMedial','LeadingMedialBase','Leading','Medial','MedialBase
 env=None
 for k,bx in part.items():
     for b in bx.values(): env=b if env is None else union(env,b)
-CELL=(round(env[0]),round(env[1]),round(env[2]),round(env[3]))
+CELL=MA.cell((round(env[0]),round(env[1]),round(env[2]),round(env[3])))
 CX0,CY0,CX1,CY1=CELL; CW=CX1-CX0; CH=CY1-CY0
 print('기준 셀 %s  %d x %d'%(CELL,CW,CH))
 
@@ -172,4 +173,4 @@ for nm,pred,pp in cases:
     m,p=stat(err(pred)); res[nm]={'params':pp,'medianEm':m,'p95Em':p,
                                   'relPct':round(100*m/CH,2)}
     print('%-4s %10d %9.1f %8.1f   (%.1f%% of cell)'%(nm,pp,m,p,100*m/CH))
-pickle.dump((CELL,layout,P1,P2,D3,rows,res),open(_os.path.join(HERE,'layers2.pkl'),'wb'))
+pickle.dump((CELL,layout,P1,P2,D3,rows,res),open(_os.path.join(HERE,MA.tmp('layers2.pkl')),'wb'))

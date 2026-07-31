@@ -2,11 +2,12 @@ import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 """최종 4레이어 규칙을 studio-rules-layered.json 으로 낸다."""
 import json, os, pickle, statistics as st
+import master as MA
 from collections import defaultdict, Counter
 from tree import tree, CHO, JUNG, JONG, COMPOUND_MEDIALS, COMPOUND_TRAILINGS
 HERE=_os.path.dirname(_os.path.abspath(__file__))
-CELL,layout,P1,P2,D3,rows,res=pickle.load(open(_os.path.join(HERE,'layers2.pkl'),'rb'))
-part=pickle.load(open(_os.path.join(HERE,'partial.pkl'),'rb'))
+CELL,layout,P1,P2,D3,rows,res=pickle.load(open(_os.path.join(HERE,MA.tmp('layers2.pkl')),'rb'))
+part=pickle.load(open(_os.path.join(HERE,MA.tmp('partial.pkl')),'rb'))
 CX0,CY0,CX1,CY1=CELL; CW=CX1-CX0; CH=CY1-CY0
 SIDES=('top','right','bottom','left')
 ORDER=['Root','LeadingMedial','LeadingMedialBase','Leading','Medial','MedialBase',
@@ -43,7 +44,7 @@ print('  초성별:',dict(Counter(CHO[l] for l,_,_ in miss).most_common(6)))
 print('  예:',''.join(chr(0xAC00+(l*21+v)*28+t) for l,v,t in miss[:24]))
 
 out={'schema':'hangul-rules/studio-layered/2',
- 'source':'Noto Sans CJK KR Regular (noto-cjk Sans2.004)',
+ 'source':MA.SOURCE,
  'frame':{'unitsPerEm':1000,'advanceWidth':1000,
           'cellEmBox':{'x0':CELL[0],'y0':CELL[1],'x1':CELL[2],'y1':CELL[3]}},
  'model':{'L1':'CompositionTemplate 12종. split 값과 슬롯.',
@@ -78,10 +79,10 @@ out['fidelity']={'metric':'관측 노드 상자의 최대 코너 편차 em (셀 
   'layers':res,
   'perNodeL3':{p:{'n':len(bypath[p]),'medianEm':round(st.median(bypath[p]),1)}
                for p in ORDER if p in bypath}}
-P=_os.path.join(HERE,os.pardir,'studio-rules-layered.json')
+P=_os.path.join(HERE,os.pardir,MA.out('studio-rules-layered.json'))
 json.dump(out,open(P,'w'),ensure_ascii=False,indent=1)
 print()
-print('studio-rules-layered.json  L1 %d  L2 %d  L3 %d컬럼'%(
+print('%s  L1 %d  L2 %d  L3 %d컬럼'%(MA.out('studio-rules-layered.json'),
     len(out['L1_templates']),
     sum(len(v2) for v in out['L2_padding'].values() for v2 in v.values()),
     len(out['L3_columnDelta'])))

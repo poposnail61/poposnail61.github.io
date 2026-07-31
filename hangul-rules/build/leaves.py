@@ -2,6 +2,7 @@ import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 """리프(자모) 단위 잉크 박스를 뽑는다. 겹중성/겹종성을 각각 둘로 쪼갠다."""
 import sys, os, pickle
+import master as MA
 import measure as M
 from fontTools.ttLib import TTFont
 from tree import tree, CHO, JUNG, JONG, COMPOUND_MEDIALS, COMPOUND_TRAILINGS
@@ -144,7 +145,7 @@ if __name__=='__main__':
                 lb['Trailing']=M.bbox(js)
         leaves[k]=lb
     print('리프 단위 확보 %d자 (겹중성/겹종성 분리 실패 %d)'%(len(leaves),fail))
-    pickle.dump((leaves,D),open('leaves.pkl','wb'))
+    pickle.dump((leaves,D),open(MA.tmp('leaves.pkl'),'wb'))
     for ch in '괆과관각가고곡':
         i=ord(ch)-0xAC00; kk=(i//588,(i%588)//28,i%28)
         print(' ',ch, leaves.get(kk,'—'))

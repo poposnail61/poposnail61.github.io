@@ -12,6 +12,13 @@
 > 움직인다 — 중성 폭 +57%, 초성→종성 계수 2.2배, 종성 사다리 순위는 Thin 대비
 > Black에서 3/27만 일치. 합획 조합도 9쌍이 뒤집힌다.
 > [`WEIGHT-AXIS.md`](./WEIGHT-AXIS.md) 참고.
+>
+> **만드는 쪽은 마스터 두 벌을 쓴다.** 여기 설명한 구조 그대로 Thin(100)·Black(900)을
+> 따로 뽑아 뒀다 — [MASTERS.md](./MASTERS.md),
+> [`studio-rules-masters.json`](./studio-rules-masters.json). 중간 굵기는 선형 보간이다.
+> 이 문서의 Regular 수치는 구조를 설명하기 위한 것으로 읽으면 된다.
+>
+> **합획**은 컴포넌트를 겹친 채로 두고 윤곽선을 합치지 않는다 — [FUSION.md](./FUSION.md).
 
 
 ## 0. 대상 모델
@@ -419,6 +426,14 @@ python3 emit.py                                          # studio-rules.json
 python3 verify.py                                        # 왕복 검증 + fidelity 기록
 python3 grid.py                                          # 레이아웃/패딩 단위 비교 (§10)
 python3 layers.py                                        # 4레이어 적합 + studio-rules-layered.json
+```
+
+마스터 두 벌은 한 번에 뽑는다. 파이프라인이 두 마스터에 공통 셀을 물려 주므로
+따로 돌리지 말 것 (MASTERS.md §1).
+
+```bash
+python3 build/masters.py /path/to/노토_디렉터리   # studio-rules-*-{thin,black}.json + 색인
+python3 build/fuse.py    /path/to/노토_디렉터리   # 합획 결정표 + fuse-pairs.json
 ```
 
 `tree.py`는 `composition_tree.rs`를 이식한 것이다. studio 쪽 트리 구성이 바뀌면

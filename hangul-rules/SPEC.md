@@ -11,6 +11,20 @@ Noto Sans CJK KR Regular(noto-cjk `Sans2.004`)의 **완성형 11,172자를 전�
 > 움직인다 — 중성 폭 +57%, 초성→종성 계수 2.2배, 종성 사다리 순위는 Thin 대비
 > Black에서 3/27만 일치. 합획 조합도 9쌍이 뒤집힌다.
 > [`WEIGHT-AXIS.md`](./WEIGHT-AXIS.md) 참고.
+>
+> 만드는 쪽 산출물은 마스터 두 벌([MASTERS.md](./MASTERS.md))이고, 합획 처리는
+> [FUSION.md](./FUSION.md)에서 정했다.
+
+## 문서 안내
+
+| 문서 | 무엇 |
+|---|---|
+| [SPEC.md](./SPEC.md) | 노토 실측 결과와 조합 규칙 R1–R7 (이 문서) |
+| [STUDIO-RULES.md](./STUDIO-RULES.md) | 그것을 studio의 이진 조합 모델로 옮긴 것 |
+| [MODEL-SEARCH.md](./MODEL-SEARCH.md) | 모델 구조 탐색과 홀드아웃 검증, 벌 수 결정 |
+| [WEIGHT-AXIS.md](./WEIGHT-AXIS.md) | 규칙이 굵기에 따라 어떻게 변하는가 |
+| [MASTERS.md](./MASTERS.md) | 마스터 두 벌(100/900)과 그 사이의 차이 |
+| [FUSION.md](./FUSION.md) | 합획을 어떻게 처리할 것인가 |
 
 
 ## 0. 전제 — Noto Sans KR은 조합형이 아니다

@@ -2,12 +2,13 @@ import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 """리프 잉크 박스 -> hangul-font-studio LayoutNodeValue (padding/gap/spaceWeight)."""
 import json, pickle, statistics as st, sys
+import master as MA
 from collections import defaultdict
 from tree import tree, CHO, JUNG, JONG, COMPOUND_MEDIALS, COMPOUND_TRAILINGS
 RIGHT,LEFT,HORZ,MIX='ㅏㅐㅑㅒㅣ','ㅓㅔㅕㅖ','ㅗㅛㅜㅠㅡ','ㅘㅙㅚㅝㅞㅟㅢ'
 def fam(v): return 'VR' if v in RIGHT else 'VL' if v in LEFT else 'H' if v in HORZ else 'M'
 def tkind(ti): return 'none' if ti==0 else ('compound' if ti in COMPOUND_TRAILINGS else 'simple')
-leaves,_=pickle.load(open('leaves.pkl','rb'))
+leaves,_=pickle.load(open(MA.tmp('leaves.pkl'),'rb'))
 
 def union(a,b): return (min(a[0],b[0]),min(a[1],b[1]),max(a[2],b[2]),max(a[3],b[3]))
 
@@ -66,7 +67,7 @@ for k,lb in leaves.items():
     nodes,root=tree(*k); box=node_boxes(nodes,root,lb)
     if box: env = box[root] if env is None else union(env,box[root])
 print('전 음절 잉크 봉투:', env)
-CELL=(round(env[0]),round(env[1]),round(env[2]),round(env[3]))
+CELL=MA.cell((round(env[0]),round(env[1]),round(env[2]),round(env[3])))
 print('기준 셀:', CELL, 'w=%d h=%d'%(CELL[2]-CELL[0],CELL[3]-CELL[1]))
 
 acc=defaultdict(lambda: defaultdict(list)); nsyl=defaultdict(int)

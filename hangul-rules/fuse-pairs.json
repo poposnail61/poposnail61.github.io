@@ -1,0 +1,450 @@
+{
+ "schema": "hangul-rules/fuse/1",
+ "note": "굵기별 합획 뒤집힘 9쌍 — A안(전 굵기 접촉)·B안(전 굵기 분리) 비용",
+ "metric": "초성 윤곽선과 중성 윤곽선의 최단거리 (em, upem 1000)",
+ "pairs": {
+  "ㄸㅗ": {
+   "contactByWeight": {
+    "Thin": 1,
+    "Light": 10,
+    "DemiLight": 26,
+    "Regular": 27,
+    "Medium": 28,
+    "Bold": 28,
+    "Black": 28
+   },
+   "majorityOnsetWght": 350,
+   "minDistByWeight": {
+    "Thin": 16.1,
+    "Light": 8.2,
+    "DemiLight": null,
+    "Regular": null,
+    "Medium": null,
+    "Bold": null,
+    "Black": null
+   },
+   "approach": {
+    "dxEm": 2.0,
+    "dyEm": 16.0,
+    "axis": "vertical"
+   },
+   "optionA_fuseAtThin": {
+    "closeEm": 16.1,
+    "medialHeightEm": 158,
+    "percentOfMedial": 10.2
+   },
+   "optionB_separateAtBlack": {
+    "nWeights": 2,
+    "r": -1.0,
+    "extrapolatedDistEm": -15.5,
+    "penetrationEm": 15.5,
+    "targetGapEm": 19.7,
+    "separateEm": 35.2,
+    "medialHeightEm": 247,
+    "percentOfMedial": 14.2
+   },
+   "cheaper": "A",
+   "stemDeltaByWeight": {
+    "Thin": 0.0,
+    "Light": 0.8,
+    "DemiLight": 0.2,
+    "Regular": 1.0,
+    "Medium": 1.0,
+    "Bold": 1.8,
+    "Black": 2.5
+   }
+  },
+  "ㅃㅗ": {
+   "contactByWeight": {
+    "Thin": 1,
+    "Light": 1,
+    "DemiLight": 24,
+    "Regular": 24,
+    "Medium": 24,
+    "Bold": 24,
+    "Black": 28
+   },
+   "majorityOnsetWght": 350,
+   "minDistByWeight": {
+    "Thin": 25.6,
+    "Light": 9.9,
+    "DemiLight": null,
+    "Regular": null,
+    "Medium": null,
+    "Bold": null,
+    "Black": null
+   },
+   "approach": {
+    "dxEm": 20.0,
+    "dyEm": 16.0,
+    "axis": "horizontal"
+   },
+   "optionA_fuseAtThin": {
+    "closeEm": 25.6,
+    "medialHeightEm": 148,
+    "percentOfMedial": 17.3
+   },
+   "optionB_separateAtBlack": {
+    "nWeights": 2,
+    "r": -1.0,
+    "extrapolatedDistEm": -37.2,
+    "penetrationEm": 37.2,
+    "targetGapEm": 19.7,
+    "separateEm": 56.9,
+    "medialHeightEm": 247,
+    "percentOfMedial": 23.0
+   },
+   "cheaper": "A",
+   "stemDeltaByWeight": {
+    "Thin": 0.0,
+    "Light": 0.8,
+    "DemiLight": 0.0,
+    "Regular": 1.0,
+    "Medium": 0.2,
+    "Bold": 1.0,
+    "Black": 1.0
+   }
+  },
+  "ㅆㅗ": {
+   "contactByWeight": {
+    "Thin": 1,
+    "Light": 1,
+    "DemiLight": 1,
+    "Regular": 1,
+    "Medium": 1,
+    "Bold": 2,
+    "Black": 28
+   },
+   "majorityOnsetWght": 900,
+   "minDistByWeight": {
+    "Thin": 24.1,
+    "Light": 18.1,
+    "DemiLight": null,
+    "Regular": null,
+    "Medium": null,
+    "Bold": null,
+    "Black": null
+   },
+   "approach": {
+    "dxEm": 2.2,
+    "dyEm": 24.0,
+    "axis": "vertical"
+   },
+   "optionA_fuseAtThin": {
+    "closeEm": 24.1,
+    "medialHeightEm": 133,
+    "percentOfMedial": 18.1
+   },
+   "optionB_separateAtBlack": {
+    "nWeights": 2,
+    "r": -1.0,
+    "extrapolatedDistEm": -0.1,
+    "penetrationEm": 0.1,
+    "targetGapEm": 19.7,
+    "separateEm": 19.7,
+    "medialHeightEm": 247,
+    "percentOfMedial": 8.0
+   },
+   "cheaper": "B",
+   "stemDeltaByWeight": {
+    "Thin": 12.0,
+    "Light": 10.5,
+    "DemiLight": 9.0,
+    "Regular": 7.8,
+    "Medium": 6.0,
+    "Bold": 3.5,
+    "Black": 2.0
+   }
+  },
+  "ㅉㅗ": {
+   "contactByWeight": {
+    "Thin": 1,
+    "Light": 1,
+    "DemiLight": 1,
+    "Regular": 1,
+    "Medium": 1,
+    "Bold": 5,
+    "Black": 28
+   },
+   "majorityOnsetWght": 900,
+   "minDistByWeight": {
+    "Thin": 19.1,
+    "Light": 15.1,
+    "DemiLight": null,
+    "Regular": null,
+    "Medium": null,
+    "Bold": null,
+    "Black": null
+   },
+   "approach": {
+    "dxEm": 2.2,
+    "dyEm": 19.0,
+    "axis": "vertical"
+   },
+   "optionA_fuseAtThin": {
+    "closeEm": 19.1,
+    "medialHeightEm": 135,
+    "percentOfMedial": 14.2
+   },
+   "optionB_separateAtBlack": {
+    "nWeights": 2,
+    "r": -1.0,
+    "extrapolatedDistEm": 2.9,
+    "penetrationEm": 0.0,
+    "targetGapEm": 19.7,
+    "separateEm": 19.7,
+    "medialHeightEm": 247,
+    "percentOfMedial": 8.0
+   },
+   "cheaper": "A",
+   "stemDeltaByWeight": {
+    "Thin": 12.0,
+    "Light": 10.0,
+    "DemiLight": 9.0,
+    "Regular": 8.0,
+    "Medium": 6.0,
+    "Bold": 3.5,
+    "Black": 2.0
+   }
+  },
+  "ㄲㅛ": {
+   "contactByWeight": {
+    "Thin": 1,
+    "Light": 1,
+    "DemiLight": 1,
+    "Regular": 1,
+    "Medium": 28,
+    "Bold": 28,
+    "Black": 28
+   },
+   "majorityOnsetWght": 500,
+   "minDistByWeight": {
+    "Thin": 39.0,
+    "Light": 26.9,
+    "DemiLight": 14.5,
+    "Regular": 9.6,
+    "Medium": null,
+    "Bold": null,
+    "Black": null
+   },
+   "approach": {
+    "dxEm": 38.3,
+    "dyEm": 7.5,
+    "axis": "horizontal"
+   },
+   "optionA_fuseAtThin": {
+    "closeEm": 39.0,
+    "medialHeightEm": 214,
+    "percentOfMedial": 18.2
+   },
+   "optionB_separateAtBlack": {
+    "nWeights": 4,
+    "r": -0.959,
+    "extrapolatedDistEm": -36.4,
+    "penetrationEm": 36.4,
+    "targetGapEm": 31.0,
+    "separateEm": 67.4,
+    "medialHeightEm": 258,
+    "percentOfMedial": 26.1
+   },
+   "cheaper": "A"
+  },
+  "ㅅㅛ": {
+   "contactByWeight": {
+    "Thin": 1,
+    "Light": 1,
+    "DemiLight": 1,
+    "Regular": 10,
+    "Medium": 21,
+    "Bold": 21,
+    "Black": 25
+   },
+   "majorityOnsetWght": 500,
+   "minDistByWeight": {
+    "Thin": 35.9,
+    "Light": 23.8,
+    "DemiLight": 11.2,
+    "Regular": 7.2,
+    "Medium": 17.4,
+    "Bold": null,
+    "Black": null
+   },
+   "approach": {
+    "dxEm": 17.9,
+    "dyEm": 31.1,
+    "axis": "vertical"
+   },
+   "optionA_fuseAtThin": {
+    "closeEm": 35.9,
+    "medialHeightEm": 161,
+    "percentOfMedial": 22.3
+   },
+   "optionB_separateAtBlack": {
+    "nWeights": 5,
+    "r": -0.787,
+    "extrapolatedDistEm": -15.1,
+    "penetrationEm": 15.1,
+    "targetGapEm": 31.0,
+    "separateEm": 46.1,
+    "medialHeightEm": 258,
+    "percentOfMedial": 17.9
+   },
+   "cheaper": "A"
+  },
+  "ㅆㅛ": {
+   "contactByWeight": {
+    "Thin": 1,
+    "Light": 1,
+    "DemiLight": 1,
+    "Regular": 1,
+    "Medium": 1,
+    "Bold": 14,
+    "Black": 27
+   },
+   "majorityOnsetWght": 900,
+   "minDistByWeight": {
+    "Thin": 42.6,
+    "Light": 31.5,
+    "DemiLight": null,
+    "Regular": null,
+    "Medium": null,
+    "Bold": null,
+    "Black": null
+   },
+   "approach": {
+    "dxEm": 26.4,
+    "dyEm": 32.4,
+    "axis": "vertical"
+   },
+   "optionA_fuseAtThin": {
+    "closeEm": 42.6,
+    "medialHeightEm": 174,
+    "percentOfMedial": 24.5
+   },
+   "optionB_separateAtBlack": {
+    "nWeights": 2,
+    "r": -1.0,
+    "extrapolatedDistEm": -1.6,
+    "penetrationEm": 1.6,
+    "targetGapEm": 31.0,
+    "separateEm": 32.6,
+    "medialHeightEm": 258,
+    "percentOfMedial": 12.6
+   },
+   "cheaper": "B"
+  },
+  "ㅈㅛ": {
+   "contactByWeight": {
+    "Thin": 1,
+    "Light": 1,
+    "DemiLight": 11,
+    "Regular": 20,
+    "Medium": 25,
+    "Bold": 28,
+    "Black": 28
+   },
+   "majorityOnsetWght": 400,
+   "minDistByWeight": {
+    "Thin": 23.8,
+    "Light": 12.2,
+    "DemiLight": 2.8,
+    "Regular": 9.7,
+    "Medium": null,
+    "Bold": null,
+    "Black": null
+   },
+   "approach": {
+    "dxEm": 7.8,
+    "dyEm": 22.0,
+    "axis": "vertical"
+   },
+   "optionA_fuseAtThin": {
+    "closeEm": 23.8,
+    "medialHeightEm": 160,
+    "percentOfMedial": 14.9
+   },
+   "optionB_separateAtBlack": {
+    "nWeights": 4,
+    "r": -0.884,
+    "extrapolatedDistEm": -23.9,
+    "penetrationEm": 23.9,
+    "targetGapEm": 31.0,
+    "separateEm": 54.9,
+    "medialHeightEm": 258,
+    "percentOfMedial": 21.3
+   },
+   "cheaper": "A"
+  },
+  "ㅉㅛ": {
+   "contactByWeight": {
+    "Thin": 1,
+    "Light": 1,
+    "DemiLight": 1,
+    "Regular": 1,
+    "Medium": 1,
+    "Bold": 12,
+    "Black": 26
+   },
+   "majorityOnsetWght": 900,
+   "minDistByWeight": {
+    "Thin": 55.3,
+    "Light": 42.5,
+    "DemiLight": null,
+    "Regular": null,
+    "Medium": null,
+    "Bold": null,
+    "Black": null
+   },
+   "approach": {
+    "dxEm": 34.8,
+    "dyEm": 42.9,
+    "axis": "vertical"
+   },
+   "optionA_fuseAtThin": {
+    "closeEm": 55.3,
+    "medialHeightEm": 159,
+    "percentOfMedial": 34.8
+   },
+   "optionB_separateAtBlack": {
+    "nWeights": 2,
+    "r": -1.0,
+    "extrapolatedDistEm": 4.1,
+    "penetrationEm": 0.0,
+    "targetGapEm": 31.0,
+    "separateEm": 31.0,
+    "medialHeightEm": 258,
+    "percentOfMedial": 12.0
+   },
+   "cheaper": "B"
+  }
+ },
+ "flippedSyllables": 237,
+ "alreadyFusedAtThin": 9,
+ "optionA": {
+  "medianCloseEm": 25.6,
+  "maxCloseEm": 55.3
+ },
+ "optionB": {
+  "medianSeparateEm": 35.2,
+  "maxSeparateEm": 67.4,
+  "targetGapEm": {
+   "ㅗ": 19.7,
+   "ㅛ": 31.0
+  }
+ },
+ "recommendation": {
+  "cheaperA": 6,
+  "cheaperB": 3
+ },
+ "stemRedrawn": {
+  "medianGrowthEm": -4.5,
+  "maxGrowthEm": 2.5,
+  "conclusion": "components unchanged; fusion is plain overlap",
+  "measuredPairs": [
+   "ㄸㅗ",
+   "ㅃㅗ",
+   "ㅆㅗ",
+   "ㅉㅗ"
+  ]
+ }
+}

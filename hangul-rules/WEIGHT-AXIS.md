@@ -67,15 +67,18 @@ Regular에서 가장 높은 종성은 ㅎ(420)인데 Black에서는 **ㅀ(429)**
 (stroke·contour 수와 순서, node ID·개수·type·순서). 그런데 위 9쌍은
 Thin에서 윤곽선이 둘, Black에서 하나다 — **topology가 다르다.**
 
-선택지는 둘이다.
+### 해결 — 겹친 채로 두고 윤곽선을 합치지 않는다
 
-1. **해당 조합을 전 굵기에서 합자 글리프로 만든다.** Thin에서도 "붙지 않은 상태의
-   합자"로 그려 두면 topology가 같아진다. 대신 합자 목록이 9쌍 늘어난다
-2. **Black에서 접촉이 안 생기게 기둥을 줄인다.** 굵기에 따라 `overlap`을 조절하는
-   것으로 처리한다. 형태는 유지되지만 Black에서 ㅗ의 기둥이 짧아진다
+전 굵기 합자(A안)와 굵기별 `overlap` 조절(B안)을 다 재 봤는데, **둘 다 필요 없다.**
+초성과 중성을 각각의 컴포넌트로 두고 합성 결과를 불리언 합치기 없이 내보내면 모든
+마스터에서 컴포넌트 수·윤곽선 수·노드 순서가 같다. 겹침은 topology를 건드리지 않는다.
 
-**이 결정은 자모 컴포넌트를 그리기 전에 내려야 한다.** 나중에 바꾸면 topology가
-깨져 보간이 무너진다.
+노토 자신도 합획에서 자모를 다시 그리지 않았다. 기둥 x 좌표가 접촉이 시작되는
+굵기에서 튀지 않는다(최대 2.5 em). 윤곽선이 하나로 보이는 건 굵기별 정적 빌드에서
+오버랩을 제거했기 때문이다.
+
+조건은 하나 — **가변 빌드에서 오버랩 제거를 돌리지 않는 것.** 자세한 측정과 A·B안
+비용은 [FUSION.md](./FUSION.md), 데이터는 [`fuse-pairs.json`](./fuse-pairs.json).
 
 ## 4. 그래서 규칙 데이터는 마스터별로 가져야 한다
 
@@ -85,10 +88,20 @@ Thin에서 윤곽선이 둘, Black에서 하나다 — **topology가 다르다.*
 - `CompositionTemplate.master_sources[*].layout_node_values` — 마스터별 노드 값
 - `JamoVariant.master_sources[*].layout_demand` — 마스터별 demand
 
-**지금 산출물(`rules.json`, `studio-rules.json`, `studio-rules-layered.json`,
-`variant_groups.json`)은 전부 Regular 하나다.** 최소한 Thin·Black 두 끝점을 다시
-재서 마스터 두 벌을 만들어야 한다. `build/measure.py`는 폰트 파일만 받으므로
-명령 두 번이면 된다.
+**뽑았다.** Thin(100)·Black(900) 두 벌이 나와 있다.
+
+| | 파일 |
+|---|---|
+| 색인 | [`studio-rules-masters.json`](./studio-rules-masters.json) |
+| Thin | `studio-rules-layered-thin.json` · `studio-rules-thin.json` |
+| Black | `studio-rules-layered-black.json` · `studio-rules-black.json` |
+
+`rules.json` / `glyphs.json` / `studio-rules*.json`(태그 없는 것)은 Regular 그대로
+남겨 뒀다. 참고용이다. 만드는 쪽은 두 마스터 파일을 쓰면 된다.
+
+두 마스터가 얼마나 다른지는 [MASTERS.md](./MASTERS.md)에 정리했다. 요약하면
+**L2 자모 패딩이 부모 사각형 대비 중앙 8.7%, p90 22.8% 움직인다** — Regular 하나로
+양 끝을 대신할 수 없다.
 
 ## 6. 마스터는 100/900만 재면 된다 — 중간은 선형으로 충분하다
 
@@ -161,10 +174,11 @@ Regular 하나로 군집한 §4의 그룹과 비교하면 초성은 거의 같�
 
 ## 8. 아직 확인 못 한 것
 
-- **§3의 합획 뒤집힘 9쌍을 어떻게 처리할지.** 전 굵기 합자로 만들지, 굵기별
-  `overlap`으로 막을지. 자모를 그리기 전에 결정해야 한다
-- **끝점 두 벌의 실제 규칙 데이터.** 지금 `studio-rules*.json`은 Regular 하나다.
-  Thin·Black으로 다시 뽑아 마스터 두 벌을 만들어야 한다
+- **C안의 전제 확인.** hangul-font-studio의 가변 TTF 내보내기가 오버랩 제거를
+  하는지, `glyf`면 `OVERLAP_SIMPLE`을 세우는지. FUSION.md §5 참고
+- **한쪽 마스터에서만 관측된 자모 문맥 항목.** Thin에만 106개, Black에만 79개
+  있다. 보간하려면 양쪽에 값이 있어야 하므로 없는 쪽은 상위 레이어(L1 계열 기본값)로
+  메워야 한다. MASTERS.md §3 참고
 - Thin의 분해율이 Light보다 낮은 이유(80 vs 81). 측정 잡음일 수도 있고
   Thin 특유의 접촉일 수도 있다
 

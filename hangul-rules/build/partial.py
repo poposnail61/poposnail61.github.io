@@ -6,6 +6,7 @@ _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 음절 전체를 버리지 않으므로 커버리지가 크게 올라간다.
 """
 import pickle, sys
+import master as MA
 from collections import Counter, defaultdict
 import measure as M
 from fontTools.ttLib import TTFont
@@ -135,7 +136,7 @@ def main(font_path):
     print('노드별 관측 자수:')
     for p,c in sorted(pathcnt.items(),key=lambda kv:-kv[1]):
         print('  %-18s %5d'%(p,c))
-    pickle.dump(res,open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)),'partial.pkl'),'wb'))
+    pickle.dump(res,open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)),MA.tmp('partial.pkl')),'wb'))
     print()
     print('총 상자 %d개 / %d자'%(sum(pathcnt.values()),len(res)))
 

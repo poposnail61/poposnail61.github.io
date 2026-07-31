@@ -1,0 +1,376 @@
+{
+ "schema": "hangul-rules/studio-masters/1",
+ "note": "마스터 두 벌(100/900)의 규칙 색인. 규칙 본문은 각 파일에 있고 중간 굵기는 선형 보간으로 얻는다.",
+ "cellEmBox": {
+  "x0": 8,
+  "y0": -121,
+  "x1": 931,
+  "y1": 852
+ },
+ "cellNote": "두 마스터 잉크 봉투의 합집합. 마스터마다 셀이 다르면 정규화 좌표가 서로 다른 em 상자를 가리켜 보간이 어긋난다.",
+ "masters": [
+  {
+   "name": "Thin",
+   "wght": 100,
+   "tag": "thin",
+   "source": "Noto Sans CJK KR Thin (noto-cjk Sans2.004)",
+   "frame": {
+    "unitsPerEm": 1000,
+    "advanceWidth": 1000,
+    "cellEmBox": {
+     "x0": 8,
+     "y0": -121,
+     "x1": 931,
+     "y1": 852
+    }
+   },
+   "coverage": {
+    "syllablesWithAnyBox": 10843,
+    "totalSyllables": 11172,
+    "boxes": 35339,
+    "columnsCovered": 587,
+    "columnsTotal": 588,
+    "perNode": {
+     "LeadingMedial": 1945,
+     "LeadingMedialBase": 930,
+     "Leading": 7968,
+     "Medial": 5549,
+     "MedialBase": 2419,
+     "MedialExtension": 3349,
+     "Trailing": 7555,
+     "TrailingFirst": 2812,
+     "TrailingSecond": 2812
+    },
+    "unmeasured": 329
+   },
+   "fidelity": {
+    "L1": {
+     "params": 698,
+     "medianEm": 57.0,
+     "p95Em": 276.4,
+     "relPct": 5.86
+    },
+    "L2": {
+     "params": 5366,
+     "medianEm": 24.0,
+     "p95Em": 249.5,
+     "relPct": 2.47
+    },
+    "L3": {
+     "params": 15226,
+     "medianEm": 8.5,
+     "p95Em": 40.0,
+     "relPct": 0.87
+    },
+    "L4": {
+     "params": 141950,
+     "medianEm": 0.0,
+     "p95Em": 0.0,
+     "relPct": 0.0
+    }
+   },
+   "files": {
+    "layered": "studio-rules-layered-thin.json",
+    "topology": "studio-rules-thin.json"
+   }
+  },
+  {
+   "name": "Black",
+   "wght": 900,
+   "tag": "black",
+   "source": "Noto Sans CJK KR Black (noto-cjk Sans2.004)",
+   "frame": {
+    "unitsPerEm": 1000,
+    "advanceWidth": 1000,
+    "cellEmBox": {
+     "x0": 8,
+     "y0": -121,
+     "x1": 931,
+     "y1": 852
+    }
+   },
+   "coverage": {
+    "syllablesWithAnyBox": 10707,
+    "totalSyllables": 11172,
+    "boxes": 31534,
+    "columnsCovered": 581,
+    "columnsTotal": 588,
+    "perNode": {
+     "LeadingMedial": 3210,
+     "LeadingMedialBase": 1382,
+     "Leading": 6115,
+     "Medial": 4431,
+     "MedialBase": 1684,
+     "MedialExtension": 3066,
+     "Trailing": 8856,
+     "TrailingFirst": 1395,
+     "TrailingSecond": 1395
+    },
+    "unmeasured": 465
+   },
+   "fidelity": {
+    "L1": {
+     "params": 698,
+     "medianEm": 55.0,
+     "p95Em": 254.0,
+     "relPct": 5.65
+    },
+    "L2": {
+     "params": 5258,
+     "medianEm": 26.8,
+     "p95Em": 196.5,
+     "relPct": 2.75
+    },
+    "L3": {
+     "params": 14778,
+     "medianEm": 7.5,
+     "p95Em": 40.0,
+     "relPct": 0.77
+    },
+    "L4": {
+     "params": 126730,
+     "medianEm": 0.0,
+     "p95Em": 0.0,
+     "relPct": 0.0
+    }
+   },
+   "files": {
+    "layered": "studio-rules-layered-black.json",
+    "topology": "studio-rules-black.json"
+   }
+  }
+ ],
+ "interpolation": {
+  "kind": "linear",
+  "avar": false,
+  "evidence": "중간 5종 실측 대비 중앙 3.2 em / 최대 32.5 em. 규칙 모델 자체의 오차(8.8 em)보다 작다. WEIGHT-AXIS.md §6",
+  "checkAtRegular": {
+   "entries": 1072,
+   "unit": "padding % points",
+   "medianError": 2.12,
+   "p90Error": 12.97,
+   "maxError": 42.64,
+   "baselineThinOnly": 3.81
+  }
+ },
+ "L1delta": {
+  "gap": {
+   "medianDelta": 0.0,
+   "maxDelta": 0.0
+  },
+  "overlap": {
+   "medianDelta": 4.519,
+   "maxDelta": 63.489
+  },
+  "spaceWeight": {
+   "medianDelta": 0.024,
+   "maxDelta": 0.23
+  },
+  "pad_top": {
+   "medianDelta": 0.0,
+   "maxDelta": 17.872
+  },
+  "pad_right": {
+   "medianDelta": 0.0,
+   "maxDelta": 24.919
+  },
+  "pad_bottom": {
+   "medianDelta": 0.0,
+   "maxDelta": 24.876
+  },
+  "pad_left": {
+   "medianDelta": 0.0,
+   "maxDelta": 9.366
+  }
+ },
+ "L2byNode": {
+  "LeadingMedial": {
+   "n": 139,
+   "medianDelta": 3.82,
+   "p90Delta": 6.83
+  },
+  "LeadingMedialBase": {
+   "n": 59,
+   "medianDelta": 6.8,
+   "p90Delta": 36.7
+  },
+  "Leading": {
+   "n": 313,
+   "medianDelta": 5.73,
+   "p90Delta": 22.62
+  },
+  "Medial": {
+   "n": 224,
+   "medianDelta": 15.8,
+   "p90Delta": 24.14
+  },
+  "MedialBase": {
+   "n": 89,
+   "medianDelta": 18.62,
+   "p90Delta": 31.06
+  },
+  "MedialExtension": {
+   "n": 117,
+   "medianDelta": 14.52,
+   "p90Delta": 17.82
+  },
+  "Trailing": {
+   "n": 98,
+   "medianDelta": 4.76,
+   "p90Delta": 20.24
+  },
+  "TrailingFirst": {
+   "n": 24,
+   "medianDelta": 6.58,
+   "p90Delta": 17.64
+  },
+  "TrailingSecond": {
+   "n": 24,
+   "medianDelta": 8.92,
+   "p90Delta": 37.43
+  }
+ },
+ "L2delta": {
+  "commonEntries": 1087,
+  "medianDelta": 8.72,
+  "p90Delta": 22.81,
+  "maxDelta": 67.81,
+  "largest": [
+   {
+    "path": "Leading",
+    "family": "H",
+    "key": "ㅎ|ㅗ",
+    "delta": 67.81
+   },
+   {
+    "path": "Medial",
+    "family": "H",
+    "key": "ㅗ|ㅎ",
+    "delta": 61.7
+   },
+   {
+    "path": "MedialExtension",
+    "family": "M",
+    "key": "ㅞ|ㅆ",
+    "delta": 61.43
+   },
+   {
+    "path": "MedialExtension",
+    "family": "M",
+    "key": "ㅞ|ㅉ",
+    "delta": 59.92
+   },
+   {
+    "path": "LeadingMedialBase",
+    "family": "M",
+    "key": "ㅃ|ㅟ",
+    "delta": 58.74
+   },
+   {
+    "path": "MedialExtension",
+    "family": "M",
+    "key": "ㅞ|ㅅ",
+    "delta": 57.81
+   },
+   {
+    "path": "Medial",
+    "family": "VL",
+    "key": "ㅖ|ㄴ",
+    "delta": 57.22
+   },
+   {
+    "path": "MedialExtension",
+    "family": "M",
+    "key": "ㅞ|ㅈ",
+    "delta": 56.95
+   },
+   {
+    "path": "Leading",
+    "family": "H",
+    "key": "ㅎ|ㅛ",
+    "delta": 54.65
+   },
+   {
+    "path": "Trailing",
+    "family": "H",
+    "key": "ㄼ",
+    "delta": 52.78
+   },
+   {
+    "path": "Medial",
+    "family": "H",
+    "key": "ㅛ|ㅎ",
+    "delta": 52.54
+   },
+   {
+    "path": "Trailing",
+    "family": "VL",
+    "key": "ㄳ",
+    "delta": 52.51
+   }
+  ],
+  "thinOnly": 106,
+  "blackOnly": 79
+ },
+ "variantGroups": {
+  "note": "마스터 100/900 효과 벡터를 이어 붙여 군집한 굵기 안정 벌 구성",
+  "leading": [
+   "ㅏㅑㅣ",
+   "ㅐㅒ",
+   "ㅓㅕ",
+   "ㅔㅖ",
+   "ㅗㅛ",
+   "ㅘㅚㅟ",
+   "ㅙ",
+   "ㅜㅠ",
+   "ㅝㅢ",
+   "ㅞ",
+   "ㅡ"
+  ],
+  "medial": [
+   "ㄱㄲㅋ",
+   "ㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅌㅍㅎ"
+  ],
+  "trailing": [
+   "ㅏㅑ",
+   "ㅐㅒㅓㅕㅣ",
+   "ㅔㅖ",
+   "ㅗㅘㅛㅡ",
+   "ㅙㅞ",
+   "ㅚㅝㅢ",
+   "ㅜㅠ",
+   "ㅟ"
+  ],
+  "counts": {
+   "leading": 11,
+   "medial": 2,
+   "trailing": 8
+  }
+ },
+ "fusion": {
+  "flippedPairs": [
+   "ㄲㅛ",
+   "ㄸㅗ",
+   "ㅃㅗ",
+   "ㅅㅛ",
+   "ㅆㅗ",
+   "ㅆㅛ",
+   "ㅈㅛ",
+   "ㅉㅗ",
+   "ㅉㅛ"
+  ],
+  "flippedSyllables": 237,
+  "stemRedrawn": {
+   "medianGrowthEm": -4.5,
+   "maxGrowthEm": 2.5,
+   "conclusion": "components unchanged; fusion is plain overlap",
+   "measuredPairs": [
+    "ㄸㅗ",
+    "ㅃㅗ",
+    "ㅆㅗ",
+    "ㅉㅗ"
+   ]
+  },
+  "decision": "컴포넌트를 겹친 채로 두고 윤곽선을 합치지 않는다. 마스터마다 컴포넌트 수와 윤곽선 수가 같으므로 보간이 성립한다. FUSION.md 참고"
+ }
+}
