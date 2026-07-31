@@ -3,6 +3,11 @@
 어떤 구조가 최적인지 여러 방향을 실측 비교한 기록. 결론부터: **초성 11벌 × 중성 4벌 ×
 종성 8벌**이 무릎이고, 전통 벌식과 두 군데가 다르다.
 
+> **중성은 2벌로 줄이는 게 낫다.** 여기 벌 구성은 Regular 하나로 군집한 것인데,
+> 마스터 100/900을 함께 보면 중성 그룹만 불안정하다(쌍 일치 71.9%). 굵기 안정
+> 구성은 [`WEIGHT-AXIS.md`](./WEIGHT-AXIS.md) §7을 쓰면 된다 — 중성 4→2벌 손해가
+> 0.2 em뿐이다.
+
 데이터: [`variant_groups.json`](./variant_groups.json) · 코드: `build/bench.py`,
 `build/bench2.py`, `build/beol.py`, `build/beol2.py`
 
