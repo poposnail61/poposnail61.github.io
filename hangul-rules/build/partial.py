@@ -15,25 +15,33 @@ import leaves as L
 def union(a,b): return (min(a[0],b[0]),min(a[1],b[1]),max(a[2],b[2]),max(a[3],b[3]))
 def bb(sl): return M.bbox(sl)
 
-def peel_trailing(shapes):
-    """종성을 y 공백으로 떼어낸다. 모든 후보 절단선을 시험해 타당한 것을 고른다."""
+def peel_trailing(shapes, want_h=None):
+    """종성을 y 공백으로 떼어낸다.
+
+    '아래쪽 절단선부터 첫 타당한 것'은 중성까지 종성에 넣는 일이 잦았다. 종성 고유
+    높이 표(want_h)가 있으면 결과 높이가 표에 가장 가까운 절단선을 고른다.
+    """
     iv=sorted((s[2],s[4]) for s in shapes); cur=iv[0][1]; cuts=[]
     for lo,hi in iv[1:]:
         if lo>cur: cuts.append((cur+lo)/2)
         cur=max(cur,hi)
-    for cut in cuts:                                  # 아래쪽 절단선부터
+    best=None
+    for cut in cuts:
         low=[s for s in shapes if s[4]<=cut]; up=[s for s in shapes if s[2]>=cut]
         if len(low)+len(up)!=len(shapes) or not low or not up: continue
         bl,bu=bb(low),bb(up)
-        if bl[3]<500 and bu[3]>700: return low,up     # 종성은 아래, 초·중성은 위
-    return None
+        if not (bl[3]<500 and bu[3]>700): continue
+        if want_h is None: return low,up
+        d=abs((bl[3]-bl[1])-want_h)
+        if best is None or d<best[0]: best=(d,low,up)
+    return (best[1],best[2]) if best else None
 
 def right_extension(shapes, xmin=600):
     """섞임/세로모임에서 오른쪽 기둥(중성 확장부)만 떼어낸다."""
     r=[s for s in shapes if s[1]>xmin]; rest=[s for s in shapes if s[1]<=xmin]
     return (r,rest) if r and rest else None
 
-def boxes_for(k, slots, horz, D):
+def boxes_for(k, slots, horz, D, jong_h=None):
     """path -> box. 리프까지 못 가면 그룹 노드로 남긴다."""
     li,vi,ti=k
     out={}; compound_v = vi in COMPOUND_MEDIALS; compound_t = ti in COMPOUND_TRAILINGS
@@ -75,7 +83,7 @@ def boxes_for(k, slots, horz, D):
     # 슬롯분해 자체가 실패: 종성만이라도 떼어 본다
     sh=D[k]
     if ti:
-        pl=peel_trailing(sh)
+        pl=peel_trailing(sh, jong_h.get(ti) if jong_h else None)
         if pl:
             low,up=pl; put_trailing(low)
             if compound_v:
@@ -99,15 +107,19 @@ def boxes_for(k, slots, horz, D):
     return {}
 
 def main(font_path):
+    import twopass as TP
     f=TTFont(font_path); D=M.extract(f)
-    a=L.run_validated(D,60); b=L.run_validated(D,120)
+    p1a=TP.validated2(D,60,None); p1b=TP.validated2(D,120,None)
+    p1=dict(p1b); p1.update(p1a); jong_h=TP.jong_table(p1)
+    a=TP.validated2(D,60,jong_h); b=TP.validated2(D,120,jong_h)
     slots=dict(b); slots.update(a); horz=L.horz_shapes(D)
+    print('2패스 슬롯 %d자 (1패스 %d자), 종성 높이 표 %d종'%(len(slots),len(p1),len(jong_h)))
     res={}; pathcnt=Counter(); depth=Counter()
     for li in range(19):
         for vi in range(21):
             for ti in range(28):
                 k=(li,vi,ti)
-                bx=boxes_for(k,slots,horz,D)
+                bx=boxes_for(k,slots,horz,D,jong_h)
                 if not bx: depth['0 아무것도 못 얻음']+=1; continue
                 nodes,root=tree(*k)
                 leafpaths={p for p,kind in nodes if kind[0]=='leaf'}
